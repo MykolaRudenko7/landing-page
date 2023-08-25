@@ -1,5 +1,17 @@
-import styles from "app/Home.module.scss";
+import styles from 'app/Home.module.scss';
+import Navbar from 'components/Navbar';
 
 export default function Home() {
-  return <main className={styles.main}> </main>;
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.canvas}>
+        <div className={styles.frame}>
+            <header className={styles.header}>
+              <Navbar />
+            </header>
+        </div>
+      </div>
+    </main>
+  );
 }

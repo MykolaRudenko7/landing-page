@@ -67,7 +67,6 @@
 %borderGradientButton {
   cursor: pointer;
   color: $mainWhiteColor;
-  font-size: 2.4rem;
   letter-spacing: 0.07rem;
   font-weight: $mediumFontWeight;
   text-transform: capitalize;
@@ -108,7 +107,6 @@
 
   &:hover {
     padding: 1.4rem 4.5rem;
-    font-size: 3.4rem;
 
     &::after {
       transform: translate(-50%, -50%) skew(-25deg);
@@ -116,6 +114,35 @@
 
     &::before {
       transform: skew(-25deg);
+    }
+  }
+}
+
+%underlineLinkHoverEffect {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 0.25rem;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+    transform-origin: right;
+    background-color: $mainDarkBlueColor;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &::after {
+      transform: scale(1);
+      transform-origin: left;
     }
   }
 }

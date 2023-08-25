@@ -1,0 +1,93 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logoLinksBlock {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+
+	@include onDesktop() {
+		gap: 2rem;
+	}
+
+	@include onTablet() {
+		gap: 1rem;
+	}
+}
+
+.logoWrapper {
+	@extend %flexCenter;
+	width: 19.6rem;
+	height: 11.6rem;
+
+	@include onDesktop() {
+		width: 15rem;
+		height: 7rem;
+	}
+
+	@include onDesktop() {
+		width: 14rem;
+		height: 8rem;
+	}
+}
+
+.logoImage {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.linksWrapper {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	color: $mainDarkBlueColor;
+	font-size: 2rem;
+	font-weight: $semiBoldFontWeight;
+	text-transform: uppercase;
+
+	@include onDesktop() {
+		gap: 1.5rem;
+		font-size: 1.7rem;
+	}
+
+	@include onTablet() {
+		font-size: 1.4rem;
+	}
+}
+
+.navbarButton {
+	font-size: 1.5rem;
+	@extend %fillGradientButton;
+	padding: 1.1rem 3.4rem;
+
+	&:hover {
+		font-size: 1.7rem;
+	}
+
+	@include onTablet() {
+		padding: 1rem 2rem;
+		font-size: 1.2rem;
+
+		&:hover {
+			font-size: 1.4rem;
+		}
+	}
+
+	@include onSmallTablet() {
+		padding: 1rem 2rem;
+		font-size: 1rem;
+
+		&:hover {
+			font-size: 1.2rem;
+		}
+	}
+}
