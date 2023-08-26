@@ -1,7 +1,3 @@
-.link{
-	@extend %underlineLinkHoverEffect;
-
-	@include onTablet() {
-		
-	}
+.link {
+  @extend %underlineLinkHoverEffect;
 }

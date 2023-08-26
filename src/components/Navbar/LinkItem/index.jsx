@@ -1,12 +1,17 @@
-'use client'
+"use client";
 
-import { Link } from 'react-scroll';
-import styles from 'components/Navbar/LinkItem/LinkItem.module.scss';
+import { Link } from "react-scroll";
+import styles from "components/Navbar/LinkItem/LinkItem.module.scss";
 
 export default function LinkItem({ title, id }) {
-  
   return (
-    <Link to={id} smooth={true} duration={500} offset={-70} className={styles.link}>
+    <Link
+      to={id}
+      smooth={true}
+      duration={500}
+      offset={-70}
+      className={styles.link}
+    >
       {title}
     </Link>
   );
