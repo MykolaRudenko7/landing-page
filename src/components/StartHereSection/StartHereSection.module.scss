@@ -1,5 +1,17 @@
+.startHere {
+  position: relative;
+  z-index: 1;
+  padding: 2.7rem 0rem 11.2rem 2rem;
+
+  @include onSmallTablet() {
+    padding: 1rem 0rem 3rem 2rem;
+  }
+  @include onPhone() {
+    padding: 0rem;
+  }
+}
+
 .startHereContainer {
-  padding: 2.7rem 0 11.2rem 0;
   display: flex;
   align-items: center;
 
@@ -62,11 +74,13 @@
 }
 
 .buttonsBlock {
+  padding: 0 1.1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
   gap: 5.7rem;
   font-size: 1.2rem;
+  text-shadow: $textShadow;
 
   @include onDesktop() {
     gap: 1.9rem;
@@ -85,11 +99,12 @@
 
 .buttonConsultation {
   @extend %fillGradientButton;
-  text-align: center;
-  padding: 1rem 2rem;
   font-size: 2.4rem;
+  padding: 1.5rem 2.5rem;
+  text-shadow: $textShadow;
 
   @include onDesktop() {
+    padding: 1rem 2rem;
     font-size: 2rem;
   }
   @include onTablet() {
@@ -105,12 +120,12 @@
 
 .buttonServices {
   @extend %borderGradientButton;
-  text-align: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   font-size: 2.4rem;
 
   @include onDesktop() {
     font-size: 2rem;
+    padding: 1rem 2rem;
   }
   @include onTablet() {
     font-size: 1.4rem;
@@ -124,11 +139,27 @@
 }
 
 .imageWrapper {
+  position: relative;
   flex: 0 1 42%;
   text-align: center;
 
   @include onDesktop() {
     flex: 0 1 45%;
+  }
+
+  &:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 133.6rem;
+    height: 133.6rem;
+    border-radius: 133.6rem;
+    background: $mainYellowColor;
+    filter: blur(28.85rem);
   }
 }
 

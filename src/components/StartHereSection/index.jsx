@@ -19,7 +19,7 @@ export default function StartHereSection() {
               role="button"
               className={styles.buttonConsultation}
             >
-              Schedule a consultation
+              <p className={styles.buttonText}>Schedule a consultation</p>
             </Link>
             <Link
               about="explore our services"
@@ -27,7 +27,7 @@ export default function StartHereSection() {
               role="button"
               className={styles.buttonServices}
             >
-              Explore our services
+              <p className={styles.buttonText}>Explore our services</p>
             </Link>
           </div>
         </div>
