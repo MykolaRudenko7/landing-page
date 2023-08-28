@@ -9,7 +9,7 @@ export default function LinkItem({ title, id }) {
       to={id}
       smooth={true}
       duration={500}
-      offset={-70}
+      offset={-25}
       className={styles.link}
     >
       {title}

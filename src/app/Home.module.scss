@@ -5,7 +5,20 @@
   background-color: $headerBackgroundColor;
 
   @include onTablet() {
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
+  }
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    width: 133.6rem;
+    height: 133.6rem;
+    border-radius: 133.6rem;
+    background: $mainYellowColor;
+    filter: blur(28.85rem);
   }
 }
 
@@ -15,12 +28,12 @@
   background-color: $pagebackgroundColor;
   filter: drop-shadow(0 0.4rem 0.55 rgba(0, 0, 0, 0.25));
   padding: 4rem 8rem 0 8rem;
+  position: relative;
 
   @include onDesktop() {
     padding: 2rem 3rem;
   }
-
   @include onTablet() {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
 }
