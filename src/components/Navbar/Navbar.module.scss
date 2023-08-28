@@ -1,4 +1,6 @@
 .navbar {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,6 +35,10 @@
   @include onSmallTablet() {
     width: 11rem;
     height: 9rem;
+  }
+  @include onPhone() {
+    width: 9rem;
+    height: 7rem;
   }
 }
 
@@ -90,15 +96,14 @@
 }
 
 .navbarButton {
-  font-size: 1.5rem;
   @extend %fillGradientButton;
+  font-size: 1.5rem;
   padding: 1.1rem 3.4rem;
+  margin-left: 1rem;
 
   @include onSmallTablet() {
-    justify-items: flex-end;
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
+    padding: 0.5rem 0.8rem;
   }
 }
 
@@ -159,7 +164,4 @@
 .navbarWrapper {
   @extend %flexCenter;
   gap: 2rem;
-  @include onPhone() {
-    gap: 1rem;
-  }
 }

@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2.2rem 2rem 2.6rem 2rem;
+  border-radius: 2.2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.51) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1.25rem);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0.4rem 0.4rem 1.2rem 0rem $mainDarkBlueColor;
+
+    .cardText {
+      color: $mainDarkBlueColor;
+    }
+  }
+
+  @include onTablet() {
+    padding: 1rem;
+  }
+}
+
+.cardImageWrapper {
+  overflow: hidden;
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 2.45rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardSubTitle {
+  margin-bottom: 0.85rem;
+  color: $mainDarkBlueColor;
+  font-size: $titleCargSize;
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onPhone() {
+    font-size: 1.4rem;
+  }
+}
+.title {
+  margin-bottom: 2rem;
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+  font-weight: $mediumFontWeight;
+  @include onTablet() {
+    font-size: 2.4rem;
+  }
+  @include onPhone() {
+    font-size: 1.8rem;
+  }
+}
+.cardText {
+  font-size: $textCardSize;
+  letter-spacing: -0.05rem;
+  color: $textCardBlurColor;
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onPhone() {
+    font-size: 1.4rem;
+  }
+}

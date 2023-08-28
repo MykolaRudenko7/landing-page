@@ -44,7 +44,7 @@ export default function Navbar() {
           role="button"
           about="boost your business!"
         >
-          Boost your business!
+          <p className={styles.buttonText}>Boost your business!</p>
         </Link>
         <div
           className={cn(styles.menuBurger, {
