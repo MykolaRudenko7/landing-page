@@ -1,5 +1,6 @@
-import styles from "app/Home.module.scss";
 import Navbar from "components/Navbar";
+import StartHereSection from "components/StartHereSection";
+import styles from "app/Home.module.scss";
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
         <header className={styles.header}>
           <Navbar />
         </header>
+        <main>
+          <StartHereSection />
+        </main>
       </div>
     </main>
   );
