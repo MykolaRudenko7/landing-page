@@ -5,6 +5,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 li {
@@ -35,15 +36,17 @@ img {
 }
 
 body {
-  line-height: 1;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
   min-width: 320px;
-  width: 1730px;
 }
 
 html,
 body {
   background: #fff;
-  height: 100%;
   font-size: 10px;
   font-style: normal;
+  height: 100%;
+  width: 100%;
 }
