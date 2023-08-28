@@ -24,7 +24,7 @@
   }
 
   @include onTablet() {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -33,6 +33,10 @@
   width: 15rem;
   height: 15rem;
   margin-bottom: 2.45rem;
+  @include onTablet() {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .cardImage {
