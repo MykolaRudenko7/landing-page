@@ -1,9 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { whoWeAreSectionData } from "data/whoWeAreData";
-import styles from "components/WhoWeAreSection/WhoWeAre.module.scss";
+import styles from "components/WhoWeAreSection/WhoWeAreSection.module.scss";
 
-export default function WhoWeAre() {
+export default function WhoWeAreSection() {
   const { imageSrc, text, title } = whoWeAreSectionData;
 
   return (
@@ -19,14 +18,9 @@ export default function WhoWeAre() {
           />
         </div>
         <div className={styles.whoWeAreTextBlock}>
-          <Link
-            className={styles.whoWeAreButton}
-            href="#"
-            about="who we are"
-            role="block lable button"
-          >
+          <div className={styles.whoWeAreLableButton}>
             <p className={styles.buttonText}>Who we are</p>
-          </Link>
+          </div>
           <h4 className={styles.title}>{title}</h4>
           <p className={styles.text}>{text}</p>
         </div>

@@ -1,0 +1,68 @@
+.listBlock {
+  position: relative;
+  color: $mainDarkBlueColor;
+  background: $backgroundServiceCard;
+  padding: 3.8rem 1.3rem 1.6rem 1.3rem;
+  border-radius: 3.52rem;
+  transition: $transitionAnimation;
+
+  &:hover {
+    filter: $filterServiceCardTitle;
+    backdrop-filter: blur(2.35rem);
+  }
+}
+.listTitle {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) skew(-25deg);
+  text-align: center;
+  text-shadow: 0.05rem 0.1rem 0.1rem $mainDarkBlueColor;
+  font-size: 2.4rem;
+  font-weight: $mediumFontWeight;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: $backgroundServiceCard;
+  border-radius: 3.52rem;
+  padding: 0.4rem 2rem;
+  border-image: $borderGradientServiceCardTitle;
+  filter: $filterServiceCardTitle;
+  backdrop-filter: blur(2.35rem);
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.6rem;
+  }
+}
+.listTitleText {
+  display: inline-block;
+  transform: skew(25deg);
+}
+
+.list {
+  padding-left: 2rem;
+}
+
+.listItem {
+  font-size: 2.2rem;
+  letter-spacing: 0.06rem;
+  display: list-item;
+  list-style-type: "◉";
+  padding-inline-start: 0.4rem;
+
+  @include onDesktop() {
+    font-size: 1.8rem;
+  }
+  @include onTablet() {
+    font-size: 1.6rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.4rem;
+  }
+}

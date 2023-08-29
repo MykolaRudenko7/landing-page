@@ -1,0 +1,35 @@
+.services {
+  padding: 5rem 0 3rem 0;
+
+  @include onSmallTablet() {
+    padding: 3rem 0;
+  }
+}
+.servicesWrapper {
+  @extend %flexCenter;
+  flex-direction: column;
+  gap: 10rem;
+
+  @include onSmallTablet() {
+    gap: 5rem;
+  }
+}
+.servicesLableButton {
+  cursor: default;
+  @extend %borderGradientButton;
+
+  @include onSmallTablet() {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 4rem;
+  padding: 0 0.5rem;
+}

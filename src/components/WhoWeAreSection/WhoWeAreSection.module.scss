@@ -40,8 +40,9 @@
   }
 }
 
-.whoWeAreButton {
+.whoWeAreLableButton {
   @extend %borderGradientButton;
+  cursor: default;
   display: inline-block;
   padding: 1.1rem 8.7rem;
   margin-bottom: 19rem;
@@ -53,6 +54,8 @@
     margin-bottom: 5rem;
   }
   @include onSmallTablet() {
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
   }
 }
 .title {
@@ -66,14 +69,24 @@
   }
   @include onTablet() {
     margin-bottom: 3rem;
-    font-size: $smallTitleSize;
+    font-size: $textCardSize;
+  }
+  @include onSmallTablet() {
+    font-size: 2rem;
   }
 }
 .text {
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
-  @include onTablet() {
+
+  @include onDesktop() {
     font-size: $textCardSize;
+  }
+  @include onTablet() {
     text-align: left;
+    font-size: 1.6rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.4rem;
   }
 }
