@@ -9,7 +9,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.frame}>
         <header className={styles.header}>
-        <Navbar />
+          <Navbar />
         </header>
         <main>
           <StartHereSection />
