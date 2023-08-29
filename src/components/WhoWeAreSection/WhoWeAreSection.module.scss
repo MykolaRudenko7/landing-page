@@ -1,0 +1,92 @@
+.whoWeAre {
+  padding: 8.8rem 0 5rem 0;
+
+  @include onTablet() {
+    padding-top: 5rem;
+  }
+  @include onSmallTablet() {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+.whoWeAreWrapper {
+  display: flex;
+
+  @include onSmallTablet() {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+.whoWeAreImageWrapper {
+  @extend %flexCenter;
+  width: 50%;
+  @include onSmallTablet() {
+    width: 100%;
+  }
+}
+.whoWeAreImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.whoWeAreTextBlock {
+  padding: 0 0 0 1rem;
+  width: 50%;
+  text-align: left;
+  @include onSmallTablet() {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.whoWeAreLableButton {
+  @extend %borderGradientButton;
+  cursor: default;
+  display: inline-block;
+  padding: 1.1rem 8.7rem;
+  margin-bottom: 19rem;
+
+  @include onLargeDesktop() {
+    margin-bottom: 10rem;
+  }
+  @include onTablet() {
+    margin-bottom: 5rem;
+  }
+  @include onSmallTablet() {
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
+  }
+}
+.title {
+  color: $mainDarkBlueColor;
+  font-size: $mediumTitleSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 8.6rem;
+
+  @include onLargeDesktop() {
+    margin-bottom: 5rem;
+  }
+  @include onTablet() {
+    margin-bottom: 3rem;
+    font-size: $textCardSize;
+  }
+  @include onSmallTablet() {
+    font-size: 2rem;
+  }
+}
+.text {
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+
+  @include onDesktop() {
+    font-size: $textCardSize;
+  }
+  @include onTablet() {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.4rem;
+  }
+}
