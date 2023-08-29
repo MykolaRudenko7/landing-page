@@ -2,18 +2,18 @@
   position: relative;
   z-index: 2;
 
-  &::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: -11%;
-    left: -12%;
-    width: 133.6rem;
-    height: 133.6rem;
-    border-radius: 133.6rem;
-    background: $mainYellowColor;
-    filter: blur(28.85rem);
-  }
+  // &::before {
+  //   z-index: -1;
+  //   content: '';
+  //   position: absolute;
+  //   top: -10%;
+  //   left: -12%;
+  //   width: 133.6rem;
+  //   height: 133.6rem;
+  //   border-radius: 100%;
+  //   background: $mainYellowColor;
+  //   filter: blur(28.85rem);
+  // }
 }
 
 .whoWeAreContainer {

@@ -45,11 +45,7 @@
   }
 
   &:hover {
-    background: linear-gradient(
-      112deg,
-      rgba(64, 204, 255, 0.5) 0%,
-      #ffd600 100%
-    );
+    background: linear-gradient(112deg, rgba(64, 204, 255, 0.5) 0%, #ffd600 100%);
   }
 }
 
@@ -63,10 +59,10 @@
   font-size: 2.4rem;
   font-weight: $mediumFontWeight;
   text-transform: capitalize;
-  padding: 1.6rem 4.5rem;
+  padding: 1.4rem 4.3rem;
   transform: skew(-25deg);
   background-color: transparent;
-  border: 0.3rem solid;
+  border: 0.5rem solid;
   border-image-slice: 2;
   border-image-source: linear-gradient(81deg, #ffd600 0%, #40ccff 100%);
   filter: drop-shadow(0.3rem 0.4rem 1.2rem rgba(0, 0, 0, 0.25));
@@ -87,7 +83,7 @@
   transition: 0.3s ease-in-out;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
