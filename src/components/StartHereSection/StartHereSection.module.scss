@@ -1,21 +1,13 @@
-.startHere {
-  position: relative;
-  z-index: 2;
-  padding: 2.7rem 0rem 11.2rem 2rem;
-
-  @include onSmallTablet() {
-    padding: 1rem 0rem 3rem 2rem;
-  }
-  @include onPhone() {
-    padding: 0rem;
-  }
-}
-
 .startHereContainer {
   display: flex;
   align-items: center;
+  padding: 2.7rem 0rem 11.2rem 0rem;
 
+  @include onTablet() {
+    padding-bottom: 5rem;
+  }
   @include onSmallTablet() {
+    padding: 2rem 0rem 3rem 0rem;
     flex-direction: column;
     gap: 2rem;
   }
@@ -28,6 +20,9 @@
   @include onDesktop() {
     flex: 0 1 55%;
     margin-top: 2rem;
+  }
+  @include onSmallTablet() {
+    margin-top: 0rem;
   }
 }
 
@@ -120,7 +115,7 @@
 
 .buttonServices {
   @extend %borderGradientButton;
-  padding: 1.1rem 2.1rem;
+  padding: 1.1rem 3.5rem;
   font-size: 2.4rem;
 
   @include onDesktop() {
@@ -139,33 +134,48 @@
 }
 
 .imageWrapper {
-  position: relative;
   flex: 0 1 42%;
   text-align: center;
 
   @include onDesktop() {
     flex: 0 1 45%;
   }
-
-  // &:before {
-  //   z-index: -1;
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   transform-origin: center;
-  //   width: 133.6rem;
-  //   height: 133.6rem;
-  //   border-radius: 100%;
-  //   background: $mainYellowColor;
-  //   filter: blur(28.85rem);
-  // }
 }
 
 .image {
   width: 100%;
   height: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.cardsBlockContainer {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 10rem;
+  grid-row-gap: 9rem;
+  padding: 12.4rem 6.4rem 8.8rem 6.4rem;
+
+  @include onLargeDesktop() {
+    padding: 10rem 4rem 6rem 4rem;
+    grid-column-gap: 9rem;
+  }
+  @include onDesktop() {
+    grid-column-gap: 6rem;
+    grid-row-gap: 6rem;
+  }
+  @include onTablet() {
+    padding: 3rem 2rem;
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+  }
+  @include onSmallTablet() {
+    padding: 3rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  @include onPhone() {
+    padding: 3rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 }

@@ -11,11 +11,10 @@
 }
 
 .frame {
-  position: relative;
   max-width: 168rem;
   padding: 4rem 8rem 0 8rem;
   border-radius: 2rem;
-  background-color: $pagebackgroundColor;
+  background-color: $pageBackgroundColor;
   filter: drop-shadow(0 0.4rem 0.55 rgba(0, 0, 0, 0.25));
   backdrop-filter: blur(0.25rem);
 

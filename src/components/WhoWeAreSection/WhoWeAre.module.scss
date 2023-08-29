@@ -1,51 +1,79 @@
 .whoWeAre {
-  position: relative;
-  z-index: 2;
+  padding: 8.8rem 0 5rem 0;
 
-  // &::before {
-  //   z-index: -1;
-  //   content: '';
-  //   position: absolute;
-  //   top: -10%;
-  //   left: -12%;
-  //   width: 133.6rem;
-  //   height: 133.6rem;
-  //   border-radius: 100%;
-  //   background: $mainYellowColor;
-  //   filter: blur(28.85rem);
-  // }
-}
-
-.whoWeAreContainer {
-  display: grid;
-  justify-items: stretch;
-  align-items: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-column-gap: 10rem;
-  grid-row-gap: 9rem;
-  padding: 12.4rem 6.4rem 8.8rem 6.4rem;
-
-  @include onLargeDesktop() {
-    padding: 10rem 4rem 6rem 4rem;
-    grid-column-gap: 9rem;
-  }
-
-  @include onDesktop() {
-    grid-column-gap: 6rem;
-    grid-row-gap: 6rem;
-  }
   @include onTablet() {
-    padding: 3rem 2rem;
-    grid-column-gap: 4rem;
-    grid-row-gap: 4rem;
+    padding-top: 5rem;
   }
+  @include onSmallTablet() {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+.whoWeAreWrapper {
+  display: flex;
 
   @include onSmallTablet() {
-    padding: 3rem 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    flex-direction: column-reverse;
+    gap: 2rem;
   }
-  @include onPhone() {
-    padding: 3rem 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.whoWeAreImageWrapper {
+  @extend %flexCenter;
+  width: 50%;
+  @include onSmallTablet() {
+    width: 100%;
+  }
+}
+.whoWeAreImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.whoWeAreTextBlock {
+  padding: 0 0 0 1rem;
+  width: 50%;
+  text-align: left;
+  @include onSmallTablet() {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.whoWeAreButton {
+  @extend %borderGradientButton;
+  display: inline-block;
+  padding: 1.1rem 8.7rem;
+  margin-bottom: 19rem;
+
+  @include onLargeDesktop() {
+    margin-bottom: 10rem;
+  }
+  @include onTablet() {
+    margin-bottom: 5rem;
+  }
+  @include onSmallTablet() {
+  }
+}
+.title {
+  color: $mainDarkBlueColor;
+  font-size: $mediumTitleSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 8.6rem;
+
+  @include onLargeDesktop() {
+    margin-bottom: 5rem;
+  }
+  @include onTablet() {
+    margin-bottom: 3rem;
+    font-size: $smallTitleSize;
+  }
+}
+.text {
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+  @include onTablet() {
+    font-size: $textCardSize;
+    text-align: left;
   }
 }

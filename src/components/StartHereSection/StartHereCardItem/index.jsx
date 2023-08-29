@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "components/WhoWeAreSection/WhoWeAreCardIrem/WhoWeAreCardItem.module.scss";
+import styles from "components/StartHereSection/StartHereCardItem/StartHereCardItem.module.scss";
 
-export default function WhoWeAreCardItem({ imageSrc, title, subtitle, text }) {
+export default function StartHereCardItem({ imageSrc, title, subtitle, text }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardImageWrapper}>
