@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { portfolioData } from "data/portfolioSectionData";
+import { portfolioSectionData } from "data/portfolioSectionData";
 import styles from "components/PortfilioSection/PortfolioBlock/PortfolioBlock.module.scss";
 
 export default function PortfolioBlock() {
-  const { cardB2B, cardBarossa, cardFloraNow, textBlock } = portfolioData;
+  const {
+    textBlock,
+    cards: { cardBarossa, cardFloraNow, cardB2B },
+  } = portfolioSectionData.portfolioBlockData;
 
   return (
     <div className={styles.portfolioBlock}>
@@ -42,7 +45,6 @@ export default function PortfolioBlock() {
             </Link>
           </div>
         </div>
-
         <div className={styles.cardsBlock}>
           <div className={styles.cardB2B}>
             <h6 className={styles.cardB2BTitle}>

@@ -41,6 +41,7 @@
   transition: $transitionAnimation;
 
   .buttonText {
+    display: inline-block;
     transform: skew(25deg);
   }
 
@@ -117,7 +118,7 @@
   color: $mainDarkBlueColor;
   background: $backgroundServiceCard;
   padding: 3.8rem 1.3rem 1.6rem 1.3rem;
-  border-radius: 3rem;
+  border-radius: 3.5rem;
   transition: $transitionAnimation;
 
   &:hover {

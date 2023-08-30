@@ -1,0 +1,135 @@
+.whyChooseCardItem {
+  position: absolute;
+  @extend %flexCenter;
+  width: 32rem;
+  height: 32rem;
+  transform-origin: 50% 50%;
+  filter: $circleWhyChooseCardFilter;
+  background-image: $circleWhyChooseCardGradient;
+  backdrop-filter: blur(3.85rem);
+  border-radius: 50%;
+  transition: $transitionAnimation;
+
+  &:nth-child(1) {
+    transform: translate(-170%, 100%);
+  }
+  &:nth-child(2) {
+    transform: translate(-190%, -30%);
+  }
+  &:nth-child(3) {
+    transform: translate(-125%, -150%);
+  }
+  &:nth-child(4) {
+    transform: translate(145%, -133%);
+  }
+  &:nth-child(5) {
+    transform: translate(190%, 50%);
+  }
+  &:hover {
+    background-color: $backgroundServiceCard;
+  }
+
+  @include forCircles() {
+    width: 27rem;
+    height: 27rem;
+    &:nth-child(1) {
+      transform: translate(-130%, 100%);
+    }
+    &:nth-child(2) {
+      transform: translate(-160%, -30%);
+    }
+    &:nth-child(3) {
+      transform: translate(-85%, -140%);
+    }
+    &:nth-child(4) {
+      transform: translate(100%, -130%);
+    }
+    &:nth-child(5) {
+      transform: translate(155%, 50%);
+    }
+  }
+  @include onDesktop() {
+    width: 16rem;
+    height: 16rem;
+    &:nth-child(1) {
+      transform: translate(-140%, 100%);
+    }
+    &:nth-child(2) {
+      transform: translate(-170%, -30%);
+    }
+    &:nth-child(3) {
+      transform: translate(-110%, -140%);
+    }
+    &:nth-child(4) {
+      transform: translate(120%, -130%);
+    }
+    &:nth-child(5) {
+      transform: translate(165%, 50%);
+    }
+  }
+  @include onSmallTablet() {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+    &:nth-child(n) {
+      transform: none;
+    }
+  }
+}
+
+.whyChooseCardItemWrapper {
+  padding: 4rem 3rem 3rem 3rem;
+  text-align: center;
+
+  @include forCircles() {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  @include onSmallTablet() {
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+}
+
+.title {
+  color: $mainDarkBlueColor;
+  font-size: $subtitleCargSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 2rem;
+
+  @include forCircles() {
+    font-size: 2rem;
+  }
+  @include onDesktop() {
+    font-size: 1.4rem;
+  }
+  @include onTablet() {
+    margin-bottom: 1rem;
+  }
+  @include onSmallTablet() {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.text {
+  color: $textCardBlurColor;
+  font-size: $textCardSize;
+  letter-spacing: -0.05rem;
+
+  @include forCircles() {
+    font-size: 1.8rem;
+  }
+  @include onDesktop() {
+    font-size: 1.2rem;
+  }
+  @include onSmallTablet() {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  &:hover {
+    color: $mainDarkBlueColor;
+  }
+}

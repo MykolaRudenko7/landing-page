@@ -21,11 +21,10 @@
 
 .textBlock {
   width: 43%;
-
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   justify-content: space-between;
+  gap: 3rem;
 
   @include onSmallTablet() {
     width: 100%;
@@ -36,7 +35,6 @@
 .portfolioLabel {
   @extend %borderGradientButton;
   cursor: default;
-  display: inline-block;
   padding: 1.1rem 8.7rem;
   margin-bottom: 10rem;
   margin-left: 1.5rem;
@@ -52,16 +50,13 @@
     font-size: 1.6rem;
   }
 }
-.textBlockWrapper {
-}
-.buttonWrapper {
-}
 
 .textBlockTitle {
   color: $mainDarkBlueColor;
   font-size: $mediumTitleSize;
   font-weight: $mediumFontWeight;
   margin-bottom: 4rem;
+
   @include onTablet() {
     margin-bottom: 3rem;
     font-size: $textCardSize;
@@ -75,6 +70,7 @@
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   margin-bottom: 6.4rem;
+
   @include onDesktop() {
     font-size: $textCardSize;
   }
@@ -90,15 +86,11 @@
 
 .cardBarossa {
   @extend %cardWithTabBlock;
-
-  @include onLargeDesktop() {
-  }
-  @include onSmallTablet() {
-  }
 }
 
 .cardBarossaTitle {
   @extend %cardWithTabBlockTitle;
+
   @include onDesktop() {
     white-space: normal;
   }
@@ -113,8 +105,9 @@
 }
 
 .portfolioBlockButton {
-  margin-left: 1.5rem;
   @extend %fillGradientButton;
+  margin-left: 1.5rem;
+
   @include onTablet() {
     padding: 1rem 2rem;
     font-size: 1.4rem;
@@ -128,6 +121,7 @@
 .cardsBlock {
   margin-top: 3rem;
   width: 57%;
+
   @include onSmallTablet() {
     width: 100%;
   }
@@ -140,6 +134,7 @@
 
 .cardB2BTitle {
   @extend %cardWithTabBlockTitle;
+
   @include onDesktop() {
     white-space: normal;
   }
@@ -160,6 +155,7 @@
 
 .cardFloraNowTitle {
   @extend %cardWithTabBlockTitle;
+
   @include onDesktop() {
     white-space: normal;
   }
