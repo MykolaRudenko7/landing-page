@@ -7,9 +7,9 @@ export default function ServicesSection() {
   return (
     <section id="services" className={styles.services}>
       <div className={styles.servicesWrapper}>
-        <div className={styles.servicesLableButton}>
+        <h3 className={styles.servicesLable}>
           <p className={styles.buttonText}>Industries & Services We Serve</p>
-        </div>
+        </h3>
         <div className={styles.cards}>
           {servicesSectionData.map((item) => (
             <ServiceSectionCardItem key={uuidv4()} {...item} />

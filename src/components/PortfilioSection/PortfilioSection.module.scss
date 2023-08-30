@@ -1,0 +1,14 @@
+.portfilioSection {
+  padding-top: 15.6rem;
+  padding-bottom: 17rem;
+
+  @include onDesktop() {
+    padding: 10rem 0;
+  }
+  @include onTablet() {
+    padding: 5rem 0;
+  }
+  @include onSmallTablet() {
+    padding: 3rem 0;
+  }
+}

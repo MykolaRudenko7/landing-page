@@ -1,0 +1,9 @@
+.whyChooseBlock {
+  padding: 5rem 0 8rem 0;
+  @include onSmallTablet() {
+    padding: 3rem 0;
+  }
+}
+.whyChooseBlockWrapper {
+  
+}

@@ -1,0 +1,173 @@
+.portfolioBlock {
+  padding-bottom: 10rem;
+
+  @include onTablet() {
+    padding-bottom: 5rem;
+  }
+  @include onSmallTablet() {
+    padding-bottom: 3rem;
+  }
+}
+
+.portfolioBlockWrapper {
+  display: flex;
+  gap: 6rem;
+
+  @include onSmallTablet() {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.textBlock {
+  width: 43%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+
+  @include onSmallTablet() {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.portfolioLabel {
+  @extend %borderGradientButton;
+  cursor: default;
+  display: inline-block;
+  padding: 1.1rem 8.7rem;
+  margin-bottom: 10rem;
+  margin-left: 1.5rem;
+
+  @include onLargeDesktop() {
+    margin-bottom: 10rem;
+  }
+  @include onTablet() {
+    margin-bottom: 5rem;
+  }
+  @include onSmallTablet() {
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
+  }
+}
+.textBlockWrapper {
+}
+.buttonWrapper {
+}
+
+.textBlockTitle {
+  color: $mainDarkBlueColor;
+  font-size: $mediumTitleSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 4rem;
+  @include onTablet() {
+    margin-bottom: 3rem;
+    font-size: $textCardSize;
+  }
+  @include onSmallTablet() {
+    font-size: 2rem;
+  }
+}
+
+.textBlockText {
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+  margin-bottom: 6.4rem;
+  @include onDesktop() {
+    font-size: $textCardSize;
+  }
+  @include onTablet() {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+
+.cardBarossa {
+  @extend %cardWithTabBlock;
+
+  @include onLargeDesktop() {
+  }
+  @include onSmallTablet() {
+  }
+}
+
+.cardBarossaTitle {
+  @extend %cardWithTabBlockTitle;
+  @include onDesktop() {
+    white-space: normal;
+  }
+}
+
+.cardBarossaTitleText {
+  @extend %titleTextSpan;
+}
+
+.cardBarossaImage {
+  @extend %forImage;
+}
+
+.portfolioBlockButton {
+  margin-left: 1.5rem;
+  @extend %fillGradientButton;
+  @include onTablet() {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+.buttonText {
+  display: block;
+}
+
+.cardsBlock {
+  margin-top: 3rem;
+  width: 57%;
+  @include onSmallTablet() {
+    width: 100%;
+  }
+}
+
+.cardB2B {
+  @extend %cardWithTabBlock;
+  margin-bottom: 7.5rem;
+}
+
+.cardB2BTitle {
+  @extend %cardWithTabBlockTitle;
+  @include onDesktop() {
+    white-space: normal;
+  }
+}
+.cardB2BTitleText {
+  @extend %titleTextSpan;
+}
+
+.cardB2BImage {
+  @extend %forImage;
+}
+
+.cardFloraNow {
+  @extend %cardWithTabBlock;
+  margin: 0 auto;
+  max-width: 74.5rem;
+}
+
+.cardFloraNowTitle {
+  @extend %cardWithTabBlockTitle;
+  @include onDesktop() {
+    white-space: normal;
+  }
+}
+.cardFloraNowTitleText {
+  @extend %titleTextSpan;
+}
+
+.cardFloraNowImage {
+  @extend %forImage;
+}

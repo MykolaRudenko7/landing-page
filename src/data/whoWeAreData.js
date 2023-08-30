@@ -1,4 +1,4 @@
-import WhoWeAreSectionImage from "images/whoWeAre/whoWeAreImage.png";
+import WhoWeAreSectionImage from "images/whoWeAreSection/whoWeAreImage.png";
 
 export const whoWeAreSectionData = {
   imageSrc: WhoWeAreSectionImage,

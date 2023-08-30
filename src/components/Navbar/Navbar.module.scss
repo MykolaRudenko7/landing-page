@@ -41,9 +41,7 @@
 }
 
 .logoImage {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+  @extend %forImage;
 }
 
 .linksWrapper {
@@ -144,11 +142,11 @@
     transform: rotate(-45deg);
 
     .burger__line1 {
-      transform: rotate(-90deg) translateX(0.3rem);
+      transform: rotate(-90deg) translateX(0.1rem);
     }
 
     .burger__line3 {
-      transform: rotate(-90deg) translateX(-0.3rem);
+      transform: rotate(-90deg) translateX(-0.1rem);
     }
   }
 }

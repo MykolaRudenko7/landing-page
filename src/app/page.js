@@ -1,8 +1,9 @@
 import Navbar from "components/Navbar";
 import WhoWeAre from "components/WhoWeAreSection";
-import StartHereSection from "components/StartHereSection";
-import styles from "app/Home.module.scss";
 import ServicesSection from "components/ServicesSection";
+import StartHereSection from "components/StartHereSection";
+import PortfilioSection from "components/PortfilioSection";
+import styles from "app/Home.module.scss";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <StartHereSection />
           <WhoWeAre />
           <ServicesSection />
+          <PortfilioSection />
         </main>
       </div>
     </main>
