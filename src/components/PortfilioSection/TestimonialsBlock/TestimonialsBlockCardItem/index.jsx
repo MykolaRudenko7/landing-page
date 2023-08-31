@@ -10,7 +10,11 @@ export default function TestimonialsBlockCardItem({
   return (
     <div className={styles.testimonialsBlockCardItem}>
       <div className={styles.cardImageWrapper}>
-        <Image className={styles.cardImage} alt="character image" src={imageSrc} />
+        <Image
+          className={styles.cardImage}
+          alt="character image"
+          src={imageSrc}
+        />
       </div>
       <div className={styles.cardTextBlock}>
         <p className={styles.cardName}>{name}</p>
