@@ -9,6 +9,7 @@
   backdrop-filter: blur(3.85rem);
   border-radius: 50%;
   transition: $transitionAnimation;
+  overflow: hidden;
 
   &:nth-child(1) {
     transform: translate(-170%, 100%);

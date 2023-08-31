@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.frame}>
-        <header className={styles.header}>{/* <Navbar /> */}</header>
+        <header className={styles.header}>
+          <Navbar />
+        </header>
         <main>
-          {/* <StartHereSection />
+          <StartHereSection />
           <WhoWeAre />
-          <ServicesSection /> */}
+          <ServicesSection />
           <PortfilioSection />
         </main>
       </div>

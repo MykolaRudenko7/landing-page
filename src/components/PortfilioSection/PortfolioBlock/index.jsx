@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { portfolioSectionData } from "data/portfolioSectionData";
-import styles from "components/PortfilioSection/PortfolioBlock/PortfolioBlock.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import { portfolioSectionData } from 'data/portfolioSectionData';
+import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlock.module.scss';
 
 export default function PortfolioBlock() {
   const {
-    textBlock,
+    textBlock: { text, title },
     cards: { cardBarossa, cardFloraNow, cardB2B },
   } = portfolioSectionData.portfolioBlockData;
 
@@ -17,13 +17,11 @@ export default function PortfolioBlock() {
             <h3 className={styles.portfolioLabel}>
               <span className={styles.buttonText}>Portfolio</span>
             </h3>
-            <h5 className={styles.textBlockTitle}>{textBlock.title}</h5>
-            <p className={styles.textBlockText}>{textBlock.text}</p>
+            <h5 className={styles.textBlockTitle}>{title}</h5>
+            <p className={styles.textBlockText}>{text}</p>
             <div className={styles.cardBarossa}>
               <h6 className={styles.cardBarossaTitle}>
-                <span className={styles.cardBarossaTitleText}>
-                  {cardBarossa.title}
-                </span>
+                <span className={styles.cardBarossaTitleText}>{cardBarossa.title}</span>
               </h6>
               <div className={styles.cardBarossaImageWrapper}>
                 <Image
@@ -60,9 +58,7 @@ export default function PortfolioBlock() {
           </div>
           <div className={styles.cardFloraNow}>
             <h6 className={styles.cardFloraNowTitle}>
-              <span className={styles.cardFloraNowTitleText}>
-                {cardFloraNow.title}
-              </span>
+              <span className={styles.cardFloraNowTitleText}>{cardFloraNow.title}</span>
             </h6>
             <div className={styles.cardFloraNowImageWrapper}>
               <Image

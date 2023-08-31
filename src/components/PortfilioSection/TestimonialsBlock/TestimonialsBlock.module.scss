@@ -1,2 +1,119 @@
 .testimonialsBlock {
+  padding-top: 8rem;
+  @include onSmallTablet() {
+    padding-top: 3rem;
+  }
+}
+
+.testimonialsBlockWrapper {
+  display: flex;
+  gap: 8.5rem;
+
+  @include onLargeDesktop() {
+    gap: 5rem;
+  }
+  @include onTablet() {
+    gap: 3rem;
+  }
+  @include onSmallTablet() {
+    display: block;
+  }
+}
+
+.textBlock {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  color: $mainDarkBlueColor;
+  align-items: start;
+
+  @include onTablet() {
+    flex: 0 0 50%;
+  }
+  @include onSmallTablet() {
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.testimonialsBlockLable {
+  @extend %borderGradientButton;
+  margin-left: 1.5rem;
+}
+
+.testimonialsBlockTitle {
+  font-size: $mediumTitleSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 4.4rem;
+
+  @include onTablet() {
+    font-size: $textCardSize;
+    margin-bottom: 3rem;
+  }
+  @include onSmallTablet() {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+}
+
+.testimonialsBlockText {
+  font-size: $textParagraphSize;
+
+  @include onDesktop() {
+    font-size: $textCardSize;
+  }
+  @include onTablet() {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+}
+
+.testimonialsBlockButton {
+  @extend %fillGradientButton;
+  margin-left: 1.5rem;
+}
+
+.cards {
+  flex: 0 0 70%;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $mainBlueColor;
+
+  @include onTablet() {
+    flex: 0 0 50%;
+  }
+}
+
+.cardsWrapper {
+  width: 100%;
+  display: flex;
+  gap: 3.8rem;
+  padding-top: 7.7rem;
+
+  @include onTablet() {
+    gap: 3rem;
+  }
+  @include onSmallTablet() {
+    gap: 2rem;
+  }
+}
+
+.cards::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: $mainYellowColor;
+  border-radius: 2rem;
+}
+
+.cards::-webkit-scrollbar-track {
+  background-color: $headerBackgroundColor;
+  border-radius: 2rem;
 }

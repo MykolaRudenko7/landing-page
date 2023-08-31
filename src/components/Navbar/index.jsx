@@ -33,7 +33,11 @@ export default function Navbar() {
           })}
         >
           {links.map((item) => (
-            <LinkItem key={uuidv4()} {...item} />
+            <LinkItem
+              key={uuidv4()}
+              {...item}
+              handleMenuToggle={handleMenuToggle}
+            />
           ))}
         </div>
       </div>
