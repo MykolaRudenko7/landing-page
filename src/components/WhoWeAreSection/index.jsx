@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { whoWeAreSectionData } from "data/whoWeAreData";
-import styles from "components/WhoWeAreSection/WhoWeAreSection.module.scss";
+import Image from 'next/image'
+import { whoWeAreSectionData } from 'data/whoWeAreSectionData'
+import styles from 'components/WhoWeAreSection/WhoWeAreSection.module.scss'
 
 export default function WhoWeAreSection() {
-  const { imageSrc, text, title } = whoWeAreSectionData;
+  const { imageSrc, text, title } = whoWeAreSectionData
 
   return (
     <section id="whoWeAre" className={styles.whoWeAre}>
@@ -26,5 +26,5 @@ export default function WhoWeAreSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

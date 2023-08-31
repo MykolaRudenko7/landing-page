@@ -1,8 +1,8 @@
-import cardImage1 from 'images/portfolioSection/portfolioBlock/cardImage1.svg';
-import cardImage2 from 'images/portfolioSection/portfolioBlock/cardImage2.svg';
-import cardImage3 from 'images/portfolioSection/portfolioBlock/cardImage3.svg';
-import avatarImage1 from 'images/portfolioSection/testimonialsBlock/avatar1.svg';
-import avatarImage2 from 'images/portfolioSection/testimonialsBlock/avatar2.svg';
+import cardImage1 from 'images/portfolioSection/portfolioBlock/cardImage1.svg'
+import cardImage2 from 'images/portfolioSection/portfolioBlock/cardImage2.svg'
+import cardImage3 from 'images/portfolioSection/portfolioBlock/cardImage3.svg'
+import avatarImage1 from 'images/portfolioSection/testimonialsBlock/avatar1.svg'
+import avatarImage2 from 'images/portfolioSection/testimonialsBlock/avatar2.svg'
 
 export const portfolioSectionData = {
   portfolioBlockData: {
@@ -89,4 +89,4 @@ export const portfolioSectionData = {
       },
     ],
   },
-};
+}

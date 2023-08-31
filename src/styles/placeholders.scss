@@ -46,11 +46,7 @@
   }
 
   &:hover {
-    background: linear-gradient(
-      112deg,
-      rgba(64, 204, 255, 0.5) 0%,
-      #ffd600 100%
-    );
+    background: linear-gradient(112deg, rgba(64, 204, 255, 0.5) 0%, #ffd600 100%);
   }
 }
 
@@ -88,7 +84,7 @@
   transition: $transitionAnimation;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;

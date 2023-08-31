@@ -1,12 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
-import { v4 as uuidv4 } from "uuid";
-import { startHereSectionData } from "data/startHereSectionData";
-import StartHereCardItem from "components/StartHereSection/StartHereCardItem";
-import styles from "components/StartHereSection/StartHereSection.module.scss";
+import Link from 'next/link'
+import Image from 'next/image'
+import { v4 as uuidv4 } from 'uuid'
+import { startHereSectionData } from 'data/startHereSectionData'
+import StartHereCardItem from 'components/StartHereSection/StartHereCardItem'
+import styles from 'components/StartHereSection/StartHereSection.module.scss'
 
 export default function StartHereSection() {
-  const { textBlock } = startHereSectionData;
+  const { textBlock } = startHereSectionData
 
   return (
     <section id="startHere" className={styles.startHere}>
@@ -34,20 +34,16 @@ export default function StartHereSection() {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <Image
-            className={styles.image}
-            src={textBlock.imageSrc}
-            alt="start here block image"
-          />
+          <Image className={styles.image} src={textBlock.imageSrc} alt="start here block image" />
         </div>
       </div>
       <div className={styles.cardsBlock}>
         <div className={styles.cardsBlockContainer}>
           {startHereSectionData.cards.map((card) => (
-            <StartHereCardItem {...card} key={uuidv4()} />
+            <StartHereCardItem key={uuidv4()} {...card} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

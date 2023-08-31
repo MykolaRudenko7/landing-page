@@ -1,7 +1,7 @@
-import { v4 as uuidv4 } from "uuid";
-import { servicesSectionData } from "data/servicesSectionData";
-import ServiceSectionCardItem from "components/ServicesSection/ServiceSectionCardItem";
-import styles from "components/ServicesSection/ServicesSection.module.scss";
+import { v4 as uuidv4 } from 'uuid'
+import { servicesSectionData } from 'data/servicesSectionData'
+import ServiceSectionCardItem from 'components/ServicesSection/ServiceSectionCardItem'
+import styles from 'components/ServicesSection/ServicesSection.module.scss'
 
 export default function ServicesSection() {
   return (
@@ -17,5 +17,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

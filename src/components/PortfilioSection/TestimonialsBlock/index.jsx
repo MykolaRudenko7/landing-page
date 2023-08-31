@@ -1,7 +1,8 @@
-import Link from "next/link";
-import { portfolioSectionData } from "data/portfolioSectionData";
-import TestimonialsBlockCardItem from "./TestimonialsBlockCardItem";
-import styles from "components/PortfilioSection/TestimonialsBlock/TestimonialsBlock.module.scss";
+import Link from 'next/link'
+import { v4 as uuidv4 } from 'uuid'
+import { portfolioSectionData } from 'data/portfolioSectionData'
+import TestimonialsBlockCardItem from './TestimonialsBlockCardItem'
+import styles from 'components/PortfilioSection/TestimonialsBlock/TestimonialsBlock.module.scss'
 
 export default function TestimonialsBlock() {
   const {
@@ -9,7 +10,7 @@ export default function TestimonialsBlock() {
       textBlock: { text, title },
       cards,
     },
-  } = portfolioSectionData;
+  } = portfolioSectionData
 
   return (
     <div className={styles.testimonialsBlock}>
@@ -34,11 +35,11 @@ export default function TestimonialsBlock() {
         <div className={styles.cards}>
           <div className={styles.cardsWrapper}>
             {cards.map((item) => (
-              <TestimonialsBlockCardItem {...item} />
+              <TestimonialsBlockCardItem key={uuidv4()} {...item} />
             ))}
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

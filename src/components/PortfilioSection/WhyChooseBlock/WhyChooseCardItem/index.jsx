@@ -1,4 +1,4 @@
-import styles from "components/PortfilioSection/WhyChooseBlock/WhyChooseCardItem/WhyChooseCardItem.module.scss";
+import styles from 'components/PortfilioSection/WhyChooseBlock/WhyChooseCardItem/WhyChooseCardItem.module.scss'
 
 export default function WhyChooseCardItem({ title, text }) {
   return (
@@ -8,5 +8,5 @@ export default function WhyChooseCardItem({ title, text }) {
         <p className={styles.text}>{text}</p>
       </div>
     </div>
-  );
+  )
 }

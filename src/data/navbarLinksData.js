@@ -1,4 +1,4 @@
-import logoImage from 'images/navbar/logo.svg';
+import logoImage from 'images/navbar/logo.svg'
 
 export const navbarData = {
   links: [
@@ -9,4 +9,4 @@ export const navbarData = {
     { id: 'contactUs', title: 'Contact us' },
   ],
   logoImage: logoImage,
-};
+}

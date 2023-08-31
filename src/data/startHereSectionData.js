@@ -1,10 +1,10 @@
-import startHereSectionImage from 'images/startHereSection/textBlock/image.png';
-import startHereSectionCard1 from 'images/startHereSection/cards/startHereSectionCard1.svg';
-import startHereSectionCard2 from 'images/startHereSection/cards/startHereSectionCard2.svg';
-import startHereSectionCard3 from 'images/startHereSection/cards/startHereSectionCard3.svg';
-import startHereSectionCard4 from 'images/startHereSection/cards/startHereSectionCard4.svg';
-import startHereSectionCard5 from 'images/startHereSection/cards/startHereSectionCard5.svg';
-import startHereSectionCard6 from 'images/startHereSection/cards/startHereSectionCard6.svg';
+import startHereSectionImage from 'images/startHereSection/textBlock/image.png'
+import startHereSectionCard1 from 'images/startHereSection/cards/startHereSectionCard1.svg'
+import startHereSectionCard2 from 'images/startHereSection/cards/startHereSectionCard2.svg'
+import startHereSectionCard3 from 'images/startHereSection/cards/startHereSectionCard3.svg'
+import startHereSectionCard4 from 'images/startHereSection/cards/startHereSectionCard4.svg'
+import startHereSectionCard5 from 'images/startHereSection/cards/startHereSectionCard5.svg'
+import startHereSectionCard6 from 'images/startHereSection/cards/startHereSectionCard6.svg'
 
 export const startHereSectionData = {
   textBlock: {
@@ -51,4 +51,4 @@ export const startHereSectionData = {
       text: `Gain quick access to actionable data, allowing for informed decisions. Our accurate analytics cut down trial-and-error costs, optimizing your...`,
     },
   ],
-};
+}

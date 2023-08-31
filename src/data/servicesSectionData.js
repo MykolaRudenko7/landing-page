@@ -37,4 +37,4 @@ export const servicesSectionData = [
       'Software Development',
     ],
   },
-];
+]

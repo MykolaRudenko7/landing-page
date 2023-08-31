@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { Link } from "react-scroll";
-import styles from "components/Navbar/LinkItem/LinkItem.module.scss";
+import { Link } from 'react-scroll'
+import styles from 'components/Navbar/LinkItem/LinkItem.module.scss'
 
 export default function LinkItem({ title, id, handleMenuToggle }) {
   return (
@@ -15,5 +15,5 @@ export default function LinkItem({ title, id, handleMenuToggle }) {
     >
       {title}
     </Link>
-  );
+  )
 }
