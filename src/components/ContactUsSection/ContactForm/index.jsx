@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 
 export default function ContactForm() {
+  const formRef = useRef(null)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,12 +12,9 @@ export default function ContactForm() {
     message: '',
   })
 
-  const formRef = useRef(null)
-
   const handleFormInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
-
   const handleSubmitFormData = (e) => {
     e.preventDefault()
     formRef.current.reset()

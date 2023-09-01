@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { contactUsSectionData } from 'data/contactUsSectionData'
 import ContactForm from 'components/ContactUsSection/ContactForm'
 import styles from 'components/ContactUsSection/ContactUsSection.module.scss'
-import { useState } from 'react'
 
 export default function ContactUsSection() {
   const { text, title, imageSrs } = contactUsSectionData
