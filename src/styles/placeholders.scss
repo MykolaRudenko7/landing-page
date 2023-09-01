@@ -16,16 +16,6 @@
   font-weight: $mediumFontWeight;
 }
 
-%smallTitle {
-  font-size: $smallTitleSize;
-  font-weight: $mediumFontWeight;
-}
-
-%subtitleCargSize {
-  font-size: $textParagraphSize;
-  font-weight: $mediumFontWeight;
-}
-
 %fillGradientButton {
   display: inline-block;
   text-align: center;
@@ -39,6 +29,7 @@
   transform: skew(-25deg);
   background: linear-gradient(112deg, #ffd600 0%, rgba(64, 204, 255, 0.6) 100%);
   transition: $transitionAnimation;
+  text-shadow: $textShadow;
 
   .buttonText {
     display: inline-block;
@@ -55,7 +46,7 @@
   text-align: center;
   cursor: pointer;
   text-align: center;
-  color: $mainWhiteColor;
+  color: $mainDarkBlueColor;
   letter-spacing: 0.07rem;
   font-size: 2.4rem;
   font-weight: $mediumFontWeight;
@@ -68,9 +59,11 @@
   border-image-source: linear-gradient(81deg, #ffd600 0%, #40ccff 100%);
   filter: drop-shadow(0.3rem 0.4rem 1.2rem rgba(0, 0, 0, 0.25));
   transition: $transitionAnimation;
+  text-shadow: $textShadow;
 
   .buttonText {
     transform: skew(25deg);
+    display: inline-block;
   }
 
   &:hover {
@@ -168,4 +161,30 @@
 %titleTextSpan {
   display: inline-block;
   transform: skew(25deg);
+}
+
+%decorCirclesYellow {
+  background-color: $mainYellowColor;
+  width: 133.7rem;
+  height: 133.7rem;
+  border-radius: 50%;
+  filter: blur(28.85rem);
+
+  @include onTablet() {
+    width: 50rem;
+    height: 50rem;
+  }
+}
+
+%decorCirclesBlue {
+  background-color: $mainBlueColor;
+  width: 133.7rem;
+  height: 133.7rem;
+  border-radius: 50%;
+  filter: blur(28.85rem);
+
+  @include onTablet() {
+    width: 50rem;
+    height: 50rem;
+  }
 }

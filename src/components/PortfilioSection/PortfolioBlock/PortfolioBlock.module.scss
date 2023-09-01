@@ -1,5 +1,27 @@
 .portfolioBlock {
   padding-bottom: 10rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(65%, 5%);
+    z-index: -1;
+    @extend %decorCirclesBlue;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(5%, 37%);
+    z-index: -1;
+    @extend %decorCirclesYellow;
+    width: 176rem;
+    height: 176rem;
+  }
 
   @include onTablet() {
     padding-bottom: 5rem;
@@ -35,7 +57,7 @@
 .portfolioLabel {
   @extend %borderGradientButton;
   cursor: default;
-  padding: 1.1rem 8.7rem;
+  padding: 1.1rem 8rem;
   margin-bottom: 10rem;
   margin-left: 1.5rem;
 
@@ -46,15 +68,15 @@
     margin-bottom: 5rem;
   }
   @include onSmallTablet() {
-    padding: 1rem 4rem;
+    padding: 1rem 5rem;
     font-size: 1.6rem;
+    margin-left: 0;
   }
 }
 
 .textBlockTitle {
   color: $mainDarkBlueColor;
-  font-size: $mediumTitleSize;
-  font-weight: $mediumFontWeight;
+  @extend %mediumTitle;
   margin-bottom: 4rem;
 
   @include onTablet() {
@@ -105,12 +127,14 @@
 }
 
 .portfolioBlockButton {
+  padding: 1.6rem 6rem;
   @extend %fillGradientButton;
   margin-left: 1.5rem;
 
   @include onTablet() {
-    padding: 1rem 2rem;
+    padding: 1rem 3.5rem;
     font-size: 1.4rem;
+    margin-left: 0;
   }
 }
 
