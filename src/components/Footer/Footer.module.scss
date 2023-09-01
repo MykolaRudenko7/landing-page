@@ -1,0 +1,213 @@
+.footer {
+  padding-top: 8rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-60%, 25%);
+    @extend %decorCirclesYellow;
+    z-index: -1;
+    width: 180rem;
+    height: 180rem;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%);
+    z-index: -1;
+    @extend %decorCirclesBlue;
+    width: 180rem;
+    height: 180rem;
+  }
+
+  @include onSmallTablet() {
+    padding-top: 3rem;
+  }
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+  padding: 3.6rem 1.4rem 1.4rem 1.4rem;
+  background-image: $circleWhyChooseCardGradient;
+  backdrop-filter: blur(4.55rem);
+  border-radius: 2rem;
+}
+
+.footerBlocksWrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 4.5rem;
+
+  @include onSmallTablet() {
+    flex-wrap: wrap;
+  }
+  @include onPhone() {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.logoWrapper {
+  width: 37rem;
+
+  @include onDesktop {
+    width: 20rem;
+  }
+}
+
+.logoImage {
+  @extend %forImage;
+  height: auto;
+}
+
+.scrollLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+
+  @include onSmallTablet() {
+    text-align: center;
+  }
+}
+
+.scrollLinks {
+  color: $mainDarkBlueColor;
+  font-size: $textCardSize;
+  font-weight: $semiBoldFontWeight;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: uppercase;
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+}
+
+.ordinaryLink {
+  color: $mainDarkBlueColor;
+  font-size: 2.4rem;
+  font-weight: $lightFontWeight;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  display: block;
+  @extend %underlineLinkHoverEffect;
+
+  @include onDesktop() {
+    font-size: 1.8rem;
+  }
+  @include onTablet() {
+    font-size: 1.6rem;
+  }
+}
+
+.servicesLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: $mainDarkBlueColor;
+  font-size: $textCardSize;
+  font-weight: $semiBoldFontWeight;
+  color: $mainDarkBlueColor;
+  text-transform: uppercase;
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    text-align: center;
+  }
+}
+
+.serviceLink {
+  font-size: 2.4rem;
+  color: $mainDarkBlueColor;
+  font-weight: $lightFontWeight;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  @extend %underlineLinkHoverEffect;
+
+  @include onDesktop() {
+    font-size: 1.8rem;
+  }
+  @include onTablet() {
+    font-size: 1.6rem;
+  }
+}
+
+.getInTouch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.getInTouchTitle {
+  color: $mainDarkBlueColor;
+  font-size: $textCardSize;
+  font-weight: $semiBoldFontWeight;
+  white-space: nowrap;
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: $textParagraphSize;
+  }
+}
+
+.socialsImages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialImageLink {
+  display: inline-block;
+  transition: $transitionAnimation;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  @include onDesktop() {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.socialImage {
+  @extend %forImage;
+}
+
+.about {
+  text-align: center;
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+  font-weight: $mediumFontWeight;
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+}
