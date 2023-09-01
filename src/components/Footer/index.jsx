@@ -58,7 +58,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         <p className={styles.about}>2023@TECH COSSACKS</p>
       </div>
     </div>
