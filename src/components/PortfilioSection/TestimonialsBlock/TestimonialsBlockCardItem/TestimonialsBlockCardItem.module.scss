@@ -1,0 +1,71 @@
+.testimonialsBlockCardItem {
+  position: relative;
+  min-width: 46.5rem;
+  border-radius: 3.8rem;
+  background: $backgroundServiceCard;
+  padding: 8.6rem 2.5rem 9rem 2.5rem;
+  transition: $transitionAnimation;
+
+  @include onSmallTablet() {
+    border-radius: 3rem;
+    min-width: 30rem;
+    padding: 7rem 2rem 2rem 2rem;
+  }
+  @include onPhone() {
+    border-radius: 2rem;
+    min-width: 25rem;
+    padding: 7rem 2rem 2rem 2rem;
+  }
+
+  &:hover {
+    box-shadow: 0.5rem -0.5rem 1rem $mainDarkBlueColor;
+  }
+}
+
+.cardImageWrapper {
+  @extend %flexCenter;
+  width: 12.5rem;
+  height: 12.5rem;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardImage {
+  @extend %forImage;
+}
+
+.cardTextBlock {
+  text-align: center;
+  color: $mainDarkBlueColor;
+  font-size: 2.4rem;
+}
+
+.cardName {
+  font-size: $smallTitleSize;
+  font-weight: $mediumFontWeight;
+  margin-bottom: 1.5rem;
+
+  @include onTablet() {
+    font-size: $textCardSize;
+  }
+  @include onSmallTablet() {
+    font-size: 2.4rem;
+  }
+}
+
+.cardVacancy {
+  margin-bottom: 3rem;
+}
+
+.cardText {
+  @include onTablet() {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+}

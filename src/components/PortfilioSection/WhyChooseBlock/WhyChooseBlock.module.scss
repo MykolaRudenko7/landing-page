@@ -1,0 +1,153 @@
+.whyChooseBlock {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0 8rem 0;
+
+  @include onSmallTablet() {
+    padding: 3rem 0;
+  }
+}
+.whyChooseBlockWrapper {
+  margin-top: 20rem;
+  margin-bottom: 19rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include onSmallTablet() {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.mainCard {
+  @extend %flexCenter;
+  z-index: 2;
+  width: 84rem;
+  height: 84rem;
+  background-image: $circleWhyChooseCardGradient;
+  filter: $circleWhyChooseCardFilter;
+  backdrop-filter: blur(3.85rem);
+  border-radius: 50%;
+  text-align: center;
+  transition: $transitionAnimation;
+  overflow: hidden;
+
+  &:hover {
+    background-color: $backgroundServiceCard;
+  }
+
+  @include forCircles() {
+    width: 55rem;
+    height: 55rem;
+  }
+  @include onDesktop() {
+    width: 35rem;
+    height: 35rem;
+  }
+  @include onSmallTablet() {
+    position: static;
+    height: 100%;
+    width: 100%;
+    border-radius: 2.5rem;
+    background-color: $headerBackgroundColor;
+  }
+}
+
+.mainCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem 7.7rem;
+
+  @include forCircles() {
+    gap: 3rem;
+    padding: 1rem 4rem;
+  }
+  @include onDesktop() {
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+  @include onSmallTablet() {
+    gap: 2.5rem;
+  }
+}
+
+.mainCardTitle {
+  color: $mainDarkBlueColor;
+  font-size: $mediumTitleSize;
+  font-weight: $mediumFontWeight;
+
+  @include forCircles() {
+    font-size: $textCardSize;
+  }
+  @include onDesktop() {
+    font-size: 1.8rem;
+  }
+  @include onTablet() {
+    font-size: 1.4rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+.mainCardText {
+  color: $mainDarkBlueColor;
+  font-size: $textParagraphSize;
+
+  @include forCircles() {
+    font-size: 1.6rem;
+  }
+  @include onDesktop() {
+    font-size: 1.4rem;
+  }
+  @include onTablet() {
+    font-size: 1.1rem;
+  }
+  @include onSmallTablet() {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+}
+
+.smallCircles {
+  position: absolute;
+  @extend %flexCenter;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+  @include onSmallTablet() {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+.elevateButton {
+  @extend %fillGradientButton;
+
+  @include forCircles() {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+.buttonLable {
+  @extend %borderGradientButton;
+
+  @include forCircles() {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}

@@ -9,6 +9,7 @@
     padding-bottom: 3rem;
   }
 }
+
 .whoWeAreWrapper {
   display: flex;
 
@@ -17,35 +18,36 @@
     gap: 2rem;
   }
 }
+
 .whoWeAreImageWrapper {
   @extend %flexCenter;
   width: 50%;
+
   @include onSmallTablet() {
     width: 100%;
   }
 }
+
 .whoWeAreImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  @extend %forImage;
 }
 
 .whoWeAreTextBlock {
   padding: 0 0 0 1rem;
   width: 50%;
   text-align: left;
+
   @include onSmallTablet() {
     width: 100%;
     text-align: center;
   }
 }
 
-.whoWeAreLableButton {
+.whoWeAreLable {
   @extend %borderGradientButton;
   cursor: default;
-  display: inline-block;
   padding: 1.1rem 8.7rem;
-  margin-bottom: 19rem;
+  margin-bottom: 10rem;
 
   @include onLargeDesktop() {
     margin-bottom: 10rem;
@@ -58,6 +60,7 @@
     font-size: 1.6rem;
   }
 }
+
 .title {
   color: $mainDarkBlueColor;
   font-size: $mediumTitleSize;
@@ -75,6 +78,7 @@
     font-size: 2rem;
   }
 }
+
 .text {
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;

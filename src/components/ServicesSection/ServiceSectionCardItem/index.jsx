@@ -1,5 +1,5 @@
-import { v4 as uuidv4 } from "uuid";
-import styles from "components/ServicesSection/ServiceSectionCardItem/ServiceSectionCardItem.module.scss";
+import { v4 as uuidv4 } from 'uuid'
+import styles from 'components/ServicesSection/ServiceSectionCardItem/ServiceSectionCardItem.module.scss'
 
 export default function ServiceSectionCardItem({ listTitle, listOptons }) {
   return (
@@ -15,5 +15,5 @@ export default function ServiceSectionCardItem({ listTitle, listOptons }) {
         ))}
       </ul>
     </div>
-  );
+  )
 }

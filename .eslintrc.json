@@ -13,10 +13,7 @@
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": "off",
     "jsx-a11y/anchor-is-valid": 0,
-    "no-unused-expressions": [
-      "error",
-      { "allowShortCircuit": true, "allowTernary": true }
-    ],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "no-console": [
       "error",
       {
@@ -89,11 +86,7 @@
     "no-use-before-define": "off",
     "no-useless-constructor": 0,
     "no-empty-function": 0,
-    "arrow-body-style": [
-      "error",
-      "as-needed",
-      { "requireReturnForObjectLiteral": false }
-    ],
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": false }],
     "import/order": 0,
     "lines-between-class-members": 0,
     "max-len": [
@@ -125,12 +118,7 @@
         "allowTemplateLiterals": true
       }
     ],
-    "no-restricted-syntax": [
-      "error",
-      "ForInStatement",
-      "LabeledStatement",
-      "WithStatement"
-    ],
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
     "import/no-extraneous-dependencies": [
       "error",
       {

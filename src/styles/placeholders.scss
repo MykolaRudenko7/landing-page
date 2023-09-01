@@ -27,8 +27,8 @@
 }
 
 %fillGradientButton {
+  display: inline-block;
   text-align: center;
-  @extend %flexCenter;
   cursor: pointer;
   color: $mainDarkBlueColor;
   font-size: 2.4rem;
@@ -41,20 +41,17 @@
   transition: $transitionAnimation;
 
   .buttonText {
+    display: inline-block;
     transform: skew(25deg);
   }
 
   &:hover {
-    background: linear-gradient(
-      112deg,
-      rgba(64, 204, 255, 0.5) 0%,
-      #ffd600 100%
-    );
+    background: linear-gradient(112deg, rgba(64, 204, 255, 0.5) 0%, #ffd600 100%);
   }
 }
 
 %borderGradientButton {
-  @extend %flexCenter;
+  display: inline-block;
   text-align: center;
   cursor: pointer;
   text-align: center;
@@ -87,7 +84,7 @@
   transition: $transitionAnimation;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -110,4 +107,65 @@
       transform-origin: left;
     }
   }
+}
+
+%cardWithTabBlock {
+  position: relative;
+  color: $mainDarkBlueColor;
+  background: $backgroundServiceCard;
+  padding: 3.8rem 1.3rem 1.6rem 1.3rem;
+  border-radius: 3.5rem;
+  transition: $transitionAnimation;
+
+  &:hover {
+    filter: $filterServiceCardTitle;
+    backdrop-filter: blur(2.35rem);
+  }
+}
+
+%cardWithTabBlockTitle {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) skew(-25deg);
+  font-size: 2.4rem;
+  text-align: center;
+  text-shadow: 0.05rem 0.1rem 0.1rem $mainDarkBlueColor;
+  font-weight: $mediumFontWeight;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: $backgroundServiceCard;
+  border-radius: 3.52rem;
+  padding: 1rem 2rem;
+  border-image: $borderGradientServiceCardTitle;
+  backdrop-filter: blur(2.35rem);
+  filter: $filterServiceCardTitle;
+
+  @include onDesktop() {
+    font-size: 2rem;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.4rem;
+  }
+  @include onPhone() {
+    font-size: 1.2rem;
+  }
+  @include onSmallPhone() {
+    font-size: 1.1rem;
+  }
+}
+
+%forImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+%titleTextSpan {
+  display: inline-block;
+  transform: skew(25deg);
 }

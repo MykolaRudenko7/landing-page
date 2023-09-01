@@ -1,3 +1,8 @@
+@mixin forCircles {
+  @media (max-width: 1655px) {
+    @content;
+  }
+}
 @mixin onLargeDesktop {
   @media (max-width: 1450px) {
     @content;

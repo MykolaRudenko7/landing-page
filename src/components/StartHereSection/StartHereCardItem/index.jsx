@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styles from "components/StartHereSection/StartHereCardItem/StartHereCardItem.module.scss";
+import Image from 'next/image'
+import styles from 'components/StartHereSection/StartHereCardItem/StartHereCardItem.module.scss'
 
 export default function StartHereCardItem({ imageSrc, title, subtitle, text }) {
   return (
@@ -11,5 +11,5 @@ export default function StartHereCardItem({ imageSrc, title, subtitle, text }) {
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.cardText}>{text}</p>
     </div>
-  );
+  )
 }
