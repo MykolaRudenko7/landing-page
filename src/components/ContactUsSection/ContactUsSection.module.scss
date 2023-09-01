@@ -1,0 +1,101 @@
+.contactUsSection {
+  padding: 8rem 0;
+
+  @include onSmallTablet {
+    padding: 3rem 0;
+  }
+}
+
+.contactUsSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @include onTablet() {
+    gap: 5rem;
+  }
+  @include onSmallTablet() {
+    gap: 2.5rem;
+  }
+}
+
+.textBlock {
+  color: $mainDarkBlueColor;
+  text-align: center;
+}
+
+.contactUsLabel {
+  padding: 1rem 9rem;
+  @extend %borderGradientButton;
+  margin-bottom: 3.7rem;
+
+  @include onSmallTablet() {
+    padding: 1rem 4.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+.buttonText {
+  color: $mainDarkBlueColor;
+}
+
+.contactUsTilte {
+  @extend %mediumTitle;
+  margin-bottom: 1rem;
+
+  @include onTablet() {
+    font-size: $textCardSize;
+  }
+  @include onSmallTablet() {
+    font-size: 2.4rem;
+  }
+}
+
+.contactUsText {
+  font-size: $subtitleCargSize;
+
+  @include onDesktop() {
+    font-size: $textCardSize;
+  }
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onSmallTablet() {
+    font-size: 1.6rem;
+  }
+}
+
+.formImageWrapper {
+  display: flex;
+  align-items: center;
+
+  @include onSmallTablet() {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.imageBlock {
+  flex: 0 0 54%;
+  @extend %flexCenter;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include onSmallTablet() {
+    flex-direction: column-reverse;
+  }
+}
+
+.imageWrapper {
+  max-width: 59rem;
+  text-align: center;
+}
+
+.image {
+  margin-top: -10rem;
+  @extend %forImage;
+
+  @include onTablet() {
+    margin-top: 0rem;
+  }
+}
