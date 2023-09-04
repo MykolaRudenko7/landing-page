@@ -66,7 +66,13 @@ export default function ContactForm() {
           className={styles.formBlockTextarea}
         />
       </label>
-      <button about="submit form" className={styles.submitButton} type="submit" value="Submit">
+      <button
+        tabIndex="0"
+        about="submit form"
+        className={styles.submitButton}
+        type="submit"
+        value="Submit"
+      >
         <span className={styles.buttonText}>Share Your Thoughts</span>
       </button>
     </form>

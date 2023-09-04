@@ -13,7 +13,7 @@ export default function ContactUsSection() {
       <div className={styles.contactUsSectionWrapper}>
         <div className={styles.textBlock}>
           <div className={styles.contactUsLabel}>
-            <p className={styles.buttonText}>Contact Us</p>
+            <h3 className={styles.buttonText}>Contact Us</h3>
           </div>
           <h5 className={styles.contactUsTilte}>{title}</h5>
           <p className={styles.contactUsText}>{text}</p>

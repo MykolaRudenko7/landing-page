@@ -17,19 +17,20 @@ export default function TestimonialsBlock() {
       <div className={styles.testimonialsBlockWrapper}>
         <div className={styles.textBlock}>
           <div className={styles.testimonialsBlockLable}>
-            <p className={styles.buttonText}>Testimonials</p>
+            <h3 className={styles.buttonText}>Testimonials</h3>
           </div>
           <div className={styles.textBlockWrapper}>
             <h5 className={styles.testimonialsBlockTitle}>{title}</h5>
             <p className={styles.testimonialsBlockText}>{text}</p>
           </div>
           <Link
+            tabIndex="0"
             href="#"
             about="learn more"
             role="button"
             className={styles.testimonialsBlockButton}
           >
-            <p className={styles.buttonText}>learn more</p>
+            <span className={styles.buttonText}>learn more</span>
           </Link>
         </div>
         <div className={styles.cards}>

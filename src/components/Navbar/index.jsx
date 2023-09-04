@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoLinksBlock}>
-        <Link href="" className={styles.logoWrapper}>
+        <Link tabIndex="0" href="" className={styles.logoWrapper}>
           <Image className={styles.logoImage} alt="logo image" src={logoImage} />
         </Link>
         <div
@@ -29,13 +29,19 @@ export default function Navbar() {
           })}
         >
           {links.map((item) => (
-            <LinkItem key={uuidv4()} {...item} handleMenuToggle={handleMenuToggle} />
+            <LinkItem tabIndex="0" key={uuidv4()} {...item} handleMenuToggle={handleMenuToggle} />
           ))}
         </div>
       </div>
       <div className={styles.navbarWrapper}>
-        <Link className={styles.navbarButton} href="#" role="button" about="boost your business!">
-          <p className={styles.buttonText}>Boost your business!</p>
+        <Link
+          tabIndex="0"
+          className={styles.navbarButton}
+          href="#"
+          role="button"
+          about="boost your business!"
+        >
+          <span className={styles.buttonText}>Boost your business!</span>
         </Link>
         <div
           className={cn(styles.menuBurger, {

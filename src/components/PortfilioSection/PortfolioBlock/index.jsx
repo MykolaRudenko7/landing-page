@@ -34,12 +34,13 @@ export default function PortfolioBlock() {
           </div>
           <div className={styles.buttonWrapper}>
             <Link
+              tabIndex="0"
               href="#"
               role="button"
               about="begin your project"
               className={styles.portfolioBlockButton}
             >
-              <p className={styles.buttonText}>Begin Your Project</p>
+              <span className={styles.buttonText}>Begin Your Project</span>
             </Link>
           </div>
         </div>

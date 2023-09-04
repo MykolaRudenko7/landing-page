@@ -18,9 +18,9 @@ export default function WhoWeAreSection() {
           />
         </div>
         <div className={styles.whoWeAreTextBlock}>
-          <h3 className={styles.whoWeAreLable}>
-            <p className={styles.buttonText}>Who we are</p>
-          </h3>
+          <div className={styles.whoWeAreLable}>
+            <h3 className={styles.buttonText}>Who we are</h3>
+          </div>
           <h4 className={styles.title}>{title}</h4>
           <p className={styles.text}>{text}</p>
         </div>

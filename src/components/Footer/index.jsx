@@ -17,32 +17,38 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
-          <Link href="#" className={styles.logoWrapper}>
+          <Link tabIndex="0" href="#" className={styles.logoWrapper}>
             <Image alt="logo image" src={logoImage} className={styles.logoImage} />
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
               {linksForScroll.map((link) => (
-                <LinkItem key={uuidv4()} {...link} />
+                <LinkItem tabIndex="0" key={uuidv4()} {...link} />
               ))}
             </ul>
             <ul className={styles.ordinaryLinks}>
               <li className={styles.ordinaryLinkWrapper}>
-                <Link href="#" className={styles.ordinaryLink}>
+                <Link tabIndex="0" href="#" className={styles.ordinaryLink}>
                   Privacy Policy
                 </Link>
               </li>
               <li className={styles.ordinaryLinkWrapper}>
-                <Link href="#" className={styles.ordinaryLink}>
+                <Link tabIndex="0" href="#" className={styles.ordinaryLink}>
                   Terms of Service
                 </Link>
               </li>
             </ul>
           </div>
           <div className={styles.servicesLinks}>
-            <LinkItem title={mainLink.title} id={mainLink.id} />
+            <LinkItem tabIndex="0" title={mainLink.title} id={mainLink.id} />
             {links.map(({ title, href }) => (
-              <Link className={styles.serviceLink} key={uuidv4()} href={href} about="services link">
+              <Link
+                tabIndex="0"
+                className={styles.serviceLink}
+                key={uuidv4()}
+                href={href}
+                about="services link"
+              >
                 {title}
               </Link>
             ))}
@@ -51,7 +57,13 @@ export default function Footer() {
             <p className={styles.getInTouchTitle}>{title}</p>
             <div className={styles.socialsImages}>
               {socials.map(({ href, iconSrc, alt }) => (
-                <Link className={styles.socialImageLink} key={uuidv4()} href={href} about="social">
+                <Link
+                  tabIndex="0"
+                  className={styles.socialImageLink}
+                  key={uuidv4()}
+                  href={href}
+                  about="social"
+                >
                   <Image className={styles.socialImage} width={42} alt={alt} src={iconSrc} />
                 </Link>
               ))}

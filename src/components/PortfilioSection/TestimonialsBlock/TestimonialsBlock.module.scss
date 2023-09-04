@@ -27,7 +27,7 @@
   justify-content: space-between;
   gap: 3rem;
   color: $mainDarkBlueColor;
-  align-items: start;
+  align-items: flex-start;
 
   @include onTablet() {
     flex: 0 0 50%;
@@ -41,11 +41,16 @@
 .testimonialsBlockLable {
   @extend %borderGradientButton;
   margin-left: 1.5rem;
+  padding: 1.4rem 8rem;
+
+  @include onSmallTablet() {
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
+  }
 }
 
 .testimonialsBlockTitle {
-  font-size: $mediumTitleSize;
-  font-weight: $mediumFontWeight;
+  @extend %mediumTitle;
   margin-bottom: 4.4rem;
 
   @include onTablet() {
@@ -70,13 +75,19 @@
   }
   @include onSmallTablet() {
     font-size: 1.6rem;
-    text-align: left;
   }
 }
 
 .testimonialsBlockButton {
   @extend %fillGradientButton;
   margin-left: 1.5rem;
+  padding: 1.4rem 9.5rem;
+
+  @include onSmallTablet() {
+    padding: 1rem 5rem;
+    font-size: 1.6rem;
+    margin-left: 0;
+  }
 }
 
 .cards {
@@ -84,6 +95,7 @@
   overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: $mainBlueColor;
+  padding-left: 0.5rem;
 
   @include onTablet() {
     flex: 0 0 50%;
