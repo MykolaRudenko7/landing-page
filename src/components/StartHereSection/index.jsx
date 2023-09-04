@@ -16,6 +16,7 @@ export default function StartHereSection() {
           <p className={styles.textBlockText}>{textBlock.text}</p>
           <div className={styles.buttonsBlock}>
             <Link
+              tabIndex="0"
               className={styles.buttonConsultation}
               about="schedule a consultation"
               href="#"
@@ -24,6 +25,7 @@ export default function StartHereSection() {
               <span className={styles.buttonText}>Schedule a consultation</span>
             </Link>
             <Link
+              tabIndex="0"
               about="explore our services"
               href="#"
               role="button"

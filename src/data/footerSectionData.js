@@ -5,7 +5,7 @@ import socialIcon3 from 'images/footer/ln-icon.svg'
 import socialIcon4 from 'images/footer/fb-icon.svg'
 
 export const footerSectionData = {
-  logoImage: logoImage,
+  logoImage,
   linksForScroll: [
     { id: 'startHere', title: 'Start Here' },
     { id: 'whoWeAre', title: 'Who we are' },

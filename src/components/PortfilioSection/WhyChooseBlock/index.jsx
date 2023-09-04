@@ -19,7 +19,13 @@ export default function WhyChooseBlock() {
             </div>
             <h6 className={styles.mainCardTitle}>{mainCard.title}</h6>
             <p className={styles.mainCardText}>{mainCard.text}</p>
-            <Link href="#" role="button" about="ready to elevate?" className={styles.elevateButton}>
+            <Link
+              tabIndex="0"
+              href="#"
+              role="button"
+              about="ready to elevate?"
+              className={styles.elevateButton}
+            >
               <span className={styles.buttonText}>Ready to Elevate?</span>
             </Link>
           </div>
