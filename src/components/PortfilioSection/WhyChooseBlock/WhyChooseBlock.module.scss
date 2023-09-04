@@ -1,7 +1,29 @@
 .whyChooseBlock {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 5rem 0 8rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%, 45%);
+    @extend %decorCirclesBlue;
+    z-index: -1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(39%, 59%);
+    z-index: -1;
+    @extend %decorCirclesYellow;
+    width: 217rem;
+    height: 217rem;
+  }
 
   @include onSmallTablet() {
     padding: 3rem 0;
@@ -81,8 +103,7 @@
 
 .mainCardTitle {
   color: $mainDarkBlueColor;
-  font-size: $mediumTitleSize;
-  font-weight: $mediumFontWeight;
+  @extend %mediumTitle;
 
   @include forCircles() {
     font-size: $textCardSize;
@@ -98,6 +119,7 @@
     text-align: center;
   }
 }
+
 .mainCardText {
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
@@ -139,6 +161,10 @@
 
   @include forCircles() {
     padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  @include onSmallTablet() {
+    padding: 1rem 4.5rem;
     font-size: 1.2rem;
   }
 }
