@@ -1,0 +1,114 @@
+.formBlock {
+  flex: 0 0 46%;
+
+  @include onTablet {
+    gap: 2.5rem;
+  }
+  @include onSmallTablet {
+    width: 95%;
+  }
+}
+
+.formBlockLabel {
+  display: block;
+}
+
+.formBlockInput {
+  position: relative;
+  width: 98%;
+  height: 100%;
+  margin-bottom: 4.3rem;
+  padding: 1.6rem 3.5rem;
+  background: $backgroundServiceCard;
+  font-family: $mainFontFamily;
+  font-size: 3.5rem;
+  color: $mainDarkBlueColor;
+  filter: drop-shadow(0.1rem 0.2rem 0.4rem $mainDarkBlueColor);
+  backdrop-filter: blur(4.5rem);
+  border: none;
+  border-radius: 2rem;
+  outline: none;
+  transform-origin: left bottom;
+  transform: skew(-20deg);
+  transition: $transitionAnimation;
+
+  &::placeholder {
+    font-family: $mainFontFamily;
+    color: rgba(58, 61, 96, 0.5);
+    transform: skew(20deg);
+  }
+  &:hover,
+  &:focus {
+    filter: $filterServiceCardTitle;
+    backdrop-filter: blur(2.35rem);
+    transform: skew(0deg);
+    &::placeholder {
+      transform: skew(0deg);
+    }
+  }
+
+  @include onTablet() {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.formBlockTextarea {
+  width: 100%;
+  margin-bottom: 4.3rem;
+  padding: 1.6rem 3.5rem 1.6rem 3.5rem;
+  resize: none;
+  background: $backgroundServiceCard;
+  filter: drop-shadow(0.1rem 0.2rem 0.4rem $mainDarkBlueColor);
+  backdrop-filter: blur(4.5rem);
+  font-family: $mainFontFamily;
+  color: $mainDarkBlueColor;
+  font-size: 3.5rem;
+  transform-origin: left bottom;
+  border: none;
+  outline: none;
+  position: relative;
+  transition: $transitionAnimation;
+  border-radius: 2rem;
+
+  &::placeholder {
+    font-family: $mainFontFamily;
+    color: rgba(58, 61, 96, 0.5);
+  }
+  &:hover,
+  &:focus {
+    filter: $filterServiceCardTitle;
+    backdrop-filter: blur(2.35rem);
+  }
+
+  @include onTablet() {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.submitButton {
+  text-align: center;
+  @extend %fillGradientButton;
+  padding: 1.4rem 3.5rem;
+
+  @include onSmallTablet() {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+  }
+}
+
+.buttonText {
+  font-family: $mainFontFamily;
+  font-weight: $mediumFontWeight;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  font-size: 2.4rem;
+
+  @include onSmallTablet() {
+    font-size: 1.6rem;
+  }
+}
