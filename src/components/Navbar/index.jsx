@@ -35,7 +35,7 @@ export default function Navbar() {
       </div>
       <div className={styles.navbarWrapper}>
         <Link className={styles.navbarButton} href="#" role="button" about="boost your business!">
-          <p className={styles.buttonText}>Boost your business!</p>
+          <span className={styles.buttonText}>Boost your business!</span>
         </Link>
         <div
           className={cn(styles.menuBurger, {

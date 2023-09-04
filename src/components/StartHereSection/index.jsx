@@ -16,12 +16,12 @@ export default function StartHereSection() {
           <p className={styles.textBlockText}>{textBlock.text}</p>
           <div className={styles.buttonsBlock}>
             <Link
+              className={styles.buttonConsultation}
               about="schedule a consultation"
               href="#"
               role="button"
-              className={styles.buttonConsultation}
             >
-              <p className={styles.buttonText}>Schedule a consultation</p>
+              <span className={styles.buttonText}>Schedule a consultation</span>
             </Link>
             <Link
               about="explore our services"
@@ -29,7 +29,7 @@ export default function StartHereSection() {
               role="button"
               className={styles.buttonServices}
             >
-              <p className={styles.buttonText}>Explore our services</p>
+              <span className={styles.buttonText}>Explore our services</span>
             </Link>
           </div>
         </div>

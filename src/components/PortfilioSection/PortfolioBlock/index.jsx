@@ -39,7 +39,7 @@ export default function PortfolioBlock() {
               about="begin your project"
               className={styles.portfolioBlockButton}
             >
-              <p className={styles.buttonText}>Begin Your Project</p>
+              <span className={styles.buttonText}>Begin Your Project</span>
             </Link>
           </div>
         </div>
