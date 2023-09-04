@@ -1,4 +1,4 @@
-import './globals.css'
+import 'app/globals.scss'
 
 export const metadata = {
   title: 'Home page',

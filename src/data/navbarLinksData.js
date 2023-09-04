@@ -1,6 +1,7 @@
 import logoImage from 'images/navbar/logo.svg'
 
 export const navbarData = {
+  logoImage,
   links: [
     { id: 'startHere', title: 'Start Here' },
     { id: 'whoWeAre', title: 'Who we are' },
@@ -8,5 +9,4 @@ export const navbarData = {
     { id: 'portfolio', title: 'Portfolio' },
     { id: 'contactUs', title: 'Contact us' },
   ],
-  logoImage: logoImage,
 }

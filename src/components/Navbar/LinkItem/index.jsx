@@ -6,6 +6,7 @@ import styles from 'components/Navbar/LinkItem/LinkItem.module.scss'
 export default function LinkItem({ title, id, handleMenuToggle }) {
   return (
     <Link
+      tabIndex="0"
       onClick={handleMenuToggle}
       to={id}
       smooth={true}
