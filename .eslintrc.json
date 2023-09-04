@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb-base", "prettier", "plugin:@next/next/recommended"],
-  "plugins": ["react", "jsx-a11y", "babel-eslint"],
+  "plugins": ["react", "jsx-a11y", "babel-eslint", "jsx-a11y"],
   "rules": {
     "@next/next/no-img-element": "off",
     "no-underscore-dangle": 0,
