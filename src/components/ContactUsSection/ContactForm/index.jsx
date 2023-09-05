@@ -21,55 +21,55 @@ export default function ContactForm() {
   }
 
   return (
-    <form ref={formRef} onSubmit={handleSubmitFormData} className={styles.formBlock}>
-      <label htmlFor="name" className={styles.formBlockLabel}>
+    <form className={styles.formBlock} onSubmit={handleSubmitFormData} ref={formRef}>
+      <label className={styles.formBlockLabel} htmlFor="name">
         <input
-          type="text"
+          className={styles.formBlockInput}
           id="name"
           name="name"
-          placeholder="Name"
           onChange={handleFormInput}
+          placeholder="Name"
+          type="text"
           required
-          className={styles.formBlockInput}
         />
       </label>
-      <label htmlFor="email" className={styles.formBlockLabel}>
+      <label className={styles.formBlockLabel} htmlFor="email">
         <input
-          type="email"
+          className={styles.formBlockInput}
           id="email"
           name="email"
-          placeholder="Email"
           onChange={handleFormInput}
+          placeholder="Email"
+          type="email"
           required
-          className={styles.formBlockInput}
         />
       </label>
-      <label htmlFor="phoneNumber" className={styles.formBlockLabel}>
+      <label className={styles.formBlockLabel} htmlFor="phoneNumber">
         <input
-          type="tel"
+          className={styles.formBlockInput}
           id="phoneNumber"
           name="phoneNumber"
-          placeholder="Phone Number"
           onChange={handleFormInput}
+          placeholder="Phone Number"
+          type="tel"
           required
-          className={styles.formBlockInput}
         />
       </label>
-      <label htmlFor="message" className={styles.formBlockLabel}>
+      <label className={styles.formBlockLabel} htmlFor="message">
         <textarea
-          maxLength="150"
-          rows="5"
-          id="message"
-          name="message"
-          placeholder="Your Message"
-          onChange={handleFormInput}
           className={styles.formBlockTextarea}
+          id="message"
+          maxLength="150"
+          name="message"
+          onChange={handleFormInput}
+          placeholder="Your Message"
+          rows="5"
         />
       </label>
       <button
-        tabIndex="0"
         about="submit form"
         className={styles.submitButton}
+        tabIndex="0"
         type="submit"
         value="Submit"
       >

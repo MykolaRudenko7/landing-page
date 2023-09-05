@@ -19,11 +19,9 @@
   height: 100%;
   margin-bottom: 4.3rem;
   padding: 1.6rem 3.5rem;
-  background: $backgroundServiceCard;
   font-family: $mainFontFamily;
   font-size: 3.5rem;
   color: $mainDarkBlueColor;
-  filter: drop-shadow(0.1rem 0.2rem 0.4rem $mainDarkBlueColor);
   backdrop-filter: blur(4.5rem);
   border: none;
   border-radius: 2rem;
@@ -31,6 +29,7 @@
   transform-origin: left bottom;
   transform: skew(-20deg);
   transition: $transitionAnimation;
+  @extend %blurBackground;
 
   &::placeholder {
     font-family: $mainFontFamily;
@@ -40,8 +39,8 @@
   &:hover,
   &:focus {
     filter: $filterServiceCardTitle;
-    backdrop-filter: blur(2.35rem);
     transform: skew(0deg);
+
     &::placeholder {
       transform: skew(0deg);
     }
@@ -59,9 +58,7 @@
   margin-bottom: 4.3rem;
   padding: 1.6rem 3.5rem 1.6rem 3.5rem;
   resize: none;
-  background: $backgroundServiceCard;
-  filter: drop-shadow(0.1rem 0.2rem 0.4rem $mainDarkBlueColor);
-  backdrop-filter: blur(4.5rem);
+  @extend %blurBackground;
   font-family: $mainFontFamily;
   color: $mainDarkBlueColor;
   font-size: 3.5rem;
@@ -79,7 +76,6 @@
   &:hover,
   &:focus {
     filter: $filterServiceCardTitle;
-    backdrop-filter: blur(2.35rem);
   }
 
   @include onTablet() {

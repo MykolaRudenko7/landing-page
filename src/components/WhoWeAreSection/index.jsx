@@ -6,15 +6,21 @@ export default function WhoWeAreSection() {
   const { imageSrc, text, title } = whoWeAreSectionData
 
   return (
-    <section id="whoWeAre" className={styles.whoWeAre}>
+    <section className={styles.whoWeAre} id="whoWeAre">
       <div className={styles.whoWeAreWrapper}>
         <div className={styles.whoWeAreImageWrapper}>
           <Image
+<<<<<<< HEAD
+=======
+            loading="eager"
             className={styles.whoWeAreImage}
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
             alt="blockImage"
+            className={styles.whoWeAreImage}
+            height={878}
+            loading="eager"
             src={imageSrc}
             width={771}
-            height={878}
           />
         </div>
         <div className={styles.whoWeAreTextBlock}>

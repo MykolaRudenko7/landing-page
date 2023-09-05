@@ -4,12 +4,15 @@
   width: 32rem;
   height: 32rem;
   transform-origin: 50% 50%;
-  filter: $circleWhyChooseCardFilter;
-  background-image: $circleWhyChooseCardGradient;
-  backdrop-filter: blur(3.85rem);
   border-radius: 50%;
   transition: $transitionAnimation;
   overflow: hidden;
+  @extend %blurBackground;
+  transition: $transitionAnimation;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   &:nth-child(1) {
     transform: translate(-170%, 100%);

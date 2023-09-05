@@ -1,5 +1,4 @@
 .startHereContainer {
-  position: relative;
   display: flex;
   align-items: center;
   padding: 2.7rem 0rem 11.2rem 0rem;
@@ -11,25 +10,6 @@
     padding: 2rem 0rem 3rem 0rem;
     flex-direction: column;
     gap: 2rem;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-12%, 87%);
-    z-index: -1;
-    @extend %decorCirclesYellow;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(28%, 120%);
-    z-index: -1;
-    @extend %decorCirclesBlue;
   }
 }
 

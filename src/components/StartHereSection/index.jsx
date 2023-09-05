@@ -9,34 +9,46 @@ export default function StartHereSection() {
   const { textBlock } = startHereSectionData
 
   return (
-    <section id="startHere" className={styles.startHere}>
+    <section className={styles.startHere} id="startHere">
       <div className={styles.startHereContainer}>
         <div className={styles.textBlock}>
           <h3 className={styles.textBlockTitle}>{textBlock.title}</h3>
           <p className={styles.textBlockText}>{textBlock.text}</p>
           <div className={styles.buttonsBlock}>
             <Link
-              tabIndex="0"
-              className={styles.buttonConsultation}
               about="schedule a consultation"
+              className={styles.buttonConsultation}
               href="#"
               role="button"
+              tabIndex="0"
             >
               <span className={styles.buttonText}>Schedule a consultation</span>
             </Link>
             <Link
-              tabIndex="0"
               about="explore our services"
+              className={styles.buttonServices}
               href="#"
               role="button"
-              className={styles.buttonServices}
+              tabIndex="0"
             >
               <span className={styles.buttonText}>Explore our services</span>
             </Link>
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <Image className={styles.image} src={textBlock.imageSrc} alt="start here block image" />
+          <Image
+<<<<<<< HEAD
+            alt="start here block image"
+            className={styles.image}
+            loading="eager"
+            src={textBlock.imageSrc}
+=======
+            loading="eager"
+            className={styles.image}
+            src={textBlock.imageSrc}
+            alt="start here block image"
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
+          />
         </div>
       </div>
       <div className={styles.cardsBlock}>

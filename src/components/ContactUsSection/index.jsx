@@ -9,7 +9,7 @@ export default function ContactUsSection() {
   const { text, title, imageSrs } = contactUsSectionData
 
   return (
-    <section id="contactUs" className={styles.contactUsSection}>
+    <section className={styles.contactUsSection} id="contactUs">
       <div className={styles.contactUsSectionWrapper}>
         <div className={styles.textBlock}>
           <div className={styles.contactUsLabel}>
@@ -22,7 +22,11 @@ export default function ContactUsSection() {
           <ContactForm />
           <div className={styles.imageBlock}>
             <div className={styles.imageWrapper}>
-              <Image alt="" src={imageSrs} className={styles.image} />
+<<<<<<< HEAD
+              <Image alt="" className={styles.image} loading="eager" src={imageSrs} />
+=======
+              <Image loading="eager" alt="" src={imageSrs} className={styles.image} />
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
             </div>
           </div>
         </div>

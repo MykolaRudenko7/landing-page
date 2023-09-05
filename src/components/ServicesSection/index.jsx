@@ -5,7 +5,7 @@ import styles from 'components/ServicesSection/ServicesSection.module.scss'
 
 export default function ServicesSection() {
   return (
-    <section id="services" className={styles.services}>
+    <section className={styles.services} id="services">
       <div className={styles.servicesWrapper}>
         <div className={styles.servicesLable}>
           <h3 className={styles.buttonText}>Industries & Services We Serve</h3>

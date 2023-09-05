@@ -1,27 +1,5 @@
 .portfolioBlock {
   padding-bottom: 10rem;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(65%, 5%);
-    z-index: -1;
-    @extend %decorCirclesBlue;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(5%, 37%);
-    z-index: -1;
-    @extend %decorCirclesYellow;
-    width: 176rem;
-    height: 176rem;
-  }
 
   @include onTablet() {
     padding-bottom: 5rem;

@@ -2,12 +2,12 @@
   position: relative;
   min-width: 46.5rem;
   border-radius: 3.8rem;
-  background: $backgroundServiceCard;
   padding: 8.6rem 2.5rem 9rem 2.5rem;
   transition: $transitionAnimation;
+  @extend %blurBackground;
 
   &:hover {
-    box-shadow: 0.5rem -0.5rem 1rem $mainDarkBlueColor;
+    background-color: $pageBackgroundColor;
   }
 
   @include onSmallTablet() {

@@ -9,7 +9,7 @@ export default function ServiceSectionCardItem({ listTitle, listOptons }) {
       </h6>
       <ul className={styles.list}>
         {listOptons.map((option) => (
-          <li key={uuidv4()} className={styles.listItem}>
+          <li className={styles.listItem} key={uuidv4()}>
             {option}
           </li>
         ))}

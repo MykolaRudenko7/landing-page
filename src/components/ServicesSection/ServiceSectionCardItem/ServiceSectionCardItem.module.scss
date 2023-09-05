@@ -1,16 +1,21 @@
 .listBlock {
   position: relative;
   color: $mainDarkBlueColor;
-  background: $backgroundServiceCard;
   padding: 3.8rem 1.3rem 1.6rem 1.3rem;
   border-radius: 3.52rem;
   transition: $transitionAnimation;
+  @extend %blurBackground;
 
   &:hover {
-    filter: $filterServiceCardTitle;
-    backdrop-filter: blur(2.35rem);
+    transform: scale(1.01);
+    box-shadow: 0.4rem 0.4rem 1.2rem 0rem $mainBlueColor;
+  }
+
+  .cardText {
+    color: $mainDarkBlueColor;
   }
 }
+
 .listTitle {
   position: absolute;
   top: 0%;
@@ -23,12 +28,9 @@
   letter-spacing: 0.07rem;
   text-transform: uppercase;
   white-space: nowrap;
-  background-color: $backgroundServiceCard;
   border-radius: 3.52rem;
   padding: 0.4rem 2rem;
-  border-image: $borderGradientServiceCardTitle;
-  filter: $filterServiceCardTitle;
-  backdrop-filter: blur(2.35rem);
+  @extend %blurBackground;
 
   @include onDesktop() {
     font-size: 2rem;
@@ -40,6 +42,7 @@
     font-size: 1.6rem;
   }
 }
+
 .listTitleText {
   display: inline-block;
   transform: skew(25deg);

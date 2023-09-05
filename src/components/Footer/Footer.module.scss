@@ -1,29 +1,5 @@
 .footer {
   padding-top: 8rem;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-60%, 25%);
-    @extend %decorCirclesYellow;
-    z-index: -1;
-    width: 180rem;
-    height: 180rem;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(25%, 25%);
-    z-index: -1;
-    @extend %decorCirclesBlue;
-    width: 180rem;
-    height: 180rem;
-  }
 
   @include onSmallTablet() {
     padding-top: 3rem;

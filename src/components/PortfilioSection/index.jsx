@@ -5,7 +5,7 @@ import styles from 'components/PortfilioSection/PortfilioSection.module.scss'
 
 export default function PortfilioSection() {
   return (
-    <section id="portfolio" className={styles.portfilioSection}>
+    <section className={styles.portfilioSection} id="portfolio">
       <PortfolioBlock />
       <WhyChooseBlock />
       <TestimonialsBlock />

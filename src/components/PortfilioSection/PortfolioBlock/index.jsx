@@ -25,8 +25,14 @@ export default function PortfolioBlock() {
               </h6>
               <div className={styles.cardBarossaImageWrapper}>
                 <Image
+<<<<<<< HEAD
+=======
+                  loading="eager"
                   className={styles.cardBarossaImage}
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
                   alt="card content"
+                  className={styles.cardBarossaImage}
+                  loading="eager"
                   src={cardBarossa.imageSrc}
                 />
               </div>
@@ -34,11 +40,11 @@ export default function PortfolioBlock() {
           </div>
           <div className={styles.buttonWrapper}>
             <Link
-              tabIndex="0"
-              href="#"
-              role="button"
               about="begin your project"
               className={styles.portfolioBlockButton}
+              href="#"
+              role="button"
+              tabIndex="0"
             >
               <span className={styles.buttonText}>Begin Your Project</span>
             </Link>
@@ -51,8 +57,14 @@ export default function PortfolioBlock() {
             </h6>
             <div className={styles.cardB2BImageWrapper}>
               <Image
+<<<<<<< HEAD
+=======
+                loading="eager"
                 className={styles.cardBarossaImage}
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
                 alt="card content"
+                className={styles.cardBarossaImage}
+                loading="eager"
                 src={cardB2B.imageSrc}
               />
             </div>
@@ -63,8 +75,14 @@ export default function PortfolioBlock() {
             </h6>
             <div className={styles.cardFloraNowImageWrapper}>
               <Image
+<<<<<<< HEAD
+=======
+                loading="eager"
                 className={styles.cardFloraNowImage}
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
                 alt="card content"
+                className={styles.cardFloraNowImage}
+                loading="eager"
                 src={cardFloraNow.imageSrc}
               />
             </div>

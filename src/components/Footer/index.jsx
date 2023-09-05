@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import { footerSectionData } from 'data/footerSectionData'
-import LinkItem from 'components/Navbar/LinkItem'
+import LinkItem from 'shared/LinkItem'
 import styles from 'components/Footer/Footer.module.scss'
 
 export default function Footer() {
@@ -17,37 +17,42 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
+<<<<<<< HEAD
+          <Link className={styles.logoWrapper} href="#" tabIndex="0">
+            <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
+=======
           <Link tabIndex="0" href="#" className={styles.logoWrapper}>
-            <Image alt="logo image" src={logoImage} className={styles.logoImage} />
+            <Image loading="eager" alt="logo image" src={logoImage} className={styles.logoImage} />
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
               {linksForScroll.map((link) => (
-                <LinkItem tabIndex="0" key={uuidv4()} {...link} />
+                <LinkItem key={uuidv4()} tabIndex="0" {...link} />
               ))}
             </ul>
             <ul className={styles.ordinaryLinks}>
               <li className={styles.ordinaryLinkWrapper}>
-                <Link tabIndex="0" href="#" className={styles.ordinaryLink}>
+                <Link className={styles.ordinaryLink} href="#" tabIndex="0">
                   Privacy Policy
                 </Link>
               </li>
               <li className={styles.ordinaryLinkWrapper}>
-                <Link tabIndex="0" href="#" className={styles.ordinaryLink}>
+                <Link className={styles.ordinaryLink} href="#" tabIndex="0">
                   Terms of Service
                 </Link>
               </li>
             </ul>
           </div>
           <div className={styles.servicesLinks}>
-            <LinkItem tabIndex="0" title={mainLink.title} id={mainLink.id} />
+            <LinkItem id={mainLink.id} tabIndex="0" title={mainLink.title} />
             {links.map(({ title, href }) => (
               <Link
-                tabIndex="0"
-                className={styles.serviceLink}
-                key={uuidv4()}
-                href={href}
                 about="services link"
+                className={styles.serviceLink}
+                href={href}
+                key={uuidv4()}
+                tabIndex="0"
               >
                 {title}
               </Link>
@@ -58,13 +63,27 @@ export default function Footer() {
             <div className={styles.socialsImages}>
               {socials.map(({ href, iconSrc, alt }) => (
                 <Link
-                  tabIndex="0"
-                  className={styles.socialImageLink}
-                  key={uuidv4()}
-                  href={href}
                   about="social"
+                  className={styles.socialImageLink}
+                  href={href}
+                  key={uuidv4()}
+                  tabIndex="0"
                 >
-                  <Image className={styles.socialImage} width={42} alt={alt} src={iconSrc} />
+                  <Image
+<<<<<<< HEAD
+                    alt={alt}
+                    className={styles.socialImage}
+                    loading="eager"
+                    src={iconSrc}
+                    width={42}
+=======
+                    loading="eager"
+                    className={styles.socialImage}
+                    width={42}
+                    alt={alt}
+                    src={iconSrc}
+>>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
+                  />
                 </Link>
               ))}
             </div>

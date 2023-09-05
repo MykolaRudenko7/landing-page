@@ -1,34 +1,13 @@
 .whyChooseBlock {
-  position: relative;
   display: flex;
   justify-content: center;
   padding: 5rem 0 8rem 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-30%, 45%);
-    @extend %decorCirclesBlue;
-    z-index: -1;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(39%, 59%);
-    z-index: -1;
-    @extend %decorCirclesYellow;
-    width: 217rem;
-    height: 217rem;
-  }
 
   @include onSmallTablet() {
     padding: 3rem 0;
   }
 }
+
 .whyChooseBlockWrapper {
   margin-top: 20rem;
   margin-bottom: 19rem;
@@ -51,16 +30,16 @@
   z-index: 2;
   width: 84rem;
   height: 84rem;
-  background-image: $circleWhyChooseCardGradient;
-  filter: $circleWhyChooseCardFilter;
-  backdrop-filter: blur(3.85rem);
   border-radius: 50%;
   text-align: center;
-  transition: $transitionAnimation;
   overflow: hidden;
+  @extend %blurBackground;
+  backdrop-filter: blur(3.85rem);
+  transition: $transitionAnimation;
 
   &:hover {
-    background-color: $backgroundServiceCard;
+    transform: scale(1.01);
+    background-color: $pageBackgroundColor;
   }
 
   @include forCircles() {
@@ -171,6 +150,7 @@
 
 .buttonLable {
   @extend %borderGradientButton;
+  cursor: default;
 
   @include forCircles() {
     padding: 1rem;

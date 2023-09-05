@@ -1,27 +1,5 @@
 .whoWeAre {
-  position: relative;
   padding: 8.8rem 0 5rem 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-23%, 76%);
-    z-index: -1;
-    @extend %decorCirclesBlue;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(30%, 48%);
-    z-index: -1;
-    @extend %decorCirclesYellow;
-    width: 176rem;
-    height: 176rem;
-  }
 
   @include onTablet() {
     padding-top: 5rem;

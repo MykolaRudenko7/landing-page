@@ -24,11 +24,11 @@ export default function TestimonialsBlock() {
             <p className={styles.testimonialsBlockText}>{text}</p>
           </div>
           <Link
-            tabIndex="0"
-            href="#"
             about="learn more"
-            role="button"
             className={styles.testimonialsBlockButton}
+            href="#"
+            role="button"
+            tabIndex="0"
           >
             <span className={styles.buttonText}>learn more</span>
           </Link>
