@@ -13,9 +13,15 @@ export default function Navbar() {
   const { links, logoImage } = navbarData
 
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false)
+
   const handleMenuToggle = () => {
     setIsNavbarMenuOpen(!isNavbarMenuOpen)
     document.body.classList.toggle('scrollLock')
+  }
+
+  const clickOnLink = () => {
+    setIsNavbarMenuOpen(false)
+    document.body.classList.remove('scrollLock')
   }
 
   return (
@@ -30,7 +36,7 @@ export default function Navbar() {
           })}
         >
           {links.map((item) => (
-            <LinkItem key={uuidv4()} tabIndex="0" {...item} handleMenuToggle={handleMenuToggle} />
+            <LinkItem key={uuidv4()} tabIndex="0" {...item} clickOnLink={clickOnLink} />
           ))}
         </div>
       </div>
