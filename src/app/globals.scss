@@ -46,8 +46,19 @@ img {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $mainYellowColor;
   text-rendering: optimizeSpeed;
   min-width: 320px;
+}
+body::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: $mainDarkBlueColor;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $mainYellowColor;
+  border-radius: 0.3rem;
 }
 
 html,
@@ -58,4 +69,8 @@ body {
   font-style: normal;
   height: 100%;
   width: 100%;
+}
+
+.scrollLock {
+  overflow: hidden;
 }

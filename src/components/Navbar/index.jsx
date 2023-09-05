@@ -15,6 +15,7 @@ export default function Navbar() {
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false)
   const handleMenuToggle = () => {
     setIsNavbarMenuOpen(!isNavbarMenuOpen)
+    document.body.classList.toggle('scrollLock')
   }
 
   return (
