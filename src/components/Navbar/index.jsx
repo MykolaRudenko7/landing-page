@@ -20,13 +20,8 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoLinksBlock}>
-<<<<<<< HEAD
         <Link className={styles.logoWrapper} href="" tabIndex="0">
           <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
-=======
-        <Link tabIndex="0" href="" className={styles.logoWrapper}>
-          <Image loading="eager" className={styles.logoImage} alt="logo image" src={logoImage} />
->>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
         </Link>
         <div
           className={cn(styles.linksWrapper, {

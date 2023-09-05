@@ -1,6 +1,14 @@
 {
   "extends": ["airbnb-base", "prettier", "plugin:@next/next/recommended"],
   "plugins": ["react", "jsx-a11y"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "@next/next/no-img-element": "off",
     "no-underscore-dangle": 0,

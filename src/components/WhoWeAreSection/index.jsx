@@ -10,11 +10,6 @@ export default function WhoWeAreSection() {
       <div className={styles.whoWeAreWrapper}>
         <div className={styles.whoWeAreImageWrapper}>
           <Image
-<<<<<<< HEAD
-=======
-            loading="eager"
-            className={styles.whoWeAreImage}
->>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
             alt="blockImage"
             className={styles.whoWeAreImage}
             height={878}

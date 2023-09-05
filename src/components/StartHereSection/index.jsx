@@ -37,17 +37,10 @@ export default function StartHereSection() {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-<<<<<<< HEAD
             alt="start here block image"
             className={styles.image}
             loading="eager"
             src={textBlock.imageSrc}
-=======
-            loading="eager"
-            className={styles.image}
-            src={textBlock.imageSrc}
-            alt="start here block image"
->>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
           />
         </div>
       </div>

@@ -17,13 +17,8 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
-<<<<<<< HEAD
           <Link className={styles.logoWrapper} href="#" tabIndex="0">
             <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
-=======
-          <Link tabIndex="0" href="#" className={styles.logoWrapper}>
-            <Image loading="eager" alt="logo image" src={logoImage} className={styles.logoImage} />
->>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
@@ -70,19 +65,11 @@ export default function Footer() {
                   tabIndex="0"
                 >
                   <Image
-<<<<<<< HEAD
                     alt={alt}
                     className={styles.socialImage}
                     loading="eager"
                     src={iconSrc}
                     width={42}
-=======
-                    loading="eager"
-                    className={styles.socialImage}
-                    width={42}
-                    alt={alt}
-                    src={iconSrc}
->>>>>>> 572dba4a5b3b383902c4a74e125e381b370139b8
                   />
                 </Link>
               ))}
