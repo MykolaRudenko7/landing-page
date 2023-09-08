@@ -18,7 +18,7 @@ export const startHereSectionData = {
       imageSrc: startHereSectionCard1,
       subtitle: `Tech Vendor Management`,
       title: `Struggling with multiple tech vendors?`,
-      text: `Centralize and streamline your tech interactions, eliminating the hassle of juggling multiple contacts and reducing overhead costs from managing several ...`,
+      text: `Centralize and streamline your tech interactions, eliminating the hassle of juggling multiple contacts and reducing overhead costs from managing several. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
     },
     {
       imageSrc: startHereSectionCard2,

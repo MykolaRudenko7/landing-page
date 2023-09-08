@@ -152,6 +152,7 @@
   grid-column-gap: 10rem;
   grid-row-gap: 9rem;
   padding: 12.4rem 6.4rem 8.8rem 6.4rem;
+  transition: $transitionAnimation;
 
   @include onLargeDesktop() {
     padding: 10rem 4rem 6rem 4rem;
@@ -173,5 +174,10 @@
   @include onPhone() {
     padding: 3rem 2rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &.cardHovered {
+    align-items: start;
+    transition: $transitionAnimation;
   }
 }

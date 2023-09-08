@@ -27,9 +27,9 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoLinksBlock}>
-        <Link className={styles.logoWrapper} href="" tabIndex="0">
+        <a className={styles.logoWrapper} href="" tabIndex="0">
           <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
-        </Link>
+        </a>
         <div
           className={cn(styles.linksWrapper, {
             [styles.isNavbavMenuOpen]: isNavbarMenuOpen,
