@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import { Link } from 'react-scroll'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
@@ -44,9 +44,13 @@ export default function Navbar() {
         <Link
           about="boost your business!"
           className={styles.navbarButton}
+          duration={750}
           href="#"
+          offset={-10}
           role="button"
+          smooth={true}
           tabIndex="0"
+          to="contactUs"
         >
           <span className={styles.buttonText}>Boost your business!</span>
         </Link>

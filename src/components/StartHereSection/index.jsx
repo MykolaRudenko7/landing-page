@@ -1,5 +1,7 @@
-import Link from 'next/link'
+'use client'
+
 import Image from 'next/image'
+import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { startHereSectionData } from 'data/startHereSectionData'
 import StartHereCardItem from 'components/StartHereSection/StartHereCardItem'
@@ -18,18 +20,26 @@ export default function StartHereSection() {
             <Link
               about="schedule a consultation"
               className={styles.buttonConsultation}
+              duration={750}
               href="#"
+              offset={-10}
               role="button"
+              smooth={true}
               tabIndex="0"
+              to="contactUs"
             >
               <span className={styles.buttonText}>Schedule a consultation</span>
             </Link>
             <Link
               about="explore our services"
               className={styles.buttonServices}
+              duration={750}
               href="#"
+              offset={-10}
               role="button"
+              smooth={true}
               tabIndex="0"
+              to="services"
             >
               <span className={styles.buttonText}>Explore our services</span>
             </Link>

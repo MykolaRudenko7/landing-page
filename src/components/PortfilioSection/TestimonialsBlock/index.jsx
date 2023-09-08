@@ -17,7 +17,7 @@ export default function TestimonialsBlock() {
       <div className={styles.testimonialsBlockWrapper}>
         <div className={styles.textBlock}>
           <div className={styles.testimonialsBlockLable}>
-            <h3 className={styles.buttonText}>Testimonials</h3>
+            <h3 className={styles.titleText}>Testimonials</h3>
           </div>
           <div className={styles.textBlockWrapper}>
             <h5 className={styles.testimonialsBlockTitle}>{title}</h5>

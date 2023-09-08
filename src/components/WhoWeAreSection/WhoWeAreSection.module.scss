@@ -44,9 +44,7 @@
 }
 
 .whoWeAreLable {
-  @extend %borderGradientButton;
-  cursor: default;
-  padding: 1.1rem 8.7rem;
+  @extend %borderGradientBlockTitle;
   margin-bottom: 10rem;
 
   @include onLargeDesktop() {
@@ -54,10 +52,6 @@
   }
   @include onTablet() {
     margin-bottom: 5rem;
-  }
-  @include onSmallTablet() {
-    padding: 1rem 4rem;
-    font-size: 1.6rem;
   }
 }
 

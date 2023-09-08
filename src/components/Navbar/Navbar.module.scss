@@ -89,14 +89,23 @@
 
 .navbarButton {
   @extend %fillGradientButton;
+  text-shadow: none;
   font-size: 1.5rem;
-  padding: 1.1rem 3.4rem;
+  padding: 1.1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  width: 19.5rem;
 
+  @include onTablet() {
+    width: 17.5rem;
+    font-size: 1.3rem;
+  }
   @include onSmallTablet() {
     font-size: 1.2rem;
-    padding: 0.5rem 0.8rem;
+    width: 15rem;
+  }
+  @include onSmallPhone() {
+    width: 12rem;
   }
 }
 
