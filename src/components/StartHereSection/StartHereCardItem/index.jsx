@@ -34,8 +34,8 @@ export default function StartHereCardItem({
       <div className={styles.cardImageWrapper}>
         <Image alt="card image" className={styles.cardImage} loading="eager" src={imageSrc} />
       </div>
-      <p className={styles.cardSubTitle}>{subtitle}</p>
       <h4 className={styles.title}>{title}</h4>
+      <p className={styles.cardSubTitle}>{subtitle}</p>
       <p className={styles.cardText}>{text}</p>
     </div>
   )

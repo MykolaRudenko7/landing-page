@@ -44,18 +44,6 @@
 }
 
 .cardSubTitle {
-  margin-bottom: 0.85rem;
-  color: $mainDarkBlueColor;
-  font-size: $titleCargSize;
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
-}
-.title {
-  margin-bottom: 2rem;
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   font-weight: $mediumFontWeight;
@@ -64,6 +52,18 @@
   }
   @include onPhone() {
     font-size: 1.8rem;
+  }
+  margin-bottom: 0.85rem;
+}
+.title {
+  margin-bottom: 2rem;
+  color: $mainDarkBlueColor;
+  font-size: $titleCargSize;
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onPhone() {
+    font-size: 1.4rem;
   }
 }
 .cardText {
