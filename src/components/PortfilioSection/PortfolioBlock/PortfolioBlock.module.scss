@@ -33,22 +33,14 @@
 }
 
 .portfolioLabel {
-  @extend %borderGradientButton;
-  cursor: default;
-  padding: 1.1rem 8rem;
+  @extend %borderGradientBlockTitle;
   margin-bottom: 10rem;
-  margin-left: 1.5rem;
 
   @include onLargeDesktop() {
     margin-bottom: 10rem;
   }
   @include onTablet() {
     margin-bottom: 5rem;
-  }
-  @include onSmallTablet() {
-    padding: 1rem 5rem;
-    font-size: 1.6rem;
-    margin-left: 0;
   }
 }
 
@@ -105,15 +97,7 @@
 }
 
 .portfolioBlockButton {
-  padding: 1.6rem 6rem;
   @extend %fillGradientButton;
-  margin-left: 1.5rem;
-
-  @include onTablet() {
-    padding: 1rem 3.5rem;
-    font-size: 1.4rem;
-    margin-left: 0;
-  }
 }
 
 .buttonText {

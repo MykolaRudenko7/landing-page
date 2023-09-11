@@ -139,21 +139,45 @@
   @extend %fillGradientButton;
 
   @include forCircles() {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    width: 32rem;
+  }
+  @include onDesktop() {
+    width: 13rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
   }
   @include onSmallTablet() {
-    padding: 1rem 4.5rem;
-    font-size: 1.2rem;
+    padding: 1.6rem;
+
+    margin-left: 0;
+    font-size: 1.8rem;
+    width: 20rem;
   }
 }
 
 .buttonLable {
-  @extend %borderGradientButton;
-  cursor: default;
+  @extend %borderGradientBlockTitle;
+  width: 43rem;
 
   @include forCircles() {
+    width: 34rem;
+    font-size: 2rem;
+  }
+  @include onDesktop() {
+    width: 15rem;
+    font-size: 1.3rem;
     padding: 1rem;
-    font-size: 1.2rem;
+  }
+  @include onSmallTablet() {
+    padding: 1.6rem;
+    width: 30rem;
+    font-size: 1.8rem;
+
+    padding: 1rem;
+    font-size: 1.8rem;
+    max-width: 20rem;
+  }
+  @include onPhone() {
+    width: 25rem;
   }
 }

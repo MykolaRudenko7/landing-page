@@ -14,13 +14,19 @@
     gap: 5rem;
   }
 }
-.servicesLable {
-  cursor: default;
-  @extend %borderGradientButton;
 
+.servicesLable {
+  @extend %borderGradientBlockTitle;
+  width: 43rem;
+
+  @include onTablet() {
+    width: 35rem;
+  }
   @include onSmallTablet() {
-    padding: 1rem;
-    font-size: 1.6rem;
+    width: 30rem;
+  }
+  @include onPhone {
+    width: 25rem;
   }
 }
 

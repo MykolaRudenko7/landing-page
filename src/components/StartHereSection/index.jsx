@@ -1,5 +1,9 @@
-import Link from 'next/link'
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
+import cn from 'classnames'
+import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { startHereSectionData } from 'data/startHereSectionData'
 import StartHereCardItem from 'components/StartHereSection/StartHereCardItem'
@@ -7,6 +11,8 @@ import styles from 'components/StartHereSection/StartHereSection.module.scss'
 
 export default function StartHereSection() {
   const { textBlock } = startHereSectionData
+  const [onHoverTextStyle, setOnHoverTextStyle] = useState(false)
+  const [isHoverCard, setIsHoverCard] = useState(null)
 
   return (
     <section className={styles.startHere} id="startHere">
@@ -18,18 +24,26 @@ export default function StartHereSection() {
             <Link
               about="schedule a consultation"
               className={styles.buttonConsultation}
+              duration={750}
               href="#"
+              offset={-10}
               role="button"
+              smooth={true}
               tabIndex="0"
+              to="contactUs"
             >
               <span className={styles.buttonText}>Schedule a consultation</span>
             </Link>
             <Link
               about="explore our services"
               className={styles.buttonServices}
+              duration={750}
               href="#"
+              offset={-10}
               role="button"
+              smooth={true}
               tabIndex="0"
+              to="services"
             >
               <span className={styles.buttonText}>Explore our services</span>
             </Link>
@@ -45,9 +59,17 @@ export default function StartHereSection() {
         </div>
       </div>
       <div className={styles.cardsBlock}>
-        <div className={styles.cardsBlockContainer}>
-          {startHereSectionData.cards.map((card) => (
-            <StartHereCardItem key={uuidv4()} {...card} />
+        <div className={cn(styles.cardsBlockContainer, { [styles.cardHovered]: onHoverTextStyle })}>
+          {startHereSectionData.cards.map((card, id) => (
+            <StartHereCardItem
+              cardId={id}
+              key={uuidv4()}
+              {...card}
+              isHoverCard={isHoverCard}
+              onHoverTextStyle={onHoverTextStyle}
+              setIsHoverCard={setIsHoverCard}
+              setOnHoverTextStyle={setOnHoverTextStyle}
+            />
           ))}
         </div>
       </div>

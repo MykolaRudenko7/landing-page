@@ -73,7 +73,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 5.7rem;
+  gap: 5rem;
   font-size: 1.2rem;
   text-shadow: $textShadow;
 
@@ -84,52 +84,50 @@
     gap: 1.5rem;
   }
   @include onSmallTablet() {
-    gap: 2rem;
-  }
-  @include onPhone() {
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: space-around;
   }
 }
 
 .buttonConsultation {
   @extend %fillGradientButton;
-  font-size: 2.4rem;
-  padding: 1.5rem 2.5rem;
-  text-shadow: $textShadow;
 
   @include onDesktop() {
-    padding: 1rem 2rem;
-    font-size: 2rem;
+    width: 26rem;
+    font-size: 2.2rem;
   }
   @include onTablet() {
-    font-size: 1.4rem;
+    width: 20rem;
+    font-size: 1.8rem;
   }
   @include onSmallTablet() {
-    font-size: 1.6rem;
+    padding: 1rem;
+    max-width: 20rem;
+    margin-left: 0;
   }
   @include onPhone() {
-    padding: 0.5rem 1rem;
+    width: 12rem;
+    font-size: 1.4rem;
   }
 }
 
 .buttonServices {
   @extend %borderGradientButton;
-  padding: 1.1rem 3.5rem;
-  font-size: 2.4rem;
 
   @include onDesktop() {
-    font-size: 2rem;
-    padding: 0.6rem 1.6rem;
+    width: 25rem;
+    font-size: 2.2rem;
   }
   @include onTablet() {
-    font-size: 1.4rem;
+    width: 20rem;
+    font-size: 1.8rem;
   }
   @include onSmallTablet() {
-    font-size: 1.6rem;
+    padding: 1rem;
+    max-width: 20rem;
   }
   @include onPhone() {
-    padding: 0.1rem 0.7rem;
+    width: 12rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -154,6 +152,7 @@
   grid-column-gap: 10rem;
   grid-row-gap: 9rem;
   padding: 12.4rem 6.4rem 8.8rem 6.4rem;
+  transition: $transitionAnimation;
 
   @include onLargeDesktop() {
     padding: 10rem 4rem 6rem 4rem;
@@ -175,5 +174,10 @@
   @include onPhone() {
     padding: 3rem 2rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &.cardHovered {
+    align-items: start;
+    transition: $transitionAnimation;
   }
 }

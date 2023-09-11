@@ -39,15 +39,7 @@
 }
 
 .testimonialsBlockLable {
-  cursor: default;
-  @extend %borderGradientButton;
-  margin-left: 1.5rem;
-  padding: 1.4rem 8rem;
-
-  @include onSmallTablet() {
-    padding: 1rem 4rem;
-    font-size: 1.6rem;
-  }
+  @extend %borderGradientBlockTitle;
 }
 
 .testimonialsBlockTitle {
@@ -81,14 +73,6 @@
 
 .testimonialsBlockButton {
   @extend %fillGradientButton;
-  margin-left: 1.5rem;
-  padding: 1.4rem 9.5rem;
-
-  @include onSmallTablet() {
-    padding: 1rem 5rem;
-    font-size: 1.6rem;
-    margin-left: 0;
-  }
 }
 
 .cards {

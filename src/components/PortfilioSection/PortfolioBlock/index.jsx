@@ -15,7 +15,7 @@ export default function PortfolioBlock() {
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
             <h3 className={styles.portfolioLabel}>
-              <span className={styles.buttonText}>Portfolio</span>
+              <span className={styles.titleText}>Portfolio</span>
             </h3>
             <h5 className={styles.textBlockTitle}>{title}</h5>
             <p className={styles.textBlockText}>{text}</p>
@@ -27,8 +27,6 @@ export default function PortfolioBlock() {
                 <Image
                   alt="card content"
                   className={styles.cardBarossaImage}
-                  className={styles.cardBarossaImage}
-                  loading="eager"
                   loading="eager"
                   src={cardBarossa.imageSrc}
                 />

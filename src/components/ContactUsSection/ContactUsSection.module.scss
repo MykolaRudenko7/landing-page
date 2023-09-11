@@ -25,15 +25,8 @@
 }
 
 .contactUsLabel {
-  cursor: default;
-  padding: 1rem 9rem;
-  @extend %borderGradientButton;
+  @extend %borderGradientBlockTitle;
   margin-bottom: 3.7rem;
-
-  @include onSmallTablet() {
-    padding: 1rem 4.5rem;
-    font-size: 1.6rem;
-  }
 }
 
 .buttonText {

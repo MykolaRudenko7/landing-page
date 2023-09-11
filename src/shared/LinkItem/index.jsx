@@ -7,7 +7,7 @@ export default function LinkItem({ title, id, clickOnLink }) {
   return (
     <Link
       className={styles.link}
-      duration={500}
+      duration={750}
       offset={-10}
       onClick={clickOnLink}
       smooth={true}

@@ -5,15 +5,21 @@
   text-align: center;
   padding: 2.2rem 2rem 2.6rem 2rem;
   border-radius: 2.2rem;
-  @extend %blurBackground;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
   transition: $transitionAnimation;
 
   &:hover {
-    transform: scale(1.01);
-    box-shadow: 0.4rem 0.4rem 1.2rem 0rem $mainBlueColor;
+    transform: scale(1.05);
+    border-radius: 2.5rem;
+    box-shadow: 0 0.46rem 0.46rem 0 rgba(0, 0, 0, 0.25);
 
     .cardText {
+      transition: $transitionAnimation;
       color: $mainDarkBlueColor;
+      -ms-line-clamp: unset;
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+      overflow: unset;
     }
   }
 
@@ -38,18 +44,6 @@
 }
 
 .cardSubTitle {
-  margin-bottom: 0.85rem;
-  color: $mainDarkBlueColor;
-  font-size: $titleCargSize;
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
-}
-.title {
-  margin-bottom: 2rem;
   color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   font-weight: $mediumFontWeight;
@@ -59,15 +53,45 @@
   @include onPhone() {
     font-size: 1.8rem;
   }
+  margin-bottom: 0.85rem;
 }
-.cardText {
-  font-size: $textCardSize;
-  letter-spacing: -0.05rem;
-  color: $textCardBlurColor;
+.title {
+  margin-bottom: 2rem;
+  color: $mainDarkBlueColor;
+  font-size: $titleCargSize;
   @include onTablet() {
     font-size: 1.8rem;
   }
   @include onPhone() {
     font-size: 1.4rem;
   }
+}
+.cardText {
+  font-size: $textCardSize;
+  letter-spacing: -0.05rem;
+  color: $textCardBlurColor;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 5;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  transition: $transitionAnimation;
+
+  @include onTablet() {
+    font-size: 1.8rem;
+  }
+  @include onPhone() {
+    font-size: 1.4rem;
+  }
+}
+
+.blur {
+  filter: blur(1rem);
+  transition: $transitionAnimation;
 }

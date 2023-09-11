@@ -20,7 +20,7 @@ export default function WhoWeAreSection() {
         </div>
         <div className={styles.whoWeAreTextBlock}>
           <div className={styles.whoWeAreLable}>
-            <h3 className={styles.buttonText}>Who we are</h3>
+            <h3 className={styles.titleText}>Who we are</h3>
           </div>
           <h4 className={styles.title}>{title}</h4>
           <p className={styles.text}>{text}</p>
