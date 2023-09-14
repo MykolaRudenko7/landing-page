@@ -11,7 +11,6 @@ import styles from 'components/StartHereSection/StartHereSection.module.scss'
 
 export default function StartHereSection() {
   const { textBlock } = startHereSectionData
-  const [onHoverTextStyle, setOnHoverTextStyle] = useState(false)
   const [isHoverCard, setIsHoverCard] = useState(null)
 
   return (
@@ -59,16 +58,14 @@ export default function StartHereSection() {
         </div>
       </div>
       <div className={styles.cardsBlock}>
-        <div className={cn(styles.cardsBlockContainer, { [styles.cardHovered]: onHoverTextStyle })}>
+        <div className={styles.cardsBlockContainer}>
           {startHereSectionData.cards.map((card, id) => (
             <StartHereCardItem
               cardId={id}
               key={uuidv4()}
               {...card}
               isHoverCard={isHoverCard}
-              onHoverTextStyle={onHoverTextStyle}
               setIsHoverCard={setIsHoverCard}
-              setOnHoverTextStyle={setOnHoverTextStyle}
             />
           ))}
         </div>

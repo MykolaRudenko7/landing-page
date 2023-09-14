@@ -28,6 +28,12 @@
   @include onPhone {
     width: 25rem;
   }
+  @include mobileFlexGap() {
+    margin-bottom: 10rem;
+    @include onSmallTablet() {
+      margin-bottom: 5rem;
+    }
+  }
 }
 
 .cards {

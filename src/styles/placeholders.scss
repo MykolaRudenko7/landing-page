@@ -32,7 +32,7 @@
   text-shadow: 0.05rem 0.2rem 0.2rem $textShadow;
   border-radius: 1rem;
   margin-left: 1.5rem;
-  max-width: 32rem;
+  width: 32rem;
 
   .buttonText {
     display: inline-block;
@@ -42,7 +42,12 @@
   &:hover {
     background-image: linear-gradient(112deg, $mainBlueColor 0%, $mainYellowColor 100%);
   }
-
+  &:active {
+    transform: skew(-25deg) scale(0.95);
+  }
+  @include onDesktop() {
+    width: 30rem;
+  }
   @include onTablet() {
     font-size: 2rem;
     width: 25rem;
@@ -70,6 +75,7 @@
   text-shadow: $textShadow;
   margin-left: 1.5rem;
   max-width: 32rem;
+  -webkit-appearance: none;
 
   .buttonText {
     display: inline-block;
@@ -92,13 +98,22 @@
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    -webkit-appearance: none;
   }
+
+  &:active {
+    transform: skew(-25deg) scale(0.95);
+  }
+
   &:hover {
     &:before {
       background: linear-gradient(81deg, $mainBlueColor 0%, $mainYellowColor 100%);
     }
   }
 
+  @include onDesktop() {
+    width: 30rem;
+  }
   @include onTablet() {
     font-size: 2rem;
     width: 25rem;
@@ -158,6 +173,7 @@
     margin-left: 0;
     font-size: 1.8rem;
     width: 20rem;
+    text-transform: none;
   }
 }
 
@@ -193,13 +209,8 @@
 }
 
 %blurBackground {
-  background: $circleWhyChooseCardGradient;
+  background: $backgroundServiceCard;
   box-shadow: 0 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2rem);
-
-  &:hover {
-    box-shadow: 0 0.2rem 0.2rem 0.2rem $mainBlueColor;
-  }
 }
 
 %cardWithTabBlock {
@@ -210,13 +221,15 @@
   transition: $transitionAnimation;
   @extend %blurBackground;
 
-  &:hover {
+  &:active {
+    box-shadow: 0.4rem 0.4rem 1.2rem 0rem;
     transform: scale(1.01);
   }
 }
 
 %cardWithTabBlockTitle {
-  @extend %blurBackground;
+  background: $titlePortfolioCardGradient;
+  backdrop-filter: blur(3rem);
   position: absolute;
   top: 0%;
   left: 50%;
@@ -228,14 +241,14 @@
   letter-spacing: 0.07rem;
   text-transform: uppercase;
   white-space: nowrap;
-  border-radius: 3.52rem;
+  border-radius: 1rem;
   padding: 1rem 2rem;
 
   @include onDesktop() {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   @include onTablet() {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   @include onSmallTablet() {
     font-size: 1.4rem;

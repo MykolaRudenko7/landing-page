@@ -36,10 +36,22 @@
     align-items: center;
     margin-bottom: 3rem;
   }
+  @include mobileFlexGap() {
+    margin-right: 8.5rem;
+    @include onLargeDesktop() {
+      margin-right: 5rem;
+    }
+    @include onTablet() {
+      margin-right: 3rem;
+    }
+  }
 }
 
 .testimonialsBlockLable {
   @extend %borderGradientBlockTitle;
+  @include mobileFlexGap() {
+    margin-bottom: 3rem;
+  }
 }
 
 .testimonialsBlockTitle {
@@ -92,6 +104,7 @@
   display: flex;
   gap: 3.8rem;
   padding-top: 7.7rem;
+  padding-bottom: 1rem;
 
   @include onTablet() {
     gap: 3rem;

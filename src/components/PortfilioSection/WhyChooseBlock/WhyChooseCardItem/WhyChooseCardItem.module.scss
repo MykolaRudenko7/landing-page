@@ -10,10 +10,6 @@
   @extend %blurBackground;
   transition: $transitionAnimation;
 
-  &:hover {
-    transform: scale(1.01);
-  }
-
   &:nth-child(1) {
     transform: translate(-170%, 100%);
   }
@@ -28,9 +24,6 @@
   }
   &:nth-child(5) {
     transform: translate(190%, 50%);
-  }
-  &:hover {
-    background-color: $backgroundServiceCard;
   }
 
   @include forCircles() {
@@ -71,6 +64,7 @@
       transform: translate(165%, 50%);
     }
   }
+
   @include onSmallTablet() {
     position: static;
     transform: none;
@@ -79,6 +73,13 @@
     border-radius: 2.5rem;
     &:nth-child(n) {
       transform: none;
+      &:hover,
+      &:active {
+        background-color: $pageBackgroundColor;
+      }
+    }
+    @include mobileFlexGap() {
+      margin-bottom: 2.5rem;
     }
   }
 }
@@ -86,6 +87,7 @@
 .whyChooseCardItemWrapper {
   padding: 4rem 3rem 3rem 3rem;
   text-align: center;
+  transition: $transitionAnimation;
 
   @include forCircles() {
     padding: 2rem 1rem 1rem 1rem;
@@ -93,6 +95,13 @@
   @include onSmallTablet() {
     padding: 1rem 2rem;
     width: 100%;
+  }
+
+  &:hover,
+  &:active {
+    .text {
+      color: $mainDarkBlueColor;
+    }
   }
 }
 
@@ -132,8 +141,5 @@
   @include onSmallTablet() {
     text-align: left;
     font-size: 1.4rem;
-  }
-  &:hover {
-    color: $mainDarkBlueColor;
   }
 }

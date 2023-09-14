@@ -1,9 +1,6 @@
 .formBlock {
   flex: 0 0 46%;
 
-  @include onTablet {
-    gap: 2.5rem;
-  }
   @include onSmallTablet {
     width: 95%;
   }
@@ -36,14 +33,16 @@
     color: rgba(58, 61, 96, 0.5);
     transform: skew(20deg);
   }
-  &:hover,
-  &:focus {
+  &:hover {
     filter: $filterServiceCardTitle;
     transform: skew(0deg);
 
     &::placeholder {
       transform: skew(0deg);
     }
+  }
+  &:focus {
+    border: 0.2rem solid $headerBackgroundColor;
   }
 
   @include onTablet() {
@@ -73,9 +72,11 @@
     font-family: $mainFontFamily;
     color: rgba(58, 61, 96, 0.5);
   }
-  &:hover,
-  &:focus {
+  &:hover {
     filter: $filterServiceCardTitle;
+  }
+  &:focus {
+    border: 0.2rem solid $headerBackgroundColor;
   }
 
   @include onTablet() {

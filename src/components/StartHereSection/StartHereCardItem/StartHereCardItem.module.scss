@@ -10,11 +10,7 @@
 
   &:hover {
     transform: scale(1.05);
-    border-radius: 2.5rem;
-    box-shadow: 0 0.46rem 0.46rem 0 rgba(0, 0, 0, 0.25);
-
     .cardText {
-      transition: $transitionAnimation;
       color: $mainDarkBlueColor;
       -ms-line-clamp: unset;
       -webkit-line-clamp: unset;
@@ -23,8 +19,20 @@
     }
   }
 
+  &:active {
+    border-radius: 2.5rem;
+    transform: scale(0.95);
+    border-radius: 2.5rem;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.25);
+  }
+
   @include onTablet() {
     padding: 2rem 1rem;
+  }
+
+  &.blur {
+    transition: $transitionAnimation;
+    filter: blur(1rem);
   }
 }
 
@@ -89,9 +97,4 @@
   @include onPhone() {
     font-size: 1.4rem;
   }
-}
-
-.blur {
-  filter: blur(1rem);
-  transition: $transitionAnimation;
 }

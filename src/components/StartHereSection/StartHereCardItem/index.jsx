@@ -9,17 +9,14 @@ export default function StartHereCardItem({
   title,
   subtitle,
   text,
-  setOnHoverTextStyle,
   cardId,
   isHoverCard,
   setIsHoverCard,
 }) {
   const handleCardMouseEnter = () => {
-    setOnHoverTextStyle(true)
     setIsHoverCard(cardId)
   }
   const handleCardMouseLeave = () => {
-    setOnHoverTextStyle(false)
     setIsHoverCard(null)
   }
 
@@ -30,6 +27,8 @@ export default function StartHereCardItem({
       })}
       onMouseEnter={handleCardMouseEnter}
       onMouseLeave={handleCardMouseLeave}
+      onTouchCancel={handleCardMouseLeave}
+      onTouchEnd={handleCardMouseLeave}
     >
       <div className={styles.cardImageWrapper}>
         <Image alt="card image" className={styles.cardImage} loading="eager" src={imageSrc} />

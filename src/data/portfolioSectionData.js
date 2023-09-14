@@ -14,6 +14,22 @@ export const portfolioSectionData = {
       cardBarossa: {
         title: 'Barossa - Crafting a Digital Wine Experience',
         imageSrc: cardImage1,
+        text: {
+          goals: [
+            'Seamlessly convert the Figma design into a React-based site.',
+            'Embed SEO strategies for optimal online presence.',
+            'Enrich user interaction with fluid animations.',
+            'Ensure adaptability and consistency across all device types.',
+          ],
+          features: [
+            'Design Evolution',
+            'SEO Integration',
+            'User-Vendor Registration',
+            'Interactive Animations',
+            'Universal Compatibility',
+          ],
+          techStackTags: ['React', 'Figma', 'SEO', 'CSS', 'Animations', 'Responsive Design'],
+        },
       },
       cardB2B: {
         title: 'B2B Video Communication Platform',
@@ -22,6 +38,32 @@ export const portfolioSectionData = {
       cardFloraNow: {
         title: 'FloraNow -Online Marketplace for Floriculture',
         imageSrc: cardImage3,
+        text: {
+          goals: [
+            'Develop a multi-vendor platform with individual registration and management capabilities.',
+            'Integrate a secure payment gateway.',
+            'Ensure efficient inventory management for all vendors.',
+            'Implement multilingual support to cater to a global audience.',
+            'Develop a user-friendly content management system using WordPress.',
+          ],
+          features: [
+            'Multi-Vendor Marketplace',
+            'Secure Payment Gateway',
+            'User-Vendor Registration',
+            'Inventory Management',
+            'Multilingual Support',
+            'Content Management System',
+          ],
+          techStackTags: [
+            'HTML5/CSS3/JS',
+            'Bootstrap',
+            'PHP',
+            'MySQL',
+            'Secure Payment API Integration',
+            'Multilingual Support Libraries',
+            'WordPress',
+          ],
+        },
       },
     },
   },

@@ -22,6 +22,16 @@
 .textBlock {
   color: $mainDarkBlueColor;
   text-align: center;
+
+  @include mobileFlexGap() {
+    margin-bottom: 8rem;
+    @include onTablet() {
+      margin-bottom: 5rem;
+    }
+    @include onSmallTablet() {
+      margin-bottom: 2.5rem;
+    }
+  }
 }
 
 .contactUsLabel {
@@ -73,7 +83,6 @@
   flex: 0 0 54%;
   @extend %flexCenter;
   flex-direction: column;
-  gap: 1rem;
 
   @include onSmallTablet() {
     flex-direction: column-reverse;
