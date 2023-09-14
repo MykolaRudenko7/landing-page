@@ -38,3 +38,9 @@
     @content;
   }
 }
+
+@mixin mobileHover {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}

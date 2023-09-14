@@ -92,6 +92,7 @@
   display: flex;
   gap: 3.8rem;
   padding-top: 7.7rem;
+  padding-bottom: 1rem;
 
   @include onTablet() {
     gap: 3rem;

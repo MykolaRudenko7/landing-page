@@ -6,8 +6,9 @@
   transition: $transitionAnimation;
   @extend %blurBackground;
 
-  &:hover {
+  &:active {
     background-color: $pageBackgroundColor;
+    transform: scale(1.01);
   }
 
   @include onSmallTablet() {

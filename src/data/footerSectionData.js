@@ -1,5 +1,5 @@
 import logoImage from 'images/navbar/logo.svg'
-import socialIcon1 from 'images/footer/whatsapp-icon.svg'
+import socialIcon1 from 'images/footer/whatsapp.png'
 import socialIcon2 from 'images/footer/x-icon.svg'
 import socialIcon3 from 'images/footer/ln-icon.svg'
 import socialIcon4 from 'images/footer/fb-icon.svg'

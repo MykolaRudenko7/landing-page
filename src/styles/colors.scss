@@ -3,10 +3,11 @@ $mainBlueColor: #40ccff;
 $mainDarkBlueColor: #3a3d60;
 $mainWhiteColor: #fff;
 $headerBackgroundColor: #3fa3ff;
+$techStackTagsColor: rgba(58, 61, 96, 0.7);
 $textShadow: 0.05rem 0.2rem 0.2rem rgba(58, 61, 96, 0.5);
 $textCardBlurColor: rgba(58, 61, 96, 0.5);
 $pageBackgroundColor: rgba(241, 241, 241, 0.5);
-$backgroundServiceCard: #d9d9d9;
+$backgroundServiceCard: #d9d9d95f;
 $borderGradientServiceCardTitle: linear-gradient(
   139deg,
   rgba(217, 217, 217, 0.48) 0%,
@@ -19,3 +20,4 @@ $circleWhyChooseCardGradient: linear-gradient(
 );
 $filterServiceCardTitle: drop-shadow(0.32rem 0.4rem 1.27rem rgba(58, 61, 96, 0.5));
 $circleWhyChooseCardFilter: drop-shadow(0.2rem 0.2rem 1rem rgba(58, 61, 96, 0.25));
+$titlePortfolioCardGradient: linear-gradient(91deg, #ffd600 0.58%, rgba(64, 204, 255, 0.6) 99.54%);

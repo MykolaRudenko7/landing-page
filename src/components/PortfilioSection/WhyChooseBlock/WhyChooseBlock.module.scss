@@ -37,7 +37,7 @@
   backdrop-filter: blur(3.85rem);
   transition: $transitionAnimation;
 
-  &:hover {
+  &:active {
     transform: scale(1.01);
     background-color: $pageBackgroundColor;
   }

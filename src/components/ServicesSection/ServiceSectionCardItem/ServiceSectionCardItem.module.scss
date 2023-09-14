@@ -1,4 +1,5 @@
 .listBlock {
+  @extend %transparentTap;
   position: relative;
   color: $mainDarkBlueColor;
   padding: 3.8rem 1.3rem 1.6rem 1.3rem;
@@ -6,41 +7,18 @@
   transition: $transitionAnimation;
   @extend %blurBackground;
 
-  &:hover {
-    transform: scale(1.01);
-    box-shadow: 0.4rem 0.4rem 1.2rem 0rem $mainBlueColor;
-  }
-
   .cardText {
     color: $mainDarkBlueColor;
+  }
+  &:active {
+    transform: scale(1.03);
+    box-shadow: 0.4rem 0.4rem 1.2rem 0rem;
   }
 }
 
 .listTitle {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%) skew(-25deg);
-  text-align: center;
-  text-shadow: 0.05rem 0.1rem 0.1rem $mainDarkBlueColor;
-  font-size: 2.4rem;
-  font-weight: $mediumFontWeight;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border-radius: 3.52rem;
+  @extend %cardWithTabBlockTitle;
   padding: 0.4rem 2rem;
-  @extend %blurBackground;
-
-  @include onDesktop() {
-    font-size: 2rem;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onSmallTablet() {
-    font-size: 1.6rem;
-  }
 }
 
 .listTitleText {

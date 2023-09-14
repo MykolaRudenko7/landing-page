@@ -160,7 +160,7 @@
   display: inline-block;
   transition: $transitionAnimation;
 
-  &:hover {
+  &:active {
     transform: scale(0.9);
   }
 
