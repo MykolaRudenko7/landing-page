@@ -75,7 +75,6 @@
   text-shadow: $textShadow;
   margin-left: 1.5rem;
   max-width: 32rem;
-  -webkit-appearance: none;
 
   .buttonText {
     display: inline-block;
@@ -98,7 +97,6 @@
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    -webkit-appearance: none;
   }
 
   &:active {

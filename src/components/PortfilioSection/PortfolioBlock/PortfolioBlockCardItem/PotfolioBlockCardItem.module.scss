@@ -81,6 +81,9 @@
 }
 .goalsListItem {
   margin-bottom: 1rem;
+  @include onTablet() {
+    margin-bottom: 0.5rem;
+  }
 }
 .featuresTitle {
   color: $mainDarkBlueColor;
@@ -101,6 +104,8 @@
 .featuresListItems {
   color: $mainDarkBlueColor;
   font-size: $textCardSize;
+  display: flex;
+  flex-wrap: wrap;
   @include onDesktop() {
     font-size: 2rem;
   }
@@ -113,6 +118,10 @@
 }
 .featuresListItem {
   margin-bottom: 1rem;
+  margin-right: 3rem;
+  @include onTablet() {
+    margin-right: 1.5rem;
+  }
 }
 .techStackTagsListItems {
   text-wrap: wrap;
@@ -123,8 +132,10 @@
   text-transform: lowercase;
   @include onDesktop() {
     font-size: 2rem;
+    line-height: 3rem;
   }
   @include onTablet() {
+    line-height: normal;
     font-size: 1.6rem;
     width: 30%;
   }
@@ -146,6 +157,7 @@
     margin-bottom: 0;
   }
 }
+
 @keyframes shake {
   0% {
     transform: translate(0, 0);

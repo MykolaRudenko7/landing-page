@@ -71,15 +71,15 @@
     width: 100%;
     height: 100%;
     border-radius: 2.5rem;
-    &:nth-child(n) {
+    &:nth-child(n + 0) {
       transform: none;
       &:hover,
       &:active {
         background-color: $pageBackgroundColor;
       }
-    }
-    @include mobileFlexGap() {
-      margin-bottom: 2.5rem;
+      @include mobileFlexGap() {
+        margin-bottom: 2.5rem;
+      }
     }
   }
 }
@@ -93,7 +93,6 @@
     padding: 2rem 1rem 1rem 1rem;
   }
   @include onSmallTablet() {
-    padding: 1rem 2rem;
     width: 100%;
   }
 
