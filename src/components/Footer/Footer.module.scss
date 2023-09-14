@@ -28,9 +28,6 @@
     justify-content: center;
     gap: 2rem;
   }
-  @include mobileFlexGap() {
-    margin-bottom: 4.2rem;
-  }
 }
 
 .logoWrapper {
@@ -38,12 +35,6 @@
 
   @include onDesktop {
     width: 20rem;
-  }
-  @include mobileFlexGap() {
-    margin-right: 4.2rem;
-    @include onPhone() {
-      margin-right: 2rem;
-    }
   }
 }
 
@@ -77,9 +68,6 @@
   }
   @include onTablet() {
     font-size: 1.8rem;
-  }
-  @include mobileFlexGap() {
-    margin-bottom: 2.5rem;
   }
 }
 
@@ -135,9 +123,6 @@
   @include onTablet() {
     font-size: 1.6rem;
   }
-  @include mobileFlexGap() {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .getInTouch {
@@ -162,9 +147,6 @@
   @include onSmallTablet() {
     font-size: $textParagraphSize;
   }
-  @include mobileFlexGap() {
-    margin-bottom: 1rem;
-  }
 }
 
 .socialsImages {
@@ -185,9 +167,6 @@
   @include onDesktop() {
     width: 4rem;
     height: 4rem;
-  }
-  @include mobileFlexGap() {
-    margin-bottom: 1rem;
   }
 }
 

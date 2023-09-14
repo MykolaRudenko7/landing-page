@@ -30,18 +30,6 @@
     width: 100%;
     text-align: center;
   }
-  @include mobileFlexGap() {
-    margin-right: 6rem;
-    @include onSmallTablet() {
-      margin-bottom: 3rem;
-    }
-  }
-}
-
-.textBlockWrapper {
-  @include mobileFlexGap() {
-    margin-bottom: 6rem;
-  }
 }
 
 .portfolioLabel {

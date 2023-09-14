@@ -23,9 +23,6 @@
   }
   @include onSmallTablet() {
     margin-top: 0rem;
-    @include mobileFlexGap() {
-      margin-bottom: 2rem;
-    }
   }
 }
 
@@ -110,17 +107,6 @@
   @include onPhone() {
     width: 12rem;
     font-size: 1.4rem;
-  }
-
-  @include mobileFlexGap() {
-    margin-right: 5rem;
-
-    @include onDesktop() {
-      margin-right: 1.9rem;
-    }
-    @include onTablet() {
-      margin-right: 1.5rem;
-    }
   }
 }
 

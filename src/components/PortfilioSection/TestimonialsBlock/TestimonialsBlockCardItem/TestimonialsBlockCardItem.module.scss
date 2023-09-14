@@ -21,16 +21,6 @@
     min-width: 25rem;
     padding: 7rem 2rem 2rem 2rem;
   }
-  @include mobileFlexGap() {
-    margin-right: 3.8rem;
-
-    @include onTablet() {
-      margin-right: 3rem;
-    }
-    @include onSmallTablet() {
-      margin-right: 2rem;
-    }
-  }
 }
 
 .cardImageWrapper {

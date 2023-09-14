@@ -44,11 +44,3 @@
     @content;
   }
 }
-
-@mixin mobileFlexGap {
-  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-    &:not(:last-child) {
-      @content;
-    }
-  }
-}

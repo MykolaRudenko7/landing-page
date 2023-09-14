@@ -1,6 +1,7 @@
 .card {
   cursor: pointer;
   position: relative;
+  @extend %transparentTap;
   @extend %cardWithTabBlock;
   margin-bottom: 7.5rem;
   &:last-child {
@@ -21,8 +22,7 @@
 .cardTitleText {
   @extend %titleTextSpan;
 }
-.cardImageWrapper {
-}
+
 .cardImage {
   @extend %forImage;
 }

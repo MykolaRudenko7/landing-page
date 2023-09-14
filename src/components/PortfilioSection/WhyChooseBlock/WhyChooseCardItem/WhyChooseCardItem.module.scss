@@ -77,9 +77,6 @@
       &:active {
         background-color: $pageBackgroundColor;
       }
-      @include mobileFlexGap() {
-        margin-bottom: 2.5rem;
-      }
     }
   }
 }

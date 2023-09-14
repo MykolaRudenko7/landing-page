@@ -56,9 +56,6 @@
     width: 100%;
     border-radius: 2.5rem;
     background-color: $headerBackgroundColor;
-    @include mobileFlexGap() {
-      margin-right: 2rem;
-    }
   }
 }
 
@@ -182,17 +179,5 @@
   }
   @include onPhone() {
     width: 25rem;
-  }
-  @include mobileFlexGap() {
-    margin-bottom: 5rem;
-    @include forCircles() {
-      margin-bottom: 3rem;
-    }
-    @include onDesktop() {
-      margin-bottom: 2rem;
-    }
-    @include onSmallTablet() {
-      margin-bottom: 2.5rem;
-    }
   }
 }

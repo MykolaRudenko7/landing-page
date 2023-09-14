@@ -22,16 +22,6 @@
 .textBlock {
   color: $mainDarkBlueColor;
   text-align: center;
-
-  @include mobileFlexGap() {
-    margin-bottom: 8rem;
-    @include onTablet() {
-      margin-bottom: 5rem;
-    }
-    @include onSmallTablet() {
-      margin-bottom: 2.5rem;
-    }
-  }
 }
 
 .contactUsLabel {

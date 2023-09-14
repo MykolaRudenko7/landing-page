@@ -5,15 +5,4 @@
     font-size: $textParagraphSize;
     font-weight: $mediumFontWeight;
   }
-
-  @include mobileFlexGap() {
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
-    @include onDesktop() {
-      margin-right: 1.5rem;
-    }
-    @include onSmallTablet() {
-      margin-bottom: 3rem;
-    }
-  }
 }

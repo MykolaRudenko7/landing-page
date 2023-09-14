@@ -38,15 +38,6 @@
     width: 9rem;
     height: 7rem;
   }
-  @include mobileFlexGap() {
-    margin-right: 4rem;
-    @include onDesktop() {
-      margin-right: 2rem;
-    }
-    @include onTablet() {
-      margin-right: 1rem;
-    }
-  }
 }
 
 .logoImage {
@@ -118,12 +109,10 @@
   @include onSmallPhone() {
     width: 12rem;
   }
-  @include mobileFlexGap() {
-    margin-right: 2rem;
-  }
 }
 
 .menuBurger {
+  @extend %transparentTap;
   display: none;
   z-index: 4;
 
@@ -151,11 +140,6 @@
     transition: $transitionAnimation;
     transform-origin: right;
     width: 1.5rem;
-    @include mobileFlexGap() {
-      @include onSmallTablet() {
-        margin-bottom: 1rem;
-      }
-    }
   }
 
   .burger__line2 {
