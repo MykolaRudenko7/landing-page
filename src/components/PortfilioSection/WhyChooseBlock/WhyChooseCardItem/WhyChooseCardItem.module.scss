@@ -8,6 +8,8 @@
   transition: $transitionAnimation;
   overflow: hidden;
   @extend %blurBackground;
+  backdrop-filter: $blurFilter;
+  filter: $circleWhyChooseCardFilter;
   transition: $transitionAnimation;
 
   &:nth-child(1) {
@@ -73,7 +75,7 @@
     border-radius: 2.5rem;
     &:nth-child(n + 0) {
       transform: none;
-      &:hover,
+      padding: 2rem;
       &:active {
         background-color: $pageBackgroundColor;
       }
@@ -91,6 +93,7 @@
   }
   @include onSmallTablet() {
     width: 100%;
+    padding: 0;
   }
 
   &:hover,
@@ -117,7 +120,6 @@
     margin-bottom: 1rem;
   }
   @include onSmallTablet() {
-    margin-bottom: 2.5rem;
     font-size: 1.8rem;
     text-align: center;
   }
@@ -127,6 +129,7 @@
   color: $textCardBlurColor;
   font-size: $textCardSize;
   letter-spacing: -0.05rem;
+  transition: $transitionAnimation;
 
   @include forCircles() {
     font-size: 1.8rem;

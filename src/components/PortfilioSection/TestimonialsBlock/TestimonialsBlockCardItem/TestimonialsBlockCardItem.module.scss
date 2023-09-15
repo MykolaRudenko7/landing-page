@@ -8,13 +8,15 @@
 
   &:active {
     background-color: $pageBackgroundColor;
-    transform: scale(1.01);
   }
 
-  @include onSmallTablet() {
-    border-radius: 3rem;
-    min-width: 30rem;
+  @include onTablet() {
     padding: 7rem 2rem 2rem 2rem;
+    min-width: 35rem;
+  }
+  @include onSmallTablet() {
+    min-width: 30rem;
+    border-radius: 3rem;
   }
   @include onPhone() {
     border-radius: 2rem;
@@ -31,6 +33,8 @@
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 100%;
+  filter: $circleWhyChooseCardFilter;
 }
 
 .cardImage {
@@ -38,12 +42,12 @@
 }
 
 .cardTextBlock {
-  text-align: center;
+  text-align: left;
   color: $mainDarkBlueColor;
-  font-size: 2.4rem;
 }
 
 .cardName {
+  text-align: center;
   font-size: $smallTitleSize;
   font-weight: $mediumFontWeight;
   margin-bottom: 1.5rem;
@@ -52,21 +56,32 @@
     font-size: $textCardSize;
   }
   @include onSmallTablet() {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 
 .cardVacancy {
-  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.4rem;
+  opacity: 0.85;
+  margin-bottom: 2.4rem;
+  @include onSmallTablet() {
+    font-size: 2rem;
+  }
 }
 
 .cardText {
+  font-size: 2.8rem;
+  font-weight: $lightFontWeight;
+  line-height: 3.6rem;
+  letter-spacing: 0.05rem;
+
   @include onTablet() {
-    text-align: left;
+    line-height: normal;
+    letter-spacing: normal;
     font-size: 1.8rem;
   }
   @include onSmallTablet() {
     font-size: 1.6rem;
-    text-align: left;
   }
 }

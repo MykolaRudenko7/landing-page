@@ -34,13 +34,9 @@
   text-align: center;
   overflow: hidden;
   @extend %blurBackground;
-  backdrop-filter: blur(3.85rem);
+  backdrop-filter: $blurFilter;
+  filter: $circleWhyChooseCardFilter;
   transition: $transitionAnimation;
-
-  &:active {
-    transform: scale(1.01);
-    background-color: $pageBackgroundColor;
-  }
 
   @include forCircles() {
     width: 55rem;

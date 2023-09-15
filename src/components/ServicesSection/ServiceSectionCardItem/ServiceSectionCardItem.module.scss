@@ -10,10 +10,6 @@
   .cardText {
     color: $mainDarkBlueColor;
   }
-  &:active {
-    transform: scale(1.03);
-    box-shadow: 0.4rem 0.4rem 1.2rem 0rem;
-  }
 }
 
 .listTitle {

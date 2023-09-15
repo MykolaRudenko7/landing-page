@@ -5,8 +5,9 @@
   text-align: center;
   padding: 2.2rem 2rem 2.6rem 2rem;
   border-radius: 2.2rem;
-  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
-  transition: $transitionAnimation;
+  box-shadow: $boxShadow;
+  transition: $transitionAnimationStartHere;
+  background: $backgroundServiceCard;
 
   &:hover {
     transform: scale(1.05);
@@ -17,13 +18,6 @@
       line-clamp: unset;
       overflow: unset;
     }
-  }
-
-  &:active {
-    border-radius: 2.5rem;
-    transform: scale(0.95);
-    border-radius: 2.5rem;
-    box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.25);
   }
 
   @include onTablet() {
