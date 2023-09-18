@@ -47,30 +47,37 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: $mainYellowColor;
+  scrollbar-color: var(--mainBlueColor);
   text-rendering: optimizeSpeed;
   min-width: 320px;
 }
 body::-webkit-scrollbar {
   width: 0.8rem;
-  background-color: $mainDarkBlueColor;
+  background-color: var(--mainDarkBlueColor);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $mainYellowColor;
+  background-color: var(--mainYellowColor);
   border-radius: 0.3rem;
-}
-
-html,
-body {
-  font-family: Fira Sans Condensed;
-  background: linear-gradient(90deg, $mainBlueColor 0%, $mainYellowColor 100%);
-  font-size: 10px;
-  font-style: normal;
-  height: 100%;
-  width: 100%;
 }
 
 .scrollLock {
   overflow: hidden;
+}
+
+html,
+body {
+  font-family: 'Fira Sans Condensed';
+  font-size: 10px;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  background: linear-gradient(90deg, var(--start-color) 0%, var(--end-color) 100%);
+}
+
+:root {
+  --mainYellowColor: #ffcf00;
+  --mainDarkBlueColor: #3a3d60;
+  --mainBlueColor: #40ccff;
 }

@@ -1,4 +1,7 @@
-import 'app/globals.scss'
+'use client'
+
+import 'app/globals.css'
+import ThemeProvider from 'app/provider'
 
 export const metadata = {
   title: 'Home page',
@@ -8,7 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeProvider>
+        <body>{children}</body>
+      </ThemeProvider>
     </html>
   )
 }

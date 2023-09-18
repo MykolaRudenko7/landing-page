@@ -20,17 +20,12 @@
 }
 
 .textBlock {
-  color: $mainDarkBlueColor;
   text-align: center;
 }
 
 .contactUsLabel {
   @extend %borderGradientBlockTitle;
   margin-bottom: 3.7rem;
-}
-
-.buttonText {
-  color: $mainDarkBlueColor;
 }
 
 .contactUsTilte {

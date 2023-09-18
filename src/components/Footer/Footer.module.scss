@@ -55,7 +55,6 @@
 }
 
 .scrollLinks {
-  color: $mainDarkBlueColor;
   font-size: $textCardSize;
   font-weight: $semiBoldFontWeight;
   display: flex;
@@ -72,7 +71,6 @@
 }
 
 .ordinaryLink {
-  color: $mainDarkBlueColor;
   font-size: 2.4rem;
   font-weight: $lightFontWeight;
   letter-spacing: 0.07rem;
@@ -92,10 +90,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: $mainDarkBlueColor;
   font-size: $textCardSize;
   font-weight: $semiBoldFontWeight;
-  color: $mainDarkBlueColor;
   text-transform: uppercase;
 
   @include onDesktop() {
@@ -111,7 +107,6 @@
 
 .serviceLink {
   font-size: 2.4rem;
-  color: $mainDarkBlueColor;
   font-weight: $lightFontWeight;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
@@ -133,7 +128,6 @@
 }
 
 .getInTouchTitle {
-  color: $mainDarkBlueColor;
   font-size: $textCardSize;
   font-weight: $semiBoldFontWeight;
   white-space: nowrap;
@@ -176,7 +170,6 @@
 
 .about {
   text-align: center;
-  color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   font-weight: $mediumFontWeight;
 

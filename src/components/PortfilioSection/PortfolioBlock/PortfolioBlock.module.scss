@@ -45,7 +45,6 @@
 }
 
 .textBlockTitle {
-  color: $mainDarkBlueColor;
   @extend %mediumTitle;
   margin-bottom: 4rem;
 
@@ -59,7 +58,6 @@
 }
 
 .textBlockText {
-  color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   margin-bottom: 6.4rem;
 

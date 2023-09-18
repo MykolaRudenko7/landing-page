@@ -29,7 +29,6 @@
 .textBlockTitle {
   text-align: left;
   font-size: $largeTitleSize;
-  color: $mainDarkBlueColor;
   margin-bottom: 9.8rem;
 
   @include onDesktop() {
@@ -49,7 +48,6 @@
 .textBlockText {
   text-align: left;
   font-size: $textParagraphSize;
-  color: $mainDarkBlueColor;
   margin-bottom: 13.7rem;
   line-height: 3.9rem;
 
