@@ -26,7 +26,6 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
-  color: $mainDarkBlueColor;
   align-items: flex-start;
 
   @include onTablet() {

@@ -77,7 +77,6 @@
 }
 
 .mainCardTitle {
-  color: $mainDarkBlueColor;
   @extend %mediumTitle;
 
   @include forCircles() {
@@ -96,7 +95,6 @@
 }
 
 .mainCardText {
-  color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
 
   @include forCircles() {

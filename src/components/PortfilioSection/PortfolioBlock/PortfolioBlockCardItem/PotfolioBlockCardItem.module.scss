@@ -51,7 +51,6 @@
   }
 }
 .goalsTitle {
-  color: $mainDarkBlueColor;
   font-size: $subtitleCargSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
@@ -67,7 +66,6 @@
   }
 }
 .goalsListItems {
-  color: $mainDarkBlueColor;
   font-size: $textCardSize;
   @include onDesktop() {
     font-size: 2rem;
@@ -86,7 +84,6 @@
   }
 }
 .featuresTitle {
-  color: $mainDarkBlueColor;
   font-size: $subtitleCargSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
@@ -102,7 +99,6 @@
   }
 }
 .featuresListItems {
-  color: $mainDarkBlueColor;
   font-size: $textCardSize;
   display: flex;
   flex-wrap: wrap;

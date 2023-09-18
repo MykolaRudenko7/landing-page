@@ -56,7 +56,6 @@
 }
 
 .title {
-  color: $mainDarkBlueColor;
   @extend %mediumTitle;
   margin-bottom: 8.6rem;
 
@@ -73,7 +72,6 @@
 }
 
 .text {
-  color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
 
   @include onDesktop() {

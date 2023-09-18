@@ -6,8 +6,8 @@
   padding: 2.2rem 2rem 2.6rem 2rem;
   border-radius: 2.2rem;
   box-shadow: $boxShadow;
-  transition: $transitionAnimationStartHere;
   background: $backgroundServiceCard;
+  transition: $transitionAnimationStartHere;
 
   &:hover {
     transform: scale(1.05);
@@ -46,7 +46,6 @@
 }
 
 .cardSubTitle {
-  color: $mainDarkBlueColor;
   font-size: $textParagraphSize;
   font-weight: $mediumFontWeight;
   @include onTablet() {
@@ -59,7 +58,6 @@
 }
 .title {
   margin-bottom: 2rem;
-  color: $mainDarkBlueColor;
   font-size: $titleCargSize;
   @include onTablet() {
     font-size: 1.8rem;

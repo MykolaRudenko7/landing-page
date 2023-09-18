@@ -2,6 +2,9 @@
   margin: 0 auto;
   max-width: 168rem;
   padding: 4rem 8rem 0 8rem;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   @include onDesktop() {
     padding: 2rem 3rem 0 3rem;
