@@ -1,23 +1,7 @@
 .main {
   margin: 0 auto;
-  padding: 0 2rem 4rem 2rem;
-  max-width: 173rem;
-  background-color: $headerBackgroundColor;
-  overflow: hidden;
-
-  @include onTablet() {
-    padding: 0 1rem 1rem 1rem;
-  }
-  @include onSmallTablet() {
-    padding: 0 1rem 1rem 1rem;
-  }
-}
-
-.frame {
   max-width: 168rem;
   padding: 4rem 8rem 0 8rem;
-  border-radius: 2rem;
-  background: linear-gradient(90deg, $mainBlueColor 0%, $mainYellowColor 100%);
 
   @include onDesktop() {
     padding: 2rem 3rem 0 3rem;

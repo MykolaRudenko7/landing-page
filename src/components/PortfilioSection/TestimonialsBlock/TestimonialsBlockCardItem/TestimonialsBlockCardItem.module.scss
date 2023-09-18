@@ -5,6 +5,7 @@
   padding: 8.6rem 2.5rem 9rem 2.5rem;
   transition: $transitionAnimation;
   @extend %blurBackground;
+  scroll-snap-align: center;
 
   &:active {
     background-color: $pageBackgroundColor;

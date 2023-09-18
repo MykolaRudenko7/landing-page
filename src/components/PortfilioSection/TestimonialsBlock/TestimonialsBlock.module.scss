@@ -79,6 +79,7 @@
   flex: 0 0 70%;
   overflow-x: scroll;
   scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
   scrollbar-color: $mainBlueColor;
   padding-left: 0.5rem;
 
