@@ -21,7 +21,7 @@
   font-family: $mainFontFamily;
   font-size: 3.5rem;
   border-radius: 2rem;
-  border: none;
+  border: solid 0.2rem transparent;
   outline: none;
   transform-origin: left bottom;
   transform: skew(-20deg);
@@ -43,7 +43,7 @@
     }
   }
   &:focus {
-    border: 0.1rem solid var(--start-color);
+    border: 0.2rem solid var(--start-color);
     transform: skew(0deg);
     &::placeholder {
       transform: skew(0deg);
@@ -69,7 +69,7 @@
   font-family: $mainFontFamily;
   font-size: 3.5rem;
   transform-origin: left bottom;
-  border: none;
+  border: solid 0.2rem transparent;
   outline: none;
   position: relative;
   transition: $transitionAnimation;
@@ -86,7 +86,7 @@
     filter: $filterServiceCardTitle;
   }
   &:focus {
-    border: 0.1rem solid var(--start-color);
+    border: 0.2rem solid var(--start-color);
     opacity: 1;
   }
 

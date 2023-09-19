@@ -8,9 +8,6 @@
     margin: 0 auto;
     max-width: 74.5rem;
   }
-  &:hover {
-    animation: shake 0.5s ease 0.5s;
-  }
 }
 
 .cardTitle {
@@ -151,23 +148,5 @@
   }
   @include onPhone() {
     margin-bottom: 0;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-0.2rem, 0);
-  }
-  50% {
-    transform: translate(0.2rem, 0);
-  }
-  75% {
-    transform: translate(-0.2rem, 0);
-  }
-  100% {
-    transform: translate(0.2rem, 0);
   }
 }
