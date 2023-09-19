@@ -22,20 +22,14 @@
   transition: $transitionAnimation;
 
   @include onTablet() {
-    top: 3%;
-  }
-  @include onPhone() {
-    padding: 1rem;
-    font-size: 1.2rem;
+    top: 2%;
   }
   &.closePanelButton {
-    color: var(--start-color);
-    background-color: var(--end-color);
+    display: none;
   }
 }
 
 .switchPanel {
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -44,9 +38,9 @@
   right: -90%;
   top: 0;
   height: 100%;
-  width: 45%;
+  width: 25%;
   padding: 10rem 2rem;
-  background-color: $backgroundServiceCard;
+  background-color: white;
   transition: $transitionAnimationStartHere;
   opacity: 0;
 
