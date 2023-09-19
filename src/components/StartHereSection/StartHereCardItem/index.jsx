@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import cn from 'classnames'
+import { motion } from 'framer-motion'
 import styles from 'components/StartHereSection/StartHereCardItem/StartHereCardItem.module.scss'
 
 export default function StartHereCardItem({
@@ -19,23 +19,34 @@ export default function StartHereCardItem({
   const handleCardMouseLeave = () => {
     setIsHoverCard(null)
   }
+  const isBlurred = isHoverCard !== null && isHoverCard !== cardId
 
   return (
-    <div
-      className={cn(styles.card, {
-        [styles.blur]: isHoverCard !== cardId && isHoverCard !== null,
-      })}
-      onMouseEnter={handleCardMouseEnter}
-      onMouseLeave={handleCardMouseLeave}
-      onTouchCancel={handleCardMouseLeave}
-      onTouchEnd={handleCardMouseLeave}
+    <motion.div
+      animate={{ filter: isBlurred ? 'blur(6px)' : 'none' }}
+      className={styles.card}
+      onHoverEnd={handleCardMouseLeave}
+      onHoverStart={handleCardMouseEnter}
     >
       <div className={styles.cardImageWrapper}>
         <Image alt="card image" className={styles.cardImage} loading="eager" src={imageSrc} />
       </div>
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.cardSubTitle}>{subtitle}</p>
-      <p className={styles.cardText}>{text}</p>
-    </div>
+      <motion.p
+        animate={{
+          opacity: isHoverCard === cardId ? 1 : 0.6,
+          overflow: isHoverCard === cardId ? 'unset' : 'hidden',
+        }}
+        className={styles.cardText}
+        initial={{
+          opacity: 0.6,
+          overflow: 'hidden',
+        }}
+        transition={{ duration: 0.4 }}
+      >
+        {text}
+      </motion.p>
+    </motion.div>
   )
 }

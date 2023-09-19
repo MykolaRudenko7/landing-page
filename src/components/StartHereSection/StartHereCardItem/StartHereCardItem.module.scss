@@ -10,23 +10,16 @@
   transition: $transitionAnimationStartHere;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     .cardText {
-      color: $mainDarkBlueColor;
       -ms-line-clamp: unset;
       -webkit-line-clamp: unset;
       line-clamp: unset;
-      overflow: unset;
     }
   }
 
   @include onTablet() {
     padding: 2rem 1rem;
-  }
-
-  &.blur {
-    transition: $transitionAnimation;
-    filter: blur(1rem);
   }
 }
 
@@ -69,19 +62,18 @@
 .cardText {
   font-size: $textCardSize;
   letter-spacing: -0.05rem;
-  color: $textCardBlurColor;
+  display: -webkit-box;
+
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  overflow: hidden;
   -ms-line-clamp: 5;
-  -webkit-line-clamp: 5;
   line-clamp: 5;
-  display: -webkit-box;
   word-wrap: break-word;
-  -webkit-box-orient: vertical;
   box-orient: vertical;
-  transition: $transitionAnimation;
 
   @include onTablet() {
     font-size: 1.8rem;

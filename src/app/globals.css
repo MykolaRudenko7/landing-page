@@ -22,15 +22,21 @@ a:hover {
   text-decoration: none;
 }
 
+a,
+button,
+link {
+  font-weight: inherit;
+  font-size: inherit;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  cursor: default;
   font-weight: inherit;
   font-size: inherit;
-  cursor: default;
 }
 
 p,
@@ -47,17 +53,17 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--mainBlueColor);
+  scrollbar-color: var(--start-color);
   text-rendering: optimizeSpeed;
   min-width: 320px;
 }
 body::-webkit-scrollbar {
   width: 0.8rem;
-  background-color: var(--mainDarkBlueColor);
+  background-color: var(--text-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--mainYellowColor);
+  background-color: var(--end-color);
   border-radius: 0.3rem;
 }
 

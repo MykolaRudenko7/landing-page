@@ -14,8 +14,8 @@ $circleWhyChooseCardGradient: linear-gradient(
   rgba(217, 217, 217, 0.3) 0%,
   rgba(217, 217, 217, 0) 100%
 );
-$buttonFullGradient: linear-gradient(112deg, $mainYellowColor 0%, $mainBlueColor 100%);
-$buttonFullGradientHover: linear-gradient(112deg, $mainBlueColor 0%, $mainYellowColor 100%);
-$backgroundBodyGradient: linear-gradient(90deg, $mainBlueColor 0%, $mainYellowColor 100%);
+$buttonFullGradient: linear-gradient(112deg, var(--end-color) 0%, var(--start-color) 100%);
+$buttonFullGradientHover: linear-gradient(112deg, var(--start-color) 0%, var(--end-color) 100%);
+$backgroundBodyGradient: linear-gradient(90deg, var(--start-color) 0%, var(--end-color) 100%);
 $filterServiceCardTitle: drop-shadow(0.32rem 0.4rem 1.27rem rgba(58, 61, 96, 0.5));
 $circleWhyChooseCardFilter: drop-shadow(0.2rem 0.2rem 1rem rgba(58, 61, 96, 0.25));

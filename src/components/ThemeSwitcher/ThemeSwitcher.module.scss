@@ -12,7 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $headerBackgroundColor;
+  background-color: var(--start-color);
+  color: var(--end-color);
   border-radius: 1rem 0 0 1rem;
   padding: 1rem;
   writing-mode: vertical-lr;
@@ -28,8 +29,8 @@
     font-size: 1.2rem;
   }
   &.closePanelButton {
-    background-color: $mainDarkBlueColor;
-    color: $mainWhiteColor;
+    color: var(--start-color);
+    background-color: var(--end-color);
   }
 }
 

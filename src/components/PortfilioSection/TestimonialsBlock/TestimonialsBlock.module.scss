@@ -107,11 +107,11 @@
 }
 
 .cards::-webkit-scrollbar-thumb {
-  background-color: $mainYellowColor;
+  background-color: var(--end-color);
   border-radius: 2rem;
 }
 
 .cards::-webkit-scrollbar-track {
-  background-color: $headerBackgroundColor;
+  background-color: var(--start-color);
   border-radius: 2rem;
 }
