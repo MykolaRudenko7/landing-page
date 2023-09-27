@@ -1,6 +1,11 @@
 .footer {
-  padding-top: 8rem;
-
+  padding-top: 9rem;
+  @include onDesktop() {
+    padding-top: 7rem;
+  }
+  @include onTablet() {
+    padding-top: 4rem;
+  }
   @include onSmallTablet() {
     padding-top: 3rem;
   }

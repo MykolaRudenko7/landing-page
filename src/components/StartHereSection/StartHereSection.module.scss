@@ -1,20 +1,15 @@
 .startHereContainer {
   display: flex;
   align-items: center;
-  padding: 2.7rem 0rem 11.2rem 0rem;
+  @extend %containerPaddings;
 
-  @include onTablet() {
-    padding-bottom: 5rem;
-  }
   @include onSmallTablet() {
-    padding: 2rem 0rem 3rem 0rem;
     flex-direction: column;
     gap: 2rem;
   }
 }
 
 .textBlock {
-  margin-top: 7.7rem;
   flex: 0 1 58%;
 
   @include onDesktop() {
@@ -149,11 +144,11 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 10rem;
   grid-row-gap: 9rem;
-  padding: 12.4rem 6.4rem 8.8rem 6.4rem;
+
+  @extend %containerPaddings;
   transition: $transitionAnimation;
 
   @include onLargeDesktop() {
-    padding: 10rem 4rem 6rem 4rem;
     grid-column-gap: 9rem;
   }
   @include onDesktop() {
@@ -161,16 +156,13 @@
     grid-row-gap: 6rem;
   }
   @include onTablet() {
-    padding: 3rem 2rem;
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;
   }
   @include onSmallTablet() {
-    padding: 3rem 2rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
   @include onPhone() {
-    padding: 3rem 2rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }

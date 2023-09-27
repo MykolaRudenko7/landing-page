@@ -1,4 +1,4 @@
-import logoImage from 'images/navbar/logo.svg'
+import logoImage from 'images/navbar/logo.png'
 import socialIcon1 from 'images/footer/whatsapp.png'
 import socialIcon2 from 'images/footer/x-icon.svg'
 import socialIcon3 from 'images/footer/ln-icon.svg'

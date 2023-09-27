@@ -21,6 +21,7 @@
   @extend %flexCenter;
   width: 19.6rem;
   height: 11.6rem;
+  margin-left: -2rem;
 
   @include onDesktop() {
     width: 15rem;
@@ -31,6 +32,7 @@
     height: 8rem;
   }
   @include onSmallTablet() {
+    margin-left: 0;
     width: 11rem;
     height: 9rem;
   }
@@ -114,6 +116,7 @@
   @extend %transparentTap;
   display: none;
   z-index: 4;
+  margin-left: 1rem;
 
   @include onSmallTablet() {
     width: 3rem;
@@ -166,6 +169,9 @@
 }
 
 .navbarWrapper {
-  @extend %flexCenter;
-  gap: 2rem;
+  @include onSmallTablet() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

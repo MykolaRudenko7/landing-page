@@ -1,12 +1,6 @@
 .portfolioBlock {
   padding-bottom: 10rem;
-
-  @include onTablet() {
-    padding-bottom: 5rem;
-  }
-  @include onSmallTablet() {
-    padding-bottom: 3rem;
-  }
+  @extend %containerPaddings;
 }
 
 .portfolioBlockWrapper {

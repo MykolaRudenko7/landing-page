@@ -1,6 +1,5 @@
-// 'use client';
-import { GradientContext, TextColorContext } from 'context/ThemeContext'
 import { useEffect, useState } from 'react'
+import { GradientContext, TextColorContext } from 'context/ThemeContext'
 
 export default function ThemeProvider({ children }) {
   const [textColor, setTextColor] = useState(() => {

@@ -1,8 +1,5 @@
 .testimonialsBlock {
-  padding-top: 8rem;
-  @include onSmallTablet() {
-    padding-top: 3rem;
-  }
+  @extend %containerPaddings;
 }
 
 .testimonialsBlockWrapper {

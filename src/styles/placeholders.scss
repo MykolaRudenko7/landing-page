@@ -275,3 +275,17 @@
 %transparentTap {
   -webkit-tap-highlight-color: transparent;
 }
+
+%containerPaddings {
+  padding: 9rem 0;
+
+  @include onDesktop() {
+    padding: 7rem 0;
+  }
+  @include onTablet() {
+    padding: 4rem 0;
+  }
+  @include onSmallTablet() {
+    padding: 3rem 0;
+  }
+}

@@ -1,13 +1,5 @@
 .whoWeAre {
-  padding: 8.8rem 0 5rem 0;
-
-  @include onTablet() {
-    padding-top: 5rem;
-  }
-  @include onSmallTablet() {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+  @extend %containerPaddings;
 }
 
 .whoWeAreWrapper {
