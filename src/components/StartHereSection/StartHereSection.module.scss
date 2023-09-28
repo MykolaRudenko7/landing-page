@@ -107,12 +107,10 @@
   transition: $transitionAnimation;
 
   @include onLargeDesktop() {
-    grid-column-gap: 9rem;
+    grid-column-gap: 5rem;
+    grid-row-gap: 5rem;
   }
-  @include onDesktop() {
-    grid-column-gap: 6rem;
-    grid-row-gap: 6rem;
-  }
+
   @include onTablet() {
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;

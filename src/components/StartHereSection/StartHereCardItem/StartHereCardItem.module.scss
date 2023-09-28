@@ -31,24 +31,30 @@
   width: 15rem;
   height: 15rem;
   margin-bottom: 2.45rem;
+  @include onLargeDesktop() {
+    width: 11rem;
+    height: 11rem;
+    margin-bottom: 2rem;
+  }
   @include onDesktop() {
-    width: 12rem;
-    height: 12rem;
+    width: 9rem;
+    height: 9rem;
     margin-bottom: 2rem;
   }
   @include onTablet() {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     margin-bottom: 1rem;
   }
   @include onSmallTablet() {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
 
 .cardImage {
   @extend %forImage;
+
 }
 
 .cardSubTitle {
@@ -58,7 +64,7 @@
 .title {
   @extend %cardSubtitleSet;
   margin-bottom: 2rem;
-  @include onTablet() {
+  @include onDesktop() {
     margin-bottom: 1rem;
   }
 }
@@ -78,11 +84,4 @@
   line-clamp: 5;
   word-wrap: break-word;
   box-orient: vertical;
-
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
 }
