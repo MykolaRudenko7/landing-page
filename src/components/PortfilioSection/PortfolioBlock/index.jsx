@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
+'use client'
+
+import { Link } from 'react-scroll'
 import { portfolioSectionData } from 'data/portfolioSectionData'
 import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlock.module.scss'
 import PortfolioBlockCardItem from './PortfolioBlockCardItem'
@@ -26,9 +27,13 @@ export default function PortfolioBlock() {
             <Link
               about="begin your project"
               className={styles.portfolioBlockButton}
+              duration={750}
               href="#"
+              offset={-10}
               role="button"
+              smooth={true}
               tabIndex="0"
+              to="contactUs"
             >
               Begin Your Project
             </Link>
