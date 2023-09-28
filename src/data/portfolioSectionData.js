@@ -162,6 +162,41 @@ export const portfolioSectionData = {
         content:
           'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
       },
+      {
+        imageSrc: avatarImage2,
+        name: 'Eric Manring',
+        vacancy: 'Senior Lead Architect',
+        content:
+          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+      },
+      {
+        imageSrc: avatarImage2,
+        name: 'Eric Manring',
+        vacancy: 'Senior Lead Architect',
+        content:
+          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+      },
+      {
+        imageSrc: avatarImage2,
+        name: 'Eric Manring',
+        vacancy: 'Senior Lead Architect',
+        content:
+          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+      },
+      {
+        imageSrc: avatarImage2,
+        name: 'Eric Manring',
+        vacancy: 'Senior Lead Architect',
+        content:
+          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+      },
+      {
+        imageSrc: avatarImage2,
+        name: 'Eric Manring',
+        vacancy: 'Senior Lead Architect',
+        content:
+          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+      },
     ],
   },
 }

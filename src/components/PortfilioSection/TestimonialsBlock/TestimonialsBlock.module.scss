@@ -19,9 +19,7 @@
 
 .textBlock {
   flex: 0 0 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @extend %textBlockMarking;
   gap: 3rem;
   align-items: flex-start;
 
@@ -34,37 +32,20 @@
   }
 }
 
+.textBlockWrapper {
+  @extend %textBlockMarking;
+}
+
 .testimonialsBlockLable {
   @extend %borderGradientBlockTitle;
 }
 
 .testimonialsBlockTitle {
-  @extend %mediumTitle;
-  margin-bottom: 4.4rem;
-
-  @include onTablet() {
-    font-size: $textCardSize;
-    margin-bottom: 3rem;
-  }
-  @include onSmallTablet() {
-    text-align: center;
-    font-size: 2.4rem;
-  }
+  @extend %titleTextSet;
 }
 
 .testimonialsBlockText {
-  font-size: $textParagraphSize;
-
-  @include onDesktop() {
-    font-size: $textCardSize;
-  }
-  @include onTablet() {
-    text-align: left;
-    font-size: 1.8rem;
-  }
-  @include onSmallTablet() {
-    font-size: 1.6rem;
-  }
+  @extend %subtitleTextSet;
 }
 
 .testimonialsBlockButton {
@@ -91,11 +72,12 @@
   padding-top: 7.7rem;
   padding-bottom: 1rem;
 
-  @include onTablet() {
+  @include onLargeDesktop {
     gap: 3rem;
   }
-  @include onSmallTablet() {
+  @include onTablet() {
     gap: 2rem;
+    padding-top: 5rem;
   }
 }
 

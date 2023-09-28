@@ -4,6 +4,7 @@
 
 .whoWeAreWrapper {
   display: flex;
+  gap: 1rem;
 
   @include onSmallTablet() {
     flex-direction: column-reverse;
@@ -22,58 +23,28 @@
 
 .whoWeAreImage {
   @extend %forImage;
+  @extend %imageInTextBlock;
 }
 
 .whoWeAreTextBlock {
-  padding: 0 0 0 1rem;
   width: 50%;
-  text-align: left;
+  @extend %textBlockMarking;
+  justify-content: start;
 
   @include onSmallTablet() {
     width: 100%;
-    text-align: center;
+    align-items: center;
   }
 }
 
 .whoWeAreLable {
   @extend %borderGradientBlockTitle;
-  margin-bottom: 10rem;
-
-  @include onLargeDesktop() {
-    margin-bottom: 10rem;
-  }
-  @include onTablet() {
-    margin-bottom: 5rem;
-  }
 }
 
 .title {
-  @extend %mediumTitle;
-  margin-bottom: 8.6rem;
-
-  @include onLargeDesktop() {
-    margin-bottom: 5rem;
-  }
-  @include onTablet() {
-    margin-bottom: 3rem;
-    font-size: $textCardSize;
-  }
-  @include onSmallTablet() {
-    font-size: 2rem;
-  }
+  @extend %titleTextSet;
 }
 
 .text {
-  font-size: $textParagraphSize;
-
-  @include onDesktop() {
-    font-size: $textCardSize;
-  }
-  @include onTablet() {
-    text-align: left;
-    font-size: 1.6rem;
-  }
-  @include onSmallTablet() {
-    font-size: 1.4rem;
-  }
+  @extend %subtitleTextSet;
 }

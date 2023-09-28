@@ -12,6 +12,14 @@
   justify-content: center;
   align-items: center;
 
+  @include forCircles() {
+    margin-top: 24rem;
+    margin-bottom: 14rem;
+  }
+  @include onDesktop() {
+    margin-top: 14rem;
+    margin-bottom: 7rem;
+  }
   @include onSmallTablet() {
     margin-top: 0;
     margin-bottom: 0;
@@ -67,16 +75,13 @@
     gap: 2rem;
     padding: 1rem 2rem;
   }
-  @include onSmallTablet() {
-    gap: 2.5rem;
-  }
 }
 
 .mainCardTitle {
   @extend %mediumTitle;
 
   @include forCircles() {
-    font-size: $textCardSize;
+    font-size: $largeSubtitleCargSize;
   }
   @include onDesktop() {
     font-size: 1.8rem;
@@ -85,13 +90,14 @@
     font-size: 1.4rem;
   }
   @include onSmallTablet() {
-    font-size: 1.8rem;
+    font-size: $smallTitleCardSize;
+
     text-align: center;
   }
 }
 
 .mainCardText {
-  font-size: $textParagraphSize;
+  font-size: $liteTitleSize;
 
   @include forCircles() {
     font-size: 1.6rem;
@@ -104,7 +110,7 @@
   }
   @include onSmallTablet() {
     text-align: left;
-    font-size: 1.4rem;
+    font-size: $smallSubtitleCardSize;
   }
 }
 
@@ -121,7 +127,7 @@
     position: static;
     transform: none;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 

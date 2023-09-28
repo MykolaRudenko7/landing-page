@@ -10,55 +10,16 @@
 }
 
 .textBlock {
-  flex: 0 1 58%;
-
-  @include onDesktop() {
-    flex: 0 1 55%;
-    margin-top: 2rem;
-  }
-  @include onSmallTablet() {
-    margin-top: 0rem;
-  }
+  flex: 0 1 55%;
+  @extend %textBlockMarking;
 }
 
 .textBlockTitle {
-  text-align: left;
-  font-size: $largeTitleSize;
-  margin-bottom: 9.8rem;
-
-  @include onDesktop() {
-    margin-bottom: 3rem;
-    font-size: $mediumTitleSize;
-  }
-  @include onTablet() {
-    margin-bottom: 2rem;
-    font-size: $smallTitleSize;
-  }
-  @include onSmallTablet() {
-    margin-bottom: 2rem;
-    font-size: $titleCargSize;
-  }
+  @extend %titleTextSet;
 }
 
 .textBlockText {
-  text-align: left;
-  font-size: $textParagraphSize;
-  margin-bottom: 13.7rem;
-  line-height: 3.9rem;
-
-  @include onDesktop() {
-    font-size: $textCardSize;
-    margin-bottom: 3rem;
-    line-height: normal;
-  }
-  @include onTablet() {
-    font-size: 1.7rem;
-    margin-bottom: 3rem;
-    line-height: normal;
-  }
-  @include onSmallTablet() {
-    font-size: 1.4rem;
-  }
+  @extend %subtitleTextSet;
 }
 
 .buttonsBlock {
@@ -125,23 +86,20 @@
 }
 
 .imageWrapper {
-  flex: 0 1 42%;
+  flex: 0 1 45%;
   text-align: center;
-
-  @include onDesktop() {
-    flex: 0 1 45%;
-  }
 }
 
 .image {
   @extend %forImage;
+  @extend %imageInTextBlock;
 }
 
 .cardsBlockContainer {
   display: grid;
   justify-items: stretch;
   align-items: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   grid-column-gap: 10rem;
   grid-row-gap: 9rem;
 
@@ -160,6 +118,8 @@
     grid-row-gap: 4rem;
   }
   @include onSmallTablet() {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
   @include onPhone() {

@@ -3,16 +3,18 @@
   position: relative;
   @extend %transparentTap;
   @extend %cardWithTabBlock;
-  margin-bottom: 7.5rem;
+  padding: 3.8rem 2rem 2rem 2rem;
   &:last-child {
     margin: 0 auto;
     max-width: 74.5rem;
+  }
+  @include onLargeDesktop() {
   }
 }
 
 .cardTitle {
   @extend %cardWithTabBlockTitle;
-  @include onDesktop() {
+  @include onLargeDesktop() {
     white-space: normal;
   }
 }
@@ -20,9 +22,14 @@
   @extend %titleTextSpan;
 }
 
+.cardImageWrapper {
+  @extend %flexCenter;
+}
 .cardImage {
   @extend %forImage;
+  max-width: 70rem;
 }
+
 .apearWrapper {
   text-align: center;
 }
@@ -30,9 +37,7 @@
 .apearCardContent {
   text-align: left;
   display: flex;
-  padding: 2rem;
   @include onTablet() {
-    padding: 2rem 0 1rem 0;
   }
 }
 .leftSideContent {
@@ -48,7 +53,7 @@
   }
 }
 .goalsTitle {
-  font-size: $subtitleCargSize;
+  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -63,7 +68,7 @@
   }
 }
 .goalsListItems {
-  font-size: $textCardSize;
+  font-size: $largeSubtitleCargSize;
   @include onDesktop() {
     font-size: 2rem;
   }
@@ -81,7 +86,7 @@
   }
 }
 .featuresTitle {
-  font-size: $subtitleCargSize;
+  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -96,7 +101,7 @@
   }
 }
 .featuresListItems {
-  font-size: $textCardSize;
+  font-size: $largeSubtitleCargSize;
   display: flex;
   flex-wrap: wrap;
   @include onDesktop() {

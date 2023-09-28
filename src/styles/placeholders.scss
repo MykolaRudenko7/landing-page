@@ -219,21 +219,24 @@
 
 %cardWithTabBlock {
   position: relative;
-  padding: 3.8rem 1.3rem 1.6rem 1.3rem;
+  padding: 3.8rem 1.5rem 1.6rem 1.5rem;
   border-radius: 3.5rem;
   transition: $transitionAnimation;
   @extend %blurBackground;
+  @include onTablet() {
+    border-radius: 1.5rem;
+  }
 }
 
 %cardWithTabBlockTitle {
   @extend %blurBackground;
-  box-shadow: 0 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
+  font-size: 3rem;
+  box-shadow: $boxShadowcardWithTabBlockTitle;
   backdrop-filter: blur(3rem);
   position: absolute;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%) skew(-25deg);
-  font-size: 2.4rem;
   text-align: center;
   text-shadow: 0.05rem 0.1rem 0.1rem $mainDarkBlueColor;
   font-weight: $mediumFontWeight;
@@ -241,29 +244,22 @@
   text-transform: uppercase;
   white-space: nowrap;
   border-radius: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 
-  @include onDesktop() {
-    font-size: 1.8rem;
+  @include onLargeDesktop() {
+    font-size: $smallTitleCardSize;
   }
   @include onTablet() {
-    text-shadow: none;
     font-size: 1.6rem;
   }
   @include onSmallTablet() {
-    font-size: 1.4rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
-  @include onSmallPhone() {
-    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
 %forImage {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -277,15 +273,101 @@
 }
 
 %containerPaddings {
-  padding: 9rem 0;
+  padding: 8rem 0;
 
-  @include onDesktop() {
-    padding: 7rem 0;
+  @include onLargeDesktop() {
+    padding: 5rem 0;
   }
   @include onTablet() {
     padding: 4rem 0;
   }
   @include onSmallTablet() {
     padding: 3rem 0;
+  }
+}
+
+%textBlockMarking {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8rem;
+
+  @include onLargeDesktop() {
+    gap: 5rem;
+  }
+  @include onTablet() {
+    gap: 3rem;
+  }
+  @include onPhone() {
+    gap: 2rem;
+  }
+}
+
+%titleTextSet {
+  text-shadow: $titleTextShadow;
+  font-size: $largeTitleSize;
+  font-weight: $mediumFontWeight;
+  font-style: normal;
+  line-height: normal;
+  @include onLargeDesktop() {
+    font-size: $mediumTitleSize;
+  }
+
+  @include onTablet() {
+    font-size: $liteTitleSize;
+  }
+
+  @include onSmallTablet() {
+    text-align: center;
+    text-shadow: none;
+  }
+}
+
+%subtitleTextSet {
+  font-weight: $regularFontWeight;
+  font-size: $largeSubtitleSize;
+  line-height: normal;
+  font-style: normal;
+  @include onLargeDesktop() {
+    font-size: $mediumSubtitleSize;
+  }
+
+  @include onTablet() {
+    font-size: $liteSubtitleSize;
+  }
+}
+
+%cardTitleSet {
+  font-size: $largeTitleCargSize;
+  font-weight: $mediumFontWeight;
+  @include onLargeDesktop() {
+    font-size: $regularTitleCargSize;
+  }
+  @include onTablet() {
+    font-size: $smallTitleCardSize;
+  }
+}
+
+%cardSubtitleSet {
+  font-size: $largeSubtitleCargSize;
+
+  @include onLargeDesktop() {
+    font-size: $regularSubtitleCargSize;
+  }
+  @include onTablet() {
+    font-size: $smallSubtitleCardSize;
+  }
+}
+
+%imageInTextBlock {
+  max-width: 50rem;
+  @include onLargeDesktop() {
+    max-width: 40rem;
+  }
+  @include onTablet() {
+    max-width: 35rem;
+  }
+  @include onSmallTablet() {
+    max-width: 60%;
   }
 }

@@ -23,7 +23,7 @@ export default function StartHereCardItem({
 
   return (
     <motion.div
-      animate={{ filter: isBlurred ? 'blur(6px)' : 'none' }}
+      animate={{ filter: isBlurred ? 'blur(1.5px)' : 'none' }}
       className={styles.card}
       onHoverEnd={handleCardMouseLeave}
       onHoverStart={handleCardMouseEnter}

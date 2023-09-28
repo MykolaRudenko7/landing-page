@@ -19,19 +19,23 @@
   background-image: $circleWhyChooseCardGradient;
   backdrop-filter: blur(4.55rem);
   border-radius: 2rem;
+  @include onTablet() {
+    gap: 1.5rem;
+  }
 }
 
 .footerBlocksWrapper {
   display: flex;
-  justify-content: space-around;
-  gap: 4.5rem;
+  justify-content: space-between;
+  gap: 3rem;
 
   @include onSmallTablet() {
     flex-wrap: wrap;
+    justify-content: center;
   }
   @include onPhone() {
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
@@ -56,11 +60,12 @@
 
   @include onSmallTablet() {
     text-align: center;
+    gap: 1rem;
   }
 }
 
 .scrollLinks {
-  font-size: $textCardSize;
+  font-size: $largeSubtitleCargSize;
   font-weight: $semiBoldFontWeight;
   display: flex;
   flex-direction: column;
@@ -95,7 +100,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: $textCardSize;
+  font-size: $largeSubtitleCargSize;
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
 
@@ -133,7 +138,7 @@
 }
 
 .getInTouchTitle {
-  font-size: $textCardSize;
+  font-size: $largeSubtitleCargSize;
   font-weight: $semiBoldFontWeight;
   white-space: nowrap;
 
@@ -144,7 +149,7 @@
     font-size: 1.8rem;
   }
   @include onSmallTablet() {
-    font-size: $textParagraphSize;
+    font-size: $liteTitleSize;
   }
 }
 
@@ -175,7 +180,7 @@
 
 .about {
   text-align: center;
-  font-size: $textParagraphSize;
+  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
 
   @include onDesktop() {

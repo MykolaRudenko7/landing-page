@@ -1,16 +1,28 @@
 $mainFontFamily: 'Fira Sans Condensed';
+
 $lightFontWeight: 300;
 $regularFontWeight: 400;
 $mediumFontWeight: 500;
 $semiBoldFontWeight: 600;
 $boldFontWeight: 700;
-$largeTitleSize: 6.9rem;
-$mediumTitleSize: 5rem;
-$smallTitleSize: 3.2rem;
-$textParagraphSize: 3rem;
-$titleCargSize: 2.7rem;
-$subtitleCargSize: 3rem;
-$textCardSize: 2.6rem;
+
+$largeTitleSize: 5rem;
+$mediumTitleSize: 4rem;
+$liteTitleSize: 3rem;
+
+$largeSubtitleSize: 2.5rem;
+$mediumSubtitleSize: 2rem;
+$liteSubtitleSize: 1.5rem;
+
+$largeTitleCargSize: 4rem;
+$regularTitleCargSize: 3rem;
+$smallTitleCardSize: 2rem;
+
+$largeSubtitleCargSize: 3rem;
+$regularSubtitleCargSize: 2rem;
+$smallSubtitleCardSize: 1.5rem;
+
 $transitionAnimation: all 0.35s cubic-bezier(0, 0.55, 0.45, 1);
 $transitionAnimationStartHere: all 0.45s ease;
 $boxShadow: 0 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
+$boxShadowcardWithTabBlockTitle: 0 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
