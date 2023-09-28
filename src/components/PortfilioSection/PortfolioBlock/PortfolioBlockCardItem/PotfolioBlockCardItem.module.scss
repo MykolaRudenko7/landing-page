@@ -7,6 +7,7 @@
   max-width: 80%;
   @include onSmallTablet() {
     max-width: 100%;
+    padding: 3.8rem 1.5rem 1.5rem 1.5rem;
   }
 }
 
