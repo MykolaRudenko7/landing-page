@@ -17,113 +17,43 @@
 }
 
 %fillGradientButton {
-  color: var(--text-color);
-  @extend %transparentTap;
+  border: none;
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  font-size: 2.4rem;
-  letter-spacing: 0.07rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 1.6rem;
-  transform: skew(-25deg);
-  background-image: $buttonFullGradient;
-  transition: $transitionAnimation;
-  text-shadow: 0.05rem 0.2rem 0.2rem $textShadow;
-  border-radius: 1rem;
-  margin-left: 1.5rem;
-  width: 32rem;
-
-  .buttonText {
-    display: inline-block;
-    transform: skew(25deg);
-  }
-
-  &:hover {
-    background-image: $buttonFullGradientHover;
-  }
-  &:active {
-    transform: skew(-25deg) scale(0.95);
-  }
-  @include onDesktop() {
-    width: 30rem;
-  }
-  @include onTablet() {
-    text-shadow: none;
-    font-size: 2rem;
-    width: 25rem;
-  }
-  @include onSmallTablet() {
-    margin-left: 0;
-    font-size: 1.8rem;
-    width: 20rem;
-  }
-}
-
-%borderGradientButton {
-  @extend %transparentTap;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  text-align: center;
-  letter-spacing: 0.07rem;
-  font-size: 2.4rem;
-  font-weight: $mediumFontWeight;
-  text-transform: uppercase;
-  padding: 1.6rem;
-  transform: skew(-25deg);
+  display: inline-flex;
   text-shadow: $textShadow;
-  margin-left: 1.5rem;
-  max-width: 32rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  color: var(--text-color);
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    $primaryButtonColor 0,
+    $secondaryButtonColor 100%
+  );
+  border-radius: 1rem;
+  white-space: nowrap;
+  transition: $transitionAnimation;
+  font-size: $largeSubtitleSize;
+  font-weight: $mediumFontWeight;
 
-  .buttonText {
-    color: var(--text-color);
-    display: inline-block;
-    transform: skew(25deg);
+  @include onDesktop() {
+    font-size: $mediumSubtitleSize;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    background: $buttonFullGradient;
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+  @include onTablet() {
+    font-size: $liteSubtitleSize;
   }
-
-  &:active {
-    transform: skew(-25deg) scale(0.95);
+  @include onSmallTablet() {
+    font-size: $liteSubtitleSize;
+    text-shadow: none;
   }
 
   &:hover {
-    &:before {
-      background: $buttonFullGradientHover;
-    }
+    box-shadow: $mainOrangeColor 0 -0.4rem 0 inset;
   }
 
-  @include onDesktop() {
-    width: 30rem;
-  }
-  @include onTablet() {
-    text-shadow: none;
-    font-size: 2rem;
-    width: 25rem;
-  }
-  @include onSmallTablet() {
-    margin-left: 0;
-    font-size: 1.8rem;
-    width: 20rem;
+  &:active {
+    box-shadow: $mainOrangeColor 0 0.4rem 0.8rem inset;
   }
 }
 
@@ -306,10 +236,10 @@
 
 %titleTextSet {
   text-shadow: $titleTextShadow;
-  font-size: $largeTitleSize;
   font-weight: $mediumFontWeight;
   font-style: normal;
   line-height: normal;
+  font-size: $largeTitleSize;
   @include onDesktop() {
     font-size: $mediumTitleSize;
   }
@@ -326,9 +256,9 @@
 
 %subtitleTextSet {
   font-weight: $regularFontWeight;
-  font-size: $largeSubtitleSize;
   line-height: normal;
   font-style: normal;
+  font-size: $largeSubtitleSize;
   @include onDesktop() {
     font-size: $mediumSubtitleSize;
   }

@@ -23,7 +23,6 @@
 }
 
 .buttonsBlock {
-  padding: 0 1.1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -44,45 +43,10 @@
 
 .buttonConsultation {
   @extend %fillGradientButton;
-
-  @include onDesktop() {
-    width: 26rem;
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    width: 20rem;
-    font-size: 1.8rem;
-  }
-  @include onSmallTablet() {
-    padding: 1rem;
-    max-width: 20rem;
-    margin-left: 0;
-  }
-  @include onPhone() {
-    width: 12rem;
-    font-size: 1.4rem;
-  }
 }
 
 .buttonServices {
-  @extend %borderGradientButton;
-
-  @include onDesktop() {
-    width: 25rem;
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    width: 20rem;
-    font-size: 1.8rem;
-  }
-  @include onSmallTablet() {
-    padding: 1rem;
-    max-width: 20rem;
-  }
-  @include onPhone() {
-    width: 12rem;
-    font-size: 1.4rem;
-  }
+  @extend %fillGradientButton;
 }
 
 .imageWrapper {

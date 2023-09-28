@@ -30,7 +30,7 @@ export default function PortfolioBlock() {
               role="button"
               tabIndex="0"
             >
-              <span className={styles.buttonText}>Begin Your Project</span>
+              Begin Your Project
             </Link>
           </div>
         </div>

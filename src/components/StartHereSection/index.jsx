@@ -30,7 +30,7 @@ export default function StartHereSection() {
               tabIndex="0"
               to="contactUs"
             >
-              <span className={styles.buttonText}>Schedule a consultation</span>
+              Schedule a consultation
             </Link>
             <Link
               about="explore our services"
@@ -43,7 +43,7 @@ export default function StartHereSection() {
               tabIndex="0"
               to="services"
             >
-              <span className={styles.buttonText}>Explore our services</span>
+              Explore our services
             </Link>
           </div>
         </div>

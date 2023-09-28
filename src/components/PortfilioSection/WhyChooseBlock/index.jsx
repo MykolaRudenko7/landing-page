@@ -26,7 +26,7 @@ export default function WhyChooseBlock() {
               role="button"
               tabIndex="0"
             >
-              <span className={styles.buttonText}>Ready to Elevate?</span>
+              Ready to Elevate?
             </Link>
           </div>
         </div>

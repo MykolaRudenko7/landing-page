@@ -133,22 +133,6 @@
 
 .elevateButton {
   @extend %fillGradientButton;
-
-  @include forCircles() {
-    width: 32rem;
-  }
-  @include onDesktop() {
-    width: 13rem;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-  @include onSmallTablet() {
-    padding: 1.6rem;
-
-    margin-left: 0;
-    font-size: 1.8rem;
-    width: 20rem;
-  }
 }
 
 .buttonLable {

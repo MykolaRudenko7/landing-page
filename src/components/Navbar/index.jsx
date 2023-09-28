@@ -52,7 +52,7 @@ export default function Navbar() {
           tabIndex="0"
           to="contactUs"
         >
-          <span className={styles.buttonText}>Boost your business!</span>
+          Boost your business!
         </Link>
         <div
           className={cn(styles.menuBurger, {
