@@ -1,4 +1,4 @@
-import startHereSectionImage from 'images/startHereSection/textBlock/image.png'
+import startHereSectionImage from 'images/startHereSection/textBlock/startHereTextBlockImage.png'
 import startHereSectionCard1 from 'images/startHereSection/cards/startHereSectionCard1.svg'
 import startHereSectionCard2 from 'images/startHereSection/cards/startHereSectionCard2.svg'
 import startHereSectionCard3 from 'images/startHereSection/cards/startHereSectionCard3.svg'

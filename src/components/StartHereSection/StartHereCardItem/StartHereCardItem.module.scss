@@ -3,47 +3,39 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 2.2rem 2rem 2.6rem 2rem;
+  padding: 2rem;
   border-radius: 2.2rem;
-  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
-  transition: $transitionAnimation;
+  box-shadow: $boxShadow;
+  background: $backgroundServiceCard;
+  transition: $transitionAnimationStartHere;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     .cardText {
-      color: $mainDarkBlueColor;
       -ms-line-clamp: unset;
       -webkit-line-clamp: unset;
       line-clamp: unset;
-      overflow: unset;
     }
   }
 
-  &:active {
-    border-radius: 2.5rem;
-    transform: scale(0.95);
-    border-radius: 2.5rem;
-    box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.25);
-  }
-
   @include onTablet() {
-    padding: 2rem 1rem;
-  }
-
-  &.blur {
-    transition: $transitionAnimation;
-    filter: blur(1rem);
+    padding: 1rem 1rem;
   }
 }
 
 .cardImageWrapper {
   overflow: hidden;
-  width: 15rem;
-  height: 15rem;
-  margin-bottom: 2.45rem;
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+
+  @include onDesktop() {
+    width: 9rem;
+    height: 9rem;
+  }
   @include onTablet() {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
 
@@ -52,49 +44,33 @@
 }
 
 .cardSubTitle {
-  color: $mainDarkBlueColor;
-  font-size: $textParagraphSize;
-  font-weight: $mediumFontWeight;
+  @extend %cardTitleSet;
+  margin-bottom: 1rem;
   @include onTablet() {
-    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
   }
-  @include onPhone() {
-    font-size: 1.8rem;
-  }
-  margin-bottom: 0.85rem;
 }
 .title {
-  margin-bottom: 2rem;
-  color: $mainDarkBlueColor;
-  font-size: $titleCargSize;
+  @extend %cardSubtitleSet;
+  margin-bottom: 1rem;
   @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
   }
 }
+
 .cardText {
-  font-size: $textCardSize;
+  @extend %cardSubtitleSet;
   letter-spacing: -0.05rem;
-  color: $textCardBlurColor;
+  display: -webkit-box;
+
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  overflow: hidden;
   -ms-line-clamp: 5;
-  -webkit-line-clamp: 5;
   line-clamp: 5;
-  display: -webkit-box;
   word-wrap: break-word;
-  -webkit-box-orient: vertical;
   box-orient: vertical;
-  transition: $transitionAnimation;
-
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
 }

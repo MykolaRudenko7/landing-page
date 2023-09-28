@@ -1,17 +1,10 @@
 .portfolioBlock {
-  padding-bottom: 10rem;
-
-  @include onTablet() {
-    padding-bottom: 5rem;
-  }
-  @include onSmallTablet() {
-    padding-bottom: 3rem;
-  }
+  @extend %containerPaddings;
 }
 
 .portfolioBlockWrapper {
   display: flex;
-  gap: 6rem;
+  gap: 2rem;
 
   @include onSmallTablet() {
     flex-direction: column;
@@ -19,12 +12,14 @@
   }
 }
 
+.textBlockWrapper {
+  @extend %textBlockMarking;
+  align-items: center;
+}
+
 .textBlock {
-  width: 43%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 3rem;
+  width: 50%;
+  @extend %textBlockMarking;
 
   @include onSmallTablet() {
     width: 100%;
@@ -34,24 +29,13 @@
 
 .portfolioLabel {
   @extend %borderGradientBlockTitle;
-  margin-bottom: 10rem;
-
-  @include onLargeDesktop() {
-    margin-bottom: 10rem;
-  }
-  @include onTablet() {
-    margin-bottom: 5rem;
-  }
 }
 
 .textBlockTitle {
-  color: $mainDarkBlueColor;
   @extend %mediumTitle;
-  margin-bottom: 4rem;
 
   @include onTablet() {
-    margin-bottom: 3rem;
-    font-size: $textCardSize;
+    font-size: $largeSubtitleCargSize;
   }
   @include onSmallTablet() {
     font-size: 2rem;
@@ -59,18 +43,19 @@
 }
 
 .textBlockText {
-  color: $mainDarkBlueColor;
-  font-size: $textParagraphSize;
-  margin-bottom: 6.4rem;
+  font-size: $liteTitleSize;
+  margin-bottom: 4rem;
 
   @include onDesktop() {
-    font-size: $textCardSize;
+    font-size: $largeSubtitleCargSize;
   }
   @include onTablet() {
     text-align: left;
     font-size: 1.6rem;
   }
   @include onSmallTablet() {
+    margin-bottom: 3rem;
+
     font-size: 1.4rem;
     text-align: left;
   }
@@ -86,8 +71,16 @@
 
 .cardsBlock {
   margin-top: 3rem;
-  width: 57%;
+  width: 50%;
+  gap: 7rem;
+  @extend %textBlockMarking;
+  align-items: flex-end;
 
+  @include onTablet() {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+  }
   @include onSmallTablet() {
     width: 100%;
   }

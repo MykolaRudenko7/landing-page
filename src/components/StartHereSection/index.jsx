@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import cn from 'classnames'
 import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { startHereSectionData } from 'data/startHereSectionData'

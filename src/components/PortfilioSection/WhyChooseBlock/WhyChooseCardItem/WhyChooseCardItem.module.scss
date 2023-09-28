@@ -8,6 +8,8 @@
   transition: $transitionAnimation;
   overflow: hidden;
   @extend %blurBackground;
+  backdrop-filter: $blurFilter;
+  filter: $circleWhyChooseCardFilter;
   transition: $transitionAnimation;
 
   &:nth-child(1) {
@@ -70,13 +72,10 @@
     transform: none;
     width: 100%;
     height: 100%;
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     &:nth-child(n + 0) {
       transform: none;
-      &:hover,
-      &:active {
-        background-color: $pageBackgroundColor;
-      }
+      padding: 1.5rem;
     }
   }
 }
@@ -91,19 +90,19 @@
   }
   @include onSmallTablet() {
     width: 100%;
+    padding: 0;
   }
 
   &:hover,
   &:active {
     .text {
-      color: $mainDarkBlueColor;
+      opacity: 1;
     }
   }
 }
 
 .title {
-  color: $mainDarkBlueColor;
-  font-size: $subtitleCargSize;
+  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
   margin-bottom: 2rem;
 
@@ -117,16 +116,17 @@
     margin-bottom: 1rem;
   }
   @include onSmallTablet() {
-    margin-bottom: 2.5rem;
-    font-size: 1.8rem;
+    font-size: $smallTitleCardSize;
+
     text-align: center;
   }
 }
 
 .text {
-  color: $textCardBlurColor;
-  font-size: $textCardSize;
+  opacity: 0.5;
+  font-size: $largeSubtitleCargSize;
   letter-spacing: -0.05rem;
+  transition: $transitionAnimation;
 
   @include forCircles() {
     font-size: 1.8rem;
@@ -136,6 +136,6 @@
   }
   @include onSmallTablet() {
     text-align: left;
-    font-size: 1.4rem;
+    font-size: $smallSubtitleCardSize;
   }
 }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { motion } from 'framer-motion'
 import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlockCardItem/PotfolioBlockCardItem.module.scss'
 
 export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
@@ -18,7 +19,12 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
   }
 
   return (
-    <div className={styles.card} onClick={handleShowTextBlockTogle}>
+    <motion.div
+      className={styles.card}
+      onClick={handleShowTextBlockTogle}
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <h6 className={styles.cardTitle}>
         <span className={styles.cardTitleText}>{title}</span>
       </h6>
@@ -28,7 +34,12 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
             <Image alt="card content" className={styles.cardImage} loading="eager" src={imageSrc} />
           </div>
         ) : (
-          <div className={styles.apearWrapper}>
+          <motion.div
+            animate={{ opacity: 1 }}
+            className={styles.apearWrapper}
+            initial={{ opacity: 0 }}
+            transition={{ type: 'spring', duration: 0.4 }}
+          >
             <div className={styles.apearCardContent}>
               <div className={styles.leftSideContent}>
                 <div className={styles.goalsBlock}>
@@ -60,18 +71,9 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
                 ))}
               </ul>
             </div>
-            <Link
-              about="explore more"
-              className={styles.cardButton}
-              href="#"
-              role="button"
-              tabIndex="0"
-            >
-              <span className={styles.buttonText}>Explore more</span>
-            </Link>
-          </div>
+          </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   )
 }

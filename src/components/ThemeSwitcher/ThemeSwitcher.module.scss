@@ -1,0 +1,93 @@
+.themeSwitcherWrapper {
+  display: flex;
+}
+
+.togglePanelButton {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--start-color);
+  color: var(--end-color);
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-weight: $semiBoldFontWeight;
+  transition: $transitionAnimation;
+
+  @include onTablet() {
+    top: 2%;
+  }
+  &.closePanelButton {
+    display: none;
+  }
+}
+
+.switchPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: absolute;
+  z-index: 2;
+  right: -90%;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  padding: 10rem 2rem;
+  background-color: white;
+  transition: $transitionAnimationStartHere;
+  opacity: 0;
+
+  &.openPanel {
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+.gradientColor {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  @include onSmallTablet() {
+    flex-direction: column;
+  }
+}
+
+.textColor {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 2.4rem;
+  font-weight: $mediumFontWeight;
+  @include onTablet() {
+    font-size: 1.6rem;
+  }
+  @include onPhone() {
+    font-size: 1.2rem;
+  }
+}
+.reset {
+  font-family: $mainFontFamily;
+  font-weight: $semiBoldFontWeight;
+  text-transform: uppercase;
+  color: $mainDarkBlueColor;
+  background-color: $headerBackgroundColor;
+  border: solid 0.2rem transparent;
+  padding: 1rem;
+
+  &:active {
+    border: solid 0.2rem $mainWhiteColor;
+    color: $mainWhiteColor;
+  }
+}

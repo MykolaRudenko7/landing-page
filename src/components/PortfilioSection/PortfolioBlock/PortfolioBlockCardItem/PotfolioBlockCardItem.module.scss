@@ -3,29 +3,34 @@
   position: relative;
   @extend %transparentTap;
   @extend %cardWithTabBlock;
-  margin-bottom: 7.5rem;
-  &:last-child {
-    margin: 0 auto;
-    max-width: 74.5rem;
-  }
-  &:hover {
-    animation: shake 0.5s ease 0.5s;
+  padding: 3.8rem 2rem 2rem 2rem;
+  max-width: 80%;
+  @include onSmallTablet() {
+    max-width: 100%;
   }
 }
 
 .cardTitle {
   @extend %cardWithTabBlockTitle;
-  @include onDesktop() {
-    white-space: normal;
+  @include onPhone() {
+    font-size: 1.1rem;
+  }
+  @include onSmallPhone() {
+    font-size: 1rem;
   }
 }
 .cardTitleText {
   @extend %titleTextSpan;
 }
 
+.cardImageWrapper {
+  @extend %flexCenter;
+}
 .cardImage {
   @extend %forImage;
+  max-width: 70rem;
 }
+
 .apearWrapper {
   text-align: center;
 }
@@ -33,9 +38,7 @@
 .apearCardContent {
   text-align: left;
   display: flex;
-  padding: 2rem;
   @include onTablet() {
-    padding: 2rem 0 1rem 0;
   }
 }
 .leftSideContent {
@@ -51,33 +54,13 @@
   }
 }
 .goalsTitle {
-  color: $mainDarkBlueColor;
-  font-size: $subtitleCargSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  @include onDesktop() {
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .goalsListItems {
-  color: $mainDarkBlueColor;
-  font-size: $textCardSize;
-  @include onDesktop() {
-    font-size: 2rem;
-  }
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .goalsListItem {
   margin-bottom: 1rem;
@@ -86,35 +69,15 @@
   }
 }
 .featuresTitle {
-  color: $mainDarkBlueColor;
-  font-size: $subtitleCargSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  @include onDesktop() {
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .featuresListItems {
-  color: $mainDarkBlueColor;
-  font-size: $textCardSize;
   display: flex;
   flex-wrap: wrap;
-  @include onDesktop() {
-    font-size: 2rem;
-  }
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .featuresListItem {
   margin-bottom: 1rem;
@@ -126,52 +89,18 @@
 .techStackTagsListItems {
   text-wrap: wrap;
   width: 22%;
-  color: $techStackTagsColor;
-  font-size: 2.4rem;
+  opacity: 0.5;
   line-height: 3.2rem;
   text-transform: lowercase;
-  @include onDesktop() {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
+  line-height: 3rem;
+  @extend %cardSubtitleSet;
+
   @include onTablet() {
     line-height: normal;
-    font-size: 1.6rem;
     width: 30%;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
-}
-.techStackTagsListItem {
-  text-wrap: wrap;
-}
-.cardButton {
-  margin: 0 auto;
-  @extend %borderGradientButton;
-  margin-bottom: 3rem;
-  @include onTablet() {
-    margin-bottom: 1rem;
-  }
-  @include onPhone() {
-    margin-bottom: 0;
   }
 }
 
-@keyframes shake {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-0.2rem, 0);
-  }
-  50% {
-    transform: translate(0.2rem, 0);
-  }
-  75% {
-    transform: translate(-0.2rem, 0);
-  }
-  100% {
-    transform: translate(0.2rem, 0);
-  }
+.techStackTagsListItem {
+  text-wrap: wrap;
 }

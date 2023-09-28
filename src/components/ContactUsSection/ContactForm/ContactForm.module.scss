@@ -2,7 +2,7 @@
   flex: 0 0 46%;
 
   @include onSmallTablet {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -11,26 +11,27 @@
 }
 
 .formBlockInput {
+  color: var(--text-color);
+  @extend %blurBackground;
   position: relative;
   width: 98%;
   height: 100%;
-  margin-bottom: 4.3rem;
-  padding: 1.6rem 3.5rem;
-  font-family: $mainFontFamily;
-  font-size: 3.5rem;
-  color: $mainDarkBlueColor;
-  backdrop-filter: blur(4.5rem);
-  border: none;
-  border-radius: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  border: solid 0.2rem transparent;
   outline: none;
   transform-origin: left bottom;
   transform: skew(-20deg);
   transition: $transitionAnimation;
-  @extend %blurBackground;
+  backdrop-filter: blur(4.5rem);
+  font-family: $mainFontFamily;
+  font-size: $largeTitleCargSize;
 
   &::placeholder {
+    color: var(--text-color);
     font-family: $mainFontFamily;
-    color: rgba(58, 61, 96, 0.5);
+    opacity: 0.5;
     transform: skew(20deg);
   }
   &:hover {
@@ -42,47 +43,59 @@
     }
   }
   &:focus {
-    border: 0.2rem solid $headerBackgroundColor;
+    border: 0.2rem solid var(--start-color);
+    transform: skew(0deg);
+    &::placeholder {
+      transform: skew(0deg);
+      opacity: 1;
+    }
   }
 
+  @include onDesktop() {
+    font-size: $regularSubtitleCargSize;
+  }
   @include onTablet() {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
+    font-size: $smallSubtitleCardSize;
   }
 }
 
 .formBlockTextarea {
+  font-family: $mainFontFamily;
+  font-size: $largeTitleCargSize;
+  color: var(--text-color);
+  box-shadow: $boxShadow;
   width: 100%;
   margin-bottom: 4.3rem;
-  padding: 1.6rem 3.5rem 1.6rem 3.5rem;
+  padding: 1rem 2rem;
   resize: none;
-  @extend %blurBackground;
-  font-family: $mainFontFamily;
-  color: $mainDarkBlueColor;
-  font-size: 3.5rem;
+  background-image: $circleWhyChooseCardGradient;
   transform-origin: left bottom;
-  border: none;
+  border: solid 0.2rem transparent;
   outline: none;
   position: relative;
   transition: $transitionAnimation;
   border-radius: 2rem;
+  background: $circleWhyChooseCardGradient;
+  backdrop-filter: blur(4.5rem);
 
   &::placeholder {
+    color: var(--text-color);
     font-family: $mainFontFamily;
-    color: rgba(58, 61, 96, 0.5);
+    opacity: 0.6;
   }
   &:hover {
     filter: $filterServiceCardTitle;
   }
   &:focus {
-    border: 0.2rem solid $headerBackgroundColor;
+    border: 0.2rem solid var(--start-color);
+    opacity: 1;
   }
 
+  @include onDesktop() {
+    font-size: $regularSubtitleCargSize;
+  }
   @include onTablet() {
-    padding: 1rem 2rem;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: $smallSubtitleCardSize;
   }
 }
 

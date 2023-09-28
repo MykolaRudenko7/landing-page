@@ -1,11 +1,7 @@
 .whyChooseBlock {
   display: flex;
   justify-content: center;
-  padding: 5rem 0 8rem 0;
-
-  @include onSmallTablet() {
-    padding: 3rem 0;
-  }
+  @extend %containerPaddings;
 }
 
 .whyChooseBlockWrapper {
@@ -16,6 +12,14 @@
   justify-content: center;
   align-items: center;
 
+  @include forCircles() {
+    margin-top: 24rem;
+    margin-bottom: 14rem;
+  }
+  @include onDesktop() {
+    margin-top: 14rem;
+    margin-bottom: 7rem;
+  }
   @include onSmallTablet() {
     margin-top: 0;
     margin-bottom: 0;
@@ -34,13 +38,9 @@
   text-align: center;
   overflow: hidden;
   @extend %blurBackground;
-  backdrop-filter: blur(3.85rem);
+  backdrop-filter: $blurFilter;
+  filter: $circleWhyChooseCardFilter;
   transition: $transitionAnimation;
-
-  &:active {
-    transform: scale(1.01);
-    background-color: $pageBackgroundColor;
-  }
 
   @include forCircles() {
     width: 55rem;
@@ -55,7 +55,7 @@
     height: 100%;
     width: 100%;
     border-radius: 2.5rem;
-    background-color: $headerBackgroundColor;
+    background-color: var(--start-color);
   }
 }
 
@@ -75,17 +75,13 @@
     gap: 2rem;
     padding: 1rem 2rem;
   }
-  @include onSmallTablet() {
-    gap: 2.5rem;
-  }
 }
 
 .mainCardTitle {
-  color: $mainDarkBlueColor;
   @extend %mediumTitle;
 
   @include forCircles() {
-    font-size: $textCardSize;
+    font-size: $largeSubtitleCargSize;
   }
   @include onDesktop() {
     font-size: 1.8rem;
@@ -94,14 +90,14 @@
     font-size: 1.4rem;
   }
   @include onSmallTablet() {
-    font-size: 1.8rem;
+    font-size: $smallTitleCardSize;
+
     text-align: center;
   }
 }
 
 .mainCardText {
-  color: $mainDarkBlueColor;
-  font-size: $textParagraphSize;
+  font-size: $liteTitleSize;
 
   @include forCircles() {
     font-size: 1.6rem;
@@ -114,7 +110,7 @@
   }
   @include onSmallTablet() {
     text-align: left;
-    font-size: 1.4rem;
+    font-size: $smallSubtitleCardSize;
   }
 }
 
@@ -131,7 +127,7 @@
     position: static;
     transform: none;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 

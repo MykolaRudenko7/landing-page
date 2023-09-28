@@ -1,67 +1,42 @@
 .contactUsSection {
-  padding: 8rem 0;
-
-  @include onSmallTablet {
-    padding: 3rem 0;
-  }
+  @extend %containerPaddings;
 }
 
 .contactUsSectionWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-
-  @include onTablet() {
-    gap: 5rem;
-  }
+  @extend %textBlockMarking;
+  gap: 4rem;
   @include onSmallTablet() {
-    gap: 2.5rem;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
 .textBlock {
-  color: $mainDarkBlueColor;
+  @extend %textBlockMarking;
   text-align: center;
+  gap: 3rem;
+  @include onSmallTablet() {
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 .contactUsLabel {
   @extend %borderGradientBlockTitle;
-  margin-bottom: 3.7rem;
-}
-
-.buttonText {
-  color: $mainDarkBlueColor;
+  margin-bottom: 2rem;
 }
 
 .contactUsTilte {
-  @extend %mediumTitle;
-  margin-bottom: 1rem;
-
-  @include onTablet() {
-    font-size: $textCardSize;
-  }
-  @include onSmallTablet() {
-    font-size: 2.4rem;
-  }
+  @extend %titleTextSet;
 }
 
 .contactUsText {
-  font-size: $subtitleCargSize;
-
-  @include onDesktop() {
-    font-size: $textCardSize;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onSmallTablet() {
-    font-size: 1.6rem;
-  }
+  @extend %subtitleTextSet;
 }
 
 .formImageWrapper {
   display: flex;
-  align-items: center;
+  gap: 2rem;
 
   @include onSmallTablet() {
     flex-direction: column;
@@ -72,23 +47,13 @@
 .imageBlock {
   flex: 0 0 54%;
   @extend %flexCenter;
-  flex-direction: column;
-
+  margin-top: -5rem;
   @include onSmallTablet() {
-    flex-direction: column-reverse;
+    margin-top: 0;
   }
-}
-
-.imageWrapper {
-  max-width: 59rem;
-  text-align: center;
 }
 
 .image {
-  margin-top: -10rem;
   @extend %forImage;
-
-  @include onTablet() {
-    margin-top: 0rem;
-  }
+  @extend %imageInTextBlock;
 }

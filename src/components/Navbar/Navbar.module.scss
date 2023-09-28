@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include onSmallTablet() {
+    gap: 1.5rem;
+  }
 }
 
 .logoLinksBlock {
@@ -19,46 +22,36 @@
 
 .logoWrapper {
   @extend %flexCenter;
-  width: 19.6rem;
-  height: 11.6rem;
-
-  @include onDesktop() {
-    width: 15rem;
-    height: 7rem;
-  }
-  @include onTablet() {
-    width: 14rem;
-    height: 8rem;
-  }
-  @include onSmallTablet() {
-    width: 11rem;
-    height: 9rem;
-  }
-  @include onPhone() {
-    width: 9rem;
-    height: 7rem;
-  }
 }
 
 .logoImage {
   @extend %forImage;
+  max-width: 15rem;
+  height: auto;
+  margin-left: -2rem;
+
+  @include onDesktop() {
+    max-width: 13rem;
+  }
+  @include onTablet() {
+    max-width: 11rem;
+  }
+  @include onSmallTablet() {
+    margin-left: 0;
+    max-width: 11rem;
+  }
 }
 
 .linksWrapper {
   display: flex;
   align-items: center;
   gap: 2rem;
-  color: $mainDarkBlueColor;
-  font-size: 2rem;
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
+  @extend %cardTitleSet;
 
-  @include onDesktop() {
-    gap: 1.5rem;
-    font-size: 1.7rem;
-  }
   @include onTablet() {
-    font-size: 1.2rem;
+    gap: 1.5rem;
   }
   @include onSmallTablet() {
     background-color: $pageBackgroundColor;
@@ -115,6 +108,7 @@
   @extend %transparentTap;
   display: none;
   z-index: 4;
+  margin-left: 1rem;
 
   @include onSmallTablet() {
     width: 3rem;
@@ -167,6 +161,9 @@
 }
 
 .navbarWrapper {
-  @extend %flexCenter;
-  gap: 2rem;
+  @include onSmallTablet() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

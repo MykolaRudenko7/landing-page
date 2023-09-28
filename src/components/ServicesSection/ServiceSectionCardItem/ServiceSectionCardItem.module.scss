@@ -1,24 +1,12 @@
 .listBlock {
-  @extend %transparentTap;
-  position: relative;
-  color: $mainDarkBlueColor;
-  padding: 3.8rem 1.3rem 1.6rem 1.3rem;
-  border-radius: 3.52rem;
-  transition: $transitionAnimation;
   @extend %blurBackground;
-
-  .cardText {
-    color: $mainDarkBlueColor;
-  }
-  &:active {
-    transform: scale(1.03);
-    box-shadow: 0.4rem 0.4rem 1.2rem 0rem;
-  }
+  @extend %cardWithTabBlock;
+  position: relative;
+  border-radius: 3.52rem;
 }
 
 .listTitle {
   @extend %cardWithTabBlockTitle;
-  padding: 0.4rem 2rem;
 }
 
 .listTitleText {
@@ -31,19 +19,9 @@
 }
 
 .listItem {
-  font-size: 2.2rem;
+  @extend %cardSubtitleSet;
   letter-spacing: 0.06rem;
   display: list-item;
   list-style-type: '◉';
   padding-inline-start: 0.4rem;
-
-  @include onDesktop() {
-    font-size: 1.8rem;
-  }
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onSmallTablet() {
-    font-size: 1.4rem;
-  }
 }

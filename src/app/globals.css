@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a,
+button,
+link {
+  font-weight: inherit;
+  font-size: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+p,
+ul,
+li {
+  cursor: default;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--start-color);
+  text-rendering: optimizeSpeed;
+  min-width: 320px;
+}
+body::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--end-color);
+  border-radius: 0.3rem;
+}
+
+.scrollLock {
+  overflow: hidden;
+}
+
+html,
+body {
+  font-family: 'Fira Sans Condensed';
+  font-size: 10px;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  background: linear-gradient(90deg, var(--start-color) 0%, var(--end-color) 100%);
+}
+
+:root {
+  --mainYellowColor: #ffcf00;
+  --mainDarkBlueColor: #3a3d60;
+  --mainBlueColor: #40ccff;
+}

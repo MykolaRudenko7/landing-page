@@ -10,21 +10,19 @@ import styles from 'app/Home.module.scss'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.frame}>
-        <header className={styles.header}>
-          <Navbar />
-        </header>
-        <main>
-          <StartHereSection />
-          <WhoWeAre />
-          <ServicesSection />
-          <PortfilioSection />
-          <ContactUsSection />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <header className={styles.header}>
+        <Navbar />
+      </header>
+      <main>
+        <StartHereSection />
+        <WhoWeAre />
+        <ServicesSection />
+        <PortfilioSection />
+        <ContactUsSection />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </main>
   )
 }
