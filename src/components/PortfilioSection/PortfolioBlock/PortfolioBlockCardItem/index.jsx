@@ -71,15 +71,6 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
                 ))}
               </ul>
             </div>
-            <Link
-              about="explore more"
-              className={styles.cardButton}
-              href="#"
-              role="button"
-              tabIndex="0"
-            >
-              <span className={styles.buttonText}>Explore more</span>
-            </Link>
           </motion.div>
         )}
       </div>

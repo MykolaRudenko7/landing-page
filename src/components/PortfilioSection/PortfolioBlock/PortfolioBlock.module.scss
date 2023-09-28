@@ -4,7 +4,7 @@
 
 .portfolioBlockWrapper {
   display: flex;
-  gap: 6rem;
+  gap: 2rem;
 
   @include onSmallTablet() {
     flex-direction: column;
@@ -18,7 +18,7 @@
 }
 
 .textBlock {
-  width: 43%;
+  width: 50%;
   @extend %textBlockMarking;
 
   @include onSmallTablet() {
@@ -44,7 +44,7 @@
 
 .textBlockText {
   font-size: $liteTitleSize;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 
   @include onDesktop() {
     font-size: $largeSubtitleCargSize;
@@ -71,10 +71,16 @@
 
 .cardsBlock {
   margin-top: 3rem;
-  width: 57%;
+  width: 50%;
+  gap: 7rem;
   @extend %textBlockMarking;
-  gap: 6rem;
+  align-items: flex-end;
 
+  @include onTablet() {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+  }
   @include onSmallTablet() {
     width: 100%;
   }

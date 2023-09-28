@@ -47,11 +47,10 @@
 .imageBlock {
   flex: 0 0 54%;
   @extend %flexCenter;
-  justify-content: flex-end;
-}
-
-.imageWrapper {
-  text-align: center;
+  margin-top: -5rem;
+  @include onSmallTablet() {
+    margin-top: 0;
+  }
 }
 
 .image {

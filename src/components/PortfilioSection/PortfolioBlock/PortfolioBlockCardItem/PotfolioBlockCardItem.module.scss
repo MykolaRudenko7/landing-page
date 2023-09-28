@@ -4,18 +4,19 @@
   @extend %transparentTap;
   @extend %cardWithTabBlock;
   padding: 3.8rem 2rem 2rem 2rem;
-  &:last-child {
-    margin: 0 auto;
-    max-width: 74.5rem;
-  }
-  @include onLargeDesktop() {
+  max-width: 80%;
+  @include onSmallTablet() {
+    max-width: 100%;
   }
 }
 
 .cardTitle {
   @extend %cardWithTabBlockTitle;
-  @include onLargeDesktop() {
-    white-space: normal;
+  @include onPhone() {
+    font-size: 1.1rem;
+  }
+  @include onSmallPhone() {
+    font-size: 1rem;
   }
 }
 .cardTitleText {
@@ -53,31 +54,13 @@
   }
 }
 .goalsTitle {
-  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  @include onDesktop() {
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .goalsListItems {
-  font-size: $largeSubtitleCargSize;
-  @include onDesktop() {
-    font-size: 2rem;
-  }
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .goalsListItem {
   margin-bottom: 1rem;
@@ -86,33 +69,15 @@
   }
 }
 .featuresTitle {
-  font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  @include onDesktop() {
-    font-size: 2.2rem;
-  }
-  @include onTablet() {
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.4rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .featuresListItems {
-  font-size: $largeSubtitleCargSize;
   display: flex;
   flex-wrap: wrap;
-  @include onDesktop() {
-    font-size: 2rem;
-  }
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
+  @extend %cardSubtitleSet;
 }
 .featuresListItem {
   margin-bottom: 1rem;
@@ -125,33 +90,17 @@
   text-wrap: wrap;
   width: 22%;
   opacity: 0.5;
-  font-size: 2.4rem;
   line-height: 3.2rem;
   text-transform: lowercase;
-  @include onDesktop() {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
+  line-height: 3rem;
+  @extend %cardSubtitleSet;
+
   @include onTablet() {
     line-height: normal;
-    font-size: 1.6rem;
     width: 30%;
   }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
 }
+
 .techStackTagsListItem {
   text-wrap: wrap;
-}
-.cardButton {
-  margin: 0 auto;
-  @extend %borderGradientButton;
-  margin-bottom: 3rem;
-  @include onTablet() {
-    margin-bottom: 1rem;
-  }
-  @include onPhone() {
-    margin-bottom: 0;
-  }
 }

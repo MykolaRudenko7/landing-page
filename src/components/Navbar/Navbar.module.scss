@@ -26,12 +26,15 @@
 
 .logoImage {
   @extend %forImage;
-  max-width: 20rem;
+  max-width: 15rem;
   height: auto;
   margin-left: -2rem;
 
   @include onDesktop() {
-    max-width: 14rem;
+    max-width: 13rem;
+  }
+  @include onTablet() {
+    max-width: 11rem;
   }
   @include onSmallTablet() {
     margin-left: 0;
@@ -43,16 +46,12 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-size: 2rem;
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
+  @extend %cardTitleSet;
 
-  @include onDesktop() {
-    gap: 1.5rem;
-    font-size: 1.7rem;
-  }
   @include onTablet() {
-    font-size: 1.2rem;
+    gap: 1.5rem;
   }
   @include onSmallTablet() {
     background-color: $pageBackgroundColor;

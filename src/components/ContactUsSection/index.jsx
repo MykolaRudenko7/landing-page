@@ -21,9 +21,7 @@ export default function ContactUsSection() {
         <div className={styles.formImageWrapper}>
           <ContactForm />
           <div className={styles.imageBlock}>
-            <div className={styles.imageWrapper}>
-              <Image alt="" className={styles.image} loading="eager" src={imageSrs} />
-            </div>
+            <Image alt="" className={styles.image} loading="eager" src={imageSrs} />
           </div>
         </div>
       </div>

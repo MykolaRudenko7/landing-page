@@ -56,7 +56,6 @@
   flex: 0 0 70%;
   overflow-x: scroll;
   scrollbar-width: thin;
-  scroll-snap-type: x mandatory;
   scrollbar-color: $mainBlueColor;
   padding-left: 0.5rem;
 
@@ -68,16 +67,16 @@
 .cardsWrapper {
   width: 100%;
   display: flex;
-  gap: 3.8rem;
-  padding-top: 7.7rem;
+  gap: 2rem;
+  padding-top: 5rem;
   padding-bottom: 1rem;
+  padding-right: 1rem;
 
-  @include onLargeDesktop {
-    gap: 3rem;
-  }
   @include onTablet() {
-    gap: 2rem;
-    padding-top: 5rem;
+    padding-top: 4rem;
+  }
+  @include onPhone() {
+    gap: 1.5rem;
   }
 }
 

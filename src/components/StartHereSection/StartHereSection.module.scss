@@ -99,21 +99,15 @@
   display: grid;
   justify-items: stretch;
   align-items: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  grid-column-gap: 10rem;
-  grid-row-gap: 9rem;
-
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
   @extend %containerPaddings;
   transition: $transitionAnimation;
 
-  @include onLargeDesktop() {
-    grid-column-gap: 5rem;
-    grid-row-gap: 5rem;
-  }
-
   @include onTablet() {
-    grid-column-gap: 4rem;
-    grid-row-gap: 4rem;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
   }
   @include onSmallTablet() {
     grid-column-gap: 2rem;

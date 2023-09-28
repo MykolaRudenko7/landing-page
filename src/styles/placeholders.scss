@@ -230,7 +230,7 @@
 
 %cardWithTabBlockTitle {
   @extend %blurBackground;
-  font-size: 3rem;
+  font-size: $largeSubtitleCargSize;
   box-shadow: $boxShadowcardWithTabBlockTitle;
   backdrop-filter: blur(3rem);
   position: absolute;
@@ -247,13 +247,14 @@
   padding: 1rem 1.5rem;
 
   @include onLargeDesktop() {
-    font-size: $smallTitleCardSize;
+    font-size: $regularSubtitleCargSize;
   }
   @include onTablet() {
-    font-size: 1.6rem;
+    font-size: $smallSubtitleCardSize;
   }
   @include onSmallTablet() {
     padding: 0.5rem 1rem;
+    text-shadow: none;
   }
 }
 
@@ -273,16 +274,16 @@
 }
 
 %containerPaddings {
-  padding: 8rem 0;
+  padding: 5rem 0;
 
   @include onLargeDesktop() {
-    padding: 5rem 0;
-  }
-  @include onTablet() {
     padding: 4rem 0;
   }
-  @include onSmallTablet() {
+  @include onTablet() {
     padding: 3rem 0;
+  }
+  @include onSmallTablet() {
+    padding: 2rem 0;
   }
 }
 
@@ -290,16 +291,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8rem;
+  gap: 4rem;
 
   @include onLargeDesktop() {
-    gap: 5rem;
-  }
-  @include onTablet() {
     gap: 3rem;
   }
-  @include onPhone() {
+  @include onTablet() {
     gap: 2rem;
+  }
+  @include onPhone() {
+    gap: 1.5rem;
   }
 }
 
@@ -309,7 +310,7 @@
   font-weight: $mediumFontWeight;
   font-style: normal;
   line-height: normal;
-  @include onLargeDesktop() {
+  @include onDesktop() {
     font-size: $mediumTitleSize;
   }
 
@@ -328,7 +329,7 @@
   font-size: $largeSubtitleSize;
   line-height: normal;
   font-style: normal;
-  @include onLargeDesktop() {
+  @include onDesktop() {
     font-size: $mediumSubtitleSize;
   }
 
@@ -340,7 +341,7 @@
 %cardTitleSet {
   font-size: $largeTitleCargSize;
   font-weight: $mediumFontWeight;
-  @include onLargeDesktop() {
+  @include onDesktop() {
     font-size: $regularTitleCargSize;
   }
   @include onTablet() {
@@ -351,7 +352,7 @@
 %cardSubtitleSet {
   font-size: $largeSubtitleCargSize;
 
-  @include onLargeDesktop() {
+  @include onDesktop() {
     font-size: $regularSubtitleCargSize;
   }
   @include onTablet() {
@@ -360,12 +361,12 @@
 }
 
 %imageInTextBlock {
-  max-width: 50rem;
+  max-width: 40rem;
   @include onLargeDesktop() {
-    max-width: 40rem;
+    max-width: 30rem;
   }
   @include onTablet() {
-    max-width: 35rem;
+    max-width: 25rem;
   }
   @include onSmallTablet() {
     max-width: 60%;
