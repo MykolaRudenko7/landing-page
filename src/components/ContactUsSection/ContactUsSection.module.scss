@@ -28,6 +28,7 @@
 
 .contactUsTilte {
   @extend %titleTextSet;
+  @extend %marginBottomAfterTitle;
 }
 
 .contactUsText {

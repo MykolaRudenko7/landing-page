@@ -7,6 +7,7 @@
   max-width: 80%;
   @include onSmallTablet() {
     max-width: 100%;
+    padding: 3.8rem 1.5rem 1.5rem 1.5rem;
   }
 }
 
@@ -48,30 +49,29 @@
   }
 }
 .goalsBlock {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   @include onTablet() {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 .goalsTitle {
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   @extend %cardSubtitleSet;
 }
 .goalsListItems {
   @extend %cardSubtitleSet;
 }
 .goalsListItem {
-  margin-bottom: 1rem;
-  @include onTablet() {
+  &:not(:last-child) {
     margin-bottom: 0.5rem;
   }
 }
 .featuresTitle {
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   @extend %cardSubtitleSet;
 }
 .featuresListItems {
@@ -80,10 +80,8 @@
   @extend %cardSubtitleSet;
 }
 .featuresListItem {
-  margin-bottom: 1rem;
-  margin-right: 3rem;
-  @include onTablet() {
-    margin-right: 1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
 }
 .techStackTagsListItems {

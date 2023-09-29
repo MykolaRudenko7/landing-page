@@ -73,7 +73,7 @@ export default function ContactForm() {
         type="submit"
         value="Submit"
       >
-        <span className={styles.buttonText}>Share Your Thoughts</span>
+        Share Your Thoughts
       </button>
     </form>
   )

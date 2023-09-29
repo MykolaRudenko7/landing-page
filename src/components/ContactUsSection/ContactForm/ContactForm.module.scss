@@ -100,29 +100,6 @@
 }
 
 .submitButton {
-  text-align: center;
   @extend %fillGradientButton;
-  @include onSmallTablet() {
-    width: 25rem;
-  }
-}
-
-.buttonText {
   font-family: $mainFontFamily;
-  font-weight: $mediumFontWeight;
-  text-transform: uppercase;
-  letter-spacing: 0.07rem;
-  font-size: 2.4rem;
-
-  @include onSmallTablet() {
-    font-size: 2rem;
-  }
-
-  @include onSmallTablet() {
-    margin-left: 0;
-    font-size: 1.8rem;
-  }
-  @include onPhone() {
-    font-size: 1.6rem;
-  }
 }

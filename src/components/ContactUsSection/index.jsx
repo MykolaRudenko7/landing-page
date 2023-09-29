@@ -15,8 +15,10 @@ export default function ContactUsSection() {
           <div className={styles.contactUsLabel}>
             <h3 className={styles.titleText}>Contact Us</h3>
           </div>
-          <h5 className={styles.contactUsTilte}>{title}</h5>
-          <p className={styles.contactUsText}>{text}</p>
+          <div className={styles.textBlockWrapper}>
+            <h5 className={styles.contactUsTilte}>{title}</h5>
+            <p className={styles.contactUsText}>{text}</p>
+          </div>
         </div>
         <div className={styles.formImageWrapper}>
           <ContactForm />
