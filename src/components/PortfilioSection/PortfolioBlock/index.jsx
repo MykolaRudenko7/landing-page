@@ -19,8 +19,10 @@ export default function PortfolioBlock() {
             <h3 className={styles.portfolioLabel}>
               <span className={styles.titleText}>Portfolio</span>
             </h3>
-            <h5 className={styles.textBlockTitle}>{title}</h5>
-            <p className={styles.textBlockText}>{text}</p>
+            <div className={styles.textBlockForMargin}>
+              <h5 className={styles.textBlockTitle}>{title}</h5>
+              <p className={styles.textBlockText}>{text}</p>
+            </div>
             <PortfolioBlockCardItem {...cardBarossa} />
           </div>
           <div className={styles.buttonWrapper}>

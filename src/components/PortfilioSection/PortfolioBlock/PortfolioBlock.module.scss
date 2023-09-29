@@ -32,33 +32,13 @@
 }
 
 .textBlockTitle {
-  @extend %mediumTitle;
-
-  @include onTablet() {
-    font-size: $largeSubtitleCargSize;
-  }
-  @include onSmallTablet() {
-    font-size: 2rem;
-  }
+  @extend %titleTextSet;
+  @extend %marginBottomAfterTitle;
 }
 
 .textBlockText {
   font-size: $liteTitleSize;
-  margin-bottom: 4rem;
-
-  @include onDesktop() {
-    font-size: $largeSubtitleCargSize;
-  }
-  @include onTablet() {
-    text-align: left;
-    font-size: 1.6rem;
-  }
-  @include onSmallTablet() {
-    margin-bottom: 3rem;
-
-    font-size: 1.4rem;
-    text-align: left;
-  }
+  @extend %subtitleTextSet;
 }
 
 .portfolioBlockButton {

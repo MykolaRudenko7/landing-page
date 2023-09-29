@@ -16,6 +16,7 @@
 
 .textBlockTitle {
   @extend %titleTextSet;
+  @extend %marginBottomAfterTitle;
 }
 
 .textBlockText {
@@ -23,11 +24,9 @@
 }
 
 .buttonsBlock {
-  overflow: hidden;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  text-shadow: $textShadow;
   gap: 5rem;
 
   @include onDesktop() {
@@ -38,6 +37,9 @@
   }
   @include onSmallTablet() {
     justify-content: space-around;
+  }
+  @include onPhone() {
+    justify-content: space-between;
   }
 }
 

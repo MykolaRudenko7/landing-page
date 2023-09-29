@@ -32,16 +32,13 @@
   }
 }
 
-.textBlockWrapper {
-  @extend %textBlockMarking;
-}
-
 .testimonialsBlockLable {
   @extend %borderGradientBlockTitle;
 }
 
 .testimonialsBlockTitle {
   @extend %titleTextSet;
+  @extend %marginBottomAfterTitle;
 }
 
 .testimonialsBlockText {

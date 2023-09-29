@@ -16,8 +16,10 @@ export default function StartHereSection() {
     <section className={styles.startHere} id="startHere">
       <div className={styles.startHereContainer}>
         <div className={styles.textBlock}>
-          <h3 className={styles.textBlockTitle}>{textBlock.title}</h3>
-          <p className={styles.textBlockText}>{textBlock.text}</p>
+          <div className={styles.textBlockWrapper}>
+            <h3 className={styles.textBlockTitle}>{textBlock.title}</h3>
+            <p className={styles.textBlockText}>{textBlock.text}</p>
+          </div>
           <div className={styles.buttonsBlock}>
             <Link
               about="schedule a consultation"
