@@ -91,8 +91,8 @@ export default React.memo(
           </label>
           <input
             id="fontSize"
-            max="70"
-            min="8"
+            max="25"
+            min="5"
             onChange={handleFontSizeChange}
             step="1"
             type="range"
