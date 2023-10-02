@@ -1,9 +1,8 @@
 %fillGradientButtonSecondary {
-  box-sizing: border-box;
-  font-family: 'Fira Code';
   @extend %transparentTap;
   cursor: pointer;
   border: none;
+  outline: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -11,12 +10,17 @@
   height: 5rem;
   color: var(--text-color);
   background-color: $secondaryButtonColor;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   white-space: nowrap;
-  transition: $transitionAnimation;
+  transition:
+    all 0.25s,
+    transform 0.25s;
   font-size: var(--largeSubtitleSize);
   font-weight: $mediumFontWeight;
-  box-shadow: rgba(0, 0, 0, 0.394) 0 -0.4rem 0 inset;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
+    rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+    $darkenedSecondaryButtonColor 0 -0.3rem 0 inset;
 
   @include onDesktop() {
     font-size: var(--mediumSubtitleSize);
@@ -41,12 +45,15 @@
   }
 
   &:hover {
-    transform: translateY(-0.1rem);
-    box-shadow: rgba(0, 0, 0, 0.394) 0 -0.5rem 0 inset;
+    transform: translateY(-0.2rem);
+    box-shadow:
+      rgba(45, 35, 66, 0.4) 0 0.4rem 0.8rem,
+      rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+      $darkenedSecondaryButtonHoverColor 0 -3px 0 inset;
   }
 
   &:active {
-    box-shadow: rgba(0, 0, 0, 0.394) 0 0.2rem 0.5rem inset;
+    box-shadow: $darkenedSecondaryButtonColor 0 0.3rem 0.7rem inset;
     transform: translateY(0.2rem);
   }
 }
@@ -56,6 +63,22 @@
   @extend %transparentTap;
   font-family: var(--main-font);
   background-color: $primaryButtonColor;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
+    rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+    $darkenedPrimaryButtonColor 0 -0.3rem 0 inset;
+
+  &:hover {
+    box-shadow:
+      rgba(45, 35, 66, 0.4) 0 0.4rem 0.8rem,
+      rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+      $darkenedPrimaryButtonHoverColor 0 -0.3rem 0 inset;
+  }
+
+  &:active {
+    box-shadow: $darkenedPrimaryButtonColor 0 0.3rem 0.7rem inset;
+    transform: translateY(0.2rem);
+  }
 }
 
 %underlineLinkHoverEffect {

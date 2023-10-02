@@ -1,7 +1,12 @@
 $mainYellowColor: #ffcf00;
 
 $primaryButtonColor: #ffd60a;
+$darkenedPrimaryButtonColor: darken($primaryButtonColor, 17%);
+$darkenedPrimaryButtonHoverColor: darken($primaryButtonColor, 15%);
+
 $secondaryButtonColor: #ffc300;
+$darkenedSecondaryButtonColor: darken($secondaryButtonColor, 17%);
+$darkenedSecondaryButtonHoverColor: darken($secondaryButtonColor, 15%);
 
 $blackThemeColor: #000000;
 $secondaryBlackThemeColor: #000814;
