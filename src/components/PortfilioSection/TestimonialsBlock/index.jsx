@@ -30,7 +30,7 @@ export default function TestimonialsBlock() {
             role="button"
             tabIndex="0"
           >
-            learn more
+            Learn more
           </Link>
         </div>
         <div className={styles.cards}>

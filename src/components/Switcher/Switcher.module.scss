@@ -12,8 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--start-color);
-  color: var(--end-color);
+  background-color: white;
+  color: black;
   border-radius: 1rem 0 0 1rem;
   padding: 1rem;
   writing-mode: vertical-lr;
@@ -32,14 +32,14 @@
 .switchPanel {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   position: absolute;
   z-index: 2;
   right: -90%;
   top: 0;
   height: 100%;
   width: 25%;
-  padding: 10rem 2rem;
+  padding: 3rem 2rem;
   background-color: white;
   transition: $transitionAnimationStartHere;
   opacity: 0;
@@ -50,35 +50,8 @@
   }
 }
 
-.gradientColor {
-  display: flex;
-  margin-bottom: 2rem;
-  gap: 2rem;
-  @include onSmallTablet() {
-    flex-direction: column;
-  }
-}
-
-.textColor {
-  display: flex;
-  flex-direction: column;
-}
-
-.colorLabel {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 2.4rem;
-  font-weight: $mediumFontWeight;
-  @include onTablet() {
-    font-size: 1.6rem;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-  }
-}
 .reset {
-  font-family: $mainFontFamily;
+  font-family: var(--main-font);
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
   color: $mainDarkBlueColor;

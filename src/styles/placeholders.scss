@@ -12,57 +12,8 @@
 }
 
 %mediumTitle {
-  font-size: $mediumTitleSize;
+  font-size: var(--mediumTitleSize);
   font-weight: $mediumFontWeight;
-}
-
-%fillGradientButton {
-  @extend %transparentTap;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  text-shadow: $textShadow;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  color: var(--text-color);
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    $primaryButtonColor 0,
-    $secondaryButtonColor 100%
-  );
-  border-radius: 1rem;
-  white-space: nowrap;
-  transition: $transitionAnimation;
-  font-size: $largeSubtitleSize;
-  font-weight: $mediumFontWeight;
-
-  @include onDesktop() {
-    font-size: $mediumSubtitleSize;
-  }
-
-  @include onTablet() {
-    font-size: $liteSubtitleSize;
-  }
-  @include onSmallTablet() {
-    font-size: $liteSubtitleSize;
-    text-shadow: none;
-  }
-  @include onPhone() {
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
-
-  &:hover {
-    box-shadow: $mainOrangeColor 0 -0.4rem 0 inset;
-    transform: translateY(-0.4rem);
-  }
-
-  &:active {
-    box-shadow: $mainOrangeColor 0 0.4rem 0.8rem inset;
-    transform: translateY(0.4rem);
-  }
 }
 
 %borderGradientBlockTitle {
@@ -118,38 +69,6 @@
   }
 }
 
-%underlineLinkHoverEffect {
-  color: var(--text-color);
-  @extend %transparentTap;
-  position: relative;
-  cursor: pointer;
-  transition: $transitionAnimation;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.2rem;
-    border-radius: 0.25rem;
-    transition: $transitionAnimation;
-    transform: scale(0);
-    transform-origin: right;
-    background-color: var(--text-color);
-  }
-  &:hover {
-    text-shadow: $textShadow;
-  }
-  &:active,
-  &:focus {
-    &::after {
-      transform: scale(1);
-      transform-origin: left;
-    }
-  }
-}
-
 %blurBackground {
   background: $backgroundServiceCard;
   box-shadow: $boxShadow;
@@ -168,7 +87,7 @@
 
 %cardWithTabBlockTitle {
   @extend %blurBackground;
-  font-size: $largeSubtitleCargSize;
+  font-size: var(--largeSubtitleCargSize);
   box-shadow: $boxShadowcardWithTabBlockTitle;
   backdrop-filter: blur(3rem);
   position: absolute;
@@ -185,10 +104,10 @@
   padding: 1rem 1.5rem;
 
   @include onLargeDesktop() {
-    font-size: $regularSubtitleCargSize;
+    font-size: var(--regularSubtitleCargSize);
   }
   @include onTablet() {
-    font-size: $smallSubtitleCardSize;
+    font-size: var(--smallSubtitleCardSize);
   }
   @include onSmallTablet() {
     padding: 0.5rem 1rem;
@@ -250,13 +169,13 @@
   font-weight: $mediumFontWeight;
   font-style: normal;
   line-height: normal;
-  font-size: $largeTitleSize;
+  font-size: var(--largeTitleSize);
   @include onDesktop() {
-    font-size: $mediumTitleSize;
+    font-size: var(--mediumTitleSize);
   }
 
   @include onTablet() {
-    font-size: $liteTitleSize;
+    font-size: var(--liteTitleSize);
   }
 
   @include onSmallTablet() {
@@ -269,35 +188,35 @@
   font-weight: $regularFontWeight;
   line-height: normal;
   font-style: normal;
-  font-size: $largeSubtitleSize;
+  font-size: var(--largeSubtitleSize);
   @include onDesktop() {
-    font-size: $mediumSubtitleSize;
+    font-size: var(--mediumSubtitleSize);
   }
 
   @include onTablet() {
-    font-size: $liteSubtitleSize;
+    font-size: var(--liteSubtitleSize);
   }
 }
 
 %cardTitleSet {
-  font-size: $largeTitleCargSize;
+  font-size: var(--largeTitleCargSize);
   font-weight: $mediumFontWeight;
   @include onDesktop() {
-    font-size: $regularTitleCargSize;
+    font-size: var(--regularTitleCargSize);
   }
   @include onTablet() {
-    font-size: $smallTitleCardSize;
+    font-size: var(--smallTitleCardSize);
   }
 }
 
 %cardSubtitleSet {
-  font-size: $largeSubtitleCargSize;
+  font-size: var(--largeSubtitleCargSize);
 
   @include onDesktop() {
-    font-size: $regularSubtitleCargSize;
+    font-size: var(--regularSubtitleCargSize);
   }
   @include onTablet() {
-    font-size: $smallSubtitleCardSize;
+    font-size: var(--smallSubtitleCardSize);
   }
 }
 
