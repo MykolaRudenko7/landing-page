@@ -45,7 +45,13 @@
   &:hover {
     transform: translateY(-0.2rem);
     box-shadow:
-      rgba(45, 35, 66, 0.4) 0 0.4rem 0.8rem,
+      // rgba(45, 35, 66, 0.4) 0 0.4rem 0.8rem,
+      // rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+
+      // rgba(45, 35, 66, 0.2) 0 0.4rem 0.8rem,
+      // rgba(45, 35, 66, 0.2) 0 0.7rem 1.3rem -0.3rem,
+
+      rgba(45, 35, 66, 0.3) 0 0.4rem 0.8rem,
       rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
       $darkenedSecondaryButtonHoverColor 0 -3px 0 inset;
   }
@@ -68,8 +74,8 @@
 
   &:hover {
     box-shadow:
-      rgba(45, 35, 66, 0.4) 0 0.4rem 0.8rem,
-      rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+      rgba(45, 35, 66, 0.2) 0 0.4rem 0.8rem,
+      rgba(45, 35, 66, 0.2) 0 0.7rem 1.3rem -0.3rem,
       $darkenedPrimaryButtonHoverColor 0 -0.3rem 0 inset;
   }
 
