@@ -54,7 +54,7 @@ export default React.memo(
                   endColor: '#000000',
                 },
                 'black',
-              )
+            )
             }
             type="button"
           />
@@ -71,7 +71,7 @@ export default React.memo(
                   endColor: '#000814',
                 },
                 'secondaryBlack',
-              )
+            )
             }
             type="button"
           />
@@ -86,7 +86,7 @@ export default React.memo(
                   endColor: '#003566',
                 },
                 'blue',
-              )
+            )
             }
             type="button"
           />
