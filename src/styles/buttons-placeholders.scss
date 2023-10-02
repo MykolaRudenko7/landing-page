@@ -12,9 +12,7 @@
   background-color: $secondaryButtonColor;
   border-radius: 0.6rem;
   white-space: nowrap;
-  transition:
-    all 0.25s,
-    transform 0.25s;
+  transition: all 0.2s ease-in;
   font-size: var(--largeSubtitleSize);
   font-weight: $mediumFontWeight;
   box-shadow:
