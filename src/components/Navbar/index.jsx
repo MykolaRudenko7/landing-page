@@ -49,7 +49,7 @@ export default function Navbar() {
           role="button"
           smooth={true}
           tabIndex="0"
-          to="contactUs"
+          to="contact"
         >
           Boost your business!
         </Link>

@@ -27,7 +27,7 @@
   font-size: 2.4rem;
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
-  padding: 1.6rem;
+  padding: 1.5rem;
   transform: skew(-25deg);
   text-shadow: $textShadow;
   width: 30.7rem;
@@ -61,6 +61,7 @@
     font-size: 2rem;
     width: 25rem;
     text-shadow: none;
+    padding: 1.2rem;
   }
   @include onSmallTablet() {
     margin-left: 0;

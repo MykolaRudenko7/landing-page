@@ -9,7 +9,7 @@ export default function ContactUsSection() {
   const { text, title, imageSrs } = contactUsSectionData
 
   return (
-    <section className={styles.contactUsSection} id="contactUs">
+    <section className={styles.contactUsSection} id="contact">
       <div className={styles.contactUsSectionWrapper}>
         <div className={styles.textBlock}>
           <div className={styles.contactUsLabel}>

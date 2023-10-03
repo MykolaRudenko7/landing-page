@@ -7,10 +7,11 @@ import socialIcon4 from 'images/footer/fb-icon.svg'
 export const footerSectionData = {
   logoImage,
   linksForScroll: [
-    { id: 'startHere', title: 'Start Here' },
-    { id: 'whoWeAre', title: 'Who we are' },
+    { id: 'home', title: 'Intro' },
+    { id: 'how-we-are', title: 'About Us' },
     { id: 'portfolio', title: 'Portfolio' },
-    { id: 'contactUs', title: 'Contact' },
+    { id: 'reviews', title: 'Reviews' },
+    { id: 'contact', title: 'Contact' },
   ],
   servicesLinks: {
     mainLink: { id: 'services', title: 'Services' },

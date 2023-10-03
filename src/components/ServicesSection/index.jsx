@@ -8,7 +8,7 @@ export default function ServicesSection() {
     <section className={styles.services} id="services">
       <div className={styles.servicesWrapper}>
         <div className={styles.servicesLable}>
-          <h3 className={styles.titleText}>Industries & Services We Serve</h3>
+          <h3 className={styles.titleText}>What We Do</h3>
         </div>
         <div className={styles.cards}>
           {servicesSectionData.map((item) => (

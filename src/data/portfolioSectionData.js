@@ -1,8 +1,6 @@
-import cardImage1 from 'images/portfolioSection/portfolioBlock/cardImage1.svg'
-import cardImage2 from 'images/portfolioSection/portfolioBlock/cardImage2.svg'
-import cardImage3 from 'images/portfolioSection/portfolioBlock/cardImage3.svg'
-import avatarImage1 from 'images/portfolioSection/testimonialsBlock/avatar1.svg'
-import avatarImage2 from 'images/portfolioSection/testimonialsBlock/avatar2.svg'
+import cardImage1 from 'images/portfolioSection/cardImage1.svg'
+import cardImage2 from 'images/portfolioSection/cardImage2.svg'
+import cardImage3 from 'images/portfolioSection/cardImage3.svg'
 
 export const portfolioSectionData = {
   portfolioBlockData: {
@@ -107,10 +105,6 @@ export const portfolioSectionData = {
     },
     cards: [
       {
-        title: 'Tech You Can Trust',
-        text: "Beyond being developers, we're partners committed to your tech success, aiding in the development of scalable products.",
-      },
-      {
         title: 'One-Stop Development',
         text: 'We offer comprehensive solutions, eliminating the need for multiple vendors.',
       },
@@ -126,76 +120,9 @@ export const portfolioSectionData = {
         title: 'Global Impact',
         text: 'Our work with industry leaders worldwide reflects our adaptability and global tech understanding.',
       },
-    ],
-  },
-  testimonialsBlockData: {
-    textBlock: {
-      title: 'What Our Clients Say',
-      text: "At TECH COSSACKS, we believe in building relationships that go beyond projects. Our clients' success is our success, and their words inspire us to strive for excellence. Here's what some of them have to say:",
-    },
-    cards: [
       {
-        imageSrc: avatarImage1,
-        name: 'John Wallace',
-        vacancy: 'CTO',
-        content:
-          'I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage1,
-        name: 'John Wallace',
-        vacancy: 'CTO',
-        content:
-          'I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
-      },
-      {
-        imageSrc: avatarImage2,
-        name: 'Eric Manring',
-        vacancy: 'Senior Lead Architect',
-        content:
-          'I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs.',
+        title: 'Tech You Can Trust',
+        text: "Beyond being developers, we're partners committed to your tech success, aiding in the development of scalable products.",
       },
     ],
   },
