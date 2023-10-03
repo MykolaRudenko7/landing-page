@@ -48,7 +48,9 @@
 
 .portfolioBlockButton {
   @extend %fillGradientButtonSecondary;
-  display: none;
+  @include onSmallTablet() {
+    display: none;
+  }
 }
 
 .cardsBlock {
