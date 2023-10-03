@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import { Link } from 'react-scroll'
-import { aboutUsSectionData } from 'data/AboutUsSectionData'
-import styles from 'components/AboutUs/AboutUsSection.module.scss'
+import { aboutUsSectionData } from 'data/aboutUsSectionData'
+import styles from 'components/AboutUsSection/AboutUsSection.module.scss'
 
 export default function AboutUsSection() {
   const { imageSrc, text, title } = aboutUsSectionData

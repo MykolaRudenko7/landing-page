@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
-import { introSectionData } from 'data/IntroSectionData'
+import { introSectionData } from 'data/introSectionData'
 import IntroCardItem from 'components/IntroSection/IntroCardItem'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 

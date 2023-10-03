@@ -25,19 +25,19 @@ export default function PortfolioBlock() {
             </div>
             <PortfolioBlockCardItem {...cardBarossa} />
           </div>
-            <Link
-              about="begin your project"
-              className={styles.portfolioBlockButton}
-              duration={750}
-              href="#"
-              offset={-10}
-              role="button"
-              smooth={true}
-              tabIndex="0"
-              to="contact"
-            >
-              Start Your Success Story
-            </Link>
+          <Link
+            about="begin your project"
+            className={styles.portfolioBlockButton}
+            duration={750}
+            href="#"
+            offset={-10}
+            role="button"
+            smooth={true}
+            tabIndex="0"
+            to="contact"
+          >
+            Start Your Success Story
+          </Link>
         </div>
         <div className={styles.cardsBlock}>
           <PortfolioBlockCardItem {...cardB2B} />
