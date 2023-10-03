@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GradientContext, TextColorContext } from 'context/ThemeContext'
 
-export default function ThemeProvider({ children }) {
+export default React.memo(({ children }) => {
   const [textColor, setTextColor] = useState(() => {
     const savedTextColor = typeof window !== 'undefined' && localStorage.getItem('textColor')
 
@@ -39,4 +39,4 @@ export default function ThemeProvider({ children }) {
       </GradientContext.Provider>
     </TextColorContext.Provider>
   )
-}
+})

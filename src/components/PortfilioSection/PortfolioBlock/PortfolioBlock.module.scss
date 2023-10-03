@@ -37,12 +37,12 @@
 }
 
 .textBlockText {
-  font-size: $liteTitleSize;
+  font-size: var(--liteTitleSize);
   @extend %subtitleTextSet;
 }
 
 .portfolioBlockButton {
-  @extend %fillGradientButton;
+  @extend %fillGradientButtonSecondary;
 }
 
 .cardsBlock {

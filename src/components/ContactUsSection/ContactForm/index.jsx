@@ -24,6 +24,7 @@ export default function ContactForm() {
     <form className={styles.formBlock} onSubmit={handleSubmitFormData} ref={formRef}>
       <label className={styles.formBlockLabel} htmlFor="name">
         <input
+          autoComplete="name"
           className={styles.formBlockInput}
           id="name"
           name="name"
@@ -35,6 +36,7 @@ export default function ContactForm() {
       </label>
       <label className={styles.formBlockLabel} htmlFor="email">
         <input
+          autoComplete="email"
           className={styles.formBlockInput}
           id="email"
           name="email"
@@ -46,6 +48,7 @@ export default function ContactForm() {
       </label>
       <label className={styles.formBlockLabel} htmlFor="phoneNumber">
         <input
+          autoComplete="phone number"
           className={styles.formBlockInput}
           id="phoneNumber"
           name="phoneNumber"
@@ -57,6 +60,7 @@ export default function ContactForm() {
       </label>
       <label className={styles.formBlockLabel} htmlFor="message">
         <textarea
+          autoComplete="message"
           className={styles.formBlockTextarea}
           id="message"
           maxLength="150"
@@ -73,7 +77,7 @@ export default function ContactForm() {
         type="submit"
         value="Submit"
       >
-        Share Your Thoughts
+        Share your thoughts
       </button>
     </form>
   )

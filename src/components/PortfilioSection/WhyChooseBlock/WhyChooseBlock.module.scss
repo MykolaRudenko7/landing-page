@@ -81,7 +81,7 @@
   @extend %mediumTitle;
 
   @include forCircles() {
-    font-size: $largeSubtitleCargSize;
+    font-size: var(--largeSubtitleCargSize);
   }
   @include onDesktop() {
     font-size: 1.8rem;
@@ -90,14 +90,14 @@
     font-size: 1.4rem;
   }
   @include onSmallTablet() {
-    font-size: $smallTitleCardSize;
+    font-size: var(--smallTitleCardSize);
 
     text-align: center;
   }
 }
 
 .mainCardText {
-  font-size: $liteTitleSize;
+  font-size: var(--liteTitleSize);
 
   @include forCircles() {
     font-size: 1.6rem;
@@ -110,7 +110,7 @@
   }
   @include onSmallTablet() {
     text-align: left;
-    font-size: $smallSubtitleCardSize;
+    font-size: var(--smallSubtitleCardSize);
   }
 }
 
@@ -132,7 +132,8 @@
 }
 
 .elevateButton {
-  @extend %fillGradientButton;
+  @extend %fillGradientButtonSecondary;
+  letter-spacing: -0.1rem;
 }
 
 .buttonLable {

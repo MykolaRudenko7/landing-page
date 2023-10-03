@@ -135,7 +135,7 @@
 
 .about {
   text-align: center;
-  font-size: $liteTitleSize;
+  font-size: var(--liteTitleSize);
   font-weight: $mediumFontWeight;
 
   @include onDesktop() {

@@ -8,7 +8,6 @@ import cn from 'classnames'
 import { navbarData } from 'data/navbarLinksData'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Navbar/Navbar.module.scss'
-import ThemeSwitcher from '../ThemeSwitcher'
 
 export default function Navbar() {
   const { links, logoImage } = navbarData
@@ -64,7 +63,6 @@ export default function Navbar() {
           <span className={styles.burger__line2} />
           <span className={styles.burger__line3} />
         </div>
-        <ThemeSwitcher />
       </div>
     </nav>
   )

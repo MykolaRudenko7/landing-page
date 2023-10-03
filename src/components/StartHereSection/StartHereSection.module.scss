@@ -44,11 +44,11 @@
 }
 
 .buttonConsultation {
-  @extend %fillGradientButton;
+  @extend %fillGradientButtonSecondary;
 }
 
 .buttonServices {
-  @extend %fillGradientButton;
+  @extend %fillGradientButtonPrimary;
 }
 
 .imageWrapper {

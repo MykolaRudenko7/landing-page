@@ -25,12 +25,12 @@
   transform: skew(-20deg);
   transition: $transitionAnimation;
   backdrop-filter: blur(4.5rem);
-  font-family: $mainFontFamily;
-  font-size: $largeTitleCargSize;
+  font-family: var(--main-font);
+  font-size: var(--largeTitleCargSize);
 
   &::placeholder {
     color: var(--text-color);
-    font-family: $mainFontFamily;
+    font-family: var(--main-font);
     opacity: 0.5;
     transform: skew(20deg);
   }
@@ -52,16 +52,16 @@
   }
 
   @include onDesktop() {
-    font-size: $regularSubtitleCargSize;
+    font-size: var(--regularSubtitleCargSize);
   }
   @include onTablet() {
-    font-size: $smallSubtitleCardSize;
+    font-size: var(--smallSubtitleCardSize);
   }
 }
 
 .formBlockTextarea {
-  font-family: $mainFontFamily;
-  font-size: $largeTitleCargSize;
+  font-family: var(--main-font);
+  font-size: var(--largeTitleCargSize);
   color: var(--text-color);
   box-shadow: $boxShadow;
   width: 100%;
@@ -80,7 +80,7 @@
 
   &::placeholder {
     color: var(--text-color);
-    font-family: $mainFontFamily;
+    font-family: var(--main-font);
     opacity: 0.6;
   }
   &:hover {
@@ -92,14 +92,14 @@
   }
 
   @include onDesktop() {
-    font-size: $regularSubtitleCargSize;
+    font-size: var(--regularSubtitleCargSize);
   }
   @include onTablet() {
-    font-size: $smallSubtitleCardSize;
+    font-size: var(--smallSubtitleCardSize);
   }
 }
 
 .submitButton {
-  @extend %fillGradientButton;
-  font-family: $mainFontFamily;
+  @extend %fillGradientButtonSecondary;
+  font-family: var(--main-font);
 }

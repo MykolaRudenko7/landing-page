@@ -2,7 +2,7 @@
   @extend %underlineLinkHoverEffect;
 
   @include onSmallTablet() {
-    font-size: $liteTitleSize;
+    font-size: var(--liteTitleSize);
     font-weight: $mediumFontWeight;
   }
 }
