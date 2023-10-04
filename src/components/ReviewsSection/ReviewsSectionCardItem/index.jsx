@@ -5,7 +5,7 @@ export default function ReviewsSectionCardItem({ imageSrc, name, vacancy, conten
   return (
     <div className={styles.reviewsSectionCardItem}>
       <div className={styles.cardImageWrapper}>
-        <Image alt="character image" className={styles.cardImage} src={imageSrc} />
+        <Image alt="character image" className={styles.cardImage} src={imageSrc} priority />
       </div>
       <div className={styles.cardTextBlock}>
         <p className={styles.cardName}>{name}</p>

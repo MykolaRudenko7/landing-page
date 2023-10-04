@@ -1,0 +1,8 @@
+.swiper {
+  flex: 0 0 70%;
+  padding-top: 5rem;
+
+  @include onTablet() {
+    padding-top: 4rem;
+  }
+}
