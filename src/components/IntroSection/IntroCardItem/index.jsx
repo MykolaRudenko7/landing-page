@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import styles from 'components/StartHereSection/StartHereCardItem/StartHereCardItem.module.scss'
+import styles from 'components/IntroSection/IntroCardItem/IntroCardItem.module.scss'
 
-export default function StartHereCardItem({
+export default function IntroCardItem({
   imageSrc,
   title,
   subtitle,

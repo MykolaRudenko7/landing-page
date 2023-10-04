@@ -1,4 +1,4 @@
-.testimonialsBlockCardItem {
+.reviewsSectionCardItem {
   position: relative;
   min-width: 30rem;
   border-radius: 3.8rem;
@@ -30,6 +30,7 @@
   transform: translate(-50%, -50%);
   border-radius: 100%;
   filter: $circleWhyChooseCardFilter;
+  overflow: hidden;
 }
 
 .cardImage {

@@ -4,17 +4,17 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
-import { startHereSectionData } from 'data/startHereSectionData'
-import StartHereCardItem from 'components/StartHereSection/StartHereCardItem'
-import styles from 'components/StartHereSection/StartHereSection.module.scss'
+import { introSectionData } from 'data/introSectionData'
+import IntroCardItem from 'components/IntroSection/IntroCardItem'
+import styles from 'components/IntroSection/IntroSection.module.scss'
 
-export default function StartHereSection() {
-  const { textBlock } = startHereSectionData
+export default function Intro() {
+  const { textBlock } = introSectionData
   const [isHoverCard, setIsHoverCard] = useState(null)
 
   return (
-    <section className={styles.startHere} id="startHere">
-      <div className={styles.startHereContainer}>
+    <section className={styles.intro} id="home">
+      <div className={styles.introContainer}>
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
             <h3 className={styles.textBlockTitle}>{textBlock.title}</h3>
@@ -30,7 +30,7 @@ export default function StartHereSection() {
               role="button"
               smooth={true}
               tabIndex="0"
-              to="contactUs"
+              to="contact"
             >
               Schedule a consultation
             </Link>
@@ -60,8 +60,8 @@ export default function StartHereSection() {
       </div>
       <div className={styles.cardsBlock}>
         <div className={styles.cardsBlockContainer}>
-          {startHereSectionData.cards.map((card, id) => (
-            <StartHereCardItem
+          {introSectionData.cards.map((card, id) => (
+            <IntroCardItem
               cardId={id}
               key={uuidv4()}
               {...card}

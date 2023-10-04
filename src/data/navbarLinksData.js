@@ -3,10 +3,11 @@ import logoImage from 'images/navbar/logo.png'
 export const navbarData = {
   logoImage,
   links: [
-    { id: 'startHere', title: 'Start Here' },
-    { id: 'whoWeAre', title: 'Who we are' },
+    { id: 'home', title: 'Intro' },
+    { id: 'how-we-are', title: 'About Us' },
     { id: 'services', title: 'Services' },
     { id: 'portfolio', title: 'Portfolio' },
-    { id: 'contactUs', title: 'Contact us' },
+    { id: 'reviews', title: 'Reviews' },
+    { id: 'contact', title: 'Contact' },
   ],
 }

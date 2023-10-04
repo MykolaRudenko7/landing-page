@@ -8,7 +8,7 @@
 
   @include onSmallTablet() {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
   }
 }
 
@@ -20,10 +20,12 @@
 .textBlock {
   width: 50%;
   @extend %textBlockMarking;
+  align-items: flex-start;
 
   @include onSmallTablet() {
     width: 100%;
     text-align: center;
+    align-items: center;
   }
 }
 
@@ -39,10 +41,16 @@
 .textBlockText {
   font-size: var(--liteTitleSize);
   @extend %subtitleTextSet;
+  @include onSmallTablet() {
+    margin-bottom: 2rem;
+  }
 }
 
 .portfolioBlockButton {
   @extend %fillGradientButtonSecondary;
+  @include onSmallTablet() {
+    display: none;
+  }
 }
 
 .cardsBlock {
@@ -59,5 +67,6 @@
   }
   @include onSmallTablet() {
     width: 100%;
+    gap: 3rem;
   }
 }

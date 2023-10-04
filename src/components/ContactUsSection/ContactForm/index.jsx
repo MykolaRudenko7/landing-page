@@ -77,7 +77,7 @@ export default function ContactForm() {
         type="submit"
         value="Submit"
       >
-        Share your thoughts
+        Schedule a Call
       </button>
     </form>
   )
