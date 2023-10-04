@@ -1,11 +1,12 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { motion } from 'framer-motion'
 import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlockCardItem/PotfolioBlockCardItem.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 
 export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
   const { goals, features, techStackTags } = text || {}
@@ -31,7 +32,7 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
       <div className={styles.content}>
         {!showTextBlock ? (
           <div className={styles.cardImageWrapper}>
-            <Image alt="card content" className={styles.cardImage} loading="eager" src={imageSrc} />
+            <Image alt="card content" className={styles.cardImage} src={imageSrc} />
           </div>
         ) : (
           <motion.div
@@ -74,6 +75,7 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
           </motion.div>
         )}
       </div>
+      <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
     </motion.div>
   )
 }

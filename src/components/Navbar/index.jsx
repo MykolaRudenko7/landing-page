@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logoLinksBlock}>
         <a className={styles.logoWrapper} href="" tabIndex="0">
-          <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
+          <Image alt="logo image" className={styles.logoImage} src={logoImage} />
         </a>
         <div
           className={cn(styles.linksWrapper, {

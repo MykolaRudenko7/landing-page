@@ -1,3 +1,7 @@
+%transparentTap {
+  -webkit-tap-highlight-color: transparent;
+}
+
 %fillGradientButtonSecondary {
   @extend %transparentTap;
   cursor: pointer;

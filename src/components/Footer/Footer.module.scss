@@ -39,10 +39,15 @@
     gap: 1.5rem;
   }
 }
-
+.logoWrapper {
+  @extend %transparentTap;
+}
 .logoImage {
   @extend %forImage;
-  max-width: 15rem;
+  transition: $transitionAnimation;
+  &:active {
+    scale: 0.95;
+  }
 }
 
 .scrollLinksWrapper {
@@ -118,6 +123,7 @@
 .socialImageLink {
   display: inline-block;
   transition: $transitionAnimation;
+  @extend %transparentTap;
 
   &:active {
     transform: scale(0.9);
