@@ -15,7 +15,7 @@ export default function SwiperReviewsCard() {
     <Swiper
       autoplay={{
         delay: 3500,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }}
       breakpoints={{
         2560: {

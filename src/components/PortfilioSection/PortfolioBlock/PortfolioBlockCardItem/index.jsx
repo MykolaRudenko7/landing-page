@@ -33,6 +33,7 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
         {!showTextBlock ? (
           <div className={styles.cardImageWrapper}>
             <Image alt="card content" className={styles.cardImage} src={imageSrc} />
+            <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
           </div>
         ) : (
           <motion.div
@@ -75,7 +76,6 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
           </motion.div>
         )}
       </div>
-      <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
     </motion.div>
   )
 }

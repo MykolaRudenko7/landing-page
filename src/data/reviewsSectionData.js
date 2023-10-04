@@ -22,13 +22,6 @@ export const reviewsSectionData = {
         'I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!',
     },
     {
-      imageSrc: avatarImage1,
-      name: 'John Wallace',
-      vacancy: 'CTO',
-      content:
-        'I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!',
-    },
-    {
       imageSrc: avatarImage2,
       name: 'Eric Manring',
       vacancy: 'Senior Lead Architect',
