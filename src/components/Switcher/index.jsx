@@ -9,7 +9,6 @@ import styles from 'components/Switcher/Switcher.module.scss'
 
 export default React.memo(() => {
   const [selectedFont, setSelectedFont] = useState('Fira Sans Condensed')
-  const [fontSize, setFontSize] = useState(10)
   const [isThemePanelVisible, setIsThemePanelVisible] = useState(false)
   const switchPanelRef = useRef(null)
   const { textColor, setTextColor } = useContext(TextColorContext)
@@ -46,8 +45,6 @@ export default React.memo(() => {
     document.documentElement.style.setProperty('--main-font', 'Fira Sans Condensed')
   }
 
-  const resetFontSize = () => {}
-
   return (
     <div className={styles.themeSwitcherWrapper}>
       <p
@@ -70,9 +67,9 @@ export default React.memo(() => {
           startColor={startColor}
         />
         <FontSwitcher
-          fontSize={fontSize}
+          // fontSize={fontSize}
           selectedFont={selectedFont}
-          setFontSize={setFontSize}
+          // setFontSize={setFontSize}
           setSelectedFont={setSelectedFont}
           setTextColor={setTextColor}
           textColor={textColor}
