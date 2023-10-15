@@ -18,12 +18,13 @@
 }
 
 .textBlock {
-  flex: 0 0 30%;
+  width: 30%;
   @extend %textBlockMarking;
   gap: 3rem;
   align-items: flex-start;
 
   @include onSmallTablet() {
+    width: 100%;
     align-items: center;
     margin-bottom: 3rem;
   }

@@ -1,11 +1,10 @@
 .reviewsSectionCardItem {
-  margin: 0.25rem 1rem;
   position: relative;
   border-radius: 3.8rem;
   padding: 5rem 2.5rem 2.5rem 2.5rem;
   transition: $transitionAnimation;
   @extend %blurBackground;
-  height: 98%;
+  height: 100%;
 
   &:active {
     background-color: var(--start-color);

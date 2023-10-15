@@ -1,11 +1,12 @@
 'use client'
 
-import { Autoplay } from 'swiper/modules'
+import { Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { v4 as uuidv4 } from 'uuid'
 import { reviewsSectionData } from 'data/reviewsSectionData'
 import ReviewsSectionCardItem from 'components/ReviewsSection/ReviewsSectionCardItem'
-import 'swiper/css'
+import 'swiper/scss'
+import 'swiper/scss/navigation'
 import styles from 'components/ReviewsSection/SwiperReviewsCard/SwiperReviewsCard.module.scss'
 
 export default function SwiperReviewsCard() {
@@ -18,29 +19,19 @@ export default function SwiperReviewsCard() {
         disableOnInteraction: true,
       }}
       breakpoints={{
-        2560: {
-          slidesPerView: 3.5,
-        },
-        1024: {
-          slidesPerView: 2.5,
-        },
-        768: {
-          slidesPerView: 3.5,
-        },
-        425: {
-          slidesPerView: 2.2,
-        },
-        375: {
-          slidesPerView: 1.5,
-        },
         320: {
-          slidesPerView: 1.2,
+          slidesPerView: 1.4,
+        },
+        600: {
+          slidesPerView: 2,
         },
       }}
       className={styles.swiper}
       grabCursor={true}
-      modules={[Autoplay]}
-      slidesPerView={3.5}
+      modules={[Autoplay, Navigation]}
+      slidesPerView={2}
+      spaceBetween={25}
+      navigation
     >
       {cards.map((item) => (
         <SwiperSlide key={uuidv4()}>

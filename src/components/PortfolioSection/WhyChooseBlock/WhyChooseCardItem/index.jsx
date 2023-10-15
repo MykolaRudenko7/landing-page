@@ -1,4 +1,4 @@
-import styles from 'components/PortfilioSection/WhyChooseBlock/WhyChooseCardItem/WhyChooseCardItem.module.scss'
+import styles from 'components/PortfolioSection/WhyChooseBlock/WhyChooseCardItem/WhyChooseCardItem.module.scss'
 
 export default function WhyChooseCardItem({ title, text }) {
   return (

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { motion } from 'framer-motion'
-import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlockCardItem/PotfolioBlockCardItem.module.scss'
+import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/PotfolioBlockCardItem.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 

@@ -1,8 +1,42 @@
-.swiper {
-  flex: 0 0 70%;
+.swiper :global {
+  width: 70%;
+  padding: 0 2rem;
   padding-top: 5rem;
+  padding-bottom: 0.5rem;
 
   @include onTablet() {
-    padding-top: 4rem;
+    padding-top: 3.5rem;
+    width: 100%;
+  }
+  .swiper-wrapper {
+    height: auto;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @extend %transparentTap;
+    width: 0.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: $mainWhiteColor;
+  }
+  .swiper-button-prev {
+    transform: translateX(-100%) translateY(100%);
+
+    &::after {
+      content: '❮';
+      font-size: var(--mediumTitleSize);
+      font-weight: $boldFontWeight;
+    }
+  }
+  .swiper-button-next {
+    transform: translateX(100%) translateY(100%);
+    &::after {
+      content: '❯';
+      font-weight: $boldFontWeight;
+      font-size: var(--mediumTitleSize);
+    }
   }
 }
