@@ -79,7 +79,7 @@
     opacity: 0;
     transition: $transitionAnimation;
 
-    &.isNavbavMenuOpen {
+    &.isNavbarMenuOpen {
       left: 0%;
       opacity: 1;
     }
@@ -149,7 +149,7 @@
     transform-origin: left;
   }
 
-  &.isNavbavMenuOpen {
+  &.isNavbarMenuOpen {
     transform: rotate(-45deg);
 
     .burger__line1 {

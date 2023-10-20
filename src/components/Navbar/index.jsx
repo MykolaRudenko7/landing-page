@@ -31,7 +31,7 @@ export default function Navbar() {
         </a>
         <div
           className={cn(styles.linksWrapper, {
-            [styles.isNavbavMenuOpen]: isNavbarMenuOpen,
+            [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
           })}
         >
           {links.map((item) => (
@@ -55,7 +55,7 @@ export default function Navbar() {
         </Link>
         <div
           className={cn(styles.menuBurger, {
-            [styles.isNavbavMenuOpen]: isNavbarMenuOpen,
+            [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
           })}
           onClick={handleMenuToggle}
         >

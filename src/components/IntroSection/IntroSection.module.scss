@@ -53,7 +53,8 @@
 
 .imageWrapper {
   flex: 0 1 45%;
-  text-align: center;
+  @extend %flexCenter;
+  overflow: hidden;
 }
 
 .image {
