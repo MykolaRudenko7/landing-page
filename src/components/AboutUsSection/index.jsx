@@ -16,7 +16,6 @@ export default function AboutUsSection() {
             alt="blockImage"
             className={styles.aboutUsImage}
             height={878}
-            loading="eager"
             src={imageSrc}
             width={771}
           />

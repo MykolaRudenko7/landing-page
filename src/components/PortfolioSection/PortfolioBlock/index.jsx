@@ -2,7 +2,7 @@
 
 import { Link } from 'react-scroll'
 import { portfolioSectionData } from 'data/portfolioSectionData'
-import styles from 'components/PortfilioSection/PortfolioBlock/PortfolioBlock.module.scss'
+import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlock.module.scss'
 import PortfolioBlockCardItem from './PortfolioBlockCardItem'
 
 export default function PortfolioBlock() {

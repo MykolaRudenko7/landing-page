@@ -51,10 +51,10 @@ export default function Intro() {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            alt="start here block image"
+            alt="intro block image"
             className={styles.image}
-            loading="eager"
             src={textBlock.imageSrc}
+            priority
           />
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Footer() {
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
           <Link className={styles.logoWrapper} href="#" tabIndex="0">
-            <Image alt="logo image" className={styles.logoImage} loading="eager" src={logoImage} />
+            <Image alt="logo image" className={styles.logoImage} src={logoImage} priority />
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
@@ -64,13 +64,7 @@ export default function Footer() {
                   key={uuidv4()}
                   tabIndex="0"
                 >
-                  <Image
-                    alt={alt}
-                    className={styles.socialImage}
-                    loading="eager"
-                    src={iconSrc}
-                    width={42}
-                  />
+                  <Image alt={alt} className={styles.socialImage} src={iconSrc} width={42} />
                 </Link>
               ))}
             </div>

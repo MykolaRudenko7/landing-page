@@ -1,4 +1,4 @@
-import logoImage from 'images/navbar/logo.png'
+import logoImage from 'images/navbar/logo.svg'
 
 export const navbarData = {
   logoImage,

@@ -1,24 +1,21 @@
 .reviewsSectionCardItem {
   position: relative;
-  min-width: 30rem;
   border-radius: 3.8rem;
   padding: 5rem 2.5rem 2.5rem 2.5rem;
   transition: $transitionAnimation;
   @extend %blurBackground;
+  height: 100%;
 
   &:active {
     background-color: var(--start-color);
   }
 
   @include onTablet() {
-    padding: 4rem 2rem 2rem 2rem;
-    border-radius: 1.5rem;
-    min-width: 25rem;
-  }
-  @include onSmallTablet() {
     padding: 4rem 1.5rem 2rem 1.5rem;
     border-radius: 1.5rem;
-    min-width: 20rem;
+  }
+  @include onSmallTablet() {
+    border-radius: 1.5rem;
   }
 }
 

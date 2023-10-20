@@ -4,13 +4,13 @@
 
 .reviewsSectionWrapper {
   display: flex;
-  gap: 8.5rem;
+  gap: 5rem;
 
   @include onLargeDesktop() {
-    gap: 5rem;
+    gap: 4rem;
   }
   @include onTablet() {
-    gap: 3rem;
+    gap: 2rem;
   }
   @include onSmallTablet() {
     display: block;
@@ -18,15 +18,13 @@
 }
 
 .textBlock {
-  flex: 0 0 30%;
+  width: 30%;
   @extend %textBlockMarking;
   gap: 3rem;
   align-items: flex-start;
 
-  @include onTablet() {
-    flex: 0 0 50%;
-  }
   @include onSmallTablet() {
+    width: 100%;
     align-items: center;
     margin-bottom: 3rem;
   }
@@ -47,46 +45,4 @@
 
 .reviewsSectionButton {
   @extend %fillGradientButtonSecondary;
-}
-
-.cards {
-  flex: 0 0 70%;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: $mainBlueColor;
-  padding-left: 0.5rem;
-
-  @include onTablet() {
-    flex: 0 0 50%;
-  }
-}
-
-.cardsWrapper {
-  width: 100%;
-  display: flex;
-  gap: 2rem;
-  padding-top: 5rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-
-  @include onTablet() {
-    padding-top: 4rem;
-  }
-  @include onPhone() {
-    gap: 1.5rem;
-  }
-}
-
-.cards::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-.cards::-webkit-scrollbar-thumb {
-  background-color: var(--end-color);
-  border-radius: 2rem;
-}
-
-.cards::-webkit-scrollbar-track {
-  background-color: var(--start-color);
-  border-radius: 2rem;
 }

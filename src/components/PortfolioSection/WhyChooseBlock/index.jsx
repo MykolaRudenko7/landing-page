@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { v4 as uuidv4 } from 'uuid'
 import { portfolioSectionData } from 'data/portfolioSectionData'
-import WhyChooseCardItem from 'components/PortfilioSection/WhyChooseBlock/WhyChooseCardItem'
-import styles from 'components/PortfilioSection/WhyChooseBlock/WhyChooseBlock.module.scss'
+import WhyChooseCardItem from 'components/PortfolioSection/WhyChooseBlock/WhyChooseCardItem'
+import styles from 'components/PortfolioSection/WhyChooseBlock/WhyChooseBlock.module.scss'
 
 export default function WhyChooseBlock() {
   const {

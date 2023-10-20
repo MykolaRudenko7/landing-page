@@ -29,7 +29,7 @@ export default function IntroCardItem({
       onHoverStart={handleCardMouseEnter}
     >
       <div className={styles.cardImageWrapper}>
-        <Image alt="card image" className={styles.cardImage} loading="eager" src={imageSrc} />
+        <Image alt="card image" className={styles.cardImage} src={imageSrc} />
       </div>
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.cardSubTitle}>{subtitle}</p>

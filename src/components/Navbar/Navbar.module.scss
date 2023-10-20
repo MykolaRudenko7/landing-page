@@ -22,9 +22,11 @@
 
 .logoWrapper {
   @extend %flexCenter;
+  @extend %transparentTap;
 }
 
 .logoImage {
+  transition: $transitionAnimation;
   @extend %forImage;
   max-width: 15rem;
   height: auto;
@@ -36,13 +38,11 @@
   @include onTablet() {
     max-width: 11rem;
   }
-  @include onSmallTablet() {
-    margin-left: 0;
-    max-width: 11rem;
-  }
   @include onPhone() {
-    margin-left: 0;
     max-width: 8rem;
+  }
+  &:active {
+    scale: 0.95;
   }
 }
 
@@ -167,5 +167,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
   }
 }

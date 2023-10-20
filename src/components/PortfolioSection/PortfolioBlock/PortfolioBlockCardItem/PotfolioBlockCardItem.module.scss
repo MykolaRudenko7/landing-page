@@ -3,11 +3,11 @@
   position: relative;
   @extend %transparentTap;
   @extend %cardWithTabBlock;
-  padding: 3.8rem 2rem 2rem 2rem;
+  padding: 3.8rem 1.5rem 1.5rem 1.5rem;
   max-width: 80%;
+
   @include onSmallTablet() {
     max-width: 100%;
-    padding: 3.8rem 1.5rem 1.5rem 1.5rem;
   }
 }
 
@@ -26,6 +26,7 @@
 
 .cardImageWrapper {
   @extend %flexCenter;
+  flex-direction: column;
 }
 .cardImage {
   @extend %forImage;
@@ -101,4 +102,10 @@
 
 .techStackTagsListItem {
   text-wrap: wrap;
+}
+
+.arrow {
+  height: 2rem;
+  width: 4rem;
+  align-self: flex-end;
 }
