@@ -38,7 +38,7 @@ export default React.memo(() => {
   }
 
   const handleReset = () => {
-    setTextColor('#d1faff')
+    setTextColor('#ffffff')
     setStartColor('#001d3d')
     setEndColor('#003566')
     setSelectedFont('Poppins')

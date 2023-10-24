@@ -33,7 +33,6 @@
 }
 
 .setSecondaryBlackTheme,
-.setGreenTheme,
 .setBlueTheme,
 .setBlackTheme {
   height: 5rem;
@@ -62,13 +61,6 @@
   );
 }
 
-.setGreenTheme {
-  background-image: linear-gradient(
-    to left,
-    $greenThemeColorStartColor 0%,
-    $greenThemeColorEndColor 100%
-  );
-}
 .setBlackTheme {
   background-color: $blackThemeColor;
 }
