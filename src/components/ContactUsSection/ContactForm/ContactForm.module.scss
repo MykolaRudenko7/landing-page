@@ -25,12 +25,10 @@
   transform: skew(-20deg);
   transition: $transitionAnimation;
   backdrop-filter: blur(4.5rem);
-  font-family: var(--mainFont);
   font-size: $largeTitleCardSize;
 
   &::placeholder {
     color: $mainWhiteColor;
-    font-family: var(--mainFont);
     opacity: 0.5;
     transform: skew(20deg);
   }
@@ -60,7 +58,6 @@
 }
 
 .formBlockTextarea {
-  font-family: var(--mainFont);
   font-size: $largeTitleCardSize;
   color: $mainWhiteColor;
   box-shadow: $boxShadow;
@@ -80,7 +77,6 @@
 
   &::placeholder {
     color: $mainWhiteColor;
-    font-family: var(--mainFont);
     opacity: 0.6;
   }
   &:hover {
@@ -101,5 +97,4 @@
 
 .submitButton {
   @extend %fillGradientButtonSecondary;
-  font-family: var(--mainFont);
 }

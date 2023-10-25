@@ -23,7 +23,9 @@ a:hover {
 a,
 button,
 input,
+textarea,
 link {
+  font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -51,7 +53,6 @@ img {
 
 html,
 body {
-  font-family: var(--mainFont);
   font-size: $mainFontSize;
   font-style: normal;
   height: 100%;
