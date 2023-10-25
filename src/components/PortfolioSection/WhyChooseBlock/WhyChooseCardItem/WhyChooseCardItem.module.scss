@@ -48,13 +48,13 @@
     }
   }
   @include onDesktop() {
-    width: 16rem;
-    height: 16rem;
+    width: 18rem;
+    height: 18rem;
     &:nth-child(1) {
-      transform: translate(-140%, 100%);
+      transform: translate(-135%, 100%);
     }
     &:nth-child(2) {
-      transform: translate(-170%, -30%);
+      transform: translate(-160%, -30%);
     }
     &:nth-child(3) {
       transform: translate(-110%, -140%);
@@ -63,7 +63,7 @@
       transform: translate(120%, -130%);
     }
     &:nth-child(5) {
-      transform: translate(165%, 50%);
+      transform: translate(160%, 50%);
     }
   }
 
@@ -103,15 +103,13 @@
 }
 
 .title {
-  font-size: var(--liteTitleSize);
   font-weight: $mediumFontWeight;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--liteTitleSize);
 
-  @include forCircles() {
-    font-size: 2rem;
-  }
   @include onDesktop() {
-    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
   }
   @include onTablet() {
     margin-bottom: 1rem;
@@ -125,12 +123,12 @@
 
 .text {
   opacity: 0.5;
-  font-size: var(--largeSubtitleCargSize);
-  letter-spacing: -0.05rem;
+  font-size: var(--largeSubtitleCardSize);
+  letter-spacing: -0.1rem;
   transition: $transitionAnimation;
 
   @include forCircles() {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   @include onDesktop() {
     font-size: 1.2rem;

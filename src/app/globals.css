@@ -44,8 +44,8 @@
   --mainYellowColor: #ffcf00;
   --mainDarkBlueColor: #3a3d60;
   --mainBlueColor: #40ccff;
-  --main-font: 'Fira Sans Condensed';
-  --main-font-size: 10px;
+  --main-font: 'Poppins';
+  --main-font-size: 9px;
 
   --largeTitleSize: calc(var(--main-font-size) * 3.5);
   --mediumTitleSize: calc(var(--main-font-size) * 3);
@@ -55,12 +55,12 @@
   --mediumSubtitleSize: calc(var(--main-font-size) * 1.8);
   --liteSubtitleSize: calc(var(--main-font-size) * 1.5);
 
-  --largeTitleCargSize: calc(var(--main-font-size) * 2);
-  --regularTitleCargSize: calc(var(--main-font-size) * 1.8);
+  --largeTitleCardSize: calc(var(--main-font-size) * 2);
+  --regularTitleCardSize: calc(var(--main-font-size) * 1.8);
   --smallTitleCardSize: calc(var(--main-font-size) * 1.6);
 
-  --largeSubtitleCargSize: calc(var(--main-font-size) * 1.8);
-  --regularSubtitleCargSize: calc(var(--main-font-size) * 1.6);
+  --largeSubtitleCardSize: calc(var(--main-font-size) * 1.8);
+  --regularSubtitleCardSize: calc(var(--main-font-size) * 1.6);
   --smallSubtitleCardSize: calc(var(--main-font-size) * 1.4);
 }
 

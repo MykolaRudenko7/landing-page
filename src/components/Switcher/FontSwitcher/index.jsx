@@ -4,8 +4,8 @@ import { fontsNamesData } from 'data/fonts'
 import styles from 'components/Switcher/FontSwitcher/FontSwitcher.module.scss'
 
 export default React.memo(({ textColor, selectedFont, setTextColor, setSelectedFont }) => {
-  const [fontSize, setFontSize] = useState(10)
-  const defaultFontSize = 10
+  const [fontSize, setFontSize] = useState(9)
+  const defaultFontSize = 9
 
   const handleFontSizeChange = (event) => {
     const newFontSize = event.target.value
@@ -17,11 +17,11 @@ export default React.memo(({ textColor, selectedFont, setTextColor, setSelectedF
     const largeSubtitleSize = newFontSize * 2
     const mediumSubtitleSize = newFontSize * 1.8
     const liteSubtitleSize = newFontSize * 1.5
-    const largeTitleCargSize = newFontSize * 2
-    const regularTitleCargSize = newFontSize * 1.8
+    const largeTitleCardSize = newFontSize * 2
+    const regularTitleCardSize = newFontSize * 1.8
     const smallTitleCardSize = newFontSize * 1.6
-    const largeSubtitleCargSize = newFontSize * 1.8
-    const regularSubtitleCargSize = newFontSize * 1.6
+    const largeSubtitleCardSize = newFontSize * 1.8
+    const regularSubtitleCardSize = newFontSize * 1.6
     const smallSubtitleCardSize = newFontSize * 1.4
 
     document.documentElement.style.setProperty('--main-font-size', `${event.target.value}px`)
@@ -31,19 +31,19 @@ export default React.memo(({ textColor, selectedFont, setTextColor, setSelectedF
     document.documentElement.style.setProperty('--largeSubtitleSize', `${largeSubtitleSize}px`)
     document.documentElement.style.setProperty('--mediumSubtitleSize', `${mediumSubtitleSize}px`)
     document.documentElement.style.setProperty('--liteSubtitleSize', `${liteSubtitleSize}px`)
-    document.documentElement.style.setProperty('--largeTitleCargSize', `${largeTitleCargSize}px`)
+    document.documentElement.style.setProperty('--largeTitleCardSize', `${largeTitleCardSize}px`)
     document.documentElement.style.setProperty(
-      '--regularTitleCargSize',
-      `${regularTitleCargSize}px`,
+      '--regularTitleCardSize',
+      `${regularTitleCardSize}px`,
     )
     document.documentElement.style.setProperty('--smallTitleCardSize', `${smallTitleCardSize}px`)
     document.documentElement.style.setProperty(
-      '--largeSubtitleCargSize',
-      `${largeSubtitleCargSize}px`,
+      '--largeSubtitleCardSize',
+      `${largeSubtitleCardSize}px`,
     )
     document.documentElement.style.setProperty(
-      '--regularSubtitleCargSize',
-      `${regularSubtitleCargSize}px`,
+      '--regularSubtitleCardSize',
+      `${regularSubtitleCardSize}px`,
     )
     document.documentElement.style.setProperty(
       '--smallSubtitleCardSize',
@@ -58,9 +58,6 @@ export default React.memo(({ textColor, selectedFont, setTextColor, setSelectedF
 
   const handleTextColorChange = (event) => {
     setTextColor(event.target.value)
-  }
-  const handleFontSizeReset = () => {
-    setFontSize(defaultFontSize)
   }
 
   return (

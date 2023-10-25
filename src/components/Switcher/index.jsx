@@ -8,7 +8,7 @@ import { GradientContext, TextColorContext } from 'context/ThemeContext'
 import styles from 'components/Switcher/Switcher.module.scss'
 
 export default React.memo(() => {
-  const [selectedFont, setSelectedFont] = useState('Fira Sans Condensed')
+  const [selectedFont, setSelectedFont] = useState('Poppins')
   const [isThemePanelVisible, setIsThemePanelVisible] = useState(false)
   const switchPanelRef = useRef(null)
   const { textColor, setTextColor } = useContext(TextColorContext)
@@ -38,11 +38,11 @@ export default React.memo(() => {
   }
 
   const handleReset = () => {
-    setTextColor('#3a3d60')
-    setStartColor('#40ccff')
-    setEndColor('#ffcf00')
-    setSelectedFont('Fira Sans Condensed')
-    document.documentElement.style.setProperty('--main-font', 'Fira Sans Condensed')
+    setTextColor('#ffffff')
+    setStartColor('#001d3d')
+    setEndColor('#003566')
+    setSelectedFont('Poppins')
+    document.documentElement.style.setProperty('--main-font', 'Poppins')
   }
 
   return (
@@ -67,9 +67,7 @@ export default React.memo(() => {
           startColor={startColor}
         />
         <FontSwitcher
-          // fontSize={fontSize}
           selectedFont={selectedFont}
-          // setFontSize={setFontSize}
           setSelectedFont={setSelectedFont}
           setTextColor={setTextColor}
           textColor={textColor}

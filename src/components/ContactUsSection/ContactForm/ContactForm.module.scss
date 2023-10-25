@@ -26,7 +26,7 @@
   transition: $transitionAnimation;
   backdrop-filter: blur(4.5rem);
   font-family: var(--main-font);
-  font-size: var(--largeTitleCargSize);
+  font-size: var(--largeTitleCardSize);
 
   &::placeholder {
     color: var(--text-color);
@@ -52,7 +52,7 @@
   }
 
   @include onDesktop() {
-    font-size: var(--regularSubtitleCargSize);
+    font-size: var(--regularSubtitleCardSize);
   }
   @include onTablet() {
     font-size: var(--smallSubtitleCardSize);
@@ -61,7 +61,7 @@
 
 .formBlockTextarea {
   font-family: var(--main-font);
-  font-size: var(--largeTitleCargSize);
+  font-size: var(--largeTitleCardSize);
   color: var(--text-color);
   box-shadow: $boxShadow;
   width: 100%;
@@ -92,7 +92,7 @@
   }
 
   @include onDesktop() {
-    font-size: var(--regularSubtitleCargSize);
+    font-size: var(--regularSubtitleCardSize);
   }
   @include onTablet() {
     font-size: var(--smallSubtitleCardSize);

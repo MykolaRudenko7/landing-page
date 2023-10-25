@@ -14,7 +14,7 @@ export default function WhyChooseBlock() {
       <div className={styles.whyChooseBlockWrapper}>
         <div className={styles.mainCard}>
           <div className={styles.mainCardWrapper}>
-            <div className={styles.buttonLable}>
+            <div className={styles.buttonLabel}>
               <h3 className={styles.titleText}>Why Choose TECH COSSACKS?</h3>
             </div>
             <h6 className={styles.mainCardTitle}>{mainCard.title}</h6>

@@ -21,7 +21,7 @@
   backdrop-filter: blur(4.55rem);
   border-radius: 2rem;
   @include onTablet() {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 }
 
@@ -109,8 +109,12 @@
 .getInTouchTitle {
   font-weight: $semiBoldFontWeight;
   white-space: nowrap;
-  @extend %cardTitleSet;
   text-transform: uppercase;
+  @extend %cardTitleSet;
+  @include onSmallTablet() {
+    font-size: var(--liteTitleSize);
+    font-weight: $mediumFontWeight;
+  }
 }
 
 .socialsImages {
@@ -118,6 +122,9 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  @include onPhone() {
+    flex-direction: row;
+  }
 }
 
 .socialImageLink {

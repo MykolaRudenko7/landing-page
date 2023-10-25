@@ -88,8 +88,8 @@
 
 %cardWithTabBlockTitle {
   @extend %blurBackground;
-  font-size: var(--largeSubtitleCargSize);
-  box-shadow: $boxShadowcardWithTabBlockTitle;
+  font-size: var(--largeSubtitleCardSize);
+  box-shadow: $boxShadowCardWithTabBlockTitle;
   backdrop-filter: blur(3rem);
   position: absolute;
   top: 0%;
@@ -105,7 +105,7 @@
   padding: 1rem 1.5rem;
 
   @include onLargeDesktop() {
-    font-size: var(--regularSubtitleCargSize);
+    font-size: var(--regularSubtitleCardSize);
   }
   @include onTablet() {
     font-size: var(--smallSubtitleCardSize);
@@ -117,7 +117,7 @@
 }
 
 %forImage {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -196,10 +196,10 @@
 }
 
 %cardTitleSet {
-  font-size: var(--largeTitleCargSize);
+  font-size: var(--largeTitleCardSize);
   font-weight: $mediumFontWeight;
   @include onDesktop() {
-    font-size: var(--regularTitleCargSize);
+    font-size: var(--regularTitleCardSize);
   }
   @include onTablet() {
     font-size: var(--smallTitleCardSize);
@@ -207,10 +207,10 @@
 }
 
 %cardSubtitleSet {
-  font-size: var(--largeSubtitleCargSize);
+  font-size: var(--largeSubtitleCardSize);
 
   @include onDesktop() {
-    font-size: var(--regularSubtitleCargSize);
+    font-size: var(--regularSubtitleCardSize);
   }
   @include onTablet() {
     font-size: var(--smallSubtitleCardSize);
@@ -218,16 +218,7 @@
 }
 
 %imageInTextBlock {
-  max-width: 40rem;
-  @include onLargeDesktop() {
-    max-width: 30rem;
-  }
-  @include onTablet() {
-    max-width: 25rem;
-  }
-  @include onSmallTablet() {
-    max-width: 60%;
-  }
+  height: clamp(40rem, 13.9184rem + 36.2245vw, 75.5rem);
 }
 
 %marginBottomAfterTitle {

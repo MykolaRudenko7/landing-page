@@ -1,0 +1,15 @@
+.title {
+  font-weight: $mediumFontWeight;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  @extend %cardTitleSet;
+}
+
+.listItems {
+  @extend %cardSubtitleSet;
+  &:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

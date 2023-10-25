@@ -5,19 +5,19 @@ export default React.memo(({ children }) => {
   const [textColor, setTextColor] = useState(() => {
     const savedTextColor = typeof window !== 'undefined' && localStorage.getItem('textColor')
 
-    return savedTextColor || '#3a3d60'
+    return savedTextColor || '#ffffff'
   })
 
   const [startColor, setStartColor] = useState(() => {
     const savedStartColor = typeof window !== 'undefined' && localStorage.getItem('startColor')
 
-    return savedStartColor || '#40ccff'
+    return savedStartColor || '#001d3d'
   })
 
   const [endColor, setEndColor] = useState(() => {
     const savedEndColor = typeof window !== 'undefined' && localStorage.getItem('endColor')
 
-    return savedEndColor || '#ffcf00'
+    return savedEndColor || '#003566'
   })
 
   useEffect(() => {

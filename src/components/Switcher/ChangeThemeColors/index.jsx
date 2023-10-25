@@ -81,22 +81,7 @@ export default React.memo(
             onClick={() =>
               handleChangeTheme(
                 {
-                  textColor: '#d1faff',
-                  startColor: '#001d3d',
-                  endColor: '#003566',
-                },
-                'blue',
-            )
-            }
-            type="button"
-          />
-          <button
-            aria-label="set theme"
-            className={cn(styles.setBlueTheme, { [styles.activeTheme]: activeTheme === 'blue' })}
-            onClick={() =>
-              handleChangeTheme(
-                {
-                  textColor: '#d1faff',
+                  textColor: '#ffffff',
                   startColor: '#001d3d',
                   endColor: '#003566',
                 },
