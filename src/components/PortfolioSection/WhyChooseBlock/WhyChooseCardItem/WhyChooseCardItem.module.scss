@@ -105,7 +105,7 @@
 .title {
   font-weight: $mediumFontWeight;
   margin-bottom: 1.5rem;
-  font-size: var(--liteTitleSize);
+  font-size: $liteTitleSize;
 
   @include onDesktop() {
     margin-bottom: 1.2rem;
@@ -115,7 +115,7 @@
     margin-bottom: 1rem;
   }
   @include onSmallTablet() {
-    font-size: var(--smallTitleCardSize);
+    font-size: $smallTitleCardSize;
 
     text-align: center;
   }
@@ -123,7 +123,7 @@
 
 .text {
   opacity: 0.5;
-  font-size: var(--largeSubtitleCardSize);
+  font-size: $largeSubtitleCardSize;
   letter-spacing: -0.1rem;
   transition: $transitionAnimation;
 
@@ -135,6 +135,6 @@
   }
   @include onSmallTablet() {
     text-align: center;
-    font-size: var(--smallSubtitleCardSize);
+    font-size: $smallSubtitleCardSize;
   }
 }

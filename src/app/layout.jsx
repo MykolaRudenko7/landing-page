@@ -1,19 +1,22 @@
-'use client'
+import { Poppins } from 'next/font/google'
+import 'styles/global.scss'
 
-import 'app/globals.css'
-import ThemeProvider from 'app/provider'
+export const metadata = {
+  title: 'Home page',
+  description: 'Your Trusted Partner for Web Development Excellence',
+}
 
-// export const metadata = {
-//   title: 'Home page',
-//   description: 'Your Trusted Partner for Web Development Excellence',
-// }
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--mainFont',
+  display: 'swap',
+})
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <ThemeProvider>
-        <body>{children}</body>
-      </ThemeProvider>
+    <html className={poppins.className} lang="en">
+      <body>{children}</body>
     </html>
   )
 }

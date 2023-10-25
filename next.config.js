@@ -5,6 +5,6 @@ module.exports = nextConfig
 const path = require('path')
 module.exports = {
   sassOptions: {
-    additionalData: `@import "src/styles/_global.scss";`,
+    additionalData: `@import "src/styles/_app.scss";`,
   },
 }

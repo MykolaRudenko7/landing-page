@@ -39,7 +39,7 @@
 }
 
 .textBlockText {
-  font-size: var(--liteTitleSize);
+  font-size: $liteTitleSize;
   @extend %subtitleTextSet;
   @include onSmallTablet() {
     margin-bottom: 2rem;

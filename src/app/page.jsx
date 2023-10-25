@@ -5,7 +5,6 @@ import PortfolioSection from 'components/PortfolioSection'
 import ContactUsSection from 'components/ContactUsSection'
 import AboutUsSection from 'components/AboutUsSection'
 import Footer from 'components/Footer'
-import Switcher from 'components/Switcher'
 import ReviewsSection from 'components/ReviewsSection'
 import styles from 'app/Home.module.scss'
 
@@ -14,7 +13,6 @@ export default function Home() {
     <main className={styles.main}>
       <header className={styles.header}>
         <Navbar />
-        <Switcher />
       </header>
       <main>
         <IntroSection />

@@ -11,7 +11,7 @@
 }
 
 .formBlockInput {
-  color: var(--text-color);
+  color: $mainWhiteColor;
   @extend %blurBackground;
   position: relative;
   width: 98%;
@@ -25,12 +25,12 @@
   transform: skew(-20deg);
   transition: $transitionAnimation;
   backdrop-filter: blur(4.5rem);
-  font-family: var(--main-font);
-  font-size: var(--largeTitleCardSize);
+  font-family: var(--mainFont);
+  font-size: $largeTitleCardSize;
 
   &::placeholder {
-    color: var(--text-color);
-    font-family: var(--main-font);
+    color: $mainWhiteColor;
+    font-family: var(--mainFont);
     opacity: 0.5;
     transform: skew(20deg);
   }
@@ -43,7 +43,7 @@
     }
   }
   &:focus {
-    border: 0.2rem solid var(--start-color);
+    border: 0.2rem solid $mainWhiteColor;
     transform: skew(0deg);
     &::placeholder {
       transform: skew(0deg);
@@ -52,17 +52,17 @@
   }
 
   @include onDesktop() {
-    font-size: var(--regularSubtitleCardSize);
+    font-size: $regularSubtitleCardSize;
   }
   @include onTablet() {
-    font-size: var(--smallSubtitleCardSize);
+    font-size: $smallSubtitleCardSize;
   }
 }
 
 .formBlockTextarea {
-  font-family: var(--main-font);
-  font-size: var(--largeTitleCardSize);
-  color: var(--text-color);
+  font-family: var(--mainFont);
+  font-size: $largeTitleCardSize;
+  color: $mainWhiteColor;
   box-shadow: $boxShadow;
   width: 100%;
   margin-bottom: 4.3rem;
@@ -79,27 +79,27 @@
   backdrop-filter: blur(4.5rem);
 
   &::placeholder {
-    color: var(--text-color);
-    font-family: var(--main-font);
+    color: $mainWhiteColor;
+    font-family: var(--mainFont);
     opacity: 0.6;
   }
   &:hover {
     filter: $filterServiceCardTitle;
   }
   &:focus {
-    border: 0.2rem solid var(--start-color);
+    border: 0.2rem solid $mainWhiteColor;
     opacity: 1;
   }
 
   @include onDesktop() {
-    font-size: var(--regularSubtitleCardSize);
+    font-size: $regularSubtitleCardSize;
   }
   @include onTablet() {
-    font-size: var(--smallSubtitleCardSize);
+    font-size: $smallSubtitleCardSize;
   }
 }
 
 .submitButton {
   @extend %fillGradientButtonSecondary;
-  font-family: var(--main-font);
+  font-family: var(--mainFont);
 }

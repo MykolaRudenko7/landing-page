@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+link {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+p,
+ul,
+li {
+  cursor: default;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  font-family: var(--mainFont);
+  font-size: $mainFontSize;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+  color: $mainWhiteColor;
+  background: $secondaryBlackThemeColor;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $secondaryBlackThemeColor;
+  text-rendering: optimizeSpeed;
+  min-width: 320px;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: $secondaryBlackThemeColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $mainWhiteColor;
+    border-radius: 0.2rem;
+  }
+}
+
+.scrollLock {
+  overflow: hidden;
+}

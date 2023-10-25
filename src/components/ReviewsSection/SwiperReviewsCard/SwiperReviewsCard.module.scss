@@ -27,7 +27,7 @@
 
     &::after {
       content: '❮';
-      font-size: var(--mediumTitleSize);
+      font-size: $mediumTitleSize;
       font-weight: $boldFontWeight;
     }
   }
@@ -36,7 +36,7 @@
     &::after {
       content: '❯';
       font-weight: $boldFontWeight;
-      font-size: var(--mediumTitleSize);
+      font-size: $mediumTitleSize;
     }
   }
 }
