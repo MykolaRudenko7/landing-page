@@ -1,100 +1,45 @@
 .formBlock {
+  padding-top: 2rem;
   flex: 0 0 46%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
 
   @include onSmallTablet {
     width: 100%;
   }
 }
 
-.formBlockLabel {
-  display: block;
-}
-
-.formBlockInput {
-  color: $mainWhiteColor;
-  @extend %blurBackground;
-  position: relative;
-  width: 98%;
-  height: 100%;
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 1.5rem;
-  border: solid 0.2rem transparent;
-  outline: none;
-  transform-origin: left bottom;
-  transform: skew(-20deg);
-  transition: $transitionAnimation;
-  backdrop-filter: blur(4.5rem);
-  font-size: $largeTitleCardSize;
-
-  &::placeholder {
-    color: $mainWhiteColor;
-    opacity: 0.5;
-    transform: skew(20deg);
-  }
-  &:hover {
-    filter: $filterServiceCardTitle;
-    transform: skew(0deg);
-
-    &::placeholder {
-      transform: skew(0deg);
-    }
-  }
-  &:focus {
-    border: 0.2rem solid $mainWhiteColor;
-    transform: skew(0deg);
-    &::placeholder {
-      transform: skew(0deg);
-      opacity: 1;
-    }
-  }
-
-  @include onDesktop() {
-    font-size: $regularSubtitleCardSize;
-  }
-  @include onTablet() {
-    font-size: $smallSubtitleCardSize;
-  }
-}
-
-.formBlockTextarea {
-  font-size: $largeTitleCardSize;
-  color: $mainWhiteColor;
-  box-shadow: $boxShadow;
-  width: 100%;
-  margin-bottom: 4.3rem;
-  padding: 1rem 2rem;
-  resize: none;
-  background-image: $circleWhyChooseCardGradient;
-  transform-origin: left bottom;
-  border: solid 0.2rem transparent;
-  outline: none;
-  position: relative;
-  transition: $transitionAnimation;
-  border-radius: 2rem;
-  background: $circleWhyChooseCardGradient;
-  backdrop-filter: blur(4.5rem);
-
-  &::placeholder {
-    color: $mainWhiteColor;
-    opacity: 0.6;
-  }
-  &:hover {
-    filter: $filterServiceCardTitle;
-  }
-  &:focus {
-    border: 0.2rem solid $mainWhiteColor;
-    opacity: 1;
-  }
-
-  @include onDesktop() {
-    font-size: $regularSubtitleCardSize;
-  }
-  @include onTablet() {
-    font-size: $smallSubtitleCardSize;
-  }
-}
-
 .submitButton {
   @extend %fillGradientButtonSecondary;
+}
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  @extend %forInputLabel;
+}
+
+.input {
+  @extend %forInput;
+}
+.textarea {
+  resize: none;
+}
+
+.input:focus + .label {
+  transform: translate(0%, -120%);
+  font-size: $smallSubtitleCardSize;
+  color: $mainWhiteColor;
+  opacity: 1;
+}
+
+.input:valid + .label {
+  transform: translate(0%, -120%);
+  font-size: $smallSubtitleCardSize;
+  color: $mainWhiteColor;
+  opacity: 1;
 }

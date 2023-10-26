@@ -228,3 +228,34 @@
     margin-bottom: 1rem;
   }
 }
+
+%forInput {
+  @extend %blurBackground;
+  @extend %subtitleTextSet;
+  width: 100%;
+  padding: 1rem 2rem;
+  color: $mainWhiteColor;
+  border-radius: 1rem;
+  border: solid 0.2rem transparent;
+  outline: none;
+  backdrop-filter: blur(4.5rem);
+
+  &:focus,
+  &:hover {
+    border: solid 0.2rem $mainWhiteColor;
+  }
+}
+
+%forInputLabel {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0%;
+  left: 2rem;
+  transform: translate(0%, 50%);
+  color: $mainWhiteColor;
+  opacity: 0.5;
+  pointer-events: none;
+  font-size: $regularSubtitleCardSize;
+  transition: $transitionAnimation;
+}
