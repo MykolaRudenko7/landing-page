@@ -3,15 +3,17 @@
   padding: 0 4rem;
   width: 70%;
   @include onSmallTablet() {
-    padding-top: 3.5rem;
     width: 100%;
   }
 }
 .swiper :global {
   width: 100%;
-
   padding-top: 5rem;
   padding-bottom: 0.5rem;
+
+  @include onTablet() {
+    padding-top: 3.5rem;
+  }
 
   .swiper-wrapper {
     height: auto;

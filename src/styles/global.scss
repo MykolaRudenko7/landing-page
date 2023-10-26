@@ -101,7 +101,7 @@ body {
     color: $mainDarkBlueColor;
   }
   @include onSmallTablet() {
-    top: 55%;
+    top: 50%;
   }
 }
 .swiper-navigation-prev {
