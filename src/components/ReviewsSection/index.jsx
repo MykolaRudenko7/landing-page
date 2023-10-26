@@ -12,7 +12,7 @@ export default function ReviewsSection() {
     <section className={styles.reviewsSection} id="reviews">
       <div className={styles.reviewsSectionWrapper}>
         <div className={styles.textBlock}>
-          <div className={styles.reviewsSectionLable}>
+          <div className={styles.reviewsSectionLabel}>
             <h3 className={styles.titleText}>Reviews</h3>
           </div>
           <div className={styles.textBlockWrapper}>

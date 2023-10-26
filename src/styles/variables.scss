@@ -4,7 +4,23 @@ $mediumFontWeight: 500;
 $semiBoldFontWeight: 600;
 $boldFontWeight: 700;
 
+$mainFontSize: 10px;
+
+$largeTitleSize: 3.1rem;
+$mediumTitleSize: 2.7rem;
+$liteTitleSize: 1.8rem;
+
+$largeSubtitleSize: 1.8rem;
+$mediumSubtitleSize: 1.6rem;
+$liteSubtitleSize: 1.35rem;
+
+$largeTitleCardSize: 1.8rem;
+$regularTitleCardSize: 1.6rem;
+$smallTitleCardSize: 1.45rem;
+
+$largeSubtitleCardSize: 1.6rem;
+$regularSubtitleCardSize: 1.45rem;
+$smallSubtitleCardSize: 1.25rem;
+
 $transitionAnimation: all 0.35s cubic-bezier(0, 0.55, 0.45, 1);
 $transitionAnimationIntro: all 0.45s ease;
-$boxShadow: 0 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
-$boxShadowCardWithTabBlockTitle: 0 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);

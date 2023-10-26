@@ -12,12 +12,12 @@
   align-items: center;
   padding: 0 1.5rem;
   height: 5rem;
-  color: var(--text-color);
+  color: $mainBlackColor;
   background-color: $secondaryButtonColor;
   border-radius: 0.6rem;
   white-space: nowrap;
   transition: all 0.2s ease-in;
-  font-size: var(--largeSubtitleSize);
+  font-size: $largeSubtitleSize;
   font-weight: $mediumFontWeight;
   box-shadow:
     rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
@@ -25,14 +25,14 @@
     $darkenedSecondaryButtonColor 0 -0.3rem 0 inset;
 
   @include onDesktop() {
-    font-size: var(--mediumSubtitleSize);
+    font-size: $mediumSubtitleSize;
   }
 
   @include onTablet() {
-    font-size: var(--liteSubtitleSize);
+    font-size: $liteSubtitleSize;
   }
   @include onSmallTablet() {
-    font-size: var(--liteSubtitleSize);
+    font-size: $liteSubtitleSize;
     text-shadow: none;
   }
   @include onPhone() {
@@ -63,7 +63,6 @@
 %fillGradientButtonPrimary {
   @extend %fillGradientButtonSecondary;
   @extend %transparentTap;
-  font-family: var(--main-font);
   background-color: $primaryButtonColor;
   box-shadow:
     rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
@@ -78,7 +77,7 @@
 
 %underlineLinkHoverEffect {
   @extend %transparentTap;
-  color: var(--text-color);
+  color: $mainWhiteColor;
   position: relative;
   cursor: pointer;
   transition: $transitionAnimation;
@@ -94,7 +93,7 @@
     transition: $transitionAnimation;
     transform: scale(0);
     transform-origin: right;
-    background-color: var(--text-color);
+    background-color: $mainWhiteColor;
   }
   &:hover {
     text-shadow: $textShadow;

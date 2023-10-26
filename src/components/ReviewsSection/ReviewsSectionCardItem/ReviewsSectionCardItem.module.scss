@@ -7,7 +7,7 @@
   height: 100%;
 
   &:active {
-    background-color: var(--start-color);
+    background-color: $textCardBlurColor;
   }
 
   @include onTablet() {
