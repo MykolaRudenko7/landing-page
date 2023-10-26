@@ -83,3 +83,32 @@ body {
 .scrollLock {
   overflow: hidden;
 }
+
+.swiper-navigation-next,
+.swiper-navigation-prev {
+  position: absolute;
+  top: 45%;
+  width: 0.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: $mainWhiteColor;
+  font-size: $mediumTitleSize;
+  font-weight: $boldFontWeight;
+  @extend %transparentTap;
+  transition: $transitionAnimation;
+
+  &:active {
+    color: $mainDarkBlueColor;
+  }
+  @include onSmallTablet() {
+    top: 55%;
+  }
+}
+.swiper-navigation-prev {
+  left: 0.5rem;
+}
+
+.swiper-navigation-next {
+  right: 0.5rem;
+  transform: translateX(-1rem);
+}
