@@ -19,3 +19,42 @@ export const contactCountryOptions = [
   { value: 'Japan', label: 'Japan' },
   { value: '', label: 'Write other here...' },
 ]
+
+export const customStyles = {
+  control: (baseStyles) => ({
+    ...baseStyles,
+    fontSize: '14px',
+    padding: '5px',
+    borderRadius: '10px',
+    backgroundColor: '#d9d9d956',
+    backdropFilter: 'blur(45px)',
+    border: '2px solid transparent',
+    boxShadow: 'none',
+    '&:hover': {
+      border: '2px solid white',
+    },
+  }),
+  option: (baseStyles) => ({
+    ...baseStyles,
+    backgroundColor: '#3a3d60',
+    fontSize: '14px',
+  }),
+  menu: (baseStyles) => ({
+    ...baseStyles,
+    zIndex: '5',
+  }),
+  menuList: (baseStyles) => ({
+    ...baseStyles,
+    padding: 0,
+  }),
+  placeholder: (baseStyles) => ({
+    ...baseStyles,
+    color: '#fff',
+    opacity: '0.5',
+  }),
+  input: (baseStyles) => ({
+    ...baseStyles,
+    color: '#fff',
+  }),
+  singleValue: (baseStyles) => ({ ...baseStyles, color: '#fff' }),
+}

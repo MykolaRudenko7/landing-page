@@ -27,10 +27,10 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
         <AnimatePresence>
           {!showTextBlock && (
             <motion.div
-              className={styles.frontCard}
-              initial={{ height: 0, y: 0, opacity: 1 }}
               animate={{ height: 'auto', y: 0 }}
+              className={styles.frontCard}
               exit={{ height: 0, y: -200, scale: 1.2 }}
+              initial={{ height: 0, y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <Image alt="card content" className={styles.cardImage} src={imageSrc} />
@@ -41,10 +41,10 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
         <AnimatePresence>
           {showTextBlock && (
             <motion.div
-              className={styles.backCard}
-              initial={{ height: 0, opacity: 1 }}
               animate={{ height: 'auto', y: 0 }}
+              className={styles.backCard}
               exit={{ height: 0, scale: 0.8, opacity: 0 }}
+              initial={{ height: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               {text?.map((textBlock) => (
