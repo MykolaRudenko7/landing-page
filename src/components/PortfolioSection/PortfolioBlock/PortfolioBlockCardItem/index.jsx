@@ -23,12 +23,7 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
       <h6 className={styles.cardTitle}>
         <span className={styles.cardTitleText}>{title}</span>
       </h6>
-      <motion.div
-        className={styles.content}
-        transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.95 }}
-      >
+      <div className={styles.content}>
         <AnimatePresence>
           {!showTextBlock && (
             <motion.div
@@ -58,7 +53,7 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </div>
   )
 }

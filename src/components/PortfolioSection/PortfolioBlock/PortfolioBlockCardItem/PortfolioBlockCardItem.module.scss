@@ -8,6 +8,13 @@
   @include onSmallTablet() {
     max-width: 100%;
   }
+  transition: $transitionAnimationIntro;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
 }
 .content {
   overflow: hidden;
