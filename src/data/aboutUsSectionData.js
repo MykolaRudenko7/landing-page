@@ -1,4 +1,4 @@
-import aboutUsSectionImage from 'images/aboutUsSection/aboutUsImage.png'
+import aboutUsSectionImage from 'images/aboutUsSection/aboutUsImage.webp'
 
 export const aboutUsSectionData = {
   imageSrc: aboutUsSectionImage,

@@ -1,6 +1,6 @@
-import cardImage1 from 'images/portfolioSection/cardImage1.svg'
-import cardImage2 from 'images/portfolioSection/cardImage2.svg'
-import cardImage3 from 'images/portfolioSection/cardImage3.svg'
+import cardImage1 from 'images/portfolioSection/cardImage1.webp'
+import cardImage2 from 'images/portfolioSection/cardImage2.webp'
+import cardImage3 from 'images/portfolioSection/cardImage3.webp'
 
 export const portfolioSectionData = {
   portfolioBlockData: {

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AppearTextCardContentItem from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/AppearTextCardContentItem'
@@ -19,36 +19,41 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
   }
 
   return (
-    <motion.div
-      className={styles.card}
-      onClick={handleShowTextBlockToggle}
-      whileHover={{ scale: 1.01 }}
-      whileTap={{ scale: 0.95 }}
-    >
+    <div className={styles.card} onClick={handleShowTextBlockToggle}>
       <h6 className={styles.cardTitle}>
         <span className={styles.cardTitleText}>{title}</span>
       </h6>
       <div className={styles.content}>
-        {!showTextBlock ? (
-          <div className={styles.cardImageWrapper}>
-            <Image alt="card content" className={styles.cardImage} src={imageSrc} />
-            <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
-          </div>
-        ) : (
-          <motion.div
-            animate={{ opacity: 1 }}
-            className={styles.appearWrapper}
-            initial={{ opacity: 0 }}
-            transition={{ type: 'spring', duration: 0.4 }}
-          >
-            <div className={styles.appearCardContent}>
+        <AnimatePresence>
+          {!showTextBlock && (
+            <motion.div
+              animate={{ height: 'auto', y: 0 }}
+              className={styles.frontCard}
+              exit={{ height: 0, y: -200, scale: 1.2 }}
+              initial={{ height: 0, y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image alt="card content" className={styles.cardImage} src={imageSrc} />
+              <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {showTextBlock && (
+            <motion.div
+              animate={{ height: 'auto', y: 0 }}
+              className={styles.backCard}
+              exit={{ height: 0, scale: 0.8, opacity: 0 }}
+              initial={{ height: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               {text?.map((textBlock) => (
                 <AppearTextCardContentItem key={uuidv4()} {...textBlock} />
               ))}
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </motion.div>
+    </div>
   )
 }
