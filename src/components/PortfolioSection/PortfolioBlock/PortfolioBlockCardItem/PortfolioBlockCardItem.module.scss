@@ -1,6 +1,5 @@
 .card {
   cursor: pointer;
-  position: relative;
   @extend %transparentTap;
   @extend %cardWithTabBlock;
   padding: 3.8rem 1.5rem 1.5rem 1.5rem;
@@ -9,6 +8,10 @@
   @include onSmallTablet() {
     max-width: 100%;
   }
+}
+.content {
+  overflow: hidden;
+  height: 100%;
 }
 
 .cardTitle {
@@ -20,11 +23,12 @@
     font-size: 1rem;
   }
 }
+
 .cardTitleText {
   @extend %titleTextSpan;
 }
 
-.cardImageWrapper {
+.frontCard {
   @extend %flexCenter;
   flex-direction: column;
 }
@@ -32,11 +36,8 @@
   @extend %forImage;
 }
 
-.appearWrapper {
-  text-align: center;
-}
-
-.appearCardContent {
+.backCard {
+  height: auto;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -50,4 +51,47 @@
   height: 2rem;
   width: 4rem;
   align-self: flex-end;
+  transform: translateY(180deg);
 }
+// good 1
+// animate={{ height: 'auto', opacity: 1 }}
+// exit={{ height: 0, opacity: 0 }}
+// initial={{ height: 0, opacity: 0 }}
+// transition={{ duration: 0.5 }}
+// 2
+// animate={{ height: 'auto', opacity: 1 }}
+// exit={{ height: 0, opacity: 0, scale: 0.75 }}
+// initial={{ height: 0, opacity: 0 }}
+// transition={{ duration: 0.5 }}
+// 3
+//  animate={{ height: 'auto' }}
+//   exit={{ height: 0, scale: 2 }}
+//   initial={{ height: 0, x: 300 }}
+//   transition={{ duration: 0.5 }}
+// 4
+// initial={{ height: 0, y: 300 }}
+// animate={{ height: 'auto', y: 0 }}
+// exit={{ height: 0, scale: 2, y: -300 }}
+// transition={{ duration: 0.5 }}
+// 5
+// initial={{ height: 0, y: -300 }}
+// animate={{ height: 'auto', y: 0 }}
+// exit={{ height: 0, y: 300, scale: 0.5 }}
+// transition={{ duration: 0.5 }}
+
+// top
+// className={styles.frontCard}
+// initial={{ height: 0, y: 0, opacity: 1 }}
+// animate={{ height: 'auto', y: 0 }}
+// exit={{ height: 0, y: -200, scale: 1.2 }}
+// transition={{ duration: 0.5 }}
+//
+// className={styles.backCard}
+// initial={{ height: 0, opacity: 1 }}
+// animate={{ height: 'auto', y: 0 }}
+// exit={{ height: 0, scale: 0.8, opacity: 0 }}
+// transition={{ duration: 0.5 }}
+//
+//
+//
+// left

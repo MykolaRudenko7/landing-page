@@ -1,4 +1,4 @@
-import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.png'
+import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.webp'
 import introSectionCard1 from 'images/introSection/cards/introSectionCard1.svg'
 import introSectionCard2 from 'images/introSection/cards/introSectionCard2.svg'
 import introSectionCard3 from 'images/introSection/cards/introSectionCard3.svg'

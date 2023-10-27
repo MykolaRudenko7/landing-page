@@ -1,5 +1,5 @@
-import avatarImage1 from 'images/reviewsSection/avatar1.svg'
-import avatarImage2 from 'images/reviewsSection/avatar2.svg'
+import avatarImage1 from 'images/reviewsSection/avatar1.webp'
+import avatarImage2 from 'images/reviewsSection/avatar2.webp'
 
 export const reviewsSectionData = {
   textBlock: {

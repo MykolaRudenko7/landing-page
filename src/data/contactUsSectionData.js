@@ -1,4 +1,4 @@
-import contactUsImage from 'images/contactUsSection/contactUs.png'
+import contactUsImage from 'images/contactUsSection/contactUs.webp'
 
 export const contactUsSectionData = {
   title: 'Ready to Elevate Your Tech Game?',
