@@ -6,13 +6,26 @@
   gap: 3.5rem;
   align-items: flex-start;
 
-  @include onSmallTablet {
+  @include onSmallTablet() {
     width: 100%;
   }
 }
 
 .submitButton {
   @extend %fillGradientButtonSecondary;
+
+  &:disabled {
+    box-shadow: none;
+    background-color: $pageBackgroundColor;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
 }
 .inputContainer {
   position: relative;
@@ -79,26 +92,32 @@
     border-radius: 1rem 0 0 1rem;
     border: none;
   }
+
   .tellDropdown {
     background-color: $mainDarkBlueColor;
     z-index: 2;
-    &:hover {
-      background-color: $mainDarkBlueColor;
-    }
   }
 }
 
 .buttonBlock {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
+  @include onSmallTablet() {
+    gap: 2rem;
+  }
 }
 
 .submitMessageError {
+  text-wrap: wrap;
   color: $mainYellowColor;
   @extend %cardSubtitleSet;
+  width: 40%;
+  @include onSmallTablet() {
+    font-size: 1.1rem;
+  }
 }
 .submitMessageSuccess {
-  color: greenyellow;
+  color: $successMessageColor;
   @extend %cardSubtitleSet;
 }

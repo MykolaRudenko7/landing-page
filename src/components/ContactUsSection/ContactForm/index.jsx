@@ -2,18 +2,19 @@
 
 import { useId, useState } from 'react'
 import cn from 'classnames'
+import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
 import CreatableSelect from 'react-select/creatable'
 import { useForm, Controller } from 'react-hook-form'
 import { contactCountryOptions, customStyles } from 'data/contactUsSectionData'
 import { validationFormRules } from 'utils/validationFormRules'
+import Loading from 'shared/Loading'
 import 'react-phone-input-2/lib/style.css'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({})
-  console.log(formData)
   const [error, setError] = useState(null)
+  const currentTime = new Date().toLocaleString()
 
   const methods = useForm({
     mode: 'onChange',
@@ -22,7 +23,7 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful, isSubmitting, isValid },
     control,
     reset,
   } = methods
@@ -44,15 +45,22 @@ export default function ContactForm() {
   const marketToContactSelectId = useId()
   const yourMessageTextareaId = useId()
 
-  const onFormSubmit = (data) => {
+  const onFormSubmit = async (data) => {
     try {
-      reset()
-      setFormData({
-        ...data,
-        country: data.country.label,
+      const response = await axios.post(process.env.GOOGLE_SPREADSHEET, {
+        name: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        market: data.country.value,
+        message: data.messageArea,
+        date: currentTime,
       })
+      setError(false)
+      reset()
     } catch (error) {
       setError(true)
+
       throw new Error(error)
     }
   }
@@ -61,8 +69,8 @@ export default function ContactForm() {
     <form
       className={styles.formBlock}
       id={contactFormId}
-      onSubmit={handleSubmit(onFormSubmit)}
       method="POST"
+      onSubmit={handleSubmit(onFormSubmit)}
     >
       <div className={styles.inputContainer}>
         <input
@@ -127,7 +135,6 @@ export default function ContactForm() {
               id={phoneNumberInputId}
               inputClass={styles.tellInput}
               inputProps={{
-                required: true,
                 autoFocus: true,
               }}
               onChange={(newValue) => onChange(newValue)}
@@ -185,6 +192,7 @@ export default function ContactForm() {
         <button
           aria-label="submit"
           className={styles.submitButton}
+          disabled={isSubmitSuccessful}
           form={contactFormId}
           tabIndex="0"
           type="submit"
@@ -196,9 +204,8 @@ export default function ContactForm() {
             An error occurred while submitting the form. Please try again.
           </p>
         )}
-        {Object.keys(formData).length > 0 && !error && (
-          <p className={styles.submitMessageSuccess}>Success ✅</p>
-        )}
+        {isSubmitSuccessful && isValid && <p className={styles.submitMessageSuccess}>Success ✅</p>}
+        {isSubmitting && <Loading />}
       </div>
     </form>
   )

@@ -24,7 +24,7 @@ export const validationFormRules = {
     },
   },
   countryValidation: {
-    required: true,
+    required: 'Market to contact is required',
     pattern: {
       value: /^[^/\\:*?<>]+$/,
       message: 'Input cannot have the following characters: / \\ : * ? < >',
@@ -36,7 +36,7 @@ export const validationFormRules = {
     maxLength: { value: 300, message: 'Maximum length is 300 characters' },
   },
   mobileNumberValidation: {
-    required: true,
+    required: 'Mobile number is required',
     minLength: { value: 12, message: 'Minimum length is 12 characters' },
   },
 }

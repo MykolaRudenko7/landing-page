@@ -7,4 +7,7 @@ module.exports = {
   sassOptions: {
     additionalData: `@import "src/styles/_app.scss";`,
   },
+  env: {
+    GOOGLE_SPREADSHEET: process.env.GOOGLE_SPREADSHEET,
+  },
 }
