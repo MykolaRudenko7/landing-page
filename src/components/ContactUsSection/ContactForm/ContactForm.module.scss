@@ -3,7 +3,7 @@
   flex: 0 0 46%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: flex-start;
 
   @include onSmallTablet {
@@ -30,16 +30,75 @@
   resize: none;
 }
 
-.input:focus + .label {
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
   transform: translate(0%, -120%);
-  font-size: $smallSubtitleCardSize;
   color: $mainWhiteColor;
+  font-size: $smallSubtitleCardSize;
   opacity: 1;
 }
 
-.input:valid + .label {
-  transform: translate(0%, -120%);
+.textDanger {
   font-size: $smallSubtitleCardSize;
-  color: $mainWhiteColor;
-  opacity: 1;
+  transform: $transitionAnimation;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-5%, 100%);
+  color: $mainYellowColor;
+}
+
+.tellContainer {
+  .tellInput {
+    @extend %blurBackground;
+    @extend %subtitleTextSet;
+    height: clamp(4.4rem, 3.4911rem + 0.8876vw, 5rem);
+    color: $mainWhiteColor;
+    width: 100%;
+    border-radius: 1rem;
+    border: solid 0.2rem transparent;
+    outline: none;
+    backdrop-filter: blur(4.5rem);
+
+    &:focus,
+    &:hover {
+      border: solid 0.2rem $mainWhiteColor;
+    }
+
+    &::placeholder {
+      color: $mainWhiteColor;
+      opacity: 0.5;
+      pointer-events: none;
+      font-size: $regularSubtitleCardSize;
+      transition: $transitionAnimation;
+    }
+  }
+
+  .tellButton {
+    @extend %blurBackground;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+  }
+  .tellDropdown {
+    background-color: $mainDarkBlueColor;
+    z-index: 2;
+    &:hover {
+      background-color: $mainDarkBlueColor;
+    }
+  }
+}
+
+.buttonBlock {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.submitMessageError {
+  color: $mainYellowColor;
+  @extend %cardSubtitleSet;
+}
+.submitMessageSuccess {
+  color: greenyellow;
+  @extend %cardSubtitleSet;
 }
