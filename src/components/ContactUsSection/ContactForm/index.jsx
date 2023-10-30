@@ -134,9 +134,6 @@ export default function ContactForm() {
               enableAreaCodes={true}
               id={phoneNumberInputId}
               inputClass={styles.tellInput}
-              inputProps={{
-                autoFocus: true,
-              }}
               onChange={(newValue) => onChange(newValue)}
               placeholder="Phone Number"
               tabIndex="0"

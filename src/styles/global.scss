@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+input::placeholder {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
 li {
   list-style: none;
 }
@@ -28,14 +34,6 @@ link {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-}
-
-input {
-  &::placeholder {
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-  }
 }
 
 h1,

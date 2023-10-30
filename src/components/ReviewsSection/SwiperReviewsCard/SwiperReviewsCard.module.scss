@@ -1,24 +1,55 @@
-.swiperBlock {
+.swiperBlock :global {
   position: relative;
   padding: 0 4rem;
   width: 70%;
   @include onSmallTablet() {
     width: 100%;
   }
-}
-.swiper :global {
-  width: 100%;
-  padding-top: 5rem;
-  padding-bottom: 0.5rem;
 
-  @include onTablet() {
-    padding-top: 3.5rem;
+  .swiper-navigation-next,
+  .swiper-navigation-prev {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: 0.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    color: $mainWhiteColor;
+    font-size: $mediumTitleSize;
+    font-weight: $boldFontWeight;
+    @extend %transparentTap;
+    transition: $transitionAnimation;
+
+    &:active {
+      color: $mainDarkBlueColor;
+    }
+    @include onSmallTablet() {
+      top: 50%;
+    }
+  }
+  .swiper-navigation-prev {
+    left: 0.5rem;
   }
 
-  .swiper-wrapper {
-    height: auto;
+  .swiper-navigation-next {
+    right: 0.5rem;
+    transform: translateX(-1rem);
   }
-  .swiper-slide {
-    height: auto;
+
+  .swiper {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 0.5rem;
+
+    @include onTablet() {
+      padding-top: 3.5rem;
+    }
+
+    .swiper-wrapper {
+      height: auto;
+    }
+    .swiper-slide {
+      height: auto;
+    }
   }
 }

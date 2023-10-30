@@ -62,6 +62,8 @@
 }
 
 .tellContainer {
+  font-family: inherit;
+
   .tellInput {
     @extend %blurBackground;
     @extend %subtitleTextSet;
@@ -81,7 +83,6 @@
     &::placeholder {
       color: $mainWhiteColor;
       opacity: 0.5;
-      pointer-events: none;
       font-size: $regularSubtitleCardSize;
       transition: $transitionAnimation;
     }
@@ -94,7 +95,7 @@
   }
 
   .tellDropdown {
-    background-color: $mainDarkBlueColor;
+    background-color: $mainBlackColor;
     z-index: 2;
   }
 }
