@@ -1,10 +1,9 @@
-'use client'
-
 import { useId } from 'react'
 import cn from 'classnames'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 import CreatableSelect from 'react-select/creatable'
 import { contactCountryOptions } from 'data/contactUsSectionData'
+import axios from 'axios'
 
 export default function ContactForm() {
   const contactFormId = useId()
@@ -52,6 +51,19 @@ export default function ContactForm() {
       color: '#fff',
     }),
     singleValue: (baseStyles) => ({ ...baseStyles, color: '#fff' }),
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const response = await axios.post(process.env.GOOGLE_SPREADSHEET, {
+      name: 'Vladyslav',
+      lastName: 'Ruchko',
+      email: 'spinozadp@gmail.com',
+      phone: '+380958887766',
+      market: 'Ukraine',
+      message: 'Please make a web site for me.',
+    })
+    console.log(response, 'response')
   }
 
   return (
