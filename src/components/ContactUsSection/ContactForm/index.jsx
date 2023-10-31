@@ -113,6 +113,7 @@ export default function ContactForm() {
               tabIndex="0"
               value={value}
               enableAreaCodeStretch
+              country={selectedCountry?.value === 'Ukraine' ? 'ua' : ''}
             />
           )}
           rules={selectedCountry?.value === 'Ukraine' ? { ...mobileNumberValidation } : {}}
