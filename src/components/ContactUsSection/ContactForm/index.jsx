@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import cn from 'classnames'
 import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
@@ -16,6 +16,9 @@ import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.s
 
 export default function ContactForm() {
   const [error, setError] = useState(null)
+  const [selectedCountry, setSelectedCountry] = useState(null)
+  useEffect(() => {}, [selectedCountry])
+
   const currentTime = new Date().toLocaleString()
 
   const methods = useForm({
@@ -68,6 +71,31 @@ export default function ContactForm() {
       {inputFields.map((input) => (
         <ContactFormInput key={input.id} {...input} />
       ))}
+      <div className={cn(styles.inputContainerSelect, styles.inputContainer)}>
+        <Controller
+          control={control}
+          name="country"
+          render={({ field: { onChange, value } }) => (
+            <CreatableSelect
+              id={marketToContactSelectId}
+              instanceId={marketToContactSelectId}
+              isCreatable={true}
+              isSearchable={true}
+              onChange={(newValue) => {
+                setSelectedCountry(newValue)
+                onChange(newValue)
+              }}
+              options={contactCountryOptions}
+              placeholder={'Market to contact'}
+              styles={customStylesMarkets}
+              tabIndex="0"
+              value={value}
+            />
+          )}
+          rules={countryValidation}
+        />
+        {errors.country && <small className={styles.textDanger}>{errors.country.message}</small>}
+      </div>
       <div className={styles.inputContainer}>
         <Controller
           control={control}
@@ -87,31 +115,9 @@ export default function ContactForm() {
               enableAreaCodeStretch
             />
           )}
-          rules={mobileNumberValidation}
+          rules={selectedCountry?.value === 'Ukraine' ? { ...mobileNumberValidation } : {}}
         />
         {errors.phone && <small className={styles.textDanger}>{errors.phone.message}</small>}
-      </div>
-      <div className={cn(styles.inputContainerSelect, styles.inputContainer)}>
-        <Controller
-          control={control}
-          name="country"
-          render={({ field: { onChange, value } }) => (
-            <CreatableSelect
-              id={marketToContactSelectId}
-              instanceId={marketToContactSelectId}
-              isCreatable={true}
-              isSearchable={true}
-              onChange={onChange}
-              options={contactCountryOptions}
-              placeholder={'Market to contact'}
-              styles={customStylesMarkets}
-              tabIndex="0"
-              value={value}
-            />
-          )}
-          rules={countryValidation}
-        />
-        {errors.country && <small className={styles.textDanger}>{errors.country.message}</small>}
       </div>
       <div className={styles.inputContainer}>
         <textarea
