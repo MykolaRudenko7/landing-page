@@ -6,9 +6,11 @@ import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
 import CreatableSelect from 'react-select/creatable'
 import { useForm, Controller } from 'react-hook-form'
-import { contactCountryOptions, customStyles } from 'data/contactUsSectionData'
+import { getInputFields } from 'utils/getInputFields'
 import { validationFormRules } from 'utils/validationFormRules'
+import { contactCountryOptions, customStylesMarkets } from 'data/contactUsSectionData'
 import Loading from 'shared/Loading'
+import ContactFormInput from 'components/ContactUsSection/ContactForm/ContactFormInput'
 import 'react-phone-input-2/lib/style.css'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 
@@ -28,19 +30,10 @@ export default function ContactForm() {
     reset,
   } = methods
 
-  const {
-    nameValidation,
-    lastNameValidation,
-    emailValidation,
-    mobileNumberValidation,
-    countryValidation,
-    textAreaValidation,
-  } = validationFormRules
+  const { mobileNumberValidation, countryValidation, textAreaValidation } = validationFormRules
+  const inputFields = getInputFields(register, errors)
 
   const contactFormId = useId()
-  const firstNameInputId = useId()
-  const lastNameInputId = useId()
-  const emailInputId = useId()
   const phoneNumberInputId = useId()
   const marketToContactSelectId = useId()
   const yourMessageTextareaId = useId()
@@ -72,56 +65,9 @@ export default function ContactForm() {
       method="POST"
       onSubmit={handleSubmit(onFormSubmit)}
     >
-      <div className={styles.inputContainer}>
-        <input
-          autoComplete="on"
-          className={styles.input}
-          id={firstNameInputId}
-          name="firstName"
-          placeholder=" "
-          tabIndex="0"
-          type="text"
-          {...register('firstName', nameValidation)}
-        />
-        <label className={styles.label} htmlFor={firstNameInputId}>
-          Name
-        </label>
-        {errors.firstName && (
-          <small className={styles.textDanger}>{errors.firstName.message}</small>
-        )}
-      </div>
-      <div className={styles.inputContainer}>
-        <input
-          autoComplete="on"
-          className={styles.input}
-          id={lastNameInputId}
-          name="lastName"
-          placeholder=" "
-          tabIndex="0"
-          type="text"
-          {...register('lastName', lastNameValidation)}
-        />
-        <label className={styles.label} htmlFor={lastNameInputId}>
-          Last Name
-        </label>
-        {errors.lastName && <small className={styles.textDanger}>{errors.lastName.message}</small>}
-      </div>
-      <div className={styles.inputContainer}>
-        <input
-          autoComplete="on"
-          className={styles.input}
-          id={emailInputId}
-          name="email"
-          placeholder=" "
-          tabIndex="0"
-          type="email"
-          {...register('email', emailValidation)}
-        />
-        <label className={styles.label} htmlFor={emailInputId}>
-          E-mail
-        </label>
-        {errors.email && <small className={styles.textDanger}>{errors.email.message}</small>}
-      </div>
+      {inputFields.map((input) => (
+        <ContactFormInput key={input.id} {...input} />
+      ))}
       <div className={styles.inputContainer}>
         <Controller
           control={control}
@@ -158,7 +104,7 @@ export default function ContactForm() {
               onChange={onChange}
               options={contactCountryOptions}
               placeholder={'Market to contact'}
-              styles={customStyles}
+              styles={customStylesMarkets}
               tabIndex="0"
               value={value}
             />

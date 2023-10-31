@@ -27,6 +27,11 @@
     }
   }
 }
+
+.textarea {
+  resize: none;
+}
+
 .inputContainer {
   position: relative;
   width: 100%;
@@ -39,26 +44,9 @@
 .input {
   @extend %forInput;
 }
-.textarea {
-  resize: none;
-}
-
-.input:focus + .label,
-.input:not(:placeholder-shown) + .label {
-  transform: translate(0%, -120%);
-  color: $mainWhiteColor;
-  font-size: $smallSubtitleCardSize;
-  opacity: 1;
-}
 
 .textDanger {
-  font-size: $smallSubtitleCardSize;
-  transform: $transitionAnimation;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(-5%, 100%);
-  color: $mainYellowColor;
+  @extend %textDanger;
 }
 
 .tellContainer {

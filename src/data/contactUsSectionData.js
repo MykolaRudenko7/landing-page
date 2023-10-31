@@ -20,7 +20,7 @@ export const contactCountryOptions = [
   { value: '', label: 'Write other here...' },
 ]
 
-export const customStyles = {
+export const customStylesMarkets = {
   control: (baseStyles) => ({
     ...baseStyles,
     fontSize: '14px',
