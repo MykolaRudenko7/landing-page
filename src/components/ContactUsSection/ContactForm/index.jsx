@@ -17,7 +17,10 @@ import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.s
 export default function ContactForm() {
   const [error, setError] = useState(null)
   const [selectedCountry, setSelectedCountry] = useState(null)
-  useEffect(() => {}, [selectedCountry])
+
+  useEffect(() => {
+    clearErrors('phone')
+  }, [selectedCountry])
 
   const currentTime = new Date().toLocaleString()
 
@@ -31,6 +34,7 @@ export default function ContactForm() {
     formState: { errors, isSubmitSuccessful, isSubmitting, isValid },
     control,
     reset,
+    clearErrors,
   } = methods
 
   const { mobileNumberValidation, countryValidation, textAreaValidation } = validationFormRules
@@ -104,6 +108,7 @@ export default function ContactForm() {
             <PhoneInput
               buttonClass={styles.tellButton}
               containerClass={styles.tellContainer}
+              country={selectedCountry?.code}
               dropdownClass={styles.tellDropdown}
               enableAreaCodes={true}
               id={phoneNumberInputId}
@@ -113,10 +118,9 @@ export default function ContactForm() {
               tabIndex="0"
               value={value}
               enableAreaCodeStretch
-              country={selectedCountry?.value === 'Ukraine' ? 'ua' : ''}
             />
           )}
-          rules={selectedCountry?.value === 'Ukraine' ? { ...mobileNumberValidation } : {}}
+          rules={mobileNumberValidation.validate(selectedCountry)}
         />
         {errors.phone && <small className={styles.textDanger}>{errors.phone.message}</small>}
       </div>

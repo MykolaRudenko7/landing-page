@@ -36,7 +36,18 @@ export const validationFormRules = {
     maxLength: { value: 300, message: 'Maximum length is 300 characters' },
   },
   mobileNumberValidation: {
-    required: 'Mobile number is required',
-    minLength: { value: 12, message: 'Minimum length is 12 characters' },
+    validate: (selectedCountry) => {
+      if (selectedCountry?.code === 'ua') {
+        return {
+          required: 'Mobile number is required',
+          minLength: { value: 12, message: 'Minimum length is 12 characters' },
+        }
+      }
+
+      return {
+        required: false,
+        minLength: false,
+      }
+    },
   },
 }
