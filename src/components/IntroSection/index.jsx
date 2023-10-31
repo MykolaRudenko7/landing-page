@@ -5,15 +5,17 @@ import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { introSectionData } from 'data/introSectionData'
+import { scrollSectionId } from 'data/scrollSectionId'
 import IntroCardItem from 'components/IntroSection/IntroCardItem'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 
 export default function Intro() {
+  const { home, contact, services } = scrollSectionId
   const { textBlock } = introSectionData
   const [isHoverCard, setIsHoverCard] = useState(null)
 
   return (
-    <section className={styles.intro} id="home">
+    <section className={styles.intro} id={home}>
       <div className={styles.introContainer}>
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
@@ -30,7 +32,7 @@ export default function Intro() {
               role="button"
               smooth={true}
               tabIndex="0"
-              to="contact"
+              to={contact}
             >
               Schedule a consultation
             </Link>
@@ -43,7 +45,7 @@ export default function Intro() {
               role="button"
               smooth={true}
               tabIndex="0"
-              to="services"
+              to={services}
             >
               Explore our services
             </Link>

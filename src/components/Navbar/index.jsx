@@ -6,10 +6,12 @@ import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
 import { navbarData } from 'data/navbarLinksData'
+import { scrollSectionId } from 'data/scrollSectionId'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Navbar/Navbar.module.scss'
 
 export default function Navbar() {
+  const { contact } = scrollSectionId
   const { links, logoImage } = navbarData
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false)
 
@@ -49,7 +51,7 @@ export default function Navbar() {
           role="button"
           smooth={true}
           tabIndex="0"
-          to="contact"
+          to={contact}
         >
           Boost your business!
         </Link>
