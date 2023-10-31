@@ -1,0 +1,16 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  @extend %forInputLabel;
+}
+
+.input {
+  @extend %forInput;
+}
+
+.textDanger {
+  @extend %textDanger;
+}

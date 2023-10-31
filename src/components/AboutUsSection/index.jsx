@@ -3,13 +3,15 @@
 import Image from 'next/image'
 import { Link } from 'react-scroll'
 import { aboutUsSectionData } from 'data/aboutUsSectionData'
+import { scrollSectionId } from 'data/scrollSectionId'
 import styles from 'components/AboutUsSection/AboutUsSection.module.scss'
 
 export default function AboutUsSection() {
+  const { howWeAre, portfolio } = scrollSectionId
   const { imageSrc, text, title } = aboutUsSectionData
 
   return (
-    <section className={styles.aboutUs} id="how-we-are">
+    <section className={styles.aboutUs} id={howWeAre}>
       <div className={styles.aboutUsWrapper}>
         <div className={styles.aboutUsImageWrapper}>
           <Image
@@ -21,7 +23,7 @@ export default function AboutUsSection() {
           />
         </div>
         <div className={styles.aboutUsTextBlock}>
-          <div className={styles.aboutUsLable}>
+          <div className={styles.aboutUsLabel}>
             <h3 className={styles.titleText}>About us</h3>
           </div>
           <div className={styles.textBlockWrapper}>
@@ -37,7 +39,7 @@ export default function AboutUsSection() {
             role="button"
             smooth={true}
             tabIndex="0"
-            to="portfolio"
+            to={portfolio}
           >
             Portfolio
           </Link>

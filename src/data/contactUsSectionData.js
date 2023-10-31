@@ -7,20 +7,20 @@ export const contactUsSectionData = {
 }
 
 export const contactCountryOptions = [
-  { value: 'Ukraine', label: 'Ukraine' },
-  { value: 'United Kingdom', label: 'United Kingdom' },
-  { value: 'United States', label: 'United States' },
-  { value: 'Canada', label: 'Canada' },
-  { value: 'Australia', label: 'Australia' },
-  { value: 'Germany', label: 'Germany' },
-  { value: 'France', label: 'France' },
-  { value: 'Spain', label: 'Spain' },
-  { value: 'Italy', label: 'Italy' },
-  { value: 'Japan', label: 'Japan' },
-  { value: '', label: 'Write other here...' },
+  { value: 'Ukraine', label: 'Ukraine', code: 'ua' },
+  { value: 'United Kingdom', label: 'United Kingdom', code: 'gb' },
+  { value: 'United States', label: 'United States', code: 'us' },
+  { value: 'Canada', label: 'Canada', code: 'ca' },
+  { value: 'Australia', label: 'Australia', code: 'au' },
+  { value: 'Germany', label: 'Germany', code: 'de' },
+  { value: 'France', label: 'France', code: 'fr' },
+  { value: 'Spain', label: 'Spain', code: 'es' },
+  { value: 'Italy', label: 'Italy', code: 'it' },
+  { value: 'Japan', label: 'Japan', code: 'jp' },
+  { value: '', label: 'Write other here...', code: '' },
 ]
 
-export const customStyles = {
+export const customStylesMarkets = {
   control: (baseStyles) => ({
     ...baseStyles,
     fontSize: '14px',
@@ -38,6 +38,10 @@ export const customStyles = {
     ...baseStyles,
     backgroundColor: '#3a3d60',
     fontSize: '14px',
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3a3d60',
+    },
   }),
   menu: (baseStyles) => ({
     ...baseStyles,
@@ -56,5 +60,8 @@ export const customStyles = {
     ...baseStyles,
     color: '#fff',
   }),
-  singleValue: (baseStyles) => ({ ...baseStyles, color: '#fff' }),
+  singleValue: (baseStyles) => ({
+    ...baseStyles,
+    color: '#fff',
+  }),
 }

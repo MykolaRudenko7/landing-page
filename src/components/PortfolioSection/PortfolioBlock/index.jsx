@@ -2,10 +2,12 @@
 
 import { Link } from 'react-scroll'
 import { portfolioSectionData } from 'data/portfolioSectionData'
+import PortfolioBlockCardItem from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem'
+import { scrollSectionId } from 'data/scrollSectionId'
 import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlock.module.scss'
-import PortfolioBlockCardItem from './PortfolioBlockCardItem'
 
 export default function PortfolioBlock() {
+  const { contact } = scrollSectionId
   const {
     textBlock: { text, title },
     cards: { cardBarossa, cardFloraNow, cardB2B },
@@ -34,7 +36,7 @@ export default function PortfolioBlock() {
             role="button"
             smooth={true}
             tabIndex="0"
-            to="contact"
+            to={contact}
           >
             Start Your Success Story
           </Link>

@@ -244,12 +244,20 @@
   &:hover {
     border: solid 0.2rem $mainWhiteColor;
   }
+
+  &:focus + .label,
+  &:not(:placeholder-shown) + .label {
+    transform: translate(0%, -120%);
+    color: $mainWhiteColor;
+    font-size: $smallSubtitleCardSize;
+    opacity: 1;
+  }
 }
 
 %forInputLabel {
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0%;
   left: 2rem;
   transform: translate(0%, 50%);
@@ -258,4 +266,14 @@
   pointer-events: none;
   font-size: $regularSubtitleCardSize;
   transition: $transitionAnimation;
+}
+
+%textDanger {
+  font-size: $smallSubtitleCardSize;
+  transform: $transitionAnimation;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-5%, 100%);
+  color: $mainYellowColor;
 }
