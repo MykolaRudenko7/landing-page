@@ -83,8 +83,15 @@
   }
 
   .tellDropdown {
-    background-color: $mainBlackColor;
+    background-color: $mainDarkBlueColor;
+    color: $mainWhiteColor;
     z-index: 2;
+
+    li {
+      &:hover {
+        color: $mainDarkBlueColor;
+      }
+    }
   }
 }
 

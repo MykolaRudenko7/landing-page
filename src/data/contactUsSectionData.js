@@ -38,6 +38,10 @@ export const customStylesMarkets = {
     ...baseStyles,
     backgroundColor: '#3a3d60',
     fontSize: '14px',
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3a3d60',
+    },
   }),
   menu: (baseStyles) => ({
     ...baseStyles,
@@ -56,5 +60,8 @@ export const customStylesMarkets = {
     ...baseStyles,
     color: '#fff',
   }),
-  singleValue: (baseStyles) => ({ ...baseStyles, color: '#fff' }),
+  singleValue: (baseStyles) => ({
+    ...baseStyles,
+    color: '#fff',
+  }),
 }
