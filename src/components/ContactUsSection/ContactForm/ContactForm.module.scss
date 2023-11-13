@@ -62,6 +62,7 @@
     border: solid 0.2rem transparent;
     outline: none;
     backdrop-filter: blur(4.5rem);
+    padding-left: 1.5rem;
 
     &:focus,
     &:hover {
@@ -74,12 +75,50 @@
       font-size: $regularSubtitleCardSize;
       transition: $transitionAnimation;
     }
+
+    &:not(:placeholder-shown) {
+      padding-left: 6.5rem;
+
+      + .tellButton {
+        display: block;
+      }
+    }
   }
 
   .tellButton {
+    display: none;
     @extend %blurBackground;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 1rem 0 0 1rem !important;
     border: none;
+    background: transparent !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      border-radius: 1rem 0 0 1rem;
+    }
+
+    :global .selected-flag {
+      border: solid 0.2rem transparent;
+      padding-left: 2rem;
+      width: 5.5rem;
+
+      &.open {
+        border-radius: 1rem 0 0 1rem;
+        border: solid 0.2rem transparent;
+        background: transparent;
+        backdrop-filter: blur(4.5rem);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-radius: 1rem 0 0 1rem;
+        background: transparent;
+        border: solid 0.2rem $mainWhiteColor;
+      }
+    }
   }
 
   .tellDropdown {
@@ -88,6 +127,9 @@
     z-index: 2;
 
     li {
+      .highlight {
+        background-color: $mainBlackColor !important;
+      }
       &:hover {
         color: $mainDarkBlueColor;
       }
@@ -99,20 +141,23 @@
   display: flex;
   gap: 3rem;
   align-items: center;
+
   @include onSmallTablet() {
     gap: 2rem;
   }
 }
 
 .submitMessageError {
-  text-wrap: wrap;
-  color: $mainYellowColor;
   @extend %cardSubtitleSet;
   width: 40%;
+  text-wrap: wrap;
+  color: $mainYellowColor;
+
   @include onSmallTablet() {
     font-size: 1.1rem;
   }
 }
+
 .submitMessageSuccess {
   color: $successMessageColor;
   @extend %cardSubtitleSet;

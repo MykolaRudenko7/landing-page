@@ -115,6 +115,7 @@ export default function ContactForm() {
               inputClass={styles.tellInput}
               onChange={(newValue) => onChange(newValue)}
               placeholder="Phone Number"
+              searchClass={styles.tellSearch}
               tabIndex="0"
               value={value}
               enableAreaCodeStretch
