@@ -1,7 +1,7 @@
 export const servicesSectionData = [
   {
     listTitle: 'E-Commerce',
-    listOptons: [
+    listOptions: [
       'User Experience (UX) Design',
       'Website & App Development',
       'Mobile Commerce Development',
@@ -11,7 +11,7 @@ export const servicesSectionData = [
   },
   {
     listTitle: 'Fintech',
-    listOptons: [
+    listOptions: [
       'Software Development,',
       'Web App Development',
       'Blockchain Solutions',
@@ -21,7 +21,7 @@ export const servicesSectionData = [
   },
   {
     listTitle: 'Ed-Tech',
-    listOptons: [
+    listOptions: [
       'Web & Mobile App Development',
       'Software Development',
       'Gamification Solutions',
@@ -30,7 +30,7 @@ export const servicesSectionData = [
   },
   {
     listTitle: 'Telecom & Media',
-    listOptons: [
+    listOptions: [
       'Streaming Solutions',
       'Digital Advertising Platforms',
       'Website & App Development',

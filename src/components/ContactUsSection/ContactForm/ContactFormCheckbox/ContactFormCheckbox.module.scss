@@ -1,0 +1,45 @@
+.checkboxInput {
+  display: none;
+}
+
+.checkboxLabel {
+  @extend %transparentTap;
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 2rem;
+
+  color: $mainWhiteColor;
+  font-size: $smallSubtitleCardSize;
+  opacity: 1;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid $mainWhiteColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    transition: $transitionAnimation;
+    border-radius: 0.5rem;
+  }
+}
+
+.checkboxInput:checked + .checkboxLabel:before {
+  width: 1rem;
+  top: -0.5rem;
+  left: 0.5rem;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}

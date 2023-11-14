@@ -8,7 +8,7 @@ export const getInputFields = (register, errors) => {
     {
       id: useId(),
       name: 'firstName',
-      label: 'Name',
+      label: 'Name *',
       placeholder: ' ',
       type: 'text',
       register: register('firstName', nameValidation),
@@ -26,11 +26,20 @@ export const getInputFields = (register, errors) => {
     {
       id: useId(),
       name: 'email',
-      label: 'E-mail',
+      label: 'E-mail *',
       placeholder: ' ',
       type: 'email',
       register: register('email', emailValidation),
       error: errors.email,
     },
   ]
+}
+
+export const getCheckboxField = {
+  checkboxTitle: 'Preferred Contact Methods *',
+  checkboxes: [
+    { id: 'phone', label: 'Phone Call', value: 'phone' },
+    { id: 'whatsapp', label: 'WhatsApp', value: 'whatsapp' },
+    { id: 'email', label: 'Email', value: 'email' },
+  ],
 }

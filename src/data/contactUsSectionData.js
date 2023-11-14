@@ -10,15 +10,17 @@ export const contactCountryOptions = [
   { value: 'Ukraine', label: 'Ukraine', code: 'ua' },
   { value: 'United Kingdom', label: 'United Kingdom', code: 'gb' },
   { value: 'United States', label: 'United States', code: 'us' },
-  { value: 'Canada', label: 'Canada', code: 'ca' },
-  { value: 'Australia', label: 'Australia', code: 'au' },
-  { value: 'Germany', label: 'Germany', code: 'de' },
-  { value: 'France', label: 'France', code: 'fr' },
-  { value: 'Spain', label: 'Spain', code: 'es' },
-  { value: 'Italy', label: 'Italy', code: 'it' },
-  { value: 'Japan', label: 'Japan', code: 'jp' },
+  { value: 'United Arab Emirates', label: 'United Arab Emirates', code: 'ae' },
+  { value: 'Saudi Arabia', label: 'Saudi Arabia', code: 'sa' },
+  { value: 'Europe', label: 'Europe', code: '' },
   { value: '', label: 'Write other here...', code: '' },
 ]
+
+export const initialContactMethods = {
+  phoneCall: false,
+  whatsapp: false,
+  email: false,
+}
 
 export const customStylesMarkets = {
   control: (baseStyles) => ({
