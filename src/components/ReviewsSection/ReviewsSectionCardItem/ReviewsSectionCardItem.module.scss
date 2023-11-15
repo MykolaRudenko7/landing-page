@@ -28,13 +28,14 @@
   border-radius: 100%;
   filter: $circleWhyChooseCardFilter;
   overflow: hidden;
+  box-shadow: $boxShadow;
 }
 
 .cardImage {
   @extend %forImage;
-  max-width: 9rem;
+  max-width: 9.5rem;
   @include onTablet() {
-    max-width: 6rem;
+    max-width: 6.5rem;
   }
 }
 

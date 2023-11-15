@@ -1,5 +1,5 @@
 import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.png'
-import introSectionCard1 from 'images/introSection/cards/introSectionCard1.svg'
+import introSectionCard1 from 'images/introSection/cards/introSectionCard1.png'
 import introSectionCard2 from 'images/introSection/cards/introSectionCard2.svg'
 import introSectionCard3 from 'images/introSection/cards/introSectionCard3.svg'
 import introSectionCard4 from 'images/introSection/cards/introSectionCard4.svg'
@@ -9,15 +9,22 @@ import introSectionCard6 from 'images/introSection/cards/introSectionCard6.svg'
 export const introSectionData = {
   textBlock: {
     title: 'Your Trusted Partner for Web Development Excellence',
-    text: `We serve a diverse clientele including startups, SMEs,e-commerce businesses, large corporations, educational institutions, telecom and media companies, financial institutions, fintech startups, non-profit organizations, restaurant owners, investors, venture capital firms, government agencies, and large non-tech enterprises.`,
+    text: `TechCossacks is a software development company based in Ukraine that
+    works with well-known product companies from the US, Canada, and Europe. We
+    design and implement bespoke, innovative solutions for our clients, creating
+    user-friendly, efficient websites that help businesses succeed. With years of
+    experience, our team is dedicated to providing high quality work at
+    competitive prices.`,
     imageSrc: introSectionImage,
   },
   cards: [
     {
       imageSrc: introSectionCard1,
-      title: `Tech Vendor Management`,
-      subtitle: `Struggling with multiple tech vendors?`,
-      text: `Centralize and streamline your tech interactions, eliminating the hassle of juggling multiple contacts and reducing overhead costs from managing several contracts.`,
+      title: `Landing page`,
+      subtitle: `Need to invite to a webinar or other one-off event`,
+      text: `Landing page development is the basis of a set of measures
+      to attract customers from the Internet, which we implement on
+      full-cycle development.`,
     },
     {
       imageSrc: introSectionCard2,
@@ -45,9 +52,10 @@ export const introSectionData = {
     },
     {
       imageSrc: introSectionCard6,
-      title: `Data-Driven Decision Making`,
-      subtitle: `Need clear business insights?`,
-      text: `Gain quick access to actionable data, allowing for informed decisions. Our accurate analytics cut down trial-and-error costs, optimizing your business strategies for better ROI.`,
+      title: `Web Development Solutions`,
+      subtitle: `A website from a template or individual development of a web project?`,
+      text: `We are a web development business specializing in custom web design
+      and development services for businesses of all sizes.`,
     },
   ],
 }
