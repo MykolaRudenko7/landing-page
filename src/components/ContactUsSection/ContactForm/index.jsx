@@ -6,17 +6,31 @@ import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
 import CreatableSelect from 'react-select/creatable'
 import { useForm, Controller } from 'react-hook-form'
-import { getInputFields } from 'utils/getInputFields'
+import { getCheckboxField, getInputFields } from 'utils/getInputFields'
 import { validationFormRules } from 'utils/validationFormRules'
 import { contactCountryOptions, customStylesMarkets } from 'data/contactUsSectionData'
 import Loading from 'shared/Loading'
 import ContactFormInput from 'components/ContactUsSection/ContactForm/ContactFormInput'
+import ContactFormCheckbox from 'components/ContactUsSection/ContactForm/ContactFormCheckbox'
 import 'react-phone-input-2/lib/style.css'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 
 export default function ContactForm() {
   const [error, setError] = useState(null)
   const [selectedCountry, setSelectedCountry] = useState(null)
+  const [selectedContactMethods, setSelectedContactMethods] = useState([])
+
+  const handleCheckboxChange = (method) => {
+    setSelectedContactMethods((prevMethods) => {
+      if (prevMethods.includes(method)) {
+        return prevMethods.filter((m) => m !== method)
+      }
+
+      return [...prevMethods, method]
+    })
+  }
+
+  const { checkboxes, checkboxTitle } = getCheckboxField
 
   useEffect(() => {
     clearErrors('phone')
@@ -55,6 +69,7 @@ export default function ContactForm() {
         market: data.country.value,
         message: data.messageArea,
         date: currentTime,
+        contactMethods: selectedContactMethods.join(', '),
       })
       setError(false)
       reset()
@@ -90,7 +105,7 @@ export default function ContactForm() {
                 onChange(newValue)
               }}
               options={contactCountryOptions}
-              placeholder={'Market to contact'}
+              placeholder={'Market to contact *'}
               styles={customStylesMarkets}
               tabIndex="0"
               value={value}
@@ -114,7 +129,8 @@ export default function ContactForm() {
               id={phoneNumberInputId}
               inputClass={styles.tellInput}
               onChange={(newValue) => onChange(newValue)}
-              placeholder="Phone Number"
+              placeholder={'Phone Number *'}
+              searchClass={styles.tellSearch}
               tabIndex="0"
               value={value}
               enableAreaCodeStretch
@@ -123,6 +139,19 @@ export default function ContactForm() {
           rules={mobileNumberValidation.validate(selectedCountry)}
         />
         {errors.phone && <small className={styles.textDanger}>{errors.phone.message}</small>}
+      </div>
+      <div className={styles.checkboxContainer}>
+        <p className={styles.checkboxTitle}>{checkboxTitle}</p>
+        <div className={styles.checkboxFields}>
+          {checkboxes.map((checkbox) => (
+            <ContactFormCheckbox
+              key={checkbox.id}
+              {...checkbox}
+              isChecked={selectedContactMethods.includes(checkbox.id)}
+              onChange={handleCheckboxChange}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.inputContainer}>
         <textarea

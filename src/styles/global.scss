@@ -89,3 +89,17 @@ body {
 .scrollLock {
   overflow: hidden;
 }
+
+.react-tel-input .country-list .country.highlight {
+  background-color: $mainWhiteColor !important;
+  color: $mainDarkBlueColor !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  border-top: 0.4rem solid $mainWhiteColor !important;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  border-top: none !important;
+  border-bottom: 0.4rem solid $mainWhiteColor !important;
+}

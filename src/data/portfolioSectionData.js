@@ -118,7 +118,6 @@ export const portfolioSectionData = {
               'MySQL',
               'Secure Payment API Integration',
               'Multilingual Support Libraries',
-              'WordPress',
             ],
           },
         ],

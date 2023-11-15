@@ -3,7 +3,7 @@ export const validationFormRules = {
     required: 'Name is required',
     maxLength: { value: 20, message: 'Maximum length is 20 characters' },
     pattern: {
-      value: /^[a-z ,.'-]+$/i,
+      value: /^[a-zA-Zа-яА-Я ,.'-]+$/,
       message: 'You need to enter only letters.',
     },
   },
@@ -11,7 +11,7 @@ export const validationFormRules = {
     required: false,
     maxLength: { value: 20, message: 'Maximum length is 20 characters' },
     pattern: {
-      value: /^[a-z ,.'-]+$/i,
+      value: /^[a-zA-Zа-яА-Я ,.'-]+$/,
       message: 'You need to enter only letters.',
     },
   },
