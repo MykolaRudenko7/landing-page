@@ -91,6 +91,128 @@
       }
     }
   },
+  "PortfolioSection": {
+    "title": "From Vision to Victory: Stories of Our Tech Transformations",
+    "text": "We've helped businesses in various sectors achieve their goals through our tailored tech solutions. Here are some of our success stories"
+  },
+  "PortfolioSectionCards": {
+    "card0": {
+      "title": "Barossa - Crafting a Digital Wine Experience",
+      "imageSrc": "cardImage1",
+      "text": {
+        "goals": {
+          "label": "goals",
+          "list": {
+            "option0": "Seamlessly convert the Figma design into a React-based site.",
+            "option1": "Embed SEO strategies for optimal online presence.",
+            "option2": "Enrich user interaction with fluid animations.",
+            "option3": "Ensure adaptability and consistency across all device types."
+          }
+        },
+        "features": {
+          "label": "features",
+          "list": {
+            "option0": "Design Evolution",
+            "option1": "SEO Integration",
+            "option2": "User-Vendor Registration",
+            "option3": "Interactive Animations",
+            "option4": "Universal Compatibility"
+          }
+        },
+        "technology": {
+          "label": "technology",
+          "list": {
+            "option0": "React",
+            "option1": "Figma",
+            "option2": "SEO",
+            "option3": "CSS",
+            "option4": "Animations",
+            "option5": "Responsive Design"
+          }
+        }
+      }
+    },
+    "card1": {
+      "title": "B2B Video Communication Platform",
+      "imageSrc": "cardImage2",
+      "text": {
+        "label": "goals",
+        "list": {
+          "option0": "Ensure dependable peer-to-peer video communication.",
+          "option1": "Achieve mobile-responsiveness for broad device compatibility.",
+          "option2": "Integrate a comprehensive admin panel for content oversight."
+        }
+      },
+      "features": {
+        "label": "features",
+        "list": {
+          "option0": "Real-time Conversation",
+          "option1": "State Management",
+          "option2": "API Integration",
+          "option3": "Design",
+          "option4": "Admin Panel",
+          "option5": "Deployment"
+        }
+      },
+      "technology": {
+        "label": "technology",
+        "list": {
+          "option0": "React",
+          "option1": "Node.js",
+          "option2": "Socket.io",
+          "option3": "Agora.io",
+          "option4": "SDK",
+          "option5": "Redux",
+          "option6": "Axios",
+          "option7": "React-query",
+          "option8": "GraphQL",
+          "option9": "Sass",
+          "option10": "Less",
+          "option11": "CSS",
+          "option12": "Modules",
+          "option13": "Netlify",
+          "option14": "AWS",
+          "option15": "Heroku"
+        }
+      }
+    },
+    "card2": {
+      "title": "FloraNow -Online Marketplace for Floriculture",
+      "imageSrc": "cardImage3",
+      "text": {
+        "label": "goals",
+        "list": {
+          "option0": "Develop a multi-vendor platform with individual registration and management capabilities.",
+          "option1": "Integrate a secure payment gateway.",
+          "option2": "Ensure efficient inventory management for all vendors.",
+          "option3": "Implement multilingual support to cater to a global audience.",
+          "option4": "Develop a user-friendly content management system using WordPress."
+        }
+      },
+      "features": {
+        "label": "features",
+        "list": {
+          "option0": "Multi-Vendor Marketplace",
+          "option1": "Secure Payment Gateway",
+          "option2": "User-Vendor Registration",
+          "option3": "Inventory Management",
+          "option4": "Multilingual Support",
+          "option5": "Content Management System"
+        }
+      },
+      "technology": {
+        "label": "technology",
+        "list": {
+          "option0": "HTML5/CSS3/JS",
+          "option1": "Bootstrap",
+          "option2": "PHP",
+          "option3": "MySQL",
+          "option4": "Secure Payment API Integration",
+          "option5": "Multilingual Support Libraries"
+        }
+      }
+    }
+  },
   "SectionLabels": {
     "aboutUsSection": "ABOUT US",
     "servicesSection": "WHAT WE DO",

@@ -4,12 +4,13 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AppearTextCardContentItem from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/AppearTextCardContentItem'
 import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/PortfolioBlockCardItem.module.scss'
 
-export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
+export default function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
   const [showTextBlock, setShowTextBlock] = useState(false)
 
   const handleShowTextBlockToggle = () => {
@@ -18,10 +19,13 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
     }
   }
 
+  const tPortfolioSectionCards = useTranslations('PortfolioSectionCards')
+  const cardTitle = tPortfolioSectionCards(`card${cardId}.title`)
+
   return (
     <div className={styles.card} onClick={handleShowTextBlockToggle}>
       <h6 className={styles.cardTitle}>
-        <span className={styles.cardTitleText}>{title}</span>
+        <span className={styles.cardTitleText}>{cardTitle}</span>
       </h6>
       <div className={styles.content}>
         <AnimatePresence>
@@ -47,8 +51,13 @@ export default function PortfolioBlockCardItem({ title, imageSrc, text }) {
               initial={{ height: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              {text?.map((textBlock) => (
-                <AppearTextCardContentItem key={uuidv4()} {...textBlock} />
+              {text?.map((textBlock, labelId) => (
+                <AppearTextCardContentItem
+                  key={uuidv4()}
+                  {...textBlock}
+                  cardId={cardId}
+                  labelId={labelId}
+                />
               ))}
             </motion.div>
           )}

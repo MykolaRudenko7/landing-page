@@ -5,12 +5,17 @@ import { portfolioSectionData } from 'data/portfolioSectionData'
 import PortfolioBlockCardItem from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem'
 import { scrollSectionId } from 'data/scrollSectionId'
 import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlock.module.scss'
+import { useTranslations } from 'next-intl'
 
 export default function PortfolioBlock() {
   const { contact } = scrollSectionId
+
+  const tLabel = useTranslations('SectionLabels')
+  const tPortfolioSection = useTranslations('PortfolioSection')
+  const tButton = useTranslations('Buttons')
+
   const {
-    textBlock: { text, title },
-    cards: { cardBarossa, cardFloraNow, cardB2B },
+    cards: { card0, card1, card2 },
   } = portfolioSectionData.portfolioBlockData
 
   return (
@@ -19,16 +24,16 @@ export default function PortfolioBlock() {
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
             <h3 className={styles.portfolioLabel}>
-              <span className={styles.titleText}>Portfolio</span>
+              <span className={styles.titleText}>{tLabel('portfolioSection')}</span>
             </h3>
             <div className={styles.textBlockForMargin}>
-              <h5 className={styles.textBlockTitle}>{title}</h5>
-              <p className={styles.textBlockText}>{text}</p>
+              <h5 className={styles.textBlockTitle}>{tPortfolioSection('title')}</h5>
+              <p className={styles.textBlockText}>{tPortfolioSection('text')}</p>
             </div>
-            <PortfolioBlockCardItem {...cardBarossa} />
+            <PortfolioBlockCardItem {...card0} cardId={0} />
           </div>
           <Link
-            about="begin your project"
+            about={tButton('buttonStart.about')}
             className={styles.portfolioBlockButton}
             duration={750}
             href="#"
@@ -38,12 +43,12 @@ export default function PortfolioBlock() {
             tabIndex="0"
             to={contact}
           >
-            Start Your Success Story
+            {tButton('buttonStart.label')}
           </Link>
         </div>
         <div className={styles.cardsBlock}>
-          <PortfolioBlockCardItem {...cardB2B} />
-          <PortfolioBlockCardItem {...cardFloraNow} />
+          <PortfolioBlockCardItem {...card1} cardId={1} />
+          <PortfolioBlockCardItem {...card2} cardId={2} />
         </div>
       </div>
     </div>

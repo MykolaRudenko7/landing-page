@@ -4,12 +4,8 @@ import cardImage3 from 'images/portfolioSection/cardImage3.webp'
 
 export const portfolioSectionData = {
   portfolioBlockData: {
-    textBlock: {
-      title: 'From Vision to Victory: Stories of Our Tech Transformations',
-      text: "We've helped businesses in various sectors achieve their goals through our tailored tech solutions. Here are some of our success stories",
-    },
     cards: {
-      cardBarossa: {
+      card0: {
         title: 'Barossa - Crafting a Digital Wine Experience',
         imageSrc: cardImage1,
         text: [
@@ -38,7 +34,7 @@ export const portfolioSectionData = {
           },
         ],
       },
-      cardB2B: {
+      card1: {
         title: 'B2B Video Communication Platform',
         imageSrc: cardImage2,
         text: [
@@ -84,7 +80,7 @@ export const portfolioSectionData = {
           },
         ],
       },
-      cardFloraNow: {
+      card2: {
         title: 'FloraNow -Online Marketplace for Floriculture',
         imageSrc: cardImage3,
         text: [

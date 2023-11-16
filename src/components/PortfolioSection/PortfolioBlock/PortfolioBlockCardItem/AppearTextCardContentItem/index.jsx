@@ -1,14 +1,18 @@
 import { v4 as uuidv4 } from 'uuid'
+import { useTranslations } from 'next-intl'
 import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/AppearTextCardContentItem/AppearTextCardContentItem.module.scss'
 
-export default function AppearTextCardContentItem({ label, list }) {
+export default function AppearTextCardContentItem({ list, cardId, labelId }) {
+  const tPortfolioSectionCards = useTranslations('PortfolioSectionCards')
+  const tLabel = tPortfolioSectionCards(`card${cardId}.text.label${labelId}`)
+
   return (
     <div className={styles.textBlockWrapper}>
-      <h6 className={styles.title}>{label}</h6>
+      <h6 className={styles.title}>{tLabel}</h6>
       <ul className={styles.listItems}>
-        {list?.map((item) => (
+        {list?.map((item, index) => (
           <li className={styles.listItem} key={uuidv4()}>
-            {item}
+            {tPortfolioSectionCards(`card${cardId}.text.list${labelId}.option${index}`)}
           </li>
         ))}
       </ul>
