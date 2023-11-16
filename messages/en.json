@@ -47,6 +47,58 @@
       "text": "We are a web development business specializing in custom web design and development services for businesses of all sizes."
     }
   },
+  "AboutUsSection": {
+    "title": "TECH COSSACK: Bridging Tradition and Tech Innovation",
+    "text": "At TECH COSSACK, we're inspired by the resilience and courage of Ukraine's Cossack heritage. This rich tradition fuels our modern approach to technology, guiding us in delivering top-tier web and app development services. Operating internationally across the US, Canada, and Europe, we specialize in supporting startups and growing tech companies. Our team, from front-end specialists to blockchain experts, is united by a shared passion: crafting solutions that cater precisely to your needs."
+  },
+  "ServicesSection": {
+    "card0": {
+      "listTitle": "E-Commerce",
+      "listOptions": {
+        "option0": "User Experience (UX) Design",
+        "option1": "Website & App Development",
+        "option2": "Mobile Commerce Development",
+        "option3": "CRM",
+        "option4": "Payment Gateway Integration"
+      }
+    },
+    "card1": {
+      "listTitle": "Fintech",
+      "listOptions": {
+        "option0": "Software Development",
+        "option1": "Web App Development",
+        "option2": "Blockchain Solutions",
+        "option3": "Payment Processing Solutions",
+        "option4": "Consulting"
+      }
+    },
+    "card2": {
+      "listTitle": "Ed-Tech",
+      "listOptions": {
+        "option0": "Web & Mobile App Development",
+        "option1": "Software Development",
+        "option2": "Gamification Solutions",
+        "option3": "Consulting"
+      }
+    },
+    "card3": {
+      "listTitle": "Telecom & Media",
+      "listOptions": {
+        "option0": "Streaming Solutions",
+        "option1": "Digital Advertising Platforms",
+        "option2": "Website & App Development",
+        "option3": "Software Development"
+      }
+    }
+  },
+  "SectionLabels": {
+    "aboutUsSection": "ABOUT US",
+    "servicesSection": "WHAT WE DO",
+    "portfolioSection": "PORTFOLIO",
+    "whyChooseSection": "WHY CHOOSE TECH COSSACKS?",
+    "reviewsSection": "REVIEWS",
+    "contactUsSection": "CONTACT US"
+  },
   "Buttons": {
     "buttonBoost": {
       "label": "Boost your business!",

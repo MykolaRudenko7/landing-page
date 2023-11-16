@@ -2,13 +2,17 @@
 
 import Image from 'next/image'
 import { Link } from 'react-scroll'
-import { aboutUsSectionData } from 'data/aboutUsSectionData'
+import { useTranslations } from 'next-intl'
 import { scrollSectionId } from 'data/scrollSectionId'
+import aboutUsSectionImage from 'images/aboutUsSection/aboutUsImage.webp'
 import styles from 'components/AboutUsSection/AboutUsSection.module.scss'
 
 export default function AboutUsSection() {
   const { howWeAre, portfolio } = scrollSectionId
-  const { imageSrc, text, title } = aboutUsSectionData
+
+  const tAboutUs = useTranslations('AboutUsSection')
+  const tButton = useTranslations('Buttons')
+  const tLabel = useTranslations('SectionLabels')
 
   return (
     <section className={styles.aboutUs} id={howWeAre}>
@@ -18,20 +22,20 @@ export default function AboutUsSection() {
             alt="blockImage"
             className={styles.aboutUsImage}
             height={878}
-            src={imageSrc}
+            src={aboutUsSectionImage}
             width={771}
           />
         </div>
         <div className={styles.aboutUsTextBlock}>
           <div className={styles.aboutUsLabel}>
-            <h3 className={styles.titleText}>About us</h3>
+            <h3 className={styles.titleText}>{tLabel('aboutUsSection')}</h3>
           </div>
           <div className={styles.textBlockWrapper}>
-            <h4 className={styles.title}>{title}</h4>
-            <p className={styles.text}>{text}</p>
+            <h4 className={styles.title}>{tAboutUs('title')}</h4>
+            <p className={styles.text}>{tAboutUs('text')}</p>
           </div>
           <Link
-            about="boost your business!"
+            about={tButton('buttonPortfolio.about')}
             className={styles.aboutUsButton}
             duration={750}
             href="#"
@@ -41,7 +45,7 @@ export default function AboutUsSection() {
             tabIndex="0"
             to={portfolio}
           >
-            Portfolio
+            {tButton('buttonPortfolio.label')}
           </Link>
         </div>
       </div>

@@ -1,22 +1,22 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
+import { useTranslations } from 'next-intl'
 import { introSectionData } from 'data/introSectionData'
 import { scrollSectionId } from 'data/scrollSectionId'
 import IntroCardItem from 'components/IntroSection/IntroCardItem'
+import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.png'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 
 export default function Intro() {
+  const [isHoverCard, setIsHoverCard] = useState(null)
+  const { home, contact, services } = scrollSectionId
+
   const tIntro = useTranslations('IntroSection')
   const tButton = useTranslations('Buttons')
-
-  const { home, contact, services } = scrollSectionId
-  const { textBlock } = introSectionData
-  const [isHoverCard, setIsHoverCard] = useState(null)
 
   return (
     <section className={styles.intro} id={home}>
@@ -57,7 +57,7 @@ export default function Intro() {
           <Image
             alt="intro block image"
             className={styles.image}
-            src={textBlock.imageSrc}
+            src={introSectionImage}
             priority
           />
         </div>
