@@ -170,3 +170,27 @@
     gap: 1.5rem;
   }
 }
+
+.languageSwitchers {
+  @extend %flexCenter;
+  @extend %transparentTap;
+  gap: 1rem;
+}
+
+.languageSwitcher {
+  font-weight: $lightFontWeight;
+  color: $mainWhiteColor;
+
+  &:active {
+    scale: 0.95;
+  }
+
+  &:focus,
+  &:hover {
+    color: $mainYellowColor;
+  }
+
+  &.active {
+    color: $mainYellowColor;
+  }
+}

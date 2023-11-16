@@ -2,17 +2,15 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import styles from 'components/IntroSection/IntroCardItem/IntroCardItem.module.scss'
 
-export default function IntroCardItem({
-  imageSrc,
-  title,
-  subtitle,
-  text,
-  cardId,
-  isHoverCard,
-  setIsHoverCard,
-}) {
+export default function IntroCardItem({ imageSrc, cardId, isHoverCard, setIsHoverCard }) {
+  const tCards = useTranslations('IntroSectionCards')
+  const title = tCards(`card${cardId}.title`)
+  const subtitle = tCards(`card${cardId}.subtitle`)
+  const text = tCards(`card${cardId}.text`)
+
   const handleCardMouseEnter = () => {
     setIsHoverCard(cardId)
   }

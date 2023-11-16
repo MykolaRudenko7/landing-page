@@ -25,7 +25,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   }
 
   return (
-    <html lang={locale} className={poppins.className}>
+    <html className={poppins.className} lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

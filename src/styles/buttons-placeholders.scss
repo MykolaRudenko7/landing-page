@@ -95,12 +95,12 @@
     transform-origin: right;
     background-color: $mainWhiteColor;
   }
-  &:hover {
-    text-shadow: $textShadow;
-  }
+
+  &:hover,
   &:active,
   &:focus {
     &::after {
+      text-shadow: $textShadow;
       transform: scale(1);
       transform-origin: left;
     }

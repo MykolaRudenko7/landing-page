@@ -3,9 +3,10 @@
 import { Link } from 'react-scroll'
 import styles from 'shared/LinkItem/LinkItem.module.scss'
 
-export default function LinkItem({ title, id, clickOnLink }) {
+export default function LinkItem({ title, id, clickOnLink, about }) {
   return (
     <Link
+      about={about}
       className={styles.link}
       duration={750}
       offset={-10}

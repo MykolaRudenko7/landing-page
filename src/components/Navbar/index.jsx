@@ -1,11 +1,13 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
+import { useTranslations } from 'next-intl'
 import { navbarData } from 'data/navbarLinksData'
 import { scrollSectionId } from 'data/scrollSectionId'
 import LinkItem from 'shared/LinkItem'
@@ -14,7 +16,12 @@ import styles from 'components/Navbar/Navbar.module.scss'
 export default function Navbar() {
   const { contact } = scrollSectionId
   const { links, logoImage } = navbarData
+  const pathname = usePathname()
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false)
+
+  const tNavbar = useTranslations('NavbarLinks')
+  const tButton = useTranslations('Buttons')
+  const tLanguageSwitcher = useTranslations('NavbarLanguageSwitcher')
 
   const handleMenuToggle = () => {
     setIsNavbarMenuOpen(!isNavbarMenuOpen)
@@ -38,19 +45,40 @@ export default function Navbar() {
           })}
         >
           {links.map((item) => (
-            <LinkItem key={uuidv4()} tabIndex="0" {...item} clickOnLink={clickOnLink} />
+            <LinkItem
+              key={uuidv4()}
+              tabIndex="0"
+              {...item}
+              about={tNavbar(`${item.id}.about`)}
+              clickOnLink={clickOnLink}
+              title={tNavbar(`${item.id}.label`)}
+            />
           ))}
-          <Link locale="en" href="/en">
-            EN
-          </Link>
-          <Link locale="ua" href="/ua">
-            UA
-          </Link>
+          <div className={styles.languageSwitchers}>
+            <Link
+              about={tLanguageSwitcher('buttonEn.about')}
+              className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/en' })}
+              href="/en"
+              locale="en"
+              tabIndex="0"
+            >
+              {tLanguageSwitcher('buttonEn.label')}
+            </Link>
+            <Link
+              about={tLanguageSwitcher('buttonUa.about')}
+              className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/ua' })}
+              href="/ua"
+              locale="ua"
+              tabIndex="0"
+            >
+              {tLanguageSwitcher('buttonUa.label')}
+            </Link>
+          </div>
         </div>
       </div>
       <div className={styles.navbarWrapper}>
         <ScrollLink
-          about="boost your business!"
+          about={tButton('buttonBoost.about')}
           className={styles.navbarButton}
           duration={750}
           href="#"
@@ -60,7 +88,7 @@ export default function Navbar() {
           tabIndex="0"
           to={contact}
         >
-          Boost your business!
+          {tButton('buttonBoost.label')}
         </ScrollLink>
         <div
           className={cn(styles.menuBurger, {

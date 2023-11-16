@@ -11,7 +11,8 @@ import IntroCardItem from 'components/IntroSection/IntroCardItem'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 
 export default function Intro() {
-  const t = useTranslations('introSection')
+  const tIntro = useTranslations('IntroSection')
+  const tButton = useTranslations('Buttons')
 
   const { home, contact, services } = scrollSectionId
   const { textBlock } = introSectionData
@@ -22,37 +23,33 @@ export default function Intro() {
       <div className={styles.introContainer}>
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
-            {/* <h3 className={styles.textBlockTitle}>{textBlock.title}</h3> */}
-            <h3 className={styles.textBlockTitle}>{t('title')}</h3>
-            {/* <p className={styles.textBlockText}>{textBlock.text}</p> */}
-            <p className={styles.textBlockText}>{t('text')}</p>
+            <h3 className={styles.textBlockTitle}>{tIntro('title')}</h3>
+            <p className={styles.textBlockText}>{tIntro('text')}</p>
           </div>
           <div className={styles.buttonsBlock}>
             <Link
-              about="schedule a consultation"
+              about={tButton('buttonSchedule.about')}
               className={styles.buttonConsultation}
               duration={750}
-              href="#"
               offset={-10}
               role="button"
               smooth={true}
               tabIndex="0"
               to={contact}
             >
-              Schedule a consultation
+              {tButton('buttonSchedule.label')}
             </Link>
             <Link
-              about="explore our services"
+              about={tButton('buttonServices.about')}
               className={styles.buttonServices}
               duration={750}
-              href="#"
               offset={-10}
               role="button"
               smooth={true}
               tabIndex="0"
               to={services}
             >
-              Explore our services
+              {tButton('buttonServices.label')}
             </Link>
           </div>
         </div>
