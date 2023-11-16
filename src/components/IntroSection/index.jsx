@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
@@ -10,6 +11,8 @@ import IntroCardItem from 'components/IntroSection/IntroCardItem'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 
 export default function Intro() {
+  const t = useTranslations('introSection')
+
   const { home, contact, services } = scrollSectionId
   const { textBlock } = introSectionData
   const [isHoverCard, setIsHoverCard] = useState(null)
@@ -19,8 +22,10 @@ export default function Intro() {
       <div className={styles.introContainer}>
         <div className={styles.textBlock}>
           <div className={styles.textBlockWrapper}>
-            <h3 className={styles.textBlockTitle}>{textBlock.title}</h3>
-            <p className={styles.textBlockText}>{textBlock.text}</p>
+            {/* <h3 className={styles.textBlockTitle}>{textBlock.title}</h3> */}
+            <h3 className={styles.textBlockTitle}>{t('title')}</h3>
+            {/* <p className={styles.textBlockText}>{textBlock.text}</p> */}
+            <p className={styles.textBlockText}>{t('text')}</p>
           </div>
           <div className={styles.buttonsBlock}>
             <Link

@@ -1,7 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
@@ -39,10 +40,16 @@ export default function Navbar() {
           {links.map((item) => (
             <LinkItem key={uuidv4()} tabIndex="0" {...item} clickOnLink={clickOnLink} />
           ))}
+          <Link locale="en" href="/en">
+            EN
+          </Link>
+          <Link locale="ua" href="/ua">
+            UA
+          </Link>
         </div>
       </div>
       <div className={styles.navbarWrapper}>
-        <Link
+        <ScrollLink
           about="boost your business!"
           className={styles.navbarButton}
           duration={750}
@@ -54,7 +61,7 @@ export default function Navbar() {
           to={contact}
         >
           Boost your business!
-        </Link>
+        </ScrollLink>
         <div
           className={cn(styles.menuBurger, {
             [styles.isNavbarMenuOpen]: isNavbarMenuOpen,

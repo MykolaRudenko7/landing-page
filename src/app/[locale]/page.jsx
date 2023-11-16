@@ -6,7 +6,7 @@ import ContactUsSection from 'components/ContactUsSection'
 import AboutUsSection from 'components/AboutUsSection'
 import Footer from 'components/Footer'
 import ReviewsSection from 'components/ReviewsSection'
-import styles from 'app/Home.module.scss'
+import styles from 'app/[locale]/Home.module.scss'
 
 export default function Home() {
   return (
