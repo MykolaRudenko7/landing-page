@@ -16,7 +16,7 @@ export default function PortfolioBlock() {
 
   const {
     cards: { card0, card1, card2 },
-  } = portfolioSectionData.portfolioBlockData
+  } = portfolioSectionData
 
   return (
     <section className={styles.portfolioBlock} id={portfolio}>

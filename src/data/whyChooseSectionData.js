@@ -1,9 +1,4 @@
 export const whyChooseSectionData = {
-  mainCard: {
-    title: 'Elevate Your Business with TECH COSSACKS!',
-    text: 'Immerse yourself in the world of technology and see firsthand why our team is your reliable partner. Together, we will create a secure digital future for your business in the civilized world, harnessing the latest technologies and innovative solutions.',
-  },
-
   cards: [
     {
       title: 'One-Stop Development',

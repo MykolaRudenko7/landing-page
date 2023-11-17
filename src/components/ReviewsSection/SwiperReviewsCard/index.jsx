@@ -38,9 +38,9 @@ export default function SwiperReviewsCard() {
         spaceBetween={30}
         speed={1250}
       >
-        {cards.map((item) => (
+        {cards.map((item, id) => (
           <SwiperSlide key={uuidv4()}>
-            <ReviewsSectionCardItem {...item} />
+            <ReviewsSectionCardItem {...item} cardId={id} />
           </SwiperSlide>
         ))}
       </Swiper>
