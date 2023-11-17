@@ -265,6 +265,59 @@
       }
     }
   },
+  "ContactUsSection": {
+    "title": "Ready to Elevate Your Tech Game?",
+    "text": "Connect with TECH COSSACKS and embark on a transformative journey.",
+    "errorMessage": "An error occurred while submitting the form. Please try again.",
+    "successMessage": "Success ✅"
+  },
+  "ContactCountryOptions": {
+    "option0": "Ukraine",
+    "option1": "United Kingdom",
+    "option2": "United States",
+    "option3": "United Arab Emirates",
+    "option4": "Saudi Arabia",
+    "option5": "Europe",
+    "option6": "Enter another option here..."
+  },
+  "ContactFormPlaceholders": {
+    "marketToContact": "Market To Contact *",
+    "phoneNumber": "Phone Number *",
+    "preferredContactMethods": "Preferred Contact Methods *",
+    "yourMessage": "Your message"
+  },
+  "ContactInputPlaceholders": {
+    "option0": "Name *",
+    "option1": "Last Name",
+    "option2": "E-mail *"
+  },
+  "ContactCheckboxPlaceholders": {
+    "option0": "Phone Call",
+    "option1": "WhatsApp",
+    "option2": "Email"
+  },
+  "FooterSection": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "getInTouch": "Get in touch",
+    "servicesLink": "Services",
+    "linksForScroll": {
+      "link0": "Intro",
+      "link1": "About Us",
+      "link2": "Portfolio",
+      "link3": "Reviews",
+      "link4": "Contact"
+    },
+    "servicesLinks": {
+      "link0": "Website Design",
+      "link1": "Website Development",
+      "link2": "Web APP Development",
+      "link3": "E-Commerce",
+      "link4": "Software Development",
+      "link5": "Search Engine Optimization (SEO)",
+      "link6": "Consulting"
+    }
+  },
   "SectionLabels": {
     "aboutUsSection": "ABOUT US",
     "servicesSection": "WHAT WE DO",

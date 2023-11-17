@@ -251,6 +251,59 @@
       }
     }
   },
+  "ContactUsSection": {
+    "title": "Готові підняти свою технічну гру на новий рівень?",
+    "text": "Зв'яжіться з TECH COSSACKS і розпочніть трансформаційну подорож.",
+    "errorMessage": "Виникла помилка під час подання форми. Будь ласка, спробуйте ще раз.",
+    "successMessage": "Форма надіслана успішно ✅"
+  },
+  "ContactCountryOptions": {
+    "option0": "Україна",
+    "option1": "Сполучене Королівство",
+    "option2": "Сполучені Штати",
+    "option3": "Обʼєднані Арабські Емірати",
+    "option4": "Саудівська Аравія",
+    "option5": "Європа",
+    "option6": "Введіть інший варіант тут..."
+  },
+  "ContactFormPlaceholders": {
+    "marketToContact": "Ринок для зв'язку *",
+    "phoneNumber": "Номер телефону *",
+    "preferredContactMethods": "Бажані методи зв'язку *",
+    "yourMessage": "Ваше повідомлення"
+  },
+  "ContactInputPlaceholders": {
+    "option0": "Ім'я *",
+    "option1": "Прізвище",
+    "option2": "Електронна пошта *"
+  },
+  "ContactCheckboxPlaceholders": {
+    "option0": "Телефонний виклик",
+    "option1": "WhatsApp",
+    "option2": "Електронна пошта"
+  },
+  "FooterSection": {
+    "privacyPolicy": "Політика конфіденційності",
+    "termsOfService": "Умови використання",
+    "getInTouch": "Зв'язатись",
+    "servicesLink": "Послуги",
+    "linksForScroll": {
+      "link0": "НА ПОЧАТОК",
+      "link1": "ПРО НАС",
+      "link2": "ПОРТФОЛІО",
+      "link3": "ВІДГУКИ",
+      "link4": "КОНТАКТИ"
+    },
+    "servicesLinks": {
+      "link0": "Дизайн веб-сайту",
+      "link1": "Розробка веб-сайту",
+      "link2": "Розробка веб-додатків",
+      "link3": "Електронна комерція",
+      "link4": "Розробка програмного забезпечення",
+      "link5": "Оптимізація для пошукових систем (SEO)",
+      "link6": "Консультування"
+    }
+  },
   "SectionLabels": {
     "aboutUsSection": "ПРО НАС",
     "servicesSection": "ЩО МИ ЗРОБИМО",

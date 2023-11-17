@@ -17,7 +17,7 @@ export default function WhyChooseSection() {
   const { contact } = scrollSectionId
 
   return (
-    <div className={styles.whyChooseSection}>
+    <section className={styles.whyChooseSection}>
       <div className={styles.whyChooseBlockWrapper}>
         <div className={styles.mainCard}>
           <div className={styles.mainCardWrapper}>
@@ -47,6 +47,6 @@ export default function WhyChooseSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

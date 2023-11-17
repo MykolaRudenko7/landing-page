@@ -1,6 +1,9 @@
+import { useTranslations } from 'next-intl'
 import styles from 'components/ContactUsSection/ContactForm/ContactFormCheckbox/ContactFormCheckbox.module.scss'
 
-export default function ContactFormCheckbox({ id, value, isChecked, label, onChange }) {
+export default function ContactFormCheckbox({ id, value, isChecked, onChange, tId }) {
+  const tPlaceholder = useTranslations('ContactCheckboxPlaceholders')
+
   return (
     <div className={styles.checkboxContainer}>
       <input
@@ -13,7 +16,7 @@ export default function ContactFormCheckbox({ id, value, isChecked, label, onCha
         value={value}
       />
       <label className={styles.checkboxLabel} htmlFor={id}>
-        {label}
+        {tPlaceholder(`option${tId}`)}
       </label>
     </div>
   )

@@ -6,6 +6,7 @@ import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
 import CreatableSelect from 'react-select/creatable'
 import { useForm, Controller } from 'react-hook-form'
+import { useTranslations } from 'next-intl'
 import { getCheckboxField, getInputFields } from 'utils/getInputFields'
 import { validationFormRules } from 'utils/validationFormRules'
 import { contactCountryOptions, customStylesMarkets } from 'data/contactUsSectionData'
@@ -20,6 +21,13 @@ export default function ContactForm() {
   const [selectedCountry, setSelectedCountry] = useState(null)
   const [selectedContactMethods, setSelectedContactMethods] = useState([])
 
+  const tContact = useTranslations('ContactUsSection')
+  const tCountry = useTranslations('ContactCountryOptions')
+  const tPlaceholder = useTranslations('ContactFormPlaceholders')
+  const tButton = useTranslations('Buttons')
+  const tErrorMessage = tContact('errorMessage')
+  const tSuccessMessage = tContact('successMessage')
+
   const handleCheckboxChange = (method) => {
     setSelectedContactMethods((prevMethods) => {
       if (prevMethods.includes(method)) {
@@ -29,8 +37,6 @@ export default function ContactForm() {
       return [...prevMethods, method]
     })
   }
-
-  const { checkboxes, checkboxTitle } = getCheckboxField
 
   useEffect(() => {
     clearErrors('phone')
@@ -53,6 +59,7 @@ export default function ContactForm() {
 
   const { mobileNumberValidation, countryValidation, textAreaValidation } = validationFormRules
   const inputFields = getInputFields(register, errors)
+  const { checkboxes } = getCheckboxField
 
   const contactFormId = useId()
   const phoneNumberInputId = useId()
@@ -87,8 +94,8 @@ export default function ContactForm() {
       method="POST"
       onSubmit={handleSubmit(onFormSubmit)}
     >
-      {inputFields.map((input) => (
-        <ContactFormInput key={input.id} {...input} />
+      {inputFields.map((input, id) => (
+        <ContactFormInput key={input.id} {...input} tId={id} />
       ))}
       <div className={cn(styles.inputContainerSelect, styles.inputContainer)}>
         <Controller
@@ -104,8 +111,16 @@ export default function ContactForm() {
                 setSelectedCountry(newValue)
                 onChange(newValue)
               }}
-              options={contactCountryOptions}
-              placeholder={'Market to contact *'}
+              options={contactCountryOptions.map((option, index) => {
+                const translatedOption = tCountry(`option${index}`)
+
+                return {
+                  value: option.value,
+                  label: translatedOption,
+                  code: option.code,
+                }
+              })}
+              placeholder={tPlaceholder('marketToContact')}
               styles={customStylesMarkets}
               tabIndex="0"
               value={value}
@@ -129,7 +144,7 @@ export default function ContactForm() {
               id={phoneNumberInputId}
               inputClass={styles.tellInput}
               onChange={(newValue) => onChange(newValue)}
-              placeholder={'Phone Number *'}
+              placeholder={tPlaceholder('phoneNumber')}
               searchClass={styles.tellSearch}
               tabIndex="0"
               value={value}
@@ -141,14 +156,15 @@ export default function ContactForm() {
         {errors.phone && <small className={styles.textDanger}>{errors.phone.message}</small>}
       </div>
       <div className={styles.checkboxContainer}>
-        <p className={styles.checkboxTitle}>{checkboxTitle}</p>
+        <p className={styles.checkboxTitle}>{tPlaceholder('preferredContactMethods')}</p>
         <div className={styles.checkboxFields}>
-          {checkboxes.map((checkbox) => (
+          {checkboxes.map((checkbox, id) => (
             <ContactFormCheckbox
               key={checkbox.id}
               {...checkbox}
               isChecked={selectedContactMethods.includes(checkbox.id)}
               onChange={handleCheckboxChange}
+              tId={id}
             />
           ))}
         </div>
@@ -165,7 +181,7 @@ export default function ContactForm() {
           {...register('messageArea', textAreaValidation)}
         ></textarea>
         <label className={styles.label} htmlFor={yourMessageTextareaId}>
-          Your message
+          {tPlaceholder('yourMessage')}
         </label>
         {errors.messageArea && (
           <small className={styles.textDanger}>{errors.messageArea.message}</small>
@@ -173,21 +189,19 @@ export default function ContactForm() {
       </div>
       <div className={styles.buttonBlock}>
         <button
-          aria-label="submit"
+          aria-label={tButton('buttonSubmit.about')}
           className={styles.submitButton}
           disabled={isSubmitSuccessful}
           form={contactFormId}
           tabIndex="0"
           type="submit"
         >
-          Submit Your Idea
+          {tButton('buttonSubmit.label')}
         </button>
-        {error && (
-          <p className={styles.submitMessageError}>
-            An error occurred while submitting the form. Please try again.
-          </p>
+        {error && <p className={styles.submitMessageError}>{tErrorMessage}</p>}
+        {isSubmitSuccessful && isValid && (
+          <p className={styles.submitMessageSuccess}>{tSuccessMessage}</p>
         )}
-        {isSubmitSuccessful && isValid && <p className={styles.submitMessageSuccess}>Success ✅</p>}
         {isSubmitting && <Loading />}
       </div>
     </form>

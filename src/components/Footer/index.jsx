@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
+import { useTranslations } from 'next-intl'
 import { footerSectionData } from 'data/footerSectionData'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Footer/Footer.module.scss'
@@ -10,8 +11,10 @@ export default function Footer() {
     logoImage,
     linksForScroll,
     servicesLinks: { links, mainLink },
-    getInTouch: { socials, title },
+    getInTouch: { socials },
   } = footerSectionData
+
+  const tFooter = useTranslations('FooterSection')
 
   return (
     <div className={styles.footer}>
@@ -22,26 +25,32 @@ export default function Footer() {
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
-              {linksForScroll.map((link) => (
-                <LinkItem key={uuidv4()} tabIndex="0" {...link} />
+              {linksForScroll.map((link, tId) => (
+                <LinkItem
+                  key={uuidv4()}
+                  tabIndex="0"
+                  {...link}
+                  about={tFooter(`linksForScroll.link${tId}`)}
+                  title={tFooter(`linksForScroll.link${tId}`)}
+                />
               ))}
             </ul>
             <ul className={styles.ordinaryLinks}>
               <li className={styles.ordinaryLinkWrapper}>
                 <Link className={styles.ordinaryLink} href="#" tabIndex="0">
-                  Privacy Policy
+                  {tFooter('privacyPolicy')}
                 </Link>
               </li>
               <li className={styles.ordinaryLinkWrapper}>
                 <Link className={styles.ordinaryLink} href="#" tabIndex="0">
-                  Terms of Service
+                  {tFooter('termsOfService')}
                 </Link>
               </li>
             </ul>
           </div>
           <div className={styles.servicesLinks}>
-            <LinkItem id={mainLink.id} tabIndex="0" title={mainLink.title} />
-            {links.map(({ title, href }) => (
+            <LinkItem id={mainLink.id} tabIndex="0" title={tFooter(`servicesLink`)} />
+            {links.map(({ href }, tId) => (
               <Link
                 about="services link"
                 className={styles.serviceLink}
@@ -49,12 +58,12 @@ export default function Footer() {
                 key={uuidv4()}
                 tabIndex="0"
               >
-                {title}
+                {tFooter(`servicesLinks.link${tId}`)}
               </Link>
             ))}
           </div>
           <div className={styles.getInTouch}>
-            <p className={styles.getInTouchTitle}>{title}</p>
+            <p className={styles.getInTouchTitle}>{tFooter('getInTouch')}</p>
             <div className={styles.socialsImages}>
               {socials.map(({ href, iconSrc, alt }) => (
                 <Link
