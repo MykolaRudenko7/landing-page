@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import AppearTextCardContentItem from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/AppearTextCardContentItem'
-import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/PortfolioBlockCardItem.module.scss'
+import AppearTextCardContentItem from 'components/PortfolioSection/PortfolioBlockCardItem/AppearTextCardContentItem'
+import styles from 'components/PortfolioSection/PortfolioBlockCardItem/PortfolioBlockCardItem.module.scss'
 
 export default function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
   const [showTextBlock, setShowTextBlock] = useState(false)

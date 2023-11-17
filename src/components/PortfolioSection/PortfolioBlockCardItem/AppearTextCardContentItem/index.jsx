@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 import { useTranslations } from 'next-intl'
-import styles from 'components/PortfolioSection/PortfolioBlock/PortfolioBlockCardItem/AppearTextCardContentItem/AppearTextCardContentItem.module.scss'
+import styles from 'components/PortfolioSection/PortfolioBlockCardItem/AppearTextCardContentItem/AppearTextCardContentItem.module.scss'
 
 export default function AppearTextCardContentItem({ list, cardId, labelId }) {
   const tPortfolioSectionCards = useTranslations('PortfolioSectionCards')

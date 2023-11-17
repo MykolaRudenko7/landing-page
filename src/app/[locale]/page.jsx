@@ -4,8 +4,9 @@ import ServicesSection from 'components/ServicesSection'
 import PortfolioSection from 'components/PortfolioSection'
 import ContactUsSection from 'components/ContactUsSection'
 import AboutUsSection from 'components/AboutUsSection'
-import Footer from 'components/Footer'
 import ReviewsSection from 'components/ReviewsSection'
+import WhyChooseSection from 'components/WhyChooseSection'
+import Footer from 'components/Footer'
 import styles from 'app/[locale]/Home.module.scss'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutUsSection />
         <ServicesSection />
         <PortfolioSection />
+        <WhyChooseSection />
         <ReviewsSection />
         <ContactUsSection />
       </main>
