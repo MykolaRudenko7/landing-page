@@ -2,7 +2,6 @@ import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { Poppins } from 'next/font/google'
 import 'styles/global.scss'
-import Link from 'next/link'
 
 export const metadata = {
   title: 'Tech Cossacks',
@@ -27,9 +26,8 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html className={poppins.className} lang={locale}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        {/* <NextIntlClientProvider locale={locale} messages={messages}> */}
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   )
