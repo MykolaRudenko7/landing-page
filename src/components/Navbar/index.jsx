@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
@@ -18,6 +18,15 @@ export default function Navbar() {
   const { links, logoImage } = navbarData
   const pathname = usePathname()
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const tNavbar = useTranslations('NavbarLinks')
   const tButton = useTranslations('Buttons')
@@ -33,27 +42,35 @@ export default function Navbar() {
     document.body.classList.remove('scrollLock')
   }
 
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 10
+
+    setIsScrolled(isScrolled)
+  }
+
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logoLinksBlock}>
-        <a className={styles.logoWrapper} href="" tabIndex="0">
-          <Image alt="logo image" className={styles.logoImage} src={logoImage} />
-        </a>
-        <div
-          className={cn(styles.linksWrapper, {
-            [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
-          })}
-        >
-          {links.map((item) => (
-            <LinkItem
-              key={uuidv4()}
-              tabIndex="0"
-              {...item}
-              about={tNavbar(`${item.id}.about`)}
-              clickOnLink={clickOnLink}
-              title={tNavbar(`${item.id}.label`)}
-            />
-          ))}
+      <div className={cn(styles.wrapper, { [styles.isScrolled]: isScrolled })}>
+        <div className={styles.logoLinksBlock}>
+          <a className={styles.logoWrapper} href="#" tabIndex="0">
+            <Image alt="logo image" className={styles.logoImage} src={logoImage} />
+          </a>
+          <div
+            className={cn(styles.linksWrapper, {
+              [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
+            })}
+          >
+            {links.map((item) => (
+              <LinkItem
+                key={uuidv4()}
+                tabIndex="0"
+                {...item}
+                about={tNavbar(`${item.id}.about`)}
+                clickOnLink={clickOnLink}
+                title={tNavbar(`${item.id}.label`)}
+              />
+            ))}
+          </div>
           <div className={styles.languageSwitchers}>
             <Link
               about={tLanguageSwitcher('buttonEn.about')}
@@ -75,30 +92,30 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className={styles.navbarWrapper}>
-        <ScrollLink
-          about={tButton('buttonBoost.about')}
-          className={styles.navbarButton}
-          duration={750}
-          href="#"
-          offset={-10}
-          role="button"
-          smooth={true}
-          tabIndex="0"
-          to={contact}
-        >
-          {tButton('buttonBoost.label')}
-        </ScrollLink>
-        <div
-          className={cn(styles.menuBurger, {
-            [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
-          })}
-          onClick={handleMenuToggle}
-        >
-          <span className={styles.burger__line1} />
-          <span className={styles.burger__line2} />
-          <span className={styles.burger__line3} />
+        <div className={styles.navbarWrapper}>
+          <ScrollLink
+            about={tButton('buttonBoost.about')}
+            className={styles.navbarButton}
+            duration={750}
+            href="#"
+            offset={-60}
+            role="button"
+            smooth={true}
+            tabIndex="0"
+            to={contact}
+          >
+            {tButton('buttonBoost.label')}
+          </ScrollLink>
+          <div
+            className={cn(styles.menuBurger, {
+              [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
+            })}
+            onClick={handleMenuToggle}
+          >
+            <span className={styles.burger__line1} />
+            <span className={styles.burger__line2} />
+            <span className={styles.burger__line3} />
+          </div>
         </div>
       </div>
     </nav>

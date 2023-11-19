@@ -19,6 +19,7 @@
 }
 
 .listItem {
+  text-transform: capitalize;
   @extend %cardSubtitleSet;
   letter-spacing: 0.06rem;
   display: list-item;

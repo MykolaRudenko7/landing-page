@@ -29,16 +29,16 @@
   }
 
   @include onTablet() {
-    font-size: $liteSubtitleSize;
+    font-size: $smallNavbarLink;
   }
   @include onSmallTablet() {
-    font-size: $liteSubtitleSize;
     text-shadow: none;
   }
   @include onPhone() {
     font-size: 1.2rem;
     padding: 0 1rem;
     height: 4rem;
+    width: 100%;
   }
   @include onSmallPhone() {
     font-size: 1rem;

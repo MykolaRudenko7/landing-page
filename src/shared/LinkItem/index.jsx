@@ -9,7 +9,7 @@ export default function LinkItem({ title, id, clickOnLink, about }) {
       about={about}
       className={styles.link}
       duration={750}
-      offset={-10}
+      offset={-60}
       onClick={clickOnLink}
       smooth={true}
       tabIndex="0"

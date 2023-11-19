@@ -31,7 +31,7 @@ export default function Intro() {
               about={tButton('buttonSchedule.about')}
               className={styles.buttonConsultation}
               duration={750}
-              offset={-10}
+              offset={-60}
               role="button"
               smooth={true}
               tabIndex="0"
@@ -43,7 +43,7 @@ export default function Intro() {
               about={tButton('buttonServices.about')}
               className={styles.buttonServices}
               duration={750}
-              offset={-10}
+              offset={-60}
               role="button"
               smooth={true}
               tabIndex="0"

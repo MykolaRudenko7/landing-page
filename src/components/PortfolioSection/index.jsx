@@ -37,7 +37,7 @@ export default function PortfolioBlock() {
             className={styles.portfolioBlockButton}
             duration={750}
             href="#"
-            offset={-10}
+            offset={-60}
             role="button"
             smooth={true}
             tabIndex="0"

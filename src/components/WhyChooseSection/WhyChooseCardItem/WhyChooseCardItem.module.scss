@@ -1,8 +1,8 @@
 .whyChooseCardItem {
   position: absolute;
   @extend %flexCenter;
-  width: 32rem;
-  height: 32rem;
+  width: 33rem;
+  height: 33rem;
   transform-origin: 50% 50%;
   border-radius: 50%;
   transition: $transitionAnimation;
@@ -29,8 +29,8 @@
   }
 
   @include forCircles() {
-    width: 27rem;
-    height: 27rem;
+    width: 29rem;
+    height: 29rem;
     &:nth-child(1) {
       transform: translate(-130%, 100%);
     }
@@ -48,8 +48,8 @@
     }
   }
   @include onDesktop() {
-    width: 18rem;
-    height: 18rem;
+    width: 18.5rem;
+    height: 18.5rem;
     &:nth-child(1) {
       transform: translate(-135%, 100%);
     }
@@ -90,6 +90,7 @@
   @include forCircles() {
     padding: 2rem 1rem 1rem 1rem;
   }
+
   @include onSmallTablet() {
     width: 100%;
     padding: 0;
@@ -104,6 +105,7 @@
 }
 
 .title {
+  text-transform: capitalize;
   font-weight: $mediumFontWeight;
   margin-bottom: 1.5rem;
   font-size: $liteTitleSize;
@@ -131,7 +133,7 @@
     font-size: 1.5rem;
   }
   @include onDesktop() {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   @include onSmallTablet() {
     text-align: center;

@@ -1,22 +1,58 @@
 .navbar {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper {
+  background-color: $secondaryBlackThemeColor;
+  margin: 0 auto;
+  max-width: 168rem;
+  padding: 2rem 8rem 0 8rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: $transitionAnimation;
+
   @include onSmallTablet() {
     gap: 1.5rem;
   }
+
+  @include onDesktop() {
+    padding: 2rem 3rem;
+  }
+  @include onTablet() {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.isScrolled {
+  box-shadow: $boxShadowNavbar;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .logoLinksBlock {
   display: flex;
   align-items: center;
   gap: 4rem;
+  margin-right: 1rem;
 
   @include onDesktop() {
     gap: 2rem;
   }
   @include onTablet() {
     gap: 1rem;
+  }
+  @include onSmallTablet() {
+    width: 100%;
+    justify-content: space-between;
+  }
+  @include onPhone() {
+    margin-right: 0;
   }
 }
 
@@ -38,9 +74,7 @@
   @include onTablet() {
     max-width: 11rem;
   }
-  @include onPhone() {
-    max-width: 8rem;
-  }
+
   &:active {
     scale: 0.95;
   }
@@ -52,11 +86,15 @@
   gap: 2rem;
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
-  @extend %cardTitleSet;
+  @extend %navbarLinkSet;
 
-  @include onTablet() {
+  @include onDesktop() {
     gap: 1.5rem;
   }
+  @include onTablet() {
+    gap: 1.1rem;
+  }
+
   @include onSmallTablet() {
     background-color: $pageBackgroundColor;
     filter: $filterServiceCardTitle;
@@ -94,15 +132,16 @@
   height: 4rem;
 
   @include onTablet() {
-    font-size: 1.3rem;
-  }
-  @include onSmallTablet() {
     font-size: 1.2rem;
+    padding: 0.5rem;
   }
   @include onPhone() {
     height: 3.3rem;
     padding: 0.7rem;
     font-size: 1rem;
+  }
+  @include onSmallPhone() {
+    display: none;
   }
 }
 

@@ -79,6 +79,7 @@
 
 .mainCardTitle {
   @extend %mediumTitle;
+  text-transform: capitalize;
 
   @include forCircles() {
     font-size: $largeSubtitleCardSize;

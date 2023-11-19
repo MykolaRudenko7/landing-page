@@ -51,6 +51,7 @@
   }
 }
 .title {
+  text-transform: capitalize;
   @extend %cardSubtitleSet;
   margin-bottom: 1rem;
   @include onTablet() {
