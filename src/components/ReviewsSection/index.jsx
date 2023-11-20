@@ -25,13 +25,13 @@ export default function ReviewsSection() {
             <p className={styles.reviewsSectionText}>{tText}</p>
           </div>
           <Link
-            about={tButton('buttonLearn.about')}
+            about={tButton('buttonLearn')}
             className={styles.reviewsSectionButton}
             href="#"
             role="button"
             tabIndex="0"
           >
-            {tButton('buttonLearn.label')}
+            {tButton('buttonLearn')}
           </Link>
         </div>
         <SwiperReviewsCard />

@@ -27,7 +27,7 @@ export default function WhyChooseSection() {
             <h6 className={styles.mainCardTitle}>{tSection('mainCard.title')}</h6>
             <p className={styles.mainCardText}>{tSection('mainCard.text')}</p>
             <Link
-              about={tButton('buttonReady.about')}
+              about={tButton('buttonReady')}
               className={styles.elevateButton}
               duration={750}
               href="#"
@@ -37,7 +37,7 @@ export default function WhyChooseSection() {
               tabIndex="0"
               to={contact}
             >
-              {tButton('buttonReady.label')}
+              {tButton('buttonReady')}
             </Link>
           </div>
         </div>

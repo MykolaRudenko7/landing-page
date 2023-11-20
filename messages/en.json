@@ -1,11 +1,11 @@
 {
   "NavbarLinks": {
-    "home": { "label": "Intro", "about": "Intro" },
-    "how-we-are": { "label": "About Us", "about": "About Us" },
-    "services": { "label": "Services", "about": "Services" },
-    "portfolio": { "label": "Portfolio", "about": "Portfolio" },
-    "reviews": { "label": "Reviews", "about": "Reviews" },
-    "contact": { "label": "Contact", "about": "Contact" }
+    "home": "Intro",
+    "how-we-are": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "reviews": "Reviews",
+    "contact": "Contact"
   },
   "NavbarLanguageSwitcher": {
     "buttonEn": { "label": "EN", "about": "english language" },
@@ -313,37 +313,13 @@
     "contactUsSection": "CONTACT US"
   },
   "Buttons": {
-    "buttonBoost": {
-      "label": "Boost your business!",
-      "about": "Boost your business!"
-    },
-    "buttonSchedule": {
-      "label": "Schedule a consultation",
-      "about": "Schedule a consultation"
-    },
-    "buttonServices": {
-      "label": "Explore our services",
-      "about": "Explore our services"
-    },
-    "buttonPortfolio": {
-      "label": "Portfolio",
-      "about": "Portfolio"
-    },
-    "buttonReady": {
-      "label": "Ready to elevate?",
-      "about": "Ready to elevate?"
-    },
-    "buttonStart": {
-      "label": "Start Your Success Story",
-      "about": "Start Your Success Story"
-    },
-    "buttonLearn": {
-      "label": "Learn more",
-      "about": "Learn more"
-    },
-    "buttonSubmit": {
-      "label": "Submit Your Idea",
-      "about": "Submit Your Idea"
-    }
+    "buttonBoost": "Boost your business!",
+    "buttonSchedule": "Schedule a consultation",
+    "buttonServices": "Explore our services",
+    "buttonPortfolio": "Portfolio",
+    "buttonReady": "Ready to elevate?",
+    "buttonStart": "Start Your Success Story",
+    "buttonLearn": "Learn more",
+    "buttonSubmit": "Submit Your Idea"
   }
 }

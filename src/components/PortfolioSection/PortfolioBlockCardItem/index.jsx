@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AppearTextCardContentItem from 'components/PortfolioSection/PortfolioBlockCardItem/AppearTextCardContentItem'
 import styles from 'components/PortfolioSection/PortfolioBlockCardItem/PortfolioBlockCardItem.module.scss'
 
-export default function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
+function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
   const [showTextBlock, setShowTextBlock] = useState(false)
 
   const handleShowTextBlockToggle = () => {
@@ -66,3 +66,5 @@ export default function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
     </div>
   )
 }
+
+export default memo(PortfolioBlockCardItem)

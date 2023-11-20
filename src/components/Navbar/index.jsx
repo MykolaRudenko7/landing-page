@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
@@ -13,7 +13,7 @@ import { scrollSectionId } from 'data/scrollSectionId'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Navbar/Navbar.module.scss'
 
-export default function Navbar() {
+function Navbar() {
   const { contact } = scrollSectionId
   const { links, logoImage } = navbarData
   const pathname = usePathname()
@@ -65,9 +65,9 @@ export default function Navbar() {
                 key={uuidv4()}
                 tabIndex="0"
                 {...item}
-                about={tNavbar(`${item.id}.about`)}
+                about={tNavbar(`${item.id}`)}
                 clickOnLink={clickOnLink}
-                title={tNavbar(`${item.id}.label`)}
+                title={tNavbar(`${item.id}`)}
               />
             ))}
           </div>
@@ -77,6 +77,7 @@ export default function Navbar() {
               className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/en' })}
               href="/en"
               locale="en"
+              scroll={false}
               tabIndex="0"
             >
               {tLanguageSwitcher('buttonEn.label')}
@@ -86,6 +87,7 @@ export default function Navbar() {
               className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/ua' })}
               href="/ua"
               locale="ua"
+              scroll={false}
               tabIndex="0"
             >
               {tLanguageSwitcher('buttonUa.label')}
@@ -94,7 +96,7 @@ export default function Navbar() {
         </div>
         <div className={styles.navbarWrapper}>
           <ScrollLink
-            about={tButton('buttonBoost.about')}
+            about={tButton('buttonBoost')}
             className={styles.navbarButton}
             duration={750}
             href="#"
@@ -104,7 +106,7 @@ export default function Navbar() {
             tabIndex="0"
             to={contact}
           >
-            {tButton('buttonBoost.label')}
+            {tButton('buttonBoost')}
           </ScrollLink>
           <div
             className={cn(styles.menuBurger, {
@@ -121,3 +123,5 @@ export default function Navbar() {
     </nav>
   )
 }
+
+export default memo(Navbar)

@@ -1,11 +1,11 @@
 {
   "NavbarLinks": {
-    "home": { "label": "Головна", "about": "Головна" },
-    "how-we-are": { "label": "Про нас", "about": "Про нас" },
-    "services": { "label": "Послуги", "about": "Послуги" },
-    "portfolio": { "label": "Портфоліо", "about": "Портфоліо" },
-    "reviews": { "label": "Відгуки", "about": "Відгуки" },
-    "contact": { "label": "Контакти", "about": "Контакти" }
+    "home": "Головна",
+    "how-we-are": "Про нас",
+    "services": "Послуги",
+    "portfolio": "Портфоліо",
+    "reviews": "Відгуки",
+    "contact": "Контакти"
   },
   "NavbarLanguageSwitcher": {
     "buttonEn": { "label": "EN", "about": "англійська мова" },
@@ -313,37 +313,13 @@
     "contactUsSection": "ЗВ'ЯЖІТЬСЯ З НАМИ"
   },
   "Buttons": {
-    "buttonBoost": {
-      "label": "Прокачайте свій бізнес!",
-      "about": "Прокачайте свій бізнес!"
-    },
-    "buttonSchedule": {
-      "label": "Запланувати консультацію",
-      "about": "Запланувати консультацію"
-    },
-    "buttonServices": {
-      "label": "Ознайомитися з послугами",
-      "about": "Ознайомитися з послугами"
-    },
-    "buttonPortfolio": {
-      "label": "Портфоліо",
-      "about": "Портфоліо"
-    },
-    "buttonStart": {
-      "label": "Розпочніть свою історію успіху",
-      "about": "Розпочніть свою історію успіху"
-    },
-    "buttonLearn": {
-      "label": "Дізнайтеся більше",
-      "about": "Дізнайтеся більше"
-    },
-    "buttonReady": {
-      "label": "Готові до розвитку?",
-      "about": "Готові до розвитку?"
-    },
-    "buttonSubmit": {
-      "label": "Надіслати",
-      "about": "Надіслати"
-    }
+    "buttonBoost": "Прокачайте свій бізнес!",
+    "buttonSchedule": "Запланувати консультацію",
+    "buttonServices": "Ознайомитися з послугами",
+    "buttonPortfolio": "Портфоліо",
+    "buttonStart": "Розпочніть свою історію успіху",
+    "buttonLearn": "Дізнайтеся більше",
+    "buttonReady": "Готові до розвитку?",
+    "buttonSubmit": "Надіслати"
   }
 }

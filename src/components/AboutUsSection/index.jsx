@@ -35,7 +35,7 @@ export default function AboutUsSection() {
             <p className={styles.text}>{tAboutUs('text')}</p>
           </div>
           <Link
-            about={tButton('buttonPortfolio.about')}
+            about={tButton('buttonPortfolio')}
             className={styles.aboutUsButton}
             duration={750}
             href="#"
@@ -45,7 +45,7 @@ export default function AboutUsSection() {
             tabIndex="0"
             to={portfolio}
           >
-            {tButton('buttonPortfolio.label')}
+            {tButton('buttonPortfolio')}
           </Link>
         </div>
       </div>

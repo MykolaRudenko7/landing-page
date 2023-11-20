@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useId, useState } from 'react'
+import { memo, useEffect, useId, useState } from 'react'
 import cn from 'classnames'
 import axios from 'axios'
 import PhoneInput from 'react-phone-input-2'
@@ -16,7 +16,7 @@ import ContactFormCheckbox from 'components/ContactUsSection/ContactForm/Contact
 import 'react-phone-input-2/lib/style.css'
 import styles from 'components/ContactUsSection/ContactForm/ContactForm.module.scss'
 
-export default function ContactForm() {
+function ContactForm() {
   const [error, setError] = useState(null)
   const [selectedCountry, setSelectedCountry] = useState(null)
   const [selectedContactMethods, setSelectedContactMethods] = useState([])
@@ -189,14 +189,14 @@ export default function ContactForm() {
       </div>
       <div className={styles.buttonBlock}>
         <button
-          aria-label={tButton('buttonSubmit.about')}
+          aria-label={tButton('buttonSubmit')}
           className={styles.submitButton}
           disabled={isSubmitSuccessful}
           form={contactFormId}
           tabIndex="0"
           type="submit"
         >
-          {tButton('buttonSubmit.label')}
+          {tButton('buttonSubmit')}
         </button>
         {error && <p className={styles.submitMessageError}>{tErrorMessage}</p>}
         {isSubmitSuccessful && isValid && (
@@ -207,3 +207,5 @@ export default function ContactForm() {
     </form>
   )
 }
+
+export default memo(ContactForm)

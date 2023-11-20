@@ -33,7 +33,7 @@ export default function PortfolioBlock() {
             <PortfolioBlockCardItem {...card0} cardId={0} />
           </div>
           <Link
-            about={tButton('buttonStart.about')}
+            about={tButton('buttonStart')}
             className={styles.portfolioBlockButton}
             duration={750}
             href="#"
@@ -43,7 +43,7 @@ export default function PortfolioBlock() {
             tabIndex="0"
             to={contact}
           >
-            {tButton('buttonStart.label')}
+            {tButton('buttonStart')}
           </Link>
         </div>
         <div className={styles.cardsBlock}>

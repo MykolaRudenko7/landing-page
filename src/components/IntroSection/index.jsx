@@ -28,7 +28,7 @@ export default function Intro() {
           </div>
           <div className={styles.buttonsBlock}>
             <Link
-              about={tButton('buttonSchedule.about')}
+              about={tButton('buttonSchedule')}
               className={styles.buttonConsultation}
               duration={750}
               offset={-60}
@@ -37,10 +37,10 @@ export default function Intro() {
               tabIndex="0"
               to={contact}
             >
-              {tButton('buttonSchedule.label')}
+              {tButton('buttonSchedule')}
             </Link>
             <Link
-              about={tButton('buttonServices.about')}
+              about={tButton('buttonServices')}
               className={styles.buttonServices}
               duration={750}
               offset={-60}
@@ -49,7 +49,7 @@ export default function Intro() {
               tabIndex="0"
               to={services}
             >
-              {tButton('buttonServices.label')}
+              {tButton('buttonServices')}
             </Link>
           </div>
         </div>

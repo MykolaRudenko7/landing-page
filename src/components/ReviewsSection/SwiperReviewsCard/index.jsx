@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import { Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { v4 as uuidv4 } from 'uuid'
@@ -9,7 +10,7 @@ import 'swiper/scss'
 import 'swiper/scss/navigation'
 import styles from 'components/ReviewsSection/SwiperReviewsCard/SwiperReviewsCard.module.scss'
 
-export default function SwiperReviewsCard() {
+function SwiperReviewsCard() {
   const { cards } = reviewsSectionData
 
   return (
@@ -53,3 +54,5 @@ export default function SwiperReviewsCard() {
     </div>
   )
 }
+
+export default memo(SwiperReviewsCard)
