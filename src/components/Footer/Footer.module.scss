@@ -132,6 +132,9 @@
   transition: $transitionAnimation;
   @extend %transparentTap;
 
+  &:hover {
+    transform: scale(1.05);
+  }
   &:active {
     transform: scale(0.9);
   }

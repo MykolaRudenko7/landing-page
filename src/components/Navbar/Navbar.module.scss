@@ -45,7 +45,7 @@
     gap: 2rem;
   }
   @include onTablet() {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   @include onSmallTablet() {
     width: 100%;
@@ -211,9 +211,11 @@
 }
 
 .languageSwitchers {
+  @extend %navbarLinkSet;
   @extend %flexCenter;
   @extend %transparentTap;
   gap: 1rem;
+  font-weight: $lightFontWeight;
 }
 
 .languageSwitcher {
