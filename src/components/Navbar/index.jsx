@@ -79,6 +79,7 @@ function Navbar() {
               locale="en"
               scroll={false}
               tabIndex="0"
+              replace
             >
               {tLanguageSwitcher('buttonEn.label')}
             </Link>
@@ -89,6 +90,7 @@ function Navbar() {
               locale="ua"
               scroll={false}
               tabIndex="0"
+              replace
             >
               {tLanguageSwitcher('buttonUa.label')}
             </Link>
