@@ -16,10 +16,6 @@ const poppins = Poppins({
 
 const locales = ['en', 'ua']
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
-}
-
 export default function LocaleLayout({ children, params: { locale } }) {
   const messages = useMessages()
 
