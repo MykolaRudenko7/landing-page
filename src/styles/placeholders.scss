@@ -216,6 +216,9 @@
   @include onTablet() {
     font-size: $smallNavbarLink;
   }
+  @include onSmallTablet() {
+    font-size: $smallTitleCardSize;
+  }
 }
 
 %cardSubtitleSet {

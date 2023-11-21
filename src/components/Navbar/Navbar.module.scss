@@ -99,13 +99,12 @@
     background-color: $pageBackgroundColor;
     filter: $filterServiceCardTitle;
     backdrop-filter: blur(2rem);
-    padding: 5rem 1rem 1rem 3rem;
-    gap: 3rem;
+    gap: 5rem;
     font-size: $mediumFontWeight;
     overflow: auto;
     flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 4;
     left: -100%;
