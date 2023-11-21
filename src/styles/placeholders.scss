@@ -162,6 +162,7 @@
 }
 
 %titleTextSet {
+  text-transform: capitalize;
   text-shadow: $titleTextShadow;
   font-weight: $mediumFontWeight;
   font-style: normal;
@@ -202,6 +203,20 @@
     font-size: $regularTitleCardSize;
   }
   @include onTablet() {
+    font-size: $smallTitleCardSize;
+  }
+}
+
+%navbarLinkSet {
+  font-size: $largeTitleCardSize;
+  font-weight: $mediumFontWeight;
+  @include onDesktop() {
+    font-size: $regularSubtitleCardSize;
+  }
+  @include onTablet() {
+    font-size: $smallNavbarLink;
+  }
+  @include onSmallTablet() {
     font-size: $smallTitleCardSize;
   }
 }

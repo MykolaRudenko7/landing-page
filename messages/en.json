@@ -1,0 +1,325 @@
+{
+  "NavbarLinks": {
+    "home": "Intro",
+    "how-we-are": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "NavbarLanguageSwitcher": {
+    "buttonEn": { "label": "EN", "about": "english language" },
+    "buttonUa": { "label": "UA", "about": "ukraine language" }
+  },
+  "IntroSection": {
+    "title": "Your Trusted Partner for Web Development Excellence!",
+    "text": "TechCossacks is a software development company based in Ukraine that works with well-known product companies from the US, Canada, and Europe. We design and implement bespoke, innovative solutions for our clients, creating user-friendly, efficient websites that help businesses succeed. With years of experience, our team is dedicated to providing high quality work at competitive prices."
+  },
+  "IntroSectionCards": {
+    "card0": {
+      "title": "Landing page",
+      "subtitle": "Need to invite to a webinar or other one-off event?",
+      "text": "Landing page development is the basis of a set of measures to attract customers from the Internet, which we implement on full-cycle development."
+    },
+    "card1": {
+      "title": "E-commerce Optimization",
+      "subtitle": "Facing low online sales?",
+      "text": "Boost your conversions with our streamlined shopping experiences. Enhanced SEO and user experience drive organic traffic, cutting advertising costs and amplifying sales."
+    },
+    "card2": {
+      "title": "User-Friendly Website Design",
+      "subtitle": "Website not engaging enough?",
+      "text": "Our intuitive designs ensure users find what they need swiftly, leading to faster conversions. Plus, our responsive design means no more costly platform-specific tweaks."
+    },
+    "card3": {
+      "title": "Blockchain & Web3 Solutions",
+      "subtitle": "Navigating the complexities of decentralized tech?",
+      "text": "Our specialists provide tailored solutions to navigate the complexities of blockchain and web3, from scalability to security, ensuring your startup's success in this evolving field."
+    },
+    "card4": {
+      "title": "Adaptable & Timely Solutions",
+      "subtitle": "Need custom, scalable solutions on tight timelines?",
+      "text": "Our agile processes are tailored to your needs, ensuring timely project completion. As your business grows, our solutions scale seamlessly, preventing costly overhauls and frequent updates."
+    },
+    "card5": {
+      "title": "Web Development Solutions",
+      "subtitle": "A website from a template or individual development of a web project?",
+      "text": "We are a web development business specializing in custom web design and development services for businesses of all sizes."
+    }
+  },
+  "AboutUsSection": {
+    "title": "TECH COSSACK: Bridging Tradition and Tech Innovation",
+    "text": "At TECH COSSACK, we're inspired by the resilience and courage of Ukraine's Cossack heritage. This rich tradition fuels our modern approach to technology, guiding us in delivering top-tier web and app development services. Operating internationally across the US, Canada, and Europe, we specialize in supporting startups and growing tech companies. Our team, from front-end specialists to blockchain experts, is united by a shared passion: crafting solutions that cater precisely to your needs."
+  },
+  "ServicesSection": {
+    "card0": {
+      "listTitle": "E-Commerce",
+      "listOptions": {
+        "option0": "User Experience (UX) Design",
+        "option1": "Website & App Development",
+        "option2": "Mobile Commerce Development",
+        "option3": "CRM",
+        "option4": "Payment Gateway Integration"
+      }
+    },
+    "card1": {
+      "listTitle": "Fintech",
+      "listOptions": {
+        "option0": "Software Development",
+        "option1": "Web App Development",
+        "option2": "Blockchain Solutions",
+        "option3": "Payment Processing Solutions",
+        "option4": "Consulting"
+      }
+    },
+    "card2": {
+      "listTitle": "Ed-Tech",
+      "listOptions": {
+        "option0": "Web & Mobile App Development",
+        "option1": "Software Development",
+        "option2": "Gamification Solutions",
+        "option3": "Consulting"
+      }
+    },
+    "card3": {
+      "listTitle": "Telecom & Media",
+      "listOptions": {
+        "option0": "Streaming Solutions",
+        "option1": "Digital Advertising Platforms",
+        "option2": "Website & App Development",
+        "option3": "Software Development"
+      }
+    }
+  },
+  "PortfolioSection": {
+    "title": "From Vision to Victory: Stories of Our Tech Transformations",
+    "text": "We've helped businesses in various sectors achieve their goals through our tailored tech solutions. Here are some of our success stories"
+  },
+  "PortfolioSectionCards": {
+    "card0": {
+      "title": "Barossa - Crafting a Digital Wine Experience",
+      "imageSrc": "cardImage1",
+      "text": {
+        "label0": "goals",
+        "list0": {
+          "option0": "Seamlessly convert the Figma design into a React-based site.",
+          "option1": "Embed SEO strategies for optimal online presence.",
+          "option2": "Enrich user interaction with fluid animations.",
+          "option3": "Ensure adaptability and consistency across all device types."
+        },
+        "label1": "features",
+        "list1": {
+          "option0": "Design Evolution",
+          "option1": "SEO Integration",
+          "option2": "User-Vendor Registration",
+          "option3": "Interactive Animations",
+          "option4": "Universal Compatibility"
+        },
+        "label2": "technology",
+        "list2": {
+          "option0": "React",
+          "option1": "Figma",
+          "option2": "SEO",
+          "option3": "CSS",
+          "option4": "Animations",
+          "option5": "Responsive Design"
+        }
+      }
+    },
+    "card1": {
+      "title": "B2B Video Communication Platform",
+      "text": {
+        "label0": "goals",
+        "list0": {
+          "option0": "Ensure dependable peer-to-peer video communication.",
+          "option1": "Achieve mobile-responsiveness for broad device compatibility.",
+          "option2": "Integrate a comprehensive admin panel for content oversight."
+        },
+        "label1": "features",
+        "list1": {
+          "option0": "Real-time Conversation",
+          "option1": "State Management",
+          "option2": "API Integration",
+          "option3": "Design",
+          "option4": "Admin Panel",
+          "option5": "Deployment"
+        },
+        "label2": "technology",
+        "list2": {
+          "option0": "React",
+          "option1": "Node.js",
+          "option2": "Socket.io",
+          "option3": "Agora.io",
+          "option4": "SDK",
+          "option5": "Redux",
+          "option6": "Axios",
+          "option7": "React-query",
+          "option8": "GraphQL",
+          "option9": "Sass",
+          "option10": "Less",
+          "option11": "CSS",
+          "option12": "Modules",
+          "option13": "Netlify",
+          "option14": "AWS",
+          "option15": "Heroku"
+        }
+      }
+    },
+    "card2": {
+      "title": "FloraNow -Online Marketplace for Floriculture",
+      "text": {
+        "label0": "goals",
+        "list0": {
+          "option0": "Develop a multi-vendor platform with individual registration and management capabilities.",
+          "option1": "Integrate a secure payment gateway.",
+          "option2": "Ensure efficient inventory management for all vendors.",
+          "option3": "Implement multilingual support to cater to a global audience.",
+          "option4": "Develop a user-friendly content management system using WordPress."
+        },
+        "label1": "features",
+        "list1": {
+          "option0": "Multi-Vendor Marketplace",
+          "option1": "Secure Payment Gateway",
+          "option2": "User-Vendor Registration",
+          "option3": "Inventory Management",
+          "option4": "Multilingual Support",
+          "option5": "Content Management System"
+        },
+        "label2": "technology",
+        "list2": {
+          "option0": "HTML5/CSS3/JS",
+          "option1": "Bootstrap",
+          "option2": "PHP",
+          "option3": "MySQL",
+          "option4": "Secure Payment API Integration",
+          "option5": "Multilingual Support Libraries"
+        }
+      }
+    }
+  },
+  "WhyChooseSection": {
+    "mainCard": {
+      "title": "Elevate Your Business with TECH COSSACKS!",
+      "text": "Immerse yourself in the world of technology and see firsthand why our team is your reliable partner. Together, we will create a secure digital future for your business in the civilized world, harnessing the latest technologies and innovative solutions."
+    },
+    "card0": {
+      "title": "One-Stop Development",
+      "text": "We offer comprehensive solutions, eliminating the need for multiple vendors."
+    },
+    "card1": {
+      "title": "Innovation-Driven",
+      "text": "Inspired by Ukraine's forward-thinking initiatives, we're always on the lookout for the next tech frontier."
+    },
+    "card2": {
+      "title": "Cost-Savings",
+      "text": "Superior tech talent, no overhead costs"
+    },
+    "card3": {
+      "title": "Global Impact",
+      "text": "Our work with industry leaders worldwide reflects our adaptability and global tech understanding."
+    },
+    "card4": {
+      "title": "Tech You Can Trust",
+      "text": "Beyond being developers, we're partners committed to your tech success, aiding in the development of scalable products."
+    }
+  },
+  "ReviewsSectionData": {
+    "textBlock": {
+      "title": "What Our Clients Say",
+      "text": "At TECH COSSACKS, we believe in building relationships that go beyond projects. Our clients' success is our success, and their words inspire us to strive for excellence. Here's what some of them have to say:"
+    },
+    "cards": {
+      "card0": {
+        "name": "Christopher Hulbert",
+        "vacancy": "",
+        "content": "I recently hired TechCossacks for my website development needs and I must say, I was thoroughly impressed with their services. Their team of experts not only delivered a visually appealing website but also ensured its functionality and user-friendliness. I highly recommend TechCossacks to anyone looking for web development services."
+      },
+      "card1": {
+        "name": "John Wallace",
+        "vacancy": "CTO",
+        "content": "I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!"
+      },
+      "card2": {
+        "name": "Eric Manring",
+        "vacancy": "Senior Lead Architect",
+        "content": "I am extremely grateful for their work on my web project. They proved to be an excellent team of professionals who conscientiously worked on every detail. The result was impressive - the website they created is not only aesthetically appealing but also functionally meets all my needs."
+      },
+      "card3": {
+        "name": "Michael Doule",
+        "vacancy": "Director of Project Management",
+        "content": "The team was able to seamlessly integrate into the project, and there were never any issues with any tasks assigned to them. It was easy to communicate with them in the chat."
+      }
+    }
+  },
+  "ContactUsSection": {
+    "title": "Ready to Elevate Your Tech Game?",
+    "text": "Connect with TECH COSSACKS and embark on a transformative journey.",
+    "errorMessage": "An error occurred while submitting the form. Please try again.",
+    "successMessage": "Success ✅"
+  },
+  "ContactCountryOptions": {
+    "option0": "Ukraine",
+    "option1": "United Kingdom",
+    "option2": "United States",
+    "option3": "United Arab Emirates",
+    "option4": "Saudi Arabia",
+    "option5": "Europe",
+    "option6": "Enter another option here..."
+  },
+  "ContactFormPlaceholders": {
+    "marketToContact": "Market To Contact *",
+    "phoneNumber": "Phone Number *",
+    "preferredContactMethods": "Preferred Contact Methods *",
+    "yourMessage": "Your message"
+  },
+  "ContactInputPlaceholders": {
+    "option0": "Name *",
+    "option1": "Last Name",
+    "option2": "E-mail *"
+  },
+  "ContactCheckboxPlaceholders": {
+    "option0": "Phone Call",
+    "option1": "WhatsApp",
+    "option2": "Email"
+  },
+  "FooterSection": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "getInTouch": "Get in touch",
+    "servicesLink": "Services",
+    "linksForScroll": {
+      "link0": "Intro",
+      "link1": "About Us",
+      "link2": "Portfolio",
+      "link3": "Reviews",
+      "link4": "Contact"
+    },
+    "servicesLinks": {
+      "link0": "Website Design",
+      "link1": "Website Development",
+      "link2": "Web APP Development",
+      "link3": "E-Commerce",
+      "link4": "Software Development",
+      "link5": "Search Engine Optimization (SEO)",
+      "link6": "Consulting"
+    }
+  },
+  "SectionLabels": {
+    "aboutUsSection": "ABOUT US",
+    "servicesSection": "WHAT WE DO",
+    "portfolioSection": "PORTFOLIO",
+    "whyChooseSection": "WHY CHOOSE TECH COSSACKS?",
+    "reviewsSection": "REVIEWS",
+    "contactUsSection": "CONTACT US"
+  },
+  "Buttons": {
+    "buttonBoost": "Boost your business!",
+    "buttonSchedule": "Schedule a consultation",
+    "buttonServices": "Explore our services",
+    "buttonPortfolio": "Portfolio",
+    "buttonReady": "Ready to elevate?",
+    "buttonStart": "Start Your Success Story",
+    "buttonLearn": "Learn more",
+    "buttonSubmit": "Submit Your Idea"
+  }
+}

@@ -1,13 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
 const path = require('path')
-module.exports = {
+const withNextIntl = require('next-intl/plugin')()
+
+const nextConfig = {
   sassOptions: {
     additionalData: `@import "src/styles/_app.scss";`,
   },
   env: {
     GOOGLE_SPREADSHEET: process.env.GOOGLE_SPREADSHEET,
   },
+}
+
+const nextIntlConfig = withNextIntl({})
+
+module.exports = {
+  ...nextConfig,
+  ...nextIntlConfig,
 }

@@ -145,6 +145,9 @@
   @include onSmallTablet() {
     gap: 2rem;
   }
+  @include onPhone() {
+    width: 100%;
+  }
 }
 
 .submitMessageError {

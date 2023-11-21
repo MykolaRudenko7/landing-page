@@ -1,4 +1,4 @@
-.whyChooseBlock {
+.whyChooseSection {
   display: flex;
   justify-content: center;
   @extend %containerPaddings;
@@ -79,6 +79,7 @@
 
 .mainCardTitle {
   @extend %mediumTitle;
+  text-transform: capitalize;
 
   @include forCircles() {
     font-size: $largeSubtitleCardSize;

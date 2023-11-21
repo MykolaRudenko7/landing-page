@@ -1,11 +1,3 @@
-import contactUsImage from 'images/contactUsSection/contactUs.webp'
-
-export const contactUsSectionData = {
-  title: 'Ready to Elevate Your Tech Game?',
-  text: 'Connect with TECH COSSACKS and embark on a transformative journey.',
-  imageSrs: contactUsImage,
-}
-
 export const contactCountryOptions = [
   { value: 'Ukraine', label: 'Ukraine', code: 'ua' },
   { value: 'United Kingdom', label: 'United Kingdom', code: 'gb' },
