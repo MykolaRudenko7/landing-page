@@ -21,28 +21,16 @@ function ContactForm() {
   const [selectedCountry, setSelectedCountry] = useState(null)
   const [selectedContactMethods, setSelectedContactMethods] = useState([])
 
+  useEffect(() => {
+    clearErrors('phone')
+  }, [selectedCountry])
+
   const tContact = useTranslations('ContactUsSection')
   const tCountry = useTranslations('ContactCountryOptions')
   const tPlaceholder = useTranslations('ContactFormPlaceholders')
   const tButton = useTranslations('Buttons')
   const tErrorMessage = tContact('errorMessage')
   const tSuccessMessage = tContact('successMessage')
-
-  const handleCheckboxChange = (method) => {
-    setSelectedContactMethods((prevMethods) => {
-      if (prevMethods.includes(method)) {
-        return prevMethods.filter((m) => m !== method)
-      }
-
-      return [...prevMethods, method]
-    })
-  }
-
-  useEffect(() => {
-    clearErrors('phone')
-  }, [selectedCountry])
-
-  const currentTime = new Date().toLocaleString()
 
   const methods = useForm({
     mode: 'onChange',
@@ -61,10 +49,29 @@ function ContactForm() {
   const inputFields = getInputFields(register, errors)
   const { checkboxes } = getCheckboxField
 
+  const currentTime = new Date().toLocaleString()
+
   const contactFormId = useId()
   const phoneNumberInputId = useId()
   const marketToContactSelectId = useId()
   const yourMessageTextareaId = useId()
+
+  const handleCheckboxChange = (method) => {
+    setSelectedContactMethods((prevMethods) => {
+      if (prevMethods.includes(method)) {
+        return prevMethods.filter((m) => m !== method)
+      }
+
+      return [...prevMethods, method]
+    })
+  }
+
+  const handleCountryChange = (newValue) => {
+    setSelectedCountry(newValue)
+    setSelectedContactMethods(
+      newValue.label === 'Україна' || newValue.label === 'Ukraine' ? ['phone'] : [],
+    )
+  }
 
   const onFormSubmit = async (data) => {
     try {
@@ -108,7 +115,7 @@ function ContactForm() {
               isCreatable={true}
               isSearchable={true}
               onChange={(newValue) => {
-                setSelectedCountry(newValue)
+                handleCountryChange(newValue)
                 onChange(newValue)
               }}
               options={contactCountryOptions.map((option, index) => {
