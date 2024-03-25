@@ -6,24 +6,28 @@
   display: flex;
   gap: 5rem;
 
-  @include onLargeDesktop() {
+  @include onLargeDesktop {
     gap: 4rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     gap: 2rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     display: block;
   }
 }
 
 .textBlock {
   width: 30%;
+
   @extend %textBlockMarking;
+
   gap: 3rem;
   align-items: flex-start;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     width: 100%;
     align-items: center;
     margin-bottom: 3rem;

@@ -33,7 +33,7 @@
   width: 30.7rem;
   margin-left: 1.5rem;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -57,13 +57,14 @@
     display: inline-block;
   }
 
-  @include onTablet() {
+  @include onTablet {
     font-size: 2rem;
     width: 25rem;
     text-shadow: none;
     padding: 1.2rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     margin-left: 0;
     font-size: 1.8rem;
     width: 20rem;
@@ -77,17 +78,20 @@
 
 %cardWithTabBlock {
   position: relative;
-  padding: 3.8rem 1.5rem 1.6rem 1.5rem;
+  padding: 3.8rem 1.5rem 1.6rem;
   border-radius: 3.5rem;
   transition: $transitionAnimation;
+
   @extend %blurBackground;
-  @include onTablet() {
+
+  @include onTablet {
     border-radius: 1.5rem;
   }
 }
 
 %cardWithTabBlockTitle {
   @extend %blurBackground;
+
   font-size: $largeSubtitleCardSize;
   box-shadow: $boxShadowCardWithTabBlockTitle;
   backdrop-filter: blur(3rem);
@@ -104,13 +108,15 @@
   border-radius: 1rem;
   padding: 1rem 1.5rem;
 
-  @include onLargeDesktop() {
+  @include onLargeDesktop {
     font-size: $regularSubtitleCardSize;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: $smallSubtitleCardSize;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     padding: 0.5rem 1rem;
     text-shadow: none;
   }
@@ -130,13 +136,15 @@
 %containerPaddings {
   padding: 5rem 0;
 
-  @include onLargeDesktop() {
+  @include onLargeDesktop {
     padding: 4rem 0;
   }
-  @include onTablet() {
+
+  @include onTablet {
     padding: 3rem 0;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     padding: 2rem 0;
   }
 }
@@ -147,16 +155,19 @@
   justify-content: space-between;
   gap: 6rem;
 
-  @include onLargeDesktop() {
+  @include onLargeDesktop {
     gap: 5rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     gap: 4rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     gap: 2rem;
   }
-  @include onPhone() {
+
+  @include onPhone {
     gap: 2rem;
   }
 }
@@ -168,15 +179,16 @@
   font-style: normal;
   line-height: normal;
   font-size: $largeTitleSize;
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: $mediumTitleSize;
   }
 
-  @include onTablet() {
+  @include onTablet {
     font-size: $liteTitleSize;
   }
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     text-align: center;
     text-shadow: none;
   }
@@ -187,11 +199,12 @@
   line-height: normal;
   font-style: normal;
   font-size: $largeSubtitleSize;
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: $mediumSubtitleSize;
   }
 
-  @include onTablet() {
+  @include onTablet {
     font-size: $liteSubtitleSize;
   }
 }
@@ -199,10 +212,12 @@
 %cardTitleSet {
   font-size: $largeTitleCardSize;
   font-weight: $mediumFontWeight;
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: $regularTitleCardSize;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: $smallTitleCardSize;
   }
 }
@@ -210,13 +225,16 @@
 %navbarLinkSet {
   font-size: $largeTitleCardSize;
   font-weight: $mediumFontWeight;
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: $regularSubtitleCardSize;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: $smallNavbarLink;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     font-size: $smallTitleCardSize;
   }
 }
@@ -224,10 +242,11 @@
 %cardSubtitleSet {
   font-size: $largeSubtitleCardSize;
 
-  @include onDesktop() {
+  @include onDesktop {
     font-size: $regularSubtitleCardSize;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: $smallSubtitleCardSize;
   }
 }
@@ -239,7 +258,7 @@
 %marginBottomAfterTitle {
   margin-bottom: 2rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     margin-bottom: 1rem;
   }
 }
@@ -247,6 +266,7 @@
 %forInput {
   @extend %blurBackground;
   @extend %subtitleTextSet;
+
   width: 100%;
   padding: 1rem 2rem;
   color: $mainWhiteColor;
@@ -282,14 +302,13 @@
   font-size: $regularSubtitleCardSize;
   transition: $transitionAnimation;
 
-  @include onTablet() {
+  @include onTablet {
     transform: translate(0%, 50%);
   }
 }
 
 %textDanger {
   font-size: $smallSubtitleCardSize;
-  transform: $transitionAnimation;
   position: absolute;
   bottom: 0;
   right: 0;

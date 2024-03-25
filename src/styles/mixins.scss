@@ -1,40 +1,41 @@
 @mixin forCircles {
-  @media (max-width: 1655px) {
+  @media (width <= 165.5rem) {
     @content;
   }
 }
+
 @mixin onLargeDesktop {
-  @media (max-width: 1450px) {
+  @media (width <= 145rem) {
     @content;
   }
 }
 
 @mixin onDesktop {
-  @media (max-width: 1300px) {
+  @media (width <= 130rem) {
     @content;
   }
 }
 
 @mixin onTablet {
-  @media (max-width: 1024px) {
+  @media (width <= 102.4rem) {
     @content;
   }
 }
 
 @mixin onSmallTablet {
-  @media (max-width: 768px) {
+  @media (width <= 76.8rem) {
     @content;
   }
 }
 
 @mixin onPhone {
-  @media (max-width: 480px) {
+  @media (width <= 48rem) {
     @content;
   }
 }
 
 @mixin onSmallPhone {
-  @media (max-width: 375px) {
+  @media (width <= 37.5rem) {
     @content;
   }
 }

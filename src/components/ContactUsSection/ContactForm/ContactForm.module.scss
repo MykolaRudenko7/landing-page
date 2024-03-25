@@ -6,7 +6,7 @@
   gap: 3.5rem;
   align-items: flex-start;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     width: 100%;
   }
 }
@@ -49,12 +49,51 @@
   @extend %textDanger;
 }
 
+.tellButton {
+  display: none;
+
+  @extend %blurBackground;
+
+  border-radius: 1rem 0 0 1rem !important;
+  border: none;
+  background: transparent !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: transparent;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  :global .selected-flag {
+    border: solid 0.2rem transparent;
+    padding-left: 2rem;
+    width: 5.5rem;
+
+    &.open {
+      border-radius: 1rem 0 0 1rem;
+      border: solid 0.2rem transparent;
+      background: transparent;
+      backdrop-filter: blur(4.5rem);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-radius: 1rem 0 0 1rem;
+      background: transparent;
+      border: solid 0.2rem $mainWhiteColor;
+    }
+  }
+}
+
 .tellContainer {
   font-family: inherit;
 
   .tellInput {
     @extend %blurBackground;
     @extend %subtitleTextSet;
+
     height: clamp(4.4rem, 3.4911rem + 0.8876vw, 5rem);
     color: $mainWhiteColor;
     width: 100%;
@@ -85,42 +124,6 @@
     }
   }
 
-  .tellButton {
-    display: none;
-    @extend %blurBackground;
-    border-radius: 1rem 0 0 1rem !important;
-    border: none;
-    background: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background: transparent;
-      border-radius: 1rem 0 0 1rem;
-    }
-
-    :global .selected-flag {
-      border: solid 0.2rem transparent;
-      padding-left: 2rem;
-      width: 5.5rem;
-
-      &.open {
-        border-radius: 1rem 0 0 1rem;
-        border: solid 0.2rem transparent;
-        background: transparent;
-        backdrop-filter: blur(4.5rem);
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        border-radius: 1rem 0 0 1rem;
-        background: transparent;
-        border: solid 0.2rem $mainWhiteColor;
-      }
-    }
-  }
-
   .tellDropdown {
     background-color: $mainDarkBlueColor;
     color: $mainWhiteColor;
@@ -130,6 +133,7 @@
       .highlight {
         background-color: $mainBlackColor !important;
       }
+
       &:hover {
         color: $mainDarkBlueColor;
       }
@@ -142,27 +146,30 @@
   gap: 3rem;
   align-items: center;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     gap: 2rem;
   }
-  @include onPhone() {
+
+  @include onPhone {
     width: 100%;
   }
 }
 
 .submitMessageError {
   @extend %cardSubtitleSet;
+
   width: 40%;
   text-wrap: wrap;
   color: $mainYellowColor;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     font-size: 1.1rem;
   }
 }
 
 .submitMessageSuccess {
   color: $successMessageColor;
+
   @extend %cardSubtitleSet;
 }
 
@@ -187,7 +194,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     flex-wrap: wrap;
     justify-content: start;
   }

@@ -1,26 +1,31 @@
 .services {
   @extend %containerPaddings;
 }
+
 .servicesWrapper {
   @extend %flexCenter;
+
   flex-direction: column;
   gap: 7rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     gap: 4rem;
   }
 }
 
 .servicesLabel {
   @extend %borderGradientBlockTitle;
+
   width: 43rem;
 
-  @include onTablet() {
+  @include onTablet {
     width: 35rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     width: 30rem;
   }
+
   @include onPhone {
     width: 25rem;
   }
@@ -30,10 +35,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  justify-items: stretch;
-  align-items: stretch;
+  place-items: stretch stretch;
   gap: 4rem;
-  @include onTablet() {
+
+  @include onTablet {
     gap: 3rem;
   }
 }

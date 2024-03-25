@@ -1,15 +1,18 @@
 .textBlockWrapper {
   padding: 0.5rem;
 }
+
 .title {
   font-weight: $mediumFontWeight;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+
   @extend %cardTitleSet;
 }
 
 .listItems {
   @extend %cardSubtitleSet;
+
   &:last-child {
     display: flex;
     flex-wrap: wrap;

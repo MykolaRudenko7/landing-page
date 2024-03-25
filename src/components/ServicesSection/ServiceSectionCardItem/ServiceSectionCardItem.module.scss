@@ -1,6 +1,7 @@
 .listBlock {
   @extend %blurBackground;
   @extend %cardWithTabBlock;
+
   position: relative;
   border-radius: 3.52rem;
 }
@@ -20,7 +21,9 @@
 
 .listItem {
   text-transform: capitalize;
+
   @extend %cardSubtitleSet;
+
   letter-spacing: 0.06rem;
   display: list-item;
   list-style-type: '◉';

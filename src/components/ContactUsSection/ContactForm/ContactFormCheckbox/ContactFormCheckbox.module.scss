@@ -4,11 +4,11 @@
 
 .checkboxLabel {
   @extend %transparentTap;
+
   display: block;
   position: relative;
   padding-left: 3.5rem;
   margin-bottom: 2rem;
-
   color: $mainWhiteColor;
   font-size: $smallSubtitleCardSize;
   opacity: 1;
@@ -18,7 +18,7 @@
     margin-bottom: 0;
   }
 
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 2rem;
@@ -33,7 +33,7 @@
   }
 }
 
-.checkboxInput:checked + .checkboxLabel:before {
+.checkboxInput:checked + .checkboxLabel::before {
   width: 1rem;
   top: -0.5rem;
   left: 0.5rem;

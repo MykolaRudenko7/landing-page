@@ -76,14 +76,14 @@ function ContactForm() {
   const onFormSubmit = async (data) => {
     try {
       const response = await axios.post(process.env.GOOGLE_SPREADSHEET, {
-        name: data.firstName,
-        lastName: data.lastName,
-        email: data.email,
-        phone: data.phone,
-        market: data.country.value,
-        message: data.messageArea,
-        date: currentTime,
-        contactMethods: selectedContactMethods.join(', '),
+        // name: data.firstName,
+        // lastName: data.lastName,
+        // email: data.email,
+        // phone: data.phone,
+        // market: data.country.value,
+        // message: data.messageArea,
+        // date: currentTime,
+        // contactMethods: selectedContactMethods.join(', '),
       })
       setError(false)
       reset()

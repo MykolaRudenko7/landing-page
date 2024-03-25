@@ -1,13 +1,15 @@
 .footer {
   padding-top: 5rem 0;
 
-  @include onLargeDesktop() {
+  @include onLargeDesktop {
     padding-top: 4rem 0;
   }
-  @include onTablet() {
+
+  @include onTablet {
     padding-top: 3rem 0;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     padding-top: 2rem 0;
   }
 }
@@ -16,11 +18,12 @@
   display: flex;
   flex-direction: column;
   gap: 4.2rem;
-  padding: 2rem 3rem 1.4rem 3rem;
+  padding: 2rem 3rem 1.4rem;
   background-image: $circleWhyChooseCardGradient;
   backdrop-filter: blur(4.55rem);
   border-radius: 2rem;
-  @include onTablet() {
+
+  @include onTablet {
     gap: 2rem;
   }
 }
@@ -30,23 +33,28 @@
   justify-content: space-between;
   gap: 3rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     flex-wrap: wrap;
     justify-content: center;
   }
-  @include onPhone() {
+
+  @include onPhone {
     justify-content: center;
     gap: 1.5rem;
   }
 }
+
 .logoWrapper {
   @extend %transparentTap;
 }
+
 .logoImage {
   @extend %forImage;
+
   transition: $transitionAnimation;
+
   &:active {
-    scale: 0.95;
+    transform: scale(0.95);
   }
 }
 
@@ -56,7 +64,7 @@
   justify-content: space-between;
   gap: 2.5rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     text-align: center;
     gap: 1rem;
   }
@@ -68,6 +76,7 @@
   flex-direction: column;
   gap: 0.5rem;
   text-transform: uppercase;
+
   @extend %cardTitleSet;
 }
 
@@ -76,6 +85,7 @@
   letter-spacing: 0.07rem;
   text-transform: uppercase;
   display: block;
+
   @extend %underlineLinkHoverEffect;
   @extend %cardTitleSet;
 }
@@ -86,8 +96,10 @@
   gap: 0.5rem;
   font-weight: $semiBoldFontWeight;
   text-transform: uppercase;
+
   @extend %cardTitleSet;
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     text-align: center;
   }
 }
@@ -96,6 +108,7 @@
   font-weight: $lightFontWeight;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
+
   @extend %underlineLinkHoverEffect;
 }
 
@@ -110,8 +123,10 @@
   font-weight: $semiBoldFontWeight;
   white-space: nowrap;
   text-transform: uppercase;
+
   @extend %cardTitleSet;
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     font-size: $liteTitleSize;
     font-weight: $mediumFontWeight;
   }
@@ -122,7 +137,8 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  @include onPhone() {
+
+  @include onPhone {
     flex-direction: row;
   }
 }
@@ -130,16 +146,18 @@
 .socialImageLink {
   display: inline-block;
   transition: $transitionAnimation;
+
   @extend %transparentTap;
 
   &:hover {
     transform: scale(1.05);
   }
+
   &:active {
     transform: scale(0.9);
   }
 
-  @include onDesktop() {
+  @include onDesktop {
     width: 4rem;
     height: 4rem;
   }
@@ -154,10 +172,11 @@
   font-size: $liteTitleSize;
   font-weight: $mediumFontWeight;
 
-  @include onDesktop() {
+  @include onDesktop {
     font-size: 2rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: 1.8rem;
   }
 }
