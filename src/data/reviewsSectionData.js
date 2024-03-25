@@ -1,10 +1,13 @@
-import avatarImage1 from 'images/reviewsSection/avatar1.jpeg'
-import avatarImage2 from 'images/reviewsSection/avatar2.jpg'
-import avatarImage3 from 'images/reviewsSection/avatar3.jpg'
-import avatarImage4 from 'images/reviewsSection/avatar4.jpg'
+import avatarImage0 from 'images/reviewsSection/avatar1.jpeg'
+import avatarImage1 from 'images/reviewsSection/avatar2.jpg'
+import avatarImage2 from 'images/reviewsSection/avatar3.jpg'
+import avatarImage3 from 'images/reviewsSection/avatar4.jpg'
 
 export const reviewsSectionData = {
   cards: [
+    {
+      imageSrc: avatarImage0,
+    },
     {
       imageSrc: avatarImage1,
     },
@@ -13,9 +16,6 @@ export const reviewsSectionData = {
     },
     {
       imageSrc: avatarImage3,
-    },
-    {
-      imageSrc: avatarImage4,
     },
   ],
 }

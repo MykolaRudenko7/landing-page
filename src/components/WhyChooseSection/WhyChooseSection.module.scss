@@ -1,6 +1,7 @@
 .whyChooseSection {
   display: flex;
   justify-content: center;
+
   @extend %containerPaddings;
 }
 
@@ -12,15 +13,17 @@
   justify-content: center;
   align-items: center;
 
-  @include forCircles() {
+  @include forCircles {
     margin-top: 24rem;
     margin-bottom: 14rem;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     margin-top: 14rem;
     margin-bottom: 7rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
@@ -31,26 +34,31 @@
 
 .mainCard {
   @extend %flexCenter;
+
   z-index: 2;
   width: 84rem;
   height: 84rem;
   border-radius: 50%;
   text-align: center;
   overflow: hidden;
+
   @extend %blurBackground;
+
   backdrop-filter: $blurFilter;
   filter: $circleWhyChooseCardFilter;
   transition: $transitionAnimation;
 
-  @include forCircles() {
+  @include forCircles {
     width: 55rem;
     height: 55rem;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     width: 35rem;
     height: 35rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     position: static;
     height: 100%;
     width: 100%;
@@ -67,11 +75,12 @@
   gap: 5rem;
   padding: 1rem 7.7rem;
 
-  @include forCircles() {
+  @include forCircles {
     gap: 2.5rem;
     padding: 1rem 4rem;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     gap: 1.2rem;
     padding: 1rem 2rem;
   }
@@ -79,20 +88,23 @@
 
 .mainCardTitle {
   @extend %mediumTitle;
+
   text-transform: capitalize;
 
-  @include forCircles() {
+  @include forCircles {
     font-size: $largeSubtitleCardSize;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: 1.5rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: 1.4rem;
   }
-  @include onSmallTablet() {
-    font-size: $smallTitleCardSize;
 
+  @include onSmallTablet {
+    font-size: $smallTitleCardSize;
     text-align: center;
   }
 }
@@ -100,16 +112,19 @@
 .mainCardText {
   font-size: $liteTitleSize;
 
-  @include forCircles() {
+  @include forCircles {
     font-size: 1.6rem;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     font-size: 1.2rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     font-size: 1.1rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     text-align: left;
     font-size: $smallSubtitleCardSize;
   }
@@ -117,14 +132,16 @@
 
 .smallCircles {
   position: absolute;
+
   @extend %flexCenter;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     position: static;
     transform: none;
     flex-direction: column;
@@ -138,28 +155,30 @@
 
 .buttonLabel {
   margin-left: 0;
+
   @extend %borderGradientBlockTitle;
+
   width: 43rem;
 
-  @include forCircles() {
+  @include forCircles {
     width: 34rem;
     font-size: 2rem;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     width: 15rem;
     font-size: 1.3rem;
     padding: 1.2rem;
   }
-  @include onSmallTablet() {
-    padding: 1.6rem;
-    width: 30rem;
-    font-size: 1.8rem;
 
+  @include onSmallTablet {
+    width: 30rem;
     padding: 1rem;
     font-size: 1.8rem;
     max-width: 20rem;
   }
-  @include onPhone() {
+
+  @include onPhone {
     width: 25rem;
   }
 }

@@ -16,17 +16,17 @@ export const footerSectionData = {
   servicesLinks: {
     mainLink: { id: 'services', title: 'Services' },
     links: [
-      { title: 'Website Design', href: '#' },
-      { title: 'Website Development', href: '#' },
-      { title: 'Web APP Development', href: '#' },
-      { title: 'E-Commerce', href: '#' },
-      { title: 'Software Development', href: '#' },
-      { title: 'Search Engine Optimization (SEO)', href: '#' },
-      { title: 'Consulting', href: '#' },
+      { title: '0', href: '#' },
+      { title: '1', href: '#' },
+      { title: '2', href: '#' },
+      { title: '3', href: '#' },
+      { title: '4', href: '#' },
+      { title: '5', href: '#' },
+      { title: '6', href: '#' },
     ],
   },
   getInTouch: {
-    title: 'Get in touch',
+    title: '0',
     socials: [
       { href: 'https://web.whatsapp.com', iconSrc: socialIcon1, alt: 'whatsapp' },
       { href: 'https://twitter.com/?lang=uk', iconSrc: socialIcon2, alt: 'twitter' },

@@ -1,21 +1,27 @@
 .card {
   cursor: pointer;
+
   @extend %transparentTap;
   @extend %cardWithTabBlock;
-  padding: 3.8rem 1.5rem 1.5rem 1.5rem;
+
+  padding: 3.8rem 1.5rem 1.5rem;
   max-width: 80%;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     max-width: 100%;
   }
+
   transition: $transitionAnimationIntro;
+
   &:hover {
     transform: scale(1.02);
   }
+
   &:active {
     transform: scale(0.97);
   }
 }
+
 .content {
   overflow: hidden;
   height: 100%;
@@ -23,13 +29,16 @@
 
 .cardTitle {
   width: 90%;
+
   @extend %cardWithTabBlockTitle;
+
   text-transform: capitalize;
 
-  @include onPhone() {
+  @include onPhone {
     font-size: 1.1rem;
   }
-  @include onSmallPhone() {
+
+  @include onSmallPhone {
     font-size: 1rem;
   }
 }
@@ -40,13 +49,16 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+
   @extend %titleTextSpan;
 }
 
 .frontCard {
   @extend %flexCenter;
+
   flex-direction: column;
 }
+
 .cardImage {
   @extend %forImage;
 }
@@ -57,7 +69,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  @include onTablet() {
+
+  @include onTablet {
     gap: 1.5rem;
   }
 }

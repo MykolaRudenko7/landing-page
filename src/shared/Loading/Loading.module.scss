@@ -11,14 +11,15 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    border: 2px solid $mainYellowColor;
+    border: 0.2rem solid $mainYellowColor;
     position: absolute;
     left: 0;
     top: 0;
-    animation: animLoader 2s linear infinite;
+    animation: animLoader 200ms linear infinite;
   }
+
   &::after {
-    animation-delay: 1s;
+    animation-delay: 1000ms;
   }
 }
 
@@ -27,6 +28,7 @@
     transform: scale(0);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 0;
@@ -38,6 +40,7 @@
     box-shadow: inset 0 0 0 1rem $mainYellowColor;
     opacity: 1;
   }
+
   50%,
   100% {
     box-shadow: inset 0 0 0 0 $mainYellowColor;
@@ -51,6 +54,7 @@
     box-shadow: 0 0 0 0 $mainYellowColor;
     opacity: 0;
   }
+
   100% {
     box-shadow: 0 0 0 1rem $mainYellowColor;
     opacity: 1;

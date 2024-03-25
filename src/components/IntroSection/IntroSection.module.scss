@@ -1,9 +1,10 @@
 .introContainer {
   display: flex;
   align-items: center;
+
   @extend %containerPaddings;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     flex-direction: column;
     gap: 2rem;
   }
@@ -11,6 +12,7 @@
 
 .textBlock {
   flex: 0 1 55%;
+
   @extend %textBlockMarking;
 }
 
@@ -30,16 +32,19 @@
   gap: 5rem;
   flex-wrap: wrap;
 
-  @include onDesktop() {
+  @include onDesktop {
     gap: 1.9rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     gap: 1.5rem;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     justify-content: space-around;
   }
-  @include onPhone() {
+
+  @include onPhone {
     justify-content: space-between;
   }
 }
@@ -54,7 +59,9 @@
 
 .imageWrapper {
   flex: 0 1 45%;
+
   @extend %flexCenter;
+
   overflow: hidden;
 }
 
@@ -65,24 +72,24 @@
 
 .cardsBlockContainer {
   display: grid;
-  justify-items: stretch;
-  align-items: stretch;
+  place-items: stretch stretch;
   grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
-  grid-column-gap: 4rem;
-  grid-row-gap: 4rem;
+  grid-gap: 4rem;
+
   @extend %containerPaddings;
+
   transition: $transitionAnimation;
 
-  @include onTablet() {
-    grid-column-gap: 3rem;
-    grid-row-gap: 3rem;
+  @include onTablet {
+    grid-gap: 3rem;
   }
-  @include onSmallTablet() {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+
+  @include onSmallTablet {
+    grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
-  @include onPhone() {
+
+  @include onPhone {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }

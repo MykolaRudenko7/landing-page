@@ -1,119 +1,77 @@
-import cardImage1 from 'images/portfolioSection/cardImage1.webp'
-import cardImage2 from 'images/portfolioSection/cardImage2.webp'
-import cardImage3 from 'images/portfolioSection/cardImage3.webp'
+import cardImage0 from 'images/portfolioSection/cardImage1.webp'
+import cardImage1 from 'images/portfolioSection/cardImage2.webp'
+import cardImage2 from 'images/portfolioSection/cardImage3.webp'
 
 export const portfolioSectionData = {
   cards: {
     card0: {
-      title: 'Barossa - Crafting a Digital Wine Experience',
-      imageSrc: cardImage1,
+      title: '0',
+      imageSrc: cardImage0,
       text: [
         {
-          label: 'goals',
-          list: [
-            'Seamlessly convert the Figma design into a React-based site.',
-            'Embed SEO strategies for optimal online presence.',
-            'Enrich user interaction with fluid animations.',
-            'Ensure adaptability and consistency across all device types.',
-          ],
+          label: '0',
+          list: ['0', '1', '2', '3'],
         },
         {
-          label: 'features',
-          list: [
-            'Design Evolution',
-            'SEO Integration',
-            'User-Vendor Registration',
-            'Interactive Animations',
-            'Universal Compatibility',
-          ],
+          label: '1',
+          list: ['0', '1', '2', '3', '4'],
         },
         {
-          label: 'technology',
-          list: ['React', 'Figma', 'SEO', 'CSS', 'Animations', 'Responsive Design'],
+          label: '2',
+          list: ['0', '1', '2', '3', '4', '5'],
         },
       ],
     },
     card1: {
-      title: 'B2B Video Communication Platform',
-      imageSrc: cardImage2,
+      title: '1',
+      imageSrc: cardImage1,
       text: [
         {
-          label: 'goals',
-          list: [
-            'Ensure dependable peer-to-peer video communication.',
-            'Achieve mobile-responsiveness for broad device compatibility.',
-            'Integrate a comprehensive admin panel for content oversight.',
-          ],
+          label: '0',
+          list: ['0', '1', '2'],
         },
         {
-          label: 'features',
-          list: [
-            'Real-time Conversation',
-            ' State Management',
-            'API Integration',
-            'Design',
-            'Admin Panel',
-            'Deployment',
-          ],
+          label: '1',
+          list: ['0', '1', '2', '3', '4', '5'],
         },
         {
-          label: 'technology',
+          label: '2',
           list: [
-            'React',
-            'Node.js',
-            'Socket.io',
-            'Agora.io',
-            'SDK',
-            'Redux',
-            'Axios',
-            'React-query',
-            'GraphQL',
-            'Sass',
-            'Less',
-            'CSS',
-            'Modules',
-            'Netlify',
-            'AWS',
-            'Heroku',
+            '0',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
           ],
         },
       ],
     },
     card2: {
-      title: 'FloraNow -Online Marketplace for Floriculture',
-      imageSrc: cardImage3,
+      title: '2',
+      imageSrc: cardImage2,
       text: [
         {
-          label: 'goals',
-          list: [
-            'Develop a multi-vendor platform with individual registration and management capabilities.',
-            'Integrate a secure payment gateway.',
-            'Ensure efficient inventory management for all vendors.',
-            'Implement multilingual support to cater to a global audience.',
-            'Develop a user-friendly content management system using WordPress.',
-          ],
+          label: '0',
+          list: ['0', '1', '2', '3', '4'],
         },
         {
-          label: 'features',
-          list: [
-            'Multi-Vendor Marketplace',
-            'Secure Payment Gateway',
-            'User-Vendor Registration',
-            'Inventory Management',
-            'Multilingual Support',
-            'Content Management System',
-          ],
+          label: '1',
+          list: ['0', '1', '2', '3', '4', '5'],
         },
         {
-          label: 'technology',
-          list: [
-            'HTML5/CSS3/JS',
-            'Bootstrap',
-            'PHP',
-            'MySQL',
-            'Secure Payment API Integration',
-            'Multilingual Support Libraries',
-          ],
+          label: '2',
+          list: ['0', '1', '2', '3', '4', '5'],
         },
       ],
     },

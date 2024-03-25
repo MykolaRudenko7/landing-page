@@ -4,8 +4,10 @@
 
 .contactUsSectionWrapper {
   @extend %textBlockMarking;
+
   gap: 4rem;
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     align-items: center;
     gap: 2rem;
   }
@@ -13,9 +15,11 @@
 
 .textBlock {
   @extend %textBlockMarking;
+
   text-align: center;
   gap: 3rem;
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     align-items: center;
     gap: 1rem;
   }
@@ -23,7 +27,7 @@
 
 .contactUsLabel {
   @extend %borderGradientBlockTitle;
-  margin-bottom: 2rem;
+
   margin: 0 auto;
   text-align: center;
 }
@@ -41,7 +45,7 @@
   display: flex;
   gap: 2rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     flex-direction: column;
     gap: 3rem;
   }
@@ -49,6 +53,7 @@
 
 .imageBlock {
   @extend %flexCenter;
+
   flex: 0 0 54%;
 }
 

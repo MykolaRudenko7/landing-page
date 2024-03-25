@@ -1,3 +1,19 @@
+.cardText {
+  @extend %cardSubtitleSet;
+
+  letter-spacing: -0.05rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -ms-line-clamp: 5;
+  line-clamp: 5;
+  word-wrap: break-word;
+  -moz-box-orient: vertical;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -11,6 +27,7 @@
 
   &:hover {
     transform: scale(1.02);
+
     .cardText {
       -ms-line-clamp: unset;
       -webkit-line-clamp: unset;
@@ -18,7 +35,7 @@
     }
   }
 
-  @include onTablet() {
+  @include onTablet {
     padding: 1rem;
   }
 }
@@ -29,11 +46,12 @@
   height: 10rem;
   margin-bottom: 1rem;
 
-  @include onDesktop() {
+  @include onDesktop {
     width: 9rem;
     height: 9rem;
   }
-  @include onTablet() {
+
+  @include onTablet {
     width: 7rem;
     height: 7rem;
   }
@@ -45,33 +63,22 @@
 
 .cardSubTitle {
   @extend %cardTitleSet;
+
   margin-bottom: 1rem;
-  @include onTablet() {
+
+  @include onTablet {
     margin-bottom: 0.5rem;
   }
 }
+
 .title {
   text-transform: capitalize;
+
   @extend %cardSubtitleSet;
+
   margin-bottom: 1rem;
-  @include onTablet() {
+
+  @include onTablet {
     margin-bottom: 0.5rem;
   }
-}
-
-.cardText {
-  @extend %cardSubtitleSet;
-  letter-spacing: -0.05rem;
-  display: -webkit-box;
-
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  -ms-line-clamp: 5;
-  line-clamp: 5;
-  word-wrap: break-word;
-  box-orient: vertical;
 }

@@ -4,6 +4,7 @@
 
 %fillGradientButtonSecondary {
   @extend %transparentTap;
+
   cursor: pointer;
   border: none;
   outline: none;
@@ -16,31 +17,34 @@
   background-color: $secondaryButtonColor;
   border-radius: 0.6rem;
   white-space: nowrap;
-  transition: all 0.2s ease-in;
+  transition: all 200ms ease-in;
   font-size: $largeSubtitleSize;
   font-weight: $mediumFontWeight;
   box-shadow:
-    rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
-    rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+    rgb(45 35 66 / 40%) 0 0.2rem 0.4rem,
+    rgb(45 35 66 / 30%) 0 0.7rem 1.3rem -0.3rem,
     $darkenedSecondaryButtonColor 0 -0.3rem 0 inset;
 
-  @include onDesktop() {
+  @include onDesktop {
     font-size: $mediumSubtitleSize;
   }
 
-  @include onTablet() {
+  @include onTablet {
     font-size: $smallNavbarLink;
   }
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     text-shadow: none;
   }
-  @include onPhone() {
+
+  @include onPhone {
     font-size: 1.2rem;
     padding: 0 1rem;
     height: 4rem;
     width: 100%;
   }
-  @include onSmallPhone() {
+
+  @include onSmallPhone {
     font-size: 1rem;
     padding: 0 0.8rem;
     height: 3.5rem;
@@ -49,8 +53,8 @@
   &:hover {
     transform: translateY(-0.2rem);
     box-shadow:
-      0 0.2rem 0.4rem rgba(45, 35, 66, 0.4),
-      0 0.7rem 1.3rem -0.3rem rgba(45, 35, 66, 0.3),
+      0 0.2rem 0.4rem rgb(45 35 66 / 40%),
+      0 0.7rem 1.3rem -0.3rem rgb(45 35 66 / 30%),
       inset 0 -0.3rem 0 $buttonHoverColor;
   }
 
@@ -63,10 +67,11 @@
 %fillGradientButtonPrimary {
   @extend %fillGradientButtonSecondary;
   @extend %transparentTap;
+
   background-color: $primaryButtonColor;
   box-shadow:
-    rgba(45, 35, 66, 0.4) 0 0.2rem 0.4rem,
-    rgba(45, 35, 66, 0.3) 0 0.7rem 1.3rem -0.3rem,
+    rgb(45 35 66 / 40%) 0 0.2rem 0.4rem,
+    rgb(45 35 66 / 30%) 0 0.7rem 1.3rem -0.3rem,
     $darkenedPrimaryButtonColor 0 -0.3rem 0 inset;
 
   &:active {
@@ -77,6 +82,7 @@
 
 %underlineLinkHoverEffect {
   @extend %transparentTap;
+
   color: $mainWhiteColor;
   position: relative;
   cursor: pointer;

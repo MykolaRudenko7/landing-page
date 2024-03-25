@@ -6,7 +6,7 @@
   display: flex;
   gap: 1rem;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     flex-direction: column-reverse;
     gap: 2rem;
   }
@@ -14,9 +14,10 @@
 
 .aboutUsImageWrapper {
   @extend %flexCenter;
+
   width: 50%;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     width: 100%;
   }
 }
@@ -28,15 +29,18 @@
 
 .aboutUsTextBlock {
   width: 50%;
+
   @extend %textBlockMarking;
+
   justify-content: start;
   align-items: flex-start;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     width: 100%;
     align-items: center;
   }
 }
+
 .aboutUsLabel {
   @extend %borderGradientBlockTitle;
 }
@@ -49,6 +53,7 @@
 .text {
   @extend %subtitleTextSet;
 }
+
 .aboutUsButton {
   @extend %fillGradientButtonSecondary;
 }

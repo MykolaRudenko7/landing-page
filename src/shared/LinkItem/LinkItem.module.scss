@@ -1,7 +1,7 @@
 .link {
   @extend %underlineLinkHoverEffect;
 
-  @include onSmallTablet() {
+  @include onSmallTablet {
     font-size: $liteTitleSize;
     font-weight: $mediumFontWeight;
   }

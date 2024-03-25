@@ -1,34 +1,29 @@
 $secondaryBlackThemeColor: #000814;
-
 $mainYellowColor: #ffcf00;
-$mainBlackColor: #000000;
+$mainBlackColor: #000;
 $mainDarkBlueColor: #3a3d60;
 $mainWhiteColor: #fff;
 $successMessageColor: #a7fc27;
-
 $primaryButtonColor: #ffd60a;
 $secondaryButtonColor: #ffc300;
 $darkenedPrimaryButtonColor: darken($primaryButtonColor, 17%);
 $darkenedSecondaryButtonColor: darken($secondaryButtonColor, 17%);
 $buttonHoverColor: darken($secondaryButtonColor, 15%);
-
 $buttonFullGradient: linear-gradient(112deg, $mainYellowColor 0%, $darkenedPrimaryButtonColor 100%);
-
-$techStackTagsColor: rgba(58, 61, 96, 0.7);
-$textShadow: 0.05rem 0.2rem 0.2rem rgba(58, 61, 96, 0.5);
-$titleTextShadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-$textCardBlurColor: rgba(58, 61, 96, 0.5);
-$pageBackgroundColor: rgba(241, 241, 241, 0.5);
+$techStackTagsColor: rgb(58 61 96 / 70%);
+$textShadow: 0.05rem 0.2rem 0.2rem rgb(58 61 96 / 50%);
+$titleTextShadow: 0 0.4rem 0.4rem rgb(0 0 0 / 25%);
+$textCardBlurColor: rgb(58 61 96 / 50%);
+$pageBackgroundColor: rgb(241 241 241 / 50%);
 $backgroundServiceCard: #d9d9d956;
 $blurFilter: blur(3.85rem);
 $circleWhyChooseCardGradient: linear-gradient(
   180deg,
-  rgba(217, 217, 217, 0.3) 0%,
-  rgba(217, 217, 217, 0) 100%
+  rgb(217 217 217 / 30%) 0%,
+  rgb(217 217 217 / 0%) 100%
 );
-$filterServiceCardTitle: drop-shadow(0.32rem 0.4rem 1.27rem rgba(58, 61, 96, 0.5));
-$circleWhyChooseCardFilter: drop-shadow(0.2rem 0.2rem 1rem rgba(58, 61, 96, 0.25));
-
-$boxShadow: 0 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
-$boxShadowCardWithTabBlockTitle: 0 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
-$boxShadowNavbar: 0px 0.75rem 0.5rem -0.5rem rgba(255, 255, 255, 0.234);
+$filterServiceCardTitle: drop-shadow(0.32rem 0.4rem 1.27rem rgb(58 61 96 / 50%));
+$circleWhyChooseCardFilter: drop-shadow(0.2rem 0.2rem 1rem rgb(58 61 96 / 25%));
+$boxShadow: 0 0.1rem 0.4rem 0.2rem rgb(0 0 0 / 25%);
+$boxShadowCardWithTabBlockTitle: 0 0.4rem 0.4rem 0.2rem rgb(0 0 0 / 25%);
+$boxShadowNavbar: 0 0.75rem 0.5rem -0.5rem rgb(255 255 255 / 23.4%);

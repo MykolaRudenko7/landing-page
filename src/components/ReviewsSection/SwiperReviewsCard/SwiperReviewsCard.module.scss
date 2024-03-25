@@ -2,7 +2,8 @@
   position: relative;
   padding: 0 4rem;
   width: 70%;
-  @include onSmallTablet() {
+
+  @include onSmallTablet {
     width: 100%;
   }
 
@@ -17,16 +18,20 @@
     color: $mainWhiteColor;
     font-size: $mediumTitleSize;
     font-weight: $boldFontWeight;
+
     @extend %transparentTap;
+
     transition: $transitionAnimation;
 
     &:active {
       color: $mainDarkBlueColor;
     }
-    @include onSmallTablet() {
+
+    @include onSmallTablet {
       top: 50%;
     }
   }
+
   .swiper-navigation-prev {
     left: 0.5rem;
   }
@@ -41,13 +46,14 @@
     padding-top: 5rem;
     padding-bottom: 0.5rem;
 
-    @include onTablet() {
+    @include onTablet {
       padding-top: 3.5rem;
     }
 
     .swiper-wrapper {
       height: auto;
     }
+
     .swiper-slide {
       height: auto;
     }

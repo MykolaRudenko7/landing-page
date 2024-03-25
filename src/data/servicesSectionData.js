@@ -1,40 +1,18 @@
 export const servicesSectionData = [
   {
-    listTitle: 'E-Commerce',
-    listOptions: [
-      'User Experience (UX) Design',
-      'Website & App Development',
-      'Mobile Commerce Development',
-      'CRM',
-      'Payment Gateway Integration',
-    ],
+    listTitle: '0',
+    listOptions: ['0', '1', '2', '3', '4'],
   },
   {
-    listTitle: 'Fintech',
-    listOptions: [
-      'Software Development,',
-      'Web App Development',
-      'Blockchain Solutions',
-      'Payment Processing Solutions',
-      'Consulting',
-    ],
+    listTitle: '1',
+    listOptions: ['0', '1', '2', '3', '4'],
   },
   {
-    listTitle: 'Ed-Tech',
-    listOptions: [
-      'Web & Mobile App Development',
-      'Software Development',
-      'Gamification Solutions',
-      'Consulting',
-    ],
+    listTitle: '2',
+    listOptions: ['0', '1', '2', '3'],
   },
   {
-    listTitle: 'Telecom & Media',
-    listOptions: [
-      'Streaming Solutions',
-      'Digital Advertising Platforms',
-      'Website & App Development',
-      'Software Development',
-    ],
+    listTitle: '3',
+    listOptions: ['0', '1', '2', '3'],
   },
 ]
