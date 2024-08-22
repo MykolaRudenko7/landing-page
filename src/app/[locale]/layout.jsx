@@ -1,11 +1,11 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { notFound } from 'next/navigation'
 import { Fira_Code, Poppins } from 'next/font/google'
 import 'styles/global.scss'
 
 export const metadata = {
-  title: 'Tech Cossacks',
+  title: 'Tech Cats',
   description: 'Your Trusted Partner for Web Development Excellence',
+  manifest: '/manifest.json',
 }
 
 const poppins = Poppins({
@@ -20,20 +20,14 @@ const firaCode = Fira_Code({
   display: 'swap',
 })
 
-const locales = ['en', 'ua']
-
-export default function LocaleLayout({ children, params: { locale } }) {
+export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages()
 
-  if (!locales.includes(locale)) {
-    return notFound()
-  }
-
-  const currenFont = locale === 'ua' ? firaCode.className : poppins.className
+  const currentFont = locale === 'uk' ? firaCode.className : poppins.className
 
   return (
-    <html className={currenFont} lang={locale}>
-      <link href="/favicon.svg" rel="icon" type="favicon" />
+    <html className={currentFont} lang={locale}>
+      <link href="/favicon.ico" rel="icon" type="favicon" />
 
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>

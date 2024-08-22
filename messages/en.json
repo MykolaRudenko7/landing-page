@@ -9,11 +9,11 @@
   },
   "NavbarLanguageSwitcher": {
     "buttonEn": { "label": "EN", "about": "english language" },
-    "buttonUa": { "label": "UA", "about": "ukraine language" }
+    "buttonUa": { "label": "UK", "about": "ukraine language" }
   },
   "IntroSection": {
     "title": "Your Trusted Partner for Web Development Excellence!",
-    "text": "TechCossacks is a software development company based in Ukraine that works with well-known product companies from the US, Canada, and Europe. We design and implement bespoke, innovative solutions for our clients, creating user-friendly, efficient websites that help businesses succeed. With years of experience, our team is dedicated to providing high quality work at competitive prices."
+    "text": "TechCats is a software development company based in Ukraine that works with well-known product companies from the US, Canada, and Europe. We design and implement bespoke, innovative solutions for our clients, creating user-friendly, efficient websites that help businesses succeed. With years of experience, our team is dedicated to providing high quality work at competitive prices."
   },
   "IntroSectionCards": {
     "card0": {
@@ -48,8 +48,8 @@
     }
   },
   "AboutUsSection": {
-    "title": "TECH COSSACK: Bridging Tradition and Tech Innovation",
-    "text": "At TECH COSSACK, we're inspired by the resilience and courage of Ukraine's Cossack heritage. This rich tradition fuels our modern approach to technology, guiding us in delivering top-tier web and app development services. Operating internationally across the US, Canada, and Europe, we specialize in supporting startups and growing tech companies. Our team, from front-end specialists to blockchain experts, is united by a shared passion: crafting solutions that cater precisely to your needs."
+    "title": "Tech Cats: Bridging Tradition and Tech Innovation",
+    "text": "At Tech Cats, we're inspired by the resilience and courage of Ukraine's Cossack heritage. This rich tradition fuels our modern approach to technology, guiding us in delivering top-tier web and app development services. Operating internationally across the US, Canada, and Europe, we specialize in supporting startups and growing tech companies. Our team, from front-end specialists to blockchain experts, is united by a shared passion: crafting solutions that cater precisely to your needs."
   },
   "ServicesSection": {
     "card0": {
@@ -199,7 +199,7 @@
   },
   "WhyChooseSection": {
     "mainCard": {
-      "title": "Elevate Your Business with TECH COSSACKS!",
+      "title": "Elevate Your Business with Tech Cats!",
       "text": "Immerse yourself in the world of technology and see firsthand why our team is your reliable partner. Together, we will create a secure digital future for your business in the civilized world, harnessing the latest technologies and innovative solutions."
     },
     "card0": {
@@ -226,18 +226,18 @@
   "ReviewsSectionData": {
     "textBlock": {
       "title": "What Our Clients Say",
-      "text": "At TECH COSSACKS, we believe in building relationships that go beyond projects. Our clients' success is our success, and their words inspire us to strive for excellence. Here's what some of them have to say:"
+      "text": "At Tech Cats, we believe in building relationships that go beyond projects. Our clients' success is our success, and their words inspire us to strive for excellence. Here's what some of them have to say:"
     },
     "cards": {
       "card0": {
         "name": "Christopher Hulbert",
         "vacancy": "",
-        "content": "I recently hired TechCossacks for my website development needs and I must say, I was thoroughly impressed with their services. Their team of experts not only delivered a visually appealing website but also ensured its functionality and user-friendliness. I highly recommend TechCossacks to anyone looking for web development services."
+        "content": "I recently hired TechCats for my website development needs and I must say, I was thoroughly impressed with their services. Their team of experts not only delivered a visually appealing website but also ensured its functionality and user-friendliness. I highly recommend TechCats to anyone looking for web development services."
       },
       "card1": {
         "name": "John Wallace",
         "vacancy": "CTO",
-        "content": "I had the pleasure of working with the TechCossacks team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!"
+        "content": "I had the pleasure of working with the TechCats team. I was thoroughly impressed by their professionalism and their commitment to their craft. They have an incredible understanding of web development and can turn an idea into a reality quickly and efficiently. Highly recommended!"
       },
       "card2": {
         "name": "Eric Manring",
@@ -253,7 +253,7 @@
   },
   "ContactUsSection": {
     "title": "Ready to Elevate Your Tech Game?",
-    "text": "Connect with TECH COSSACKS and embark on a transformative journey.",
+    "text": "Connect with Tech Cats and embark on a transformative journey.",
     "errorMessage": "An error occurred while submitting the form. Please try again.",
     "successMessage": "Success ✅"
   },
@@ -308,7 +308,7 @@
     "aboutUsSection": "ABOUT US",
     "servicesSection": "WHAT WE DO",
     "portfolioSection": "PORTFOLIO",
-    "whyChooseSection": "WHY CHOOSE TECH COSSACKS?",
+    "whyChooseSection": "WHY CHOOSE Tech Cats?",
     "reviewsSection": "REVIEWS",
     "contactUsSection": "CONTACT US"
   },
