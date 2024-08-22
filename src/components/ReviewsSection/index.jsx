@@ -21,7 +21,7 @@ export default function ReviewsSection() {
             <h3 className={styles.titleText}>{tLabel('reviewsSection')}</h3>
           </div>
           <div className={styles.textBlockWrapper}>
-            <h5 className={styles.reviewsSectionTitle}>{tTitle}</h5>
+            <h4 className={styles.reviewsSectionTitle}>{tTitle}</h4>
             <p className={styles.reviewsSectionText}>{tText}</p>
           </div>
           <Link

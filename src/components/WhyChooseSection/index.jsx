@@ -24,7 +24,7 @@ export default function WhyChooseSection() {
             <div className={styles.buttonLabel}>
               <h3 className={styles.titleText}>{tLabel('whyChooseSection')}</h3>
             </div>
-            <h6 className={styles.mainCardTitle}>{tSection('mainCard.title')}</h6>
+            <h4 className={styles.mainCardTitle}>{tSection('mainCard.title')}</h4>
             <p className={styles.mainCardText}>{tSection('mainCard.text')}</p>
             <Link
               about={tButton('buttonReady')}

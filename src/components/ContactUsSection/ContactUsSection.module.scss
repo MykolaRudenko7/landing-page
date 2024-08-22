@@ -54,10 +54,12 @@
 .imageBlock {
   @extend %flexCenter;
 
+  padding-top: 2rem;
   flex: 0 0 54%;
 }
 
 .image {
   @extend %forImage;
-  @extend %imageInTextBlock;
+
+  border-radius: 0.5rem;
 }

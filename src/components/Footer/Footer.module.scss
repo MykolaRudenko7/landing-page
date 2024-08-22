@@ -52,6 +52,8 @@
   @extend %forImage;
 
   transition: $transitionAnimation;
+  max-width: 15rem;
+  height: auto;
 
   &:active {
     transform: scale(0.95);
@@ -74,10 +76,15 @@
   font-weight: $semiBoldFontWeight;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
   text-transform: uppercase;
 
   @extend %cardTitleSet;
+
+  @include onSmallTablet {
+    align-items: center;
+  }
 }
 
 .ordinaryLink {
@@ -88,6 +95,8 @@
 
   @extend %underlineLinkHoverEffect;
   @extend %cardTitleSet;
+
+  padding: 0.5rem;
 }
 
 .servicesLinks {
@@ -106,6 +115,7 @@
 
 .serviceLink {
   font-weight: $lightFontWeight;
+  padding: 0.5rem;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
 

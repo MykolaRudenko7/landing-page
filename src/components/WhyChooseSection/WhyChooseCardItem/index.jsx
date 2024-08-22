@@ -7,7 +7,7 @@ export default function WhyChooseCardItem({ cardId }) {
   return (
     <div className={styles.whyChooseCardItem}>
       <div className={styles.whyChooseCardItemWrapper}>
-        <h6 className={styles.title}>{tSection(`card${cardId}.title`)}</h6>
+        <h5 className={styles.title}>{tSection(`card${cardId}.title`)}</h5>
         <p className={styles.text}>{tSection(`card${cardId}.text`)}</p>
       </div>
     </div>

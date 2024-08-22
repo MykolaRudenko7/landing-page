@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { introSectionData } from 'data/introSectionData'
 import { scrollSectionId } from 'data/scrollSectionId'
 import IntroCardItem from 'components/IntroSection/IntroCardItem'
-import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.png'
+import introSectionImage from 'images/introSection/textBlock/introTextBlockImage.jpeg'
 import styles from 'components/IntroSection/IntroSection.module.scss'
 
 export default function Intro() {
@@ -57,8 +57,8 @@ export default function Intro() {
           <Image
             alt="intro block image"
             className={styles.image}
+            loading="eager"
             src={introSectionImage}
-            priority
           />
         </div>
       </div>

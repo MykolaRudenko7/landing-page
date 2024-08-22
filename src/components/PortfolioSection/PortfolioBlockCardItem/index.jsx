@@ -24,9 +24,9 @@ function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
 
   return (
     <div className={styles.card} onClick={handleShowTextBlockToggle}>
-      <h6 className={styles.cardTitle}>
+      <h5 className={styles.cardTitle}>
         <span className={styles.cardTitleText}>{cardTitle}</span>
-      </h6>
+      </h5>
       <div className={styles.content}>
         <AnimatePresence>
           {!showTextBlock && (
@@ -37,7 +37,12 @@ function PortfolioBlockCardItem({ imageSrc, text, cardId }) {
               initial={{ height: 0, y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Image alt="card content" className={styles.cardImage} src={imageSrc} />
+              <Image
+                alt="card content"
+                className={styles.cardImage}
+                loading="lazy"
+                src={imageSrc}
+              />
               <FontAwesomeIcon className={styles.arrow} icon={faArrowTurnUp} rotation={90} />
             </motion.div>
           )}

@@ -1,6 +1,9 @@
 .link {
   @extend %underlineLinkHoverEffect;
 
+  background: none;
+  text-transform: uppercase;
+
   @include onSmallTablet {
     font-size: $liteTitleSize;
     font-weight: $mediumFontWeight;

@@ -53,7 +53,14 @@ function Navbar() {
       <div className={cn(styles.wrapper, { [styles.isScrolled]: isScrolled })}>
         <div className={styles.logoLinksBlock}>
           <a className={styles.logoWrapper} href="#" tabIndex="0">
-            <Image alt="logo image" className={styles.logoImage} src={logoImage} />
+            <Image
+              alt="logo image"
+              className={styles.logoImage}
+              height={80}
+              loading="eager"
+              src={logoImage}
+              width={80}
+            />
           </a>
           <div
             className={cn(styles.linksWrapper, {
@@ -85,9 +92,9 @@ function Navbar() {
             </Link>
             <Link
               about={tLanguageSwitcher('buttonUa.about')}
-              className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/ua' })}
-              href="/ua"
-              locale="ua"
+              className={cn(styles.languageSwitcher, { [styles.active]: pathname === '/uk' })}
+              href="/uk"
+              locale="uk"
               scroll={false}
               tabIndex="0"
               replace

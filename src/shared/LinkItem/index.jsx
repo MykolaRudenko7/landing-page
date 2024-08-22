@@ -1,11 +1,11 @@
 'use client'
 
-import { Link } from 'react-scroll'
+import { Button as ScrollLink } from 'react-scroll'
 import styles from 'shared/LinkItem/LinkItem.module.scss'
 
 export default function LinkItem({ title, id, clickOnLink, about }) {
   return (
-    <Link
+    <ScrollLink
       about={about}
       className={styles.link}
       duration={750}
@@ -16,6 +16,6 @@ export default function LinkItem({ title, id, clickOnLink, about }) {
       to={id}
     >
       {title}
-    </Link>
+    </ScrollLink>
   )
 }
