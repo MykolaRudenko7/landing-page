@@ -8,7 +8,7 @@ export default function ReviewsSectionCardItem({ imageSrc, cardId }) {
   return (
     <div className={styles.reviewsSectionCardItem}>
       <div className={styles.cardImageWrapper}>
-        <Image alt="character image" className={styles.cardImage} src={imageSrc} priority />
+        <Image alt="character image" className={styles.cardImage} loading="lazy" src={imageSrc} />
       </div>
       <div className={styles.cardTextBlock}>
         <p className={styles.cardName}>{tReviewSection(`cards.card${cardId}.name`)}</p>

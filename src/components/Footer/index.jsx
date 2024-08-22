@@ -21,18 +21,19 @@ export default function Footer() {
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
           <Link className={styles.logoWrapper} href="#" tabIndex="0">
-            <Image alt="logo image" className={styles.logoImage} src={logoImage} priority />
+            <Image alt="logo image" className={styles.logoImage} loading="lazy" src={logoImage} />
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
               {linksForScroll.map((link, tId) => (
-                <LinkItem
-                  key={uuidv4()}
-                  tabIndex="0"
-                  {...link}
-                  about={tFooter(`linksForScroll.link${tId}`)}
-                  title={tFooter(`linksForScroll.link${tId}`)}
-                />
+                <li key={uuidv4()}>
+                  <LinkItem
+                    tabIndex="0"
+                    {...link}
+                    about={tFooter(`linksForScroll.link${tId}`)}
+                    title={tFooter(`linksForScroll.link${tId}`)}
+                  />
+                </li>
               ))}
             </ul>
             <ul className={styles.ordinaryLinks}>
@@ -72,14 +73,21 @@ export default function Footer() {
                   href={href}
                   key={uuidv4()}
                   tabIndex="0"
+                  target="_blank"
                 >
-                  <Image alt={alt} className={styles.socialImage} src={iconSrc} width={42} />
+                  <Image
+                    alt={alt}
+                    className={styles.socialImage}
+                    loading="lazy"
+                    src={iconSrc}
+                    width={42}
+                  />
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        <p className={styles.about}>2023@TECH COSSACKS</p>
+        <p className={styles.about}>2023@Tech Cats</p>
       </div>
     </div>
   )

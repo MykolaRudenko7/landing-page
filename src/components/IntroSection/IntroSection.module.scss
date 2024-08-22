@@ -1,12 +1,12 @@
 .introContainer {
   display: flex;
   align-items: center;
+  gap: 2rem;
 
   @extend %containerPaddings;
 
   @include onSmallTablet {
     flex-direction: column;
-    gap: 2rem;
   }
 }
 
@@ -59,15 +59,15 @@
 
 .imageWrapper {
   flex: 0 1 45%;
+  overflow: hidden;
 
   @extend %flexCenter;
-
-  overflow: hidden;
 }
 
 .image {
   @extend %forImage;
-  @extend %imageInTextBlock;
+
+  border-radius: 0.5rem;
 }
 
 .cardsBlockContainer {

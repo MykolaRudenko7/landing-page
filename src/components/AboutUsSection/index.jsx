@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Link } from 'react-scroll'
 import { useTranslations } from 'next-intl'
 import { scrollSectionId } from 'data/scrollSectionId'
-import aboutUsSectionImage from 'images/aboutUsSection/aboutUsImage.webp'
+import aboutUsSectionImage from 'images/aboutUsSection/aboutUsImage.png'
 import styles from 'components/AboutUsSection/AboutUsSection.module.scss'
 
 export default function AboutUsSection() {
@@ -21,9 +21,8 @@ export default function AboutUsSection() {
           <Image
             alt="blockImage"
             className={styles.aboutUsImage}
-            height={878}
+            loading="lazy"
             src={aboutUsSectionImage}
-            width={771}
           />
         </div>
         <div className={styles.aboutUsTextBlock}>

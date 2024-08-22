@@ -1,8 +1,7 @@
 import logoImage from 'images/navbar/logo.svg'
-import socialIcon1 from 'images/footer/whatsapp.png'
-import socialIcon2 from 'images/footer/x-icon.png'
-import socialIcon3 from 'images/footer/in-icon.png'
-import socialIcon4 from 'images/footer/fb-icon.png'
+import socialIconInstagram from 'images/footer/Instagram.png'
+import socialIconLinkedIn from 'images/footer/LinkedIn.png'
+import socialIconFacebook from 'images/footer/Facebook.png'
 
 export const footerSectionData = {
   logoImage,
@@ -28,10 +27,9 @@ export const footerSectionData = {
   getInTouch: {
     title: '0',
     socials: [
-      { href: 'https://web.whatsapp.com', iconSrc: socialIcon1, alt: 'whatsapp' },
-      { href: 'https://twitter.com/?lang=uk', iconSrc: socialIcon2, alt: 'twitter' },
-      { href: 'https://www.linkedin.com', iconSrc: socialIcon3, alt: 'linkedin' },
-      { href: 'https://www.facebook.com', iconSrc: socialIcon4, alt: 'facebook' },
+      { href: 'https://www.instagram.com', iconSrc: socialIconInstagram, alt: 'instagram' },
+      { href: 'https://www.facebook.com', iconSrc: socialIconFacebook, alt: 'facebook' },
+      { href: 'https://www.linkedin.com', iconSrc: socialIconLinkedIn, alt: 'linkedin' },
     ],
   },
 }

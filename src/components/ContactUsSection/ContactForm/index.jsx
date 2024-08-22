@@ -76,14 +76,14 @@ function ContactForm() {
   const onFormSubmit = async (data) => {
     try {
       const response = await axios.post(process.env.GOOGLE_SPREADSHEET, {
-        // name: data.firstName,
-        // lastName: data.lastName,
-        // email: data.email,
-        // phone: data.phone,
-        // market: data.country.value,
-        // message: data.messageArea,
-        // date: currentTime,
-        // contactMethods: selectedContactMethods.join(', '),
+        name: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        market: data.country.value,
+        message: data.messageArea,
+        date: currentTime,
+        contactMethods: selectedContactMethods.join(', '),
       })
       setError(false)
       reset()
@@ -110,6 +110,7 @@ function ContactForm() {
           name="country"
           render={({ field: { onChange, value } }) => (
             <CreatableSelect
+              aria-label={tPlaceholder('marketToContact')}
               id={marketToContactSelectId}
               instanceId={marketToContactSelectId}
               isCreatable={true}
@@ -143,6 +144,7 @@ function ContactForm() {
           name="phone"
           render={({ field: { onChange, value } }) => (
             <PhoneInput
+              aria-label={tPlaceholder('phoneNumber')}
               buttonClass={styles.tellButton}
               containerClass={styles.tellContainer}
               country={selectedCountry?.code}
@@ -150,6 +152,7 @@ function ContactForm() {
               enableAreaCodes={true}
               id={phoneNumberInputId}
               inputClass={styles.tellInput}
+              inputProps={{ id: phoneNumberInputId }}
               onChange={(newValue) => onChange(newValue)}
               placeholder={tPlaceholder('phoneNumber')}
               searchClass={styles.tellSearch}

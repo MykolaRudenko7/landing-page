@@ -3,20 +3,25 @@ $regularFontWeight: 400;
 $mediumFontWeight: 500;
 $semiBoldFontWeight: 600;
 $boldFontWeight: 700;
+
 $mainFontSize: 10px;
-$minWith: 32rem;
+
 $largeTitleSize: 3.1rem;
 $mediumTitleSize: 2.7rem;
 $liteTitleSize: 1.8rem;
+
 $largeSubtitleSize: 1.8rem;
 $mediumSubtitleSize: 1.6rem;
 $liteSubtitleSize: 1.35rem;
+
 $largeTitleCardSize: 1.8rem;
 $regularTitleCardSize: 1.6rem;
 $smallTitleCardSize: 1.45rem;
+
 $largeSubtitleCardSize: 1.6rem;
 $regularSubtitleCardSize: 1.45rem;
 $smallSubtitleCardSize: 1.25rem;
 $smallNavbarLink: 1.1rem;
-$transitionAnimation: all 350ms cubic-bezier(0, 0.55, 0.45, 1);
-$transitionAnimationIntro: all 450ms ease;
+
+$transitionAnimation: all 0.35s cubic-bezier(0, 0.55, 0.45, 1);
+$transitionAnimationIntro: all 0.45s ease;

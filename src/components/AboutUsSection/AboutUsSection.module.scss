@@ -4,18 +4,19 @@
 
 .aboutUsWrapper {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 
   @include onSmallTablet {
     flex-direction: column-reverse;
-    gap: 2rem;
   }
 }
 
 .aboutUsImageWrapper {
   @extend %flexCenter;
 
-  width: 50%;
+  @include onTablet {
+    width: 100%;
+  }
 
   @include onSmallTablet {
     width: 100%;
@@ -23,8 +24,9 @@
 }
 
 .aboutUsImage {
+  border-radius: 0.5rem;
+
   @extend %forImage;
-  @extend %imageInTextBlock;
 }
 
 .aboutUsTextBlock {

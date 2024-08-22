@@ -8,9 +8,9 @@ export default function ServiceSectionCardItem({ listOptions, index }) {
 
   return (
     <div className={styles.listBlock}>
-      <h6 className={styles.listTitle}>
+      <h4 className={styles.listTitle}>
         <span className={styles.listTitleText}>{listTitle}</span>
-      </h6>
+      </h4>
       <ul className={styles.list}>
         {listOptions.map((option, optionIndex) => (
           <li className={styles.listItem} key={uuidv4()}>

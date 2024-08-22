@@ -48,7 +48,7 @@ export const customStylesMarkets = {
   placeholder: (baseStyles) => ({
     ...baseStyles,
     color: '#fff',
-    opacity: '0.5',
+    opacity: '0.7',
   }),
   input: (baseStyles) => ({
     ...baseStyles,

@@ -34,12 +34,12 @@ function IntroCardItem({ imageSrc, cardId, isHoverCard, setIsHoverCard }) {
       <p className={styles.cardSubTitle}>{subtitle}</p>
       <motion.p
         animate={{
-          opacity: isHoverCard === cardId ? 1 : 0.6,
+          opacity: isHoverCard === cardId ? 1 : 0.7,
           overflow: isHoverCard === cardId ? 'unset' : 'hidden',
         }}
         className={styles.cardText}
         initial={{
-          opacity: 0.6,
+          opacity: 0.7,
           overflow: 'hidden',
         }}
         transition={{ duration: 0.4 }}

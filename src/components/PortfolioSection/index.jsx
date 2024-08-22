@@ -27,7 +27,7 @@ export default function PortfolioBlock() {
               <span className={styles.titleText}>{tLabel('portfolioSection')}</span>
             </h3>
             <div className={styles.textBlockForMargin}>
-              <h5 className={styles.textBlockTitle}>{tPortfolioSection('title')}</h5>
+              <h4 className={styles.textBlockTitle}>{tPortfolioSection('title')}</h4>
               <p className={styles.textBlockText}>{tPortfolioSection('text')}</p>
             </div>
             <PortfolioBlockCardItem {...card0} cardId={0} />

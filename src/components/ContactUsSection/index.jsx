@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { scrollSectionId } from 'data/scrollSectionId'
 import ContactForm from 'components/ContactUsSection/ContactForm'
-import contactUsImage from 'images/contactUsSection/contactUs.webp'
+import contactUsImage from 'images/contactUsSection/contactUs.png'
 import styles from 'components/ContactUsSection/ContactUsSection.module.scss'
 
 export default function ContactUsSection() {
@@ -23,14 +23,14 @@ export default function ContactUsSection() {
             <h3 className={styles.titleText}>{tLabel('contactUsSection')}</h3>
           </div>
           <div className={styles.textBlockWrapper}>
-            <h5 className={styles.contactUsTitle}>{tTitle}</h5>
+            <h4 className={styles.contactUsTitle}>{tTitle}</h4>
             <p className={styles.contactUsText}>{tText}</p>
           </div>
         </div>
         <div className={styles.formImageWrapper}>
           <ContactForm />
           <div className={styles.imageBlock}>
-            <Image alt="block image" className={styles.image} src={contactUsImage} />
+            <Image alt="block image" className={styles.image} loading="lazy" src={contactUsImage} />
           </div>
         </div>
       </div>
