@@ -5,14 +5,21 @@ const nextConfig = {
   sassOptions: {
     additionalData: `@import "src/styles/_app.scss";`,
   },
-  env: {
-    GOOGLE_SPREADSHEET: process.env.GOOGLE_SPREADSHEET,
-  },
+  productionBrowserSourceMaps: true,
 }
 
 const nextIntlConfig = withNextIntl({})
 
-module.exports = {
-  ...nextConfig,
-  ...nextIntlConfig,
+module.exports = async () => {
+  const withPWA = (await import('next-pwa')).default
+  const pwaConfig = withPWA({
+    dest: 'public',
+    register: true,
+  })
+
+  return {
+    ...nextConfig,
+    ...nextIntlConfig,
+    ...pwaConfig,
+  }
 }

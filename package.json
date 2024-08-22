@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint:all": "eslint src",
-    "prettier:all": "prettier --check \"src/**/*.((js|ts)(x)?|scss)\"",
-    "prettier": "prettier --write .",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:all": "eslint src",
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prettier:all": "prettier --check \"src/**/*.((js|ts)(x)?|scss)\"",
+    "prettier": "prettier --write .",
     "stylelint:fix": "npx stylelint **/*.scss --fix",
-    "lint:fix": "eslint --fix .",
     "component": "generate-react component",
     "prepare": "husky",
     "lint-staged": "lint-staged"
@@ -24,8 +24,9 @@
     "classnames": "^2.3.2",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
-    "next": "^14.0.3",
-    "next-intl": "^3.1.0",
+    "next": "^14.2.6",
+    "next-intl": "^3.17.4",
+    "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
@@ -58,6 +59,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.69.4",
     "stylelint": "^16.3.0",
-    "stylelint-config-standard-scss": "^13.0.0"
+    "stylelint-config-standard-scss": "^13.0.0",
+    "webpack": "^5.93.0"
   }
 }
