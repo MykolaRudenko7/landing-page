@@ -38,3 +38,7 @@ next-env.d.ts
 #component template
 /templates
 .generate-react-cli.json
+
+# Auto Generated PWA files
+**/public/sw.js
+**/public/workbox-*.js
