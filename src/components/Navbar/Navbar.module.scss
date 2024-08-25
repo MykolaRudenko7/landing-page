@@ -4,9 +4,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  backdrop-filter: blur(15rem);
+
+  &.isNavbarMenuOpen {
+    backdrop-filter: none;
+  }
 
   .wrapper {
-    // background-color: var(--background-color);
     margin: 0 auto;
     max-width: 168rem;
     padding: 1rem 8rem;
@@ -15,8 +19,6 @@
     align-items: center;
     justify-content: space-between;
     transition: $transitionAnimation;
-    backdrop-filter: blur(10rem);
-    -webkit-backdrop-filter: blur(10rem);
 
     @include onSmallTablet() {
       gap: 1.5rem;
