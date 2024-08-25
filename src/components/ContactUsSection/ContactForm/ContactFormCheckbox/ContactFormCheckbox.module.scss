@@ -9,7 +9,7 @@
   position: relative;
   padding-left: 3.5rem;
   margin-bottom: 2rem;
-  color: $mainWhiteColor;
+  color: var(--text-color);
   font-size: $smallSubtitleCardSize;
   opacity: 1;
   cursor: pointer;
@@ -23,7 +23,7 @@
     display: block;
     width: 2rem;
     height: 2rem;
-    border: 0.2rem solid $mainWhiteColor;
+    border: 0.2rem solid var(--text-color);
     position: absolute;
     left: 0;
     top: 0;

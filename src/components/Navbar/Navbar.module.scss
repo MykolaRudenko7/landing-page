@@ -4,35 +4,42 @@
   top: 0;
   left: 0;
   width: 100%;
-}
 
-.wrapper {
-  background-color: $secondaryBlackThemeColor;
-  margin: 0 auto;
-  max-width: 168rem;
-  padding: 2rem 8rem 0 8rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: $transitionAnimation;
+  .wrapper {
+    // background-color: var(--background-color);
+    margin: 0 auto;
+    max-width: 168rem;
+    padding: 1rem 8rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: $transitionAnimation;
+    backdrop-filter: blur(10rem);
+    -webkit-backdrop-filter: blur(10rem);
 
-  @include onSmallTablet() {
-    gap: 1.5rem;
-  }
+    @include onSmallTablet() {
+      gap: 1.5rem;
+    }
 
-  @include onDesktop() {
-    padding: 2rem 3rem;
-  }
-  @include onTablet() {
-    padding: 1.5rem 1.5rem;
+    @include onTablet() {
+      padding: 0.5rem 1.5rem;
+    }
   }
 }
 
 .isScrolled {
-  box-shadow: $boxShadowNavbar;
+  box-shadow: var(--box-shadow-navbar);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
+  .logoImage {
+    max-width: 5rem;
+
+    @include onTablet() {
+      max-width: 4rem;
+    }
+  }
 }
 
 .logoLinksBlock {
@@ -67,6 +74,10 @@
   max-width: 8rem;
   height: auto;
 
+  &LightTheme {
+    filter: invert(1) brightness(0) saturate(1000%);
+  }
+
   @include onTablet() {
     max-width: 5rem;
   }
@@ -92,8 +103,8 @@
   }
 
   @include onSmallTablet() {
-    background-color: $pageBackgroundColor;
-    filter: $filterServiceCardTitle;
+    background-color: var(--background-color);
+    filter: var(--filter-service-card-title);
     backdrop-filter: blur(2rem);
     gap: 5rem;
     font-size: $mediumFontWeight;
@@ -134,8 +145,6 @@
     height: 3.3rem;
     padding: 0.7rem;
     font-size: 1rem;
-  }
-  @include onSmallPhone() {
     display: none;
   }
 }
@@ -162,7 +171,7 @@
   .burger__line3 {
     border-radius: 0.5rem;
     display: block;
-    background-color: $mainWhiteColor;
+    background-color: var(--text-color);
     height: 0.2rem;
   }
 
@@ -214,20 +223,17 @@
 
 .languageSwitcher {
   font-weight: $lightFontWeight;
-  color: $mainWhiteColor;
   background: transparent;
   padding: 0.75rem;
 
-  &:active {
-    scale: 0.95;
-  }
-
   &:focus,
-  &:hover {
-    color: $mainYellowColor;
+  &:hover,
+  &:active {
+    transform: scale(0.95);
+    color: var(--primary-button-color);
   }
 
   &.active {
-    color: $mainYellowColor;
+    color: var(--secondary-button-color);
   }
 }

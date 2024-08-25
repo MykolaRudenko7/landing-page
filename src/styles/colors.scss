@@ -1,21 +1,18 @@
-$secondaryBlackThemeColor: #000814;
-$mainYellowColor: #ffcf00;
-$mainBlackColor: #000;
-$mainDarkBlueColor: #3a3d60;
+//  colors
+$mainBlackColor: #000814;
 $mainWhiteColor: #fff;
-$successMessageColor: #a7fc27;
-$primaryButtonColor: #ffd60a;
-$secondaryButtonColor: #ffc300;
-$darkenedPrimaryButtonColor: darken($primaryButtonColor, 17%);
-$darkenedSecondaryButtonColor: darken($secondaryButtonColor, 17%);
-$buttonHoverColor: darken($secondaryButtonColor, 15%);
-$buttonFullGradient: linear-gradient(112deg, $mainYellowColor 0%, $darkenedPrimaryButtonColor 100%);
+$secondaryWhiteColor: #fafafa;
+$mainYellowColor: #ffcf00;
+$mainDarkBlueColor: #3a3d60;
+$backgroundServiceCard: #d9d9d956;
+$successMessageColor: hsl(84deg 97% 57%);
 $techStackTagsColor: rgb(58 61 96 / 70%);
+$textCardBlurColor: rgb(58 61 96 / 50%);
+$disabledButtonColor: rgb(241 241 241 / 50%);
+
+// shadow, filter
 $textShadow: 0.05rem 0.2rem 0.2rem rgb(58 61 96 / 50%);
 $titleTextShadow: 0 0.4rem 0.4rem rgb(0 0 0 / 25%);
-$textCardBlurColor: rgb(58 61 96 / 50%);
-$pageBackgroundColor: rgb(241 241 241 / 50%);
-$backgroundServiceCard: #d9d9d956;
 $blurFilter: blur(3.85rem);
 $circleWhyChooseCardGradient: linear-gradient(
   180deg,
@@ -27,3 +24,35 @@ $circleWhyChooseCardFilter: drop-shadow(0.2rem 0.2rem 1rem rgb(58 61 96 / 25%));
 $boxShadow: 0 0.1rem 0.4rem 0.2rem rgb(0 0 0 / 25%);
 $boxShadowCardWithTabBlockTitle: 0 0.4rem 0.4rem 0.2rem rgb(0 0 0 / 25%);
 $boxShadowNavbar: 0 0.75rem 0.5rem -0.5rem rgb(255 255 255 / 23.4%);
+
+// dark theme
+$darkBackgroundColor: #000814;
+$darkTextColor: #fff;
+
+// buttons
+$darkPrimaryButtonColor: #ffd60a;
+$darkDarkenedPrimaryButtonColor: darken($darkPrimaryButtonColor, 17%);
+$darkSecondaryButtonColor: #ffc300;
+$darkDarkenedSecondaryButtonColor: darken($darkSecondaryButtonColor, 17%);
+$darkButtonHoverColor: darken($darkSecondaryButtonColor, 15%);
+$darkButtonFullGradient: linear-gradient(
+  112deg,
+  $darkPrimaryButtonColor 0%,
+  $darkDarkenedPrimaryButtonColor 100%
+);
+
+// light
+$lightBackgroundColor: #fafafa;
+$lightTextColor: #000814;
+
+// buttons
+$lightPrimaryButtonColor: #006fee;
+$lightDarkenedPrimaryButtonColor: darken($lightPrimaryButtonColor, 17%);
+$lightSecondaryButtonColor: #7828c8;
+$lightDarkenedSecondaryButtonColor: darken($lightSecondaryButtonColor, 17%);
+$lightButtonHoverColor: darken($lightSecondaryButtonColor, 15%);
+$lightButtonFullGradient: linear-gradient(
+  112deg,
+  $lightPrimaryButtonColor 0%,
+  $lightDarkenedPrimaryButtonColor 100%
+);

@@ -17,7 +17,7 @@
 }
 
 %borderGradientBlockTitle {
-  color: $mainWhiteColor;
+  color: var(--text-color);
   cursor: default;
   position: relative;
   z-index: 0;
@@ -40,7 +40,7 @@
     inset: 0;
     padding: 0.5rem;
     border-radius: 1rem;
-    background: $buttonFullGradient;
+    background: var(--button-full-gradient);
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
@@ -52,7 +52,7 @@
   }
 
   .titleText {
-    color: $mainWhiteColor;
+    color: var(--text-color);
     transform: skew(25deg);
     display: inline-block;
   }
@@ -72,8 +72,8 @@
 }
 
 %blurBackground {
-  background: $backgroundServiceCard;
-  box-shadow: $boxShadow;
+  background: var(--background-service-card);
+  box-shadow: var(--box-shadow);
 }
 
 %cardWithTabBlock {
@@ -93,14 +93,13 @@
   @extend %blurBackground;
 
   font-size: $largeSubtitleCardSize;
-  box-shadow: $boxShadowCardWithTabBlockTitle;
+  box-shadow: var(--box-shadow-card-with-tab-block-title);
   backdrop-filter: blur(3rem);
   position: absolute;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%) skew(-25deg);
   text-align: center;
-  text-shadow: 0.05rem 0.1rem 0.1rem $mainDarkBlueColor;
   font-weight: $mediumFontWeight;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
@@ -174,7 +173,6 @@
 
 %titleTextSet {
   text-transform: capitalize;
-  text-shadow: $titleTextShadow;
   font-weight: $mediumFontWeight;
   font-style: normal;
   line-height: normal;
@@ -269,7 +267,7 @@
 
   width: 100%;
   padding: 1rem 2rem;
-  color: $mainWhiteColor;
+  color: var(--text-color);
   border-radius: 1rem;
   border: solid 0.2rem transparent;
   outline: none;
@@ -277,13 +275,13 @@
 
   &:focus,
   &:hover {
-    border: solid 0.2rem $mainWhiteColor;
+    border: solid 0.2rem var(--text-color);
   }
 
   &:focus + .label,
   &:not(:placeholder-shown) + .label {
     transform: translate(0%, -120%);
-    color: $mainWhiteColor;
+    color: var(--text-color);
     font-size: $smallSubtitleCardSize;
     opacity: 1;
   }
@@ -296,7 +294,7 @@
   top: 0%;
   left: 2rem;
   transform: translate(0%, 65%);
-  color: $mainWhiteColor;
+  color: var(--text-color);
   opacity: 0.7;
   pointer-events: none;
   font-size: $regularSubtitleCardSize;
@@ -312,6 +310,6 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(-5%, 100%);
-  color: $mainYellowColor;
+  transform: translate(-5%, 125%);
+  color: var(--yellow-color);
 }

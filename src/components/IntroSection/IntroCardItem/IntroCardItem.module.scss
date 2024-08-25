@@ -20,7 +20,7 @@
   text-align: center;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  box-shadow: $boxShadow;
+  box-shadow: var(--box-shadow);
   background: $backgroundServiceCard;
   transition: $transitionAnimationIntro;
 

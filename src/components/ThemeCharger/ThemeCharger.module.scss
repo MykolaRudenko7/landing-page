@@ -1,0 +1,9 @@
+.themeChanger {
+  margin-left: 1rem;
+  background: none;
+  transition: $transitionAnimation;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+}

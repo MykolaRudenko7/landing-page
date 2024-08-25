@@ -57,8 +57,8 @@ export default function Intro() {
           <Image
             alt="intro block image"
             className={styles.image}
-            loading="eager"
             src={introSectionImage}
+            priority
           />
         </div>
       </div>

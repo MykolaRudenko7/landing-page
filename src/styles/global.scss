@@ -34,6 +34,7 @@ link {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
+  color: var(--text-color);
 }
 
 h1,
@@ -63,25 +64,25 @@ body {
   font-style: normal;
   height: 100%;
   width: 100%;
-  color: $mainWhiteColor;
-  background: $secondaryBlackThemeColor;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: $secondaryBlackThemeColor;
+  scrollbar-color: var(--background-color);
   text-rendering: optimizeSpeed;
   min-width: 320px;
 
   &::-webkit-scrollbar {
     width: 0.8rem;
-    background-color: $secondaryBlackThemeColor;
+    background-color: var(--background-color);
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $mainWhiteColor;
+    background-color: var(--text-color);
     border-radius: 0.2rem;
   }
 }
@@ -91,15 +92,62 @@ body {
 }
 
 .react-tel-input .country-list .country.highlight {
-  background-color: $mainWhiteColor !important;
-  color: $mainDarkBlueColor !important;
+  background-color: var(--text-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .react-tel-input .selected-flag .arrow {
-  border-top: 0.4rem solid $mainWhiteColor !important;
+  border-top: 0.4rem solid var(--text-color) !important;
 }
 
 .react-tel-input .selected-flag .arrow.up {
   border-top: none !important;
-  border-bottom: 0.4rem solid $mainWhiteColor !important;
+  border-bottom: 0.4rem solid var(--text-color) !important;
+}
+
+:root {
+  --background-color: #{$darkBackgroundColor};
+  --text-color: #{$darkTextColor};
+
+  --button-text-color: #{$mainDarkBlueColor};
+  --primary-button-color: #{$darkPrimaryButtonColor};
+  --secondary-button-color: #{$darkSecondaryButtonColor};
+  --darkened-primary-button-color: #{$darkDarkenedPrimaryButtonColor};
+  --darkened-secondary-button-color: #{$darkDarkenedSecondaryButtonColor};
+  --button-hover-color: #{$darkButtonHoverColor};
+  --button-full-gradient: #{$darkButtonFullGradient};
+
+  --main-black-color: #{$mainBlackColor};
+  --main-white-color: #{$mainWhiteColor};
+  --secondary-white-color: #{$secondaryWhiteColor};
+  --yellow-color: #{$mainYellowColor};
+  --main-dark-blue-color: #{$mainDarkBlueColor};
+  --background-service-card: #{$backgroundServiceCard};
+  --success-message-color: #{$successMessageColor};
+  --tech-stack-tags-color: #{$techStackTagsColor};
+  --text-card-blur-color: #{$textCardBlurColor};
+  --disabled-button-color: #{$disabledButtonColor};
+
+  --text-shadow: #{$textShadow};
+  --title-text-shadow: #{$titleTextShadow};
+  --blur-filter: #{$blurFilter};
+  --circle-why-choose-card-gradient: #{$circleWhyChooseCardGradient};
+  --filter-service-card-title: #{$filterServiceCardTitle};
+  --circle-why-choose-card-filter: #{$circleWhyChooseCardFilter};
+  --box-shadow: #{$boxShadow};
+  --box-shadow-card-with-tab-block-title: #{$boxShadowCardWithTabBlockTitle};
+  --box-shadow-navbar: #{$boxShadowNavbar};
+}
+
+[data-theme='light'] {
+  --background-color: #{$lightBackgroundColor};
+  --text-color: #{$lightTextColor};
+
+  --button-text-color: #{$mainWhiteColor};
+  --primary-button-color: #{$lightPrimaryButtonColor};
+  --secondary-button-color: #{$lightSecondaryButtonColor};
+  --darkened-primary-button-color: #{$lightDarkenedPrimaryButtonColor};
+  --darkened-secondary-button-color: #{$lightDarkenedSecondaryButtonColor};
+  --button-hover-color: #{$lightButtonHoverColor};
+  --button-full-gradient: #{$lightButtonFullGradient};
 }

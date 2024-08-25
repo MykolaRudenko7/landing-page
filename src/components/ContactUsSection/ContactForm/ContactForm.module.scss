@@ -16,7 +16,7 @@
 
   &:disabled {
     box-shadow: none;
-    background-color: $pageBackgroundColor;
+    background-color: var(--disabled-button-color);
 
     &:hover {
       box-shadow: none;
@@ -56,7 +56,7 @@
     @extend %blurBackground;
     @extend %subtitleTextSet;
     height: clamp(4.4rem, 3.4911rem + 0.8876vw, 5rem);
-    color: $mainWhiteColor;
+    color: var(--text-color);
     width: 100%;
     border-radius: 1rem;
     border: solid 0.2rem transparent;
@@ -66,11 +66,11 @@
 
     &:focus,
     &:hover {
-      border: solid 0.2rem $mainWhiteColor;
+      border: solid 0.2rem var(--text-color);
     }
 
     &::placeholder {
-      color: $mainWhiteColor;
+      color: var(--text-color);
       opacity: 0.7;
       font-size: $regularSubtitleCardSize;
       transition: $transitionAnimation;
@@ -122,16 +122,16 @@
   }
 
   .tellDropdown {
-    background-color: $mainDarkBlueColor;
-    color: $mainWhiteColor;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     z-index: 2;
 
     li {
       .highlight {
-        background-color: $mainBlackColor !important;
+        background-color: var(--disabled-button-color) !important;
       }
       &:hover {
-        color: $mainDarkBlueColor;
+        color: var(--disabled-button-color);
       }
     }
   }
@@ -154,7 +154,7 @@
   @extend %cardSubtitleSet;
   width: 40%;
   text-wrap: wrap;
-  color: $mainYellowColor;
+  color: var(--yellow-color);
 
   @include onSmallTablet() {
     font-size: 1.1rem;
@@ -162,7 +162,7 @@
 }
 
 .submitMessageSuccess {
-  color: $successMessageColor;
+  color: var(--success-message-color);
   @extend %cardSubtitleSet;
 }
 
@@ -175,7 +175,7 @@
 
 .checkboxTitle {
   margin-left: 1.5rem;
-  color: $mainWhiteColor;
+  color: var(--text-color);
   opacity: 0.7;
   pointer-events: none;
   font-size: $regularSubtitleCardSize;
