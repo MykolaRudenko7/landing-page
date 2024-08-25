@@ -1,12 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { v4 as uuidv4 } from 'uuid'
+import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 import { footerSectionData } from 'data/footerSectionData'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Footer/Footer.module.scss'
 
 export default function Footer() {
+  const { theme } = useTheme()
+
   const {
     logoImage,
     linksForScroll,
@@ -21,7 +27,14 @@ export default function Footer() {
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
           <Link className={styles.logoWrapper} href="#" tabIndex="0">
-            <Image alt="logo image" className={styles.logoImage} loading="lazy" src={logoImage} />
+            <Image
+              alt="logo image"
+              className={cn(styles.logoImage, {
+                [styles.logoImageLight]: theme === 'light',
+              })}
+              loading="lazy"
+              src={logoImage}
+            />
           </Link>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks}>
@@ -77,7 +90,9 @@ export default function Footer() {
                 >
                   <Image
                     alt={alt}
-                    className={styles.socialImage}
+                    className={cn(styles.socialImage, {
+                      [styles.socialImageLight]: theme === 'light',
+                    })}
                     loading="lazy"
                     src={iconSrc}
                     width={42}

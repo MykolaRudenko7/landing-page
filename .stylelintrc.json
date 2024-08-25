@@ -4,6 +4,7 @@
     "templates/default/TemplateName.module.scss",
     "src/styles/global.scss",
     "src/styles/variables.scss",
+    "src/styles/mixins.scss",
     "src/components/Navbar/Navbar.module.scss",
     "src/components/ContactUsSection/ContactForm/ContactForm.module.scss",
     "src/components/ReviewsSection/SwiperReviewsCard/SwiperReviewsCard.module.scss"

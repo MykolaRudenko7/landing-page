@@ -13,8 +13,8 @@
   align-items: center;
   padding: 0 1.5rem;
   height: 5rem;
-  color: $mainBlackColor;
-  background-color: $secondaryButtonColor;
+  color: var(--button-text-color);
+  background-color: var(--secondary-button-color);
   border-radius: 0.6rem;
   white-space: nowrap;
   transition: all 20ms ease-in;
@@ -23,7 +23,7 @@
   box-shadow:
     rgb(45 35 66 / 40%) 0 0.2rem 0.4rem,
     rgb(45 35 66 / 30%) 0 0.7rem 1.3rem -0.3rem,
-    $darkenedSecondaryButtonColor 0 -0.3rem 0 inset;
+    var(--darkened-secondary-button-color) 0 -0.3rem 0 inset;
 
   @include onDesktop {
     font-size: $mediumSubtitleSize;
@@ -55,11 +55,11 @@
     box-shadow:
       0 0.2rem 0.4rem rgb(45 35 66 / 40%),
       0 0.7rem 1.3rem -0.3rem rgb(45 35 66 / 30%),
-      inset 0 -0.3rem 0 $buttonHoverColor;
+      inset 0 -0.3rem 0 var(--button-hover-color);
   }
 
   &:active {
-    box-shadow: $darkenedSecondaryButtonColor 0 0.3rem 0.7rem inset;
+    box-shadow: var(--darkened-secondary-button-color) 0 0.3rem 0.7rem inset;
     transform: translateY(0.2rem);
   }
 }
@@ -68,14 +68,14 @@
   @extend %fillGradientButtonSecondary;
   @extend %transparentTap;
 
-  background-color: $primaryButtonColor;
+  background-color: var(--primary-button-color);
   box-shadow:
     rgb(45 35 66 / 40%) 0 0.2rem 0.4rem,
     rgb(45 35 66 / 30%) 0 0.7rem 1.3rem -0.3rem,
-    $darkenedPrimaryButtonColor 0 -0.3rem 0 inset;
+    var(--darkened-primary-button-color) 0 -0.3rem 0 inset;
 
   &:active {
-    box-shadow: $darkenedPrimaryButtonColor 0 0.3rem 0.7rem inset;
+    box-shadow: var(--darkened-primary-button-color) 0 0.3rem 0.7rem inset;
     transform: translateY(0.2rem);
   }
 }
@@ -83,7 +83,7 @@
 %underlineLinkHoverEffect {
   @extend %transparentTap;
 
-  color: $mainWhiteColor;
+  color: var(--text-color);
   position: relative;
   cursor: pointer;
   transition: $transitionAnimation;
@@ -99,7 +99,7 @@
     transition: $transitionAnimation;
     transform: scale(0);
     transform-origin: right;
-    background-color: $mainWhiteColor;
+    background-color: var(--text-color);
   }
 
   &:hover,

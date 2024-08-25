@@ -1,4 +1,5 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { ThemeProvider } from 'next-themes'
 import { Fira_Code, Poppins } from 'next/font/google'
 import 'styles/global.scss'
 
@@ -26,13 +27,16 @@ export default function RootLayout({ children, params: { locale } }) {
   const currentFont = locale === 'uk' ? firaCode.className : poppins.className
 
   return (
-    <html className={currentFont} lang={locale}>
+    <html className={currentFont} lang={locale} suppressHydrationWarning>
       <link href="/favicon.ico" rel="icon" type="favicon" />
+      <meta content="light dark" name="color-scheme" />
 
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider defaultTheme="system" storageKey="theme">
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -13,28 +13,28 @@ export const initialContactMethods = {
   whatsapp: false,
   email: false,
 }
-
 export const customStylesMarkets = {
   control: (baseStyles) => ({
     ...baseStyles,
-    fontSize: '14px',
-    padding: '5px',
-    borderRadius: '10px',
-    backgroundColor: '#d9d9d956',
-    backdropFilter: 'blur(45px)',
-    border: '2px solid transparent',
-    boxShadow: 'none',
+    fontSize: '1.4rem',
+    padding: '0.5rem',
+    borderRadius: '1rem',
+    backgroundColor: 'var(--background-service-card)',
+    backdropFilter: 'blur(4.5rem)',
+    border: '0.2rem solid transparent',
+    boxShadow: '0 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25)',
     '&:hover': {
-      border: '2px solid white',
+      border: '0.2rem solid var(--text-color)',
     },
   }),
   option: (baseStyles) => ({
     ...baseStyles,
-    backgroundColor: '#3a3d60',
-    fontSize: '14px',
+    backgroundColor: 'var(--secondary-color)',
+    fontSize: '1.4rem',
+    color: 'var(--text-color)',
     '&:hover': {
-      backgroundColor: '#fff',
-      color: '#3a3d60',
+      backgroundColor: 'var(--text-color)',
+      color: 'var(--secondary-color)',
     },
   }),
   menu: (baseStyles) => ({
@@ -47,15 +47,15 @@ export const customStylesMarkets = {
   }),
   placeholder: (baseStyles) => ({
     ...baseStyles,
-    color: '#fff',
+    color: 'var(--text-color)',
     opacity: '0.7',
   }),
   input: (baseStyles) => ({
     ...baseStyles,
-    color: '#fff',
+    color: 'var(--text-color)',
   }),
   singleValue: (baseStyles) => ({
     ...baseStyles,
-    color: '#fff',
+    color: 'var(--text-color)',
   }),
 }

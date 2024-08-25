@@ -1,19 +1,22 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
 import { memo, useEffect, useState } from 'react'
-import { Link as ScrollLink } from 'react-scroll'
-import Image from 'next/image'
-import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
+import { useTheme } from 'next-themes'
+import { v4 as uuidv4 } from 'uuid'
 import { useTranslations } from 'next-intl'
+import { Link as ScrollLink } from 'react-scroll'
 import { navbarData } from 'data/navbarLinksData'
 import { scrollSectionId } from 'data/scrollSectionId'
+import ThemeChanger from 'components/ThemeCharger'
 import LinkItem from 'shared/LinkItem'
 import styles from 'components/Navbar/Navbar.module.scss'
 
 function Navbar() {
+  const { theme } = useTheme()
   const { contact } = scrollSectionId
   const { links, logoImage } = navbarData
   const pathname = usePathname()
@@ -55,11 +58,11 @@ function Navbar() {
           <a className={styles.logoWrapper} href="#" tabIndex="0">
             <Image
               alt="logo image"
-              className={styles.logoImage}
+              className={cn(styles.logoImage, { [styles.logoImageLightTheme]: theme === 'light' })}
               height={80}
-              loading="eager"
               src={logoImage}
               width={80}
+              priority
             />
           </a>
           <div
@@ -101,6 +104,7 @@ function Navbar() {
             >
               {tLanguageSwitcher('buttonUa.label')}
             </Link>
+            <ThemeChanger />
           </div>
         </div>
         <div className={styles.navbarWrapper}>

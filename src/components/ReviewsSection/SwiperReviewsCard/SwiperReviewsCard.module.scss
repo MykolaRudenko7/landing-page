@@ -14,14 +14,14 @@
     width: 0.5rem;
     height: 2.5rem;
     background-color: transparent;
-    color: $mainWhiteColor;
+    color: var(--text-color);
     font-size: $mediumTitleSize;
     font-weight: $boldFontWeight;
     @extend %transparentTap;
     transition: $transitionAnimation;
 
     &:active {
-      color: $mainDarkBlueColor;
+      color: var(--secondary-color);
     }
     @include onSmallTablet() {
       top: 50%;

@@ -53,7 +53,7 @@
   @extend %blurBackground;
 
   backdrop-filter: $blurFilter;
-  filter: $circleWhyChooseCardFilter;
+  filter: var(--circle-why-choose-card-filter);
   transition: $transitionAnimation;
 
   &:nth-child(1) {
