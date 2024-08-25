@@ -52,7 +52,11 @@ function Navbar() {
   }
 
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={cn(styles.navbar, {
+        [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
+      })}
+    >
       <div className={cn(styles.wrapper, { [styles.isScrolled]: isScrolled })}>
         <div className={styles.logoLinksBlock}>
           <a className={styles.logoWrapper} href="#" tabIndex="0">
