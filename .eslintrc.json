@@ -1,14 +1,40 @@
 {
-  "extends": ["airbnb-base", "prettier", "plugin:@next/next/recommended"],
-  "plugins": ["react", "jsx-a11y"],
-  "parser": "@babel/eslint-parser",
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked"
+  ],
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "babelOptions": {
-      "presets": ["@babel/preset-react"]
-    },
-    "requireConfigFile": false
+    "project": "./tsconfig.json"
   },
   "rules": {
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
+    ],
+    "@typescript-eslint/array-type": [
+      "warn",
+      {
+        "default": "array"
+      }
+    ],
+    "@typescript-eslint/consistent-type-assertions": [
+      "warn",
+      {
+        "assertionStyle": "as",
+        "objectLiteralTypeAssertions": "never"
+      }
+    ],
     "@next/next/no-img-element": "off",
     "no-underscore-dangle": 0,
     "func-names": 0,
@@ -36,7 +62,7 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [".js", ".jsx", "ts", "tsx"]
       }
     ],
     "react/forbid-component-props": 0,
@@ -154,7 +180,7 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".json", ".vue"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
       }
     }
   },

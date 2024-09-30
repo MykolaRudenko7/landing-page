@@ -12,6 +12,8 @@
 }
 
 .aboutUsImageWrapper {
+  width: 50%;
+
   @extend %flexCenter;
 
   @include onTablet {

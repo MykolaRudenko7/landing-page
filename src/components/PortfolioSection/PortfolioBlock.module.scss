@@ -42,8 +42,6 @@
 }
 
 .textBlockText {
-  font-size: $liteTitleSize;
-
   @extend %subtitleTextSet;
 
   @include onSmallTablet {

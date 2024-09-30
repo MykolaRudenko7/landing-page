@@ -4,11 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  backdrop-filter: blur(15rem);
-
-  &.isNavbarMenuOpen {
-    backdrop-filter: none;
-  }
+  background-color: var(--background-color);
 
   .wrapper {
     margin: 0 auto;
@@ -107,6 +103,7 @@
   @include onSmallTablet() {
     background-color: var(--background-color);
     filter: var(--filter-service-card-title);
+    -webkit-backdrop-filter: blur(2rem);
     backdrop-filter: blur(2rem);
     gap: 5rem;
     font-size: $mediumFontWeight;

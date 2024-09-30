@@ -1,11 +1,18 @@
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const withNextIntl = require('next-intl/plugin')()
+const withImages = require('next-images')
 
 const nextConfig = {
+  experimental: {
+    typedRoutes: true,
+  },
   sassOptions: {
     additionalData: `@import "src/styles/_app.scss";`,
   },
   productionBrowserSourceMaps: true,
+  images: {
+    disableStaticImages: true,
+  },
 }
 
 const nextIntlConfig = withNextIntl({})
@@ -17,9 +24,9 @@ module.exports = async () => {
     register: true,
   })
 
-  return {
+  return withImages({
     ...nextConfig,
     ...nextIntlConfig,
     ...pwaConfig,
-  }
+  })
 }

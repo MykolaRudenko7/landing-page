@@ -52,6 +52,7 @@
 
   @extend %blurBackground;
 
+  -webkit-backdrop-filter: $blurFilter;
   backdrop-filter: $blurFilter;
   filter: var(--circle-why-choose-card-filter);
   transition: $transitionAnimation;

@@ -1,11 +1,11 @@
 {
   "NavbarLinks": {
-    "home": "Intro",
-    "how-we-are": "About Us",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "reviews": "Reviews",
-    "contact": "Contact"
+    "0": "Intro",
+    "1": "About Us",
+    "2": "Services",
+    "3": "Portfolio",
+    "4": "Reviews",
+    "5": "Contact"
   },
   "NavbarLanguageSwitcher": {
     "buttonEn": { "label": "EN", "about": "english language" },
@@ -98,7 +98,7 @@
   "PortfolioSectionCards": {
     "card0": {
       "title": "Barossa - Crafting a Digital Wine Experience",
-      "imageSrc": "cardImage1",
+      "imageAlt": "card 1 image",
       "text": {
         "label0": "goals",
         "list0": {
@@ -128,6 +128,7 @@
     },
     "card1": {
       "title": "B2B Video Communication Platform",
+      "imageAlt": "card 1 image",
       "text": {
         "label0": "goals",
         "list0": {
@@ -167,6 +168,7 @@
     },
     "card2": {
       "title": "FloraNow -Online Marketplace for Floriculture",
+      "imageAlt": "card 1 image",
       "text": {
         "label0": "goals",
         "list0": {
@@ -302,6 +304,11 @@
       "link4": "Software Development",
       "link5": "Search Engine Optimization (SEO)",
       "link6": "Consulting"
+    },
+    "socialsLinks": {
+      "link0": "Instagram",
+      "link1": "Facebook",
+      "link2": "LinkedIn"
     }
   },
   "SectionLabels": {
@@ -320,6 +327,21 @@
     "buttonReady": "Ready to elevate?",
     "buttonStart": "Start Your Success Story",
     "buttonLearn": "Learn more",
-    "buttonSubmit": "Submit Your Idea"
+    "buttonSubmit": "Submit Your Idea",
+    "buttonThemeChanger": "Change theme"
+  },
+  "Images": {
+    "logo": "logo image",
+    "contactUs": "contact us image",
+    "intro": "intro image",
+    "aboutUs": "about us image",
+    "services": "services image",
+    "portfolio": "portfolio image",
+    "reviews": "reviews image",
+    "contact": "contact image",
+    "introCard": "intro card image"
+  },
+  "LinkAlt": {
+    "logo": "Tech Cats Logo"
   }
 }

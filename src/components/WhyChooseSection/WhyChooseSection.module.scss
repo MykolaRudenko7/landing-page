@@ -44,6 +44,7 @@
 
   @extend %blurBackground;
 
+  -webkit-backdrop-filter: $blurFilter;
   backdrop-filter: $blurFilter;
   filter: var();
   transition: $transitionAnimation;

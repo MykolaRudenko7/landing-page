@@ -61,6 +61,7 @@
     border-radius: 1rem;
     border: solid 0.2rem transparent;
     outline: none;
+    -webkit-backdrop-filter: blur(4.5rem);
     backdrop-filter: blur(4.5rem);
     padding-left: 1.5rem;
 
@@ -91,6 +92,7 @@
     border-radius: 1rem 0 0 1rem !important;
     border: none;
     background: transparent !important;
+    background-color: $darkBackgroundColor;
 
     &:hover,
     &:active,
@@ -108,6 +110,7 @@
         border-radius: 1rem 0 0 1rem;
         border: solid 0.2rem transparent;
         background: transparent;
+        -webkit-backdrop-filter: blur(4.5rem);
         backdrop-filter: blur(4.5rem);
       }
 
@@ -122,16 +125,14 @@
   }
 
   .tellDropdown {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    z-index: 2;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    z-index: 5 !important;
 
     li {
-      .highlight {
-        background-color: var(--disabled-button-color) !important;
-      }
       &:hover {
-        color: var(--disabled-button-color);
+        background-color: var(--text-color) !important;
+        color: var(--background-color) !important;
       }
     }
   }
@@ -153,7 +154,7 @@
 .submitMessageError {
   @extend %cardSubtitleSet;
   width: 40%;
-  text-wrap: wrap;
+  word-wrap: break-word;
   color: var(--yellow-color);
 
   @include onSmallTablet() {
