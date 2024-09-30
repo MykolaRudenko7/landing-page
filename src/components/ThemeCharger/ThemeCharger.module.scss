@@ -2,6 +2,9 @@
   margin-left: 1rem;
   background: none;
   transition: $transitionAnimation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     transform: scale(0.8);

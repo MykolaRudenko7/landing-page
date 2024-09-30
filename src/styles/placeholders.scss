@@ -94,6 +94,7 @@
 
   font-size: $largeSubtitleCardSize;
   box-shadow: var(--box-shadow-card-with-tab-block-title);
+  -webkit-backdrop-filter: blur(3rem);
   backdrop-filter: blur(3rem);
   position: absolute;
   top: 0%;
@@ -124,7 +125,7 @@
 %forImage {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 %titleTextSpan {
@@ -271,6 +272,7 @@
   border-radius: 1rem;
   border: solid 0.2rem transparent;
   outline: none;
+  -webkit-backdrop-filter: blur(4.5rem);
   backdrop-filter: blur(4.5rem);
 
   &:focus,

@@ -93,9 +93,8 @@ body {
 
 .react-tel-input .country-list .country.highlight {
   background-color: var(--text-color) !important;
-  color: var(--secondary-color) !important;
+  color: var(--background-color) !important;
 }
-
 .react-tel-input .selected-flag .arrow {
   border-top: 0.4rem solid var(--text-color) !important;
 }
