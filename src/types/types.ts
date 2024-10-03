@@ -1,3 +1,7 @@
+import { VariantProps } from 'class-variance-authority'
+import { linkItemVariants } from 'shared/Link/linkItemVariants'
+import { scrollLinkVariants } from 'shared/ScrollIdLink/scrollLinkVariants'
+
 export enum ScrollSectionId {
   Home = 'home',
   HowWeAre = 'how-we-are',
@@ -33,12 +37,35 @@ export interface RootLayoutProps {
   }
 }
 
-export interface ScrollIdLinkProps {
-  title: string
+export interface ScrollLinkDefaultProps {
   id: string
-  clickOnLink?: () => void
+  href?: string
+  role: string
   about: string
+  clickOnLink?: () => void
+  tabIndex?: number
+  children?: React.ReactNode
+  className?: string
+  smooth?: boolean
+  duration?: number
+  offset?: number
 }
+
+export interface ScrollLinkProps
+  extends ScrollLinkDefaultProps,
+    VariantProps<typeof scrollLinkVariants> {}
+
+export interface LinkDefaultProps {
+  href: string
+  about: string
+  role: string
+  tabIndex?: number
+  children: React.ReactNode
+  className?: string
+  target?: string
+}
+
+export interface LinkAllProps extends LinkDefaultProps, VariantProps<typeof linkItemVariants> {}
 
 export interface IntroCardItemProps {
   imageSrc: string

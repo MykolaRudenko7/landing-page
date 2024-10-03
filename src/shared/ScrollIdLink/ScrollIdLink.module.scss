@@ -1,4 +1,4 @@
-.link {
+.scrollLink {
   @extend %underlineLinkHoverEffect;
 
   background: none;
@@ -7,5 +7,40 @@
   @include onSmallTablet {
     font-size: $liteTitleSize;
     font-weight: $mediumFontWeight;
+  }
+}
+
+.navButton {
+  @extend %fillGradientButtonSecondary;
+
+  text-shadow: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  height: 4rem;
+
+  @include onTablet {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  @include onPhone {
+    height: 3.3rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    display: none;
+  }
+}
+
+.buttonSecondary {
+  @extend %fillGradientButtonSecondary;
+}
+
+.buttonPrimary {
+  @extend %fillGradientButtonPrimary;
+}
+
+.hideOnSmallTablet {
+  @include onSmallTablet {
+    display: none;
   }
 }

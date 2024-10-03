@@ -49,14 +49,6 @@
   }
 }
 
-.buttonConsultation {
-  @extend %fillGradientButtonSecondary;
-}
-
-.buttonServices {
-  @extend %fillGradientButtonPrimary;
-}
-
 .imageWrapper {
   flex: 0 1 45%;
   overflow: hidden;

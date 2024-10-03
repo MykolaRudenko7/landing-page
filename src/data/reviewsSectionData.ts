@@ -5,7 +5,8 @@ import avatarImage3 from 'images/reviewsSection/avatar4.jpg'
 
 export const reviewsSectionData = {
   linkSrc: {
-    tabIndex: 0,
+    href: '#',
+    role: 'button',
   },
   cards: [
     {

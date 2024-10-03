@@ -5,11 +5,9 @@ import cardImage2 from 'images/portfolioSection/cardImage3.webp'
 
 export const portfolioSectionData = {
   buttonContact: {
-    duration: 750,
-    offset: -60,
-    smooth: true,
-    tabIndex: 0,
-    to: ScrollSectionId.Contact,
+    role: 'button',
+    hide: true,
+    id: ScrollSectionId.Contact,
   },
   cards: {
     card0: {
