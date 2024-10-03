@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { useTranslations } from 'next-intl'
 import { whyChooseSectionData } from 'data/whyChooseSectionData'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import WhyChooseCardItem from 'components/WhyChooseSection/WhyChooseCardItem'
 import styles from 'components/WhyChooseSection/WhyChooseSection.module.scss'
 
@@ -29,9 +29,9 @@ export default function WhyChooseSection() {
             </div>
             <h4 className={styles.mainCardTitle}>{title}</h4>
             <p className={styles.mainCardText}>{text}</p>
-            <Button about={buttonText} className={styles.elevateButton} {...buttonSrc}>
+            <ScrollIdLink about={buttonText} {...buttonSrc} variant={'buttonPrimary'}>
               {buttonText}
-            </Button>
+            </ScrollIdLink>
           </div>
         </div>
         <ul className={styles.smallCircles} role="list">

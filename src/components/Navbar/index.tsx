@@ -2,18 +2,17 @@
 
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import { memo, useEffect, useState } from 'react'
 import cn from 'classnames'
 import { useTheme } from 'next-themes'
 import { v4 as uuidv4 } from 'uuid'
 import { useTranslations } from 'next-intl'
-import { Link as ScrollLink } from 'react-scroll'
 import { navbarData } from 'data/navbarLinksData'
 import ThemeChanger from 'components/ThemeCharger'
-import LinkItem from 'shared/ScrollIdLink'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import { LanguagesUrlEndpoints, ThemeNames } from 'types/types'
 import styles from 'components/Navbar/Navbar.module.scss'
+import { LinkItem } from 'shared/Link'
 
 function Navbar() {
   const { theme } = useTheme()
@@ -70,13 +69,7 @@ function Navbar() {
     >
       <div className={cn(styles.wrapper, { [styles.isScrolled]: isScrolled })}>
         <div className={styles.logoLinksBlock}>
-          <Link
-            className={styles.logoWrapper}
-            href="#"
-            {...logoLink}
-            about={logoLinkAlt}
-            role="link"
-          >
+          <LinkItem {...logoLink} about={logoLinkAlt} variant="logo">
             <Image
               alt={logoImageAlt}
               className={cn(styles.logoImage, {
@@ -85,54 +78,47 @@ function Navbar() {
               {...logoImage}
               priority
             />
-          </Link>
+          </LinkItem>
           <div
             className={cn(styles.linksWrapper, {
               [styles.isNavbarMenuOpen]: isNavbarMenuOpen,
             })}
           >
             {links.map((item, id) => (
-              <LinkItem
+              <ScrollIdLink
                 key={uuidv4()}
                 {...item}
                 about={navbarLinks[id]}
                 clickOnLink={clickOnLink}
-                title={navbarLinks[id]}
-              />
+              >
+                {navbarLinks[id]}
+              </ScrollIdLink>
             ))}
           </div>
           <div className={styles.languageSwitchers}>
-            <Link
+            <LinkItem
               about={buttonEnAboutText}
-              className={cn(styles.languageSwitcher, {
-                [styles.active]: pathname === (LanguagesUrlEndpoints.EN as string),
-              })}
-              href={{ pathname: LanguagesUrlEndpoints.EN }}
+              active={pathname === LanguagesUrlEndpoints.EN}
               {...buttonEn}
+              variant={'languageSwitcher'}
             >
               {buttonEnLabelText}
-            </Link>
-            <Link
+            </LinkItem>
+            <LinkItem
               about={buttonUaAboutText}
-              className={cn(styles.languageSwitcher, {
-                [styles.active]: pathname === (LanguagesUrlEndpoints.UK as string),
-              })}
-              href={{ pathname: LanguagesUrlEndpoints.UK }}
+              active={pathname === LanguagesUrlEndpoints.UK}
               {...buttonUk}
+              variant={'languageSwitcher'}
             >
               {buttonUaLabelText}
-            </Link>
+            </LinkItem>
             <ThemeChanger />
           </div>
         </div>
         <div className={styles.navbarWrapper}>
-          <ScrollLink
-            about={buttonBoostText}
-            className={styles.navbarButton}
-            {...scrollToContactButton}
-          >
+          <ScrollIdLink about={buttonBoostText} {...scrollToContactButton} variant={'navButton'}>
             {buttonBoostText}
-          </ScrollLink>
+          </ScrollIdLink>
           <div
             className={cn(styles.menuBurger, {
               [styles.isNavbarMenuOpen]: isNavbarMenuOpen,

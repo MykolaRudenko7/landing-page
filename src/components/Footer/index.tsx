@@ -1,13 +1,13 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { v4 as uuidv4 } from 'uuid'
 import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 import { footerSectionData } from 'data/footerSectionData'
-import LinkItem from 'shared/ScrollIdLink'
+import { LinkItem } from 'shared/Link'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import styles from 'components/Footer/Footer.module.scss'
 import { ThemeNames } from 'types/types'
 
@@ -15,6 +15,7 @@ export default function Footer() {
   const { theme } = useTheme()
 
   const {
+    logoLink,
     logoImage,
     linksForScroll,
     privacyPolicyLink,
@@ -44,13 +45,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.footerBlocksWrapper}>
-          <Link
-            about={logoLinkAlt}
-            className={styles.logoWrapper}
-            href="#"
-            role="link"
-            tabIndex={0}
-          >
+          <LinkItem about={logoLinkAlt} {...logoLink} variant={'logo'}>
             <Image
               alt={imageAlt}
               className={cn(styles.logoImage, {
@@ -59,63 +54,54 @@ export default function Footer() {
               loading="lazy"
               {...logoImage}
             />
-          </Link>
+          </LinkItem>
           <div className={styles.scrollLinksWrapper}>
             <ul className={styles.scrollLinks} role="list">
               {linksForScroll.map((link, tId) => (
                 <li key={uuidv4()} role="listitem">
-                  <LinkItem {...link} about={linkForScroll[tId]} title={linkForScroll[tId]} />
+                  <ScrollIdLink {...link} about={linkForScroll[tId]}>
+                    {linkForScroll[tId]}
+                  </ScrollIdLink>
                 </li>
               ))}
             </ul>
             <ul className={styles.ordinaryLinks} role="list">
               <li className={styles.ordinaryLinkWrapper} role="listitem">
-                <Link className={styles.ordinaryLink} href="#" {...privacyPolicyLink}>
+                <LinkItem about={privacyPolicy} {...privacyPolicyLink} variant={'ordinary'}>
                   {privacyPolicy}
-                </Link>
+                </LinkItem>
               </li>
               <li className={styles.ordinaryLinkWrapper} role="listitem">
-                <Link className={styles.ordinaryLink} href="#" {...termsOfServiceLink}>
+                <LinkItem about={termsOfService} {...termsOfServiceLink} variant={'ordinary'}>
                   {termsOfService}
-                </Link>
+                </LinkItem>
               </li>
             </ul>
           </div>
           <div className={styles.servicesLinks}>
-            <LinkItem about={servicesLink} id={mainLink.id} title={servicesLink} />
-            {links.map(({ tabIndex }, tId) => (
-              <Link
-                about={servicesLinks[tId]}
-                className={styles.serviceLink}
-                href="#"
-                key={uuidv4()}
-                tabIndex={tabIndex}
-              >
+            <ScrollIdLink about={servicesLink} {...mainLink}>
+              {servicesLink}
+            </ScrollIdLink>
+            {links.map((link, tId) => (
+              <LinkItem about={servicesLinks[tId]} key={uuidv4()} {...link} variant={'service'}>
                 {servicesLinks[tId]}
-              </Link>
+              </LinkItem>
             ))}
           </div>
           <div className={styles.getInTouch}>
             <p className={styles.getInTouchTitle}>{getInTouchTitle}</p>
             <div className={styles.socialsImages}>
-              {socials.map(({ href, iconSrc, tabIndex, target }, tId) => (
-                <Link
-                  about={socialsLinks[tId]}
-                  className={styles.socialImageLink}
-                  href={{ pathname: href }}
-                  key={uuidv4()}
-                  tabIndex={tabIndex}
-                  target={target}
-                >
+              {socials.map((link, tId) => (
+                <LinkItem about={socialsLinks[tId]} key={uuidv4()} {...link} variant={'social'}>
                   <Image
                     alt={socialsLinks[tId]}
                     className={cn(styles.socialImage, {
                       [styles.socialImageLight]: theme === ThemeNames.Light,
                     })}
                     loading="lazy"
-                    {...iconSrc}
+                    {...link.iconSrc}
                   />
-                </Link>
+                </LinkItem>
               ))}
             </div>
           </div>

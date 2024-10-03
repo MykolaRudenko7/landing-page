@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from 'react-scroll'
 import { portfolioSectionData } from 'data/portfolioSectionData'
 import { useTranslations } from 'next-intl'
 import PortfolioBlockCardItem from 'components/PortfolioSection/PortfolioBlockCardItem'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import { ScrollSectionId } from 'types/types'
 import styles from 'components/PortfolioSection/PortfolioBlock.module.scss'
 
@@ -36,15 +36,9 @@ export default function PortfolioBlock() {
             </div>
             <PortfolioBlockCardItem {...card0} cardId={0} />
           </div>
-          <Button
-            about={buttonText}
-            className={styles.portfolioBlockButton}
-            href="#"
-            role="button"
-            {...buttonContact}
-          >
+          <ScrollIdLink about={buttonText} {...buttonContact} hide={true} variant={'buttonPrimary'}>
             {buttonText}
-          </Button>
+          </ScrollIdLink>
         </div>
         <div className={styles.cardsBlock}>
           <PortfolioBlockCardItem {...card1} cardId={1} />

@@ -1,10 +1,15 @@
-import Link from 'next/link'
+'use client'
+
 import { useTranslations } from 'next-intl'
 import SwiperReviewsCard from 'components/ReviewsSection/SwiperReviewsCard'
 import { ScrollSectionId } from 'types/types'
 import styles from 'components/ReviewsSection/ReviewsSection.module.scss'
+import { LinkItem } from 'shared/Link'
+import { reviewsSectionData } from 'data/reviewsSectionData'
 
 export default function ReviewsSection() {
+  const { linkSrc } = reviewsSectionData
+
   const tReviewSection = useTranslations('ReviewsSectionData')
   const tLabels = useTranslations('SectionLabels')
   const tButtons = useTranslations('Buttons')
@@ -25,15 +30,9 @@ export default function ReviewsSection() {
             <h4 className={styles.reviewsSectionTitle}>{title}</h4>
             <p className={styles.reviewsSectionText}>{text}</p>
           </div>
-          <Link
-            about={buttonText}
-            className={styles.reviewsSectionButton}
-            href="#"
-            role="button"
-            tabIndex={0}
-          >
+          <LinkItem about={buttonText} {...linkSrc} variant={'button'}>
             {buttonText}
-          </Link>
+          </LinkItem>
         </div>
         <SwiperReviewsCard />
       </div>

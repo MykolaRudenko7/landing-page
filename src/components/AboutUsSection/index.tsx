@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { Button } from 'react-scroll'
 import { useTranslations } from 'next-intl'
 import { aboutUsSectionData } from 'data/aboutUsSectionData'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import { ScrollSectionId } from 'types/types'
 import styles from 'components/AboutUsSection/AboutUsSection.module.scss'
 
@@ -35,9 +35,9 @@ export default function AboutUsSection() {
             <h4 className={styles.title}>{title}</h4>
             <p className={styles.text}>{text}</p>
           </div>
-          <Button about={buttonText} className={styles.aboutUsButton} role="button" {...buttonSrc}>
+          <ScrollIdLink about={buttonText} {...buttonSrc} variant={'buttonPrimary'}>
             {buttonText}
-          </Button>
+          </ScrollIdLink>
         </div>
       </div>
     </section>

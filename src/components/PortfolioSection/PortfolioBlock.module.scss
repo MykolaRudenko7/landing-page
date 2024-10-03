@@ -49,14 +49,6 @@
   }
 }
 
-.portfolioBlockButton {
-  @extend %fillGradientButtonSecondary;
-
-  @include onSmallTablet {
-    display: none;
-  }
-}
-
 .cardsBlock {
   margin-top: 3rem;
   width: 50%;

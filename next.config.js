@@ -3,9 +3,6 @@ const withNextIntl = require('next-intl/plugin')()
 const withImages = require('next-images')
 
 const nextConfig = {
-  experimental: {
-    typedRoutes: true,
-  },
   sassOptions: {
     additionalData: `@import "src/styles/_app.scss";`,
   },

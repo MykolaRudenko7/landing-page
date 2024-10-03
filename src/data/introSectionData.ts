@@ -10,18 +10,12 @@ import introSectionImage from 'images/introSection/textBlock/introTextBlockImage
 export const introSectionData = {
   imageSrc: { src: introSectionImage, height: 675, width: 675 },
   buttonSchedule: {
-    duration: 750,
-    offset: -60,
-    smooth: true,
-    tabIndex: 0,
-    to: ScrollSectionId.Contact,
+    role: 'button',
+    id: ScrollSectionId.Contact,
   },
   buttonServices: {
-    duration: 750,
-    offset: -60,
-    smooth: true,
-    tabIndex: 0,
-    to: ScrollSectionId.Services,
+    role: 'button',
+    id: ScrollSectionId.Services,
   },
   cards: [
     {

@@ -45,10 +45,6 @@
   }
 }
 
-.logoWrapper {
-  @extend %transparentTap;
-}
-
 .logoImage {
   @extend %forImage;
 
@@ -92,18 +88,6 @@
   }
 }
 
-.ordinaryLink {
-  font-weight: $lightFontWeight;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-  display: block;
-
-  @extend %underlineLinkHoverEffect;
-  @extend %cardTitleSet;
-
-  padding: 0.5rem;
-}
-
 .servicesLinks {
   display: flex;
   flex-direction: column;
@@ -116,15 +100,6 @@
   @include onSmallTablet {
     text-align: center;
   }
-}
-
-.serviceLink {
-  font-weight: $lightFontWeight;
-  padding: 0.5rem;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-
-  @extend %underlineLinkHoverEffect;
 }
 
 .getInTouch {
@@ -155,26 +130,6 @@
 
   @include onPhone {
     flex-direction: row;
-  }
-}
-
-.socialImageLink {
-  display: inline-block;
-  transition: $transitionAnimation;
-
-  @extend %transparentTap;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-
-  @include onDesktop {
-    width: 4rem;
-    height: 4rem;
   }
 }
 

@@ -1,0 +1,66 @@
+.logo {
+  @extend %flexCenter;
+  @extend %transparentTap;
+}
+
+.languageSwitcher {
+  font-weight: $lightFontWeight;
+  background: transparent;
+  padding: 0.75rem;
+
+  &:focus,
+  &:hover,
+  &:active {
+    transform: scale(0.95);
+    color: var(--primary-button-color);
+  }
+
+  &.active {
+    color: var(--secondary-button-color);
+  }
+}
+
+.button {
+  @extend %fillGradientButtonSecondary;
+}
+
+.ordinary {
+  font-weight: $lightFontWeight;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  display: block;
+
+  @extend %underlineLinkHoverEffect;
+  @extend %cardTitleSet;
+
+  padding: 0.5rem;
+}
+
+.service {
+  font-weight: $lightFontWeight;
+  padding: 0.5rem;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+
+  @extend %underlineLinkHoverEffect;
+}
+
+.social {
+  display: inline-block;
+  transition: $transitionAnimation;
+
+  @extend %transparentTap;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  @include onDesktop {
+    width: 4rem;
+    height: 4rem;
+  }
+}

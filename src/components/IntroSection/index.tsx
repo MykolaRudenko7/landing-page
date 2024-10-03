@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { Button } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import { useTranslations } from 'next-intl'
 import { introSectionData } from 'data/introSectionData'
+import ScrollIdLink from 'shared/ScrollIdLink'
 import IntroCardItem from 'components/IntroSection/IntroCardItem'
 import { ScrollSectionId } from 'types/types'
 import styles from 'components/IntroSection/IntroSection.module.scss'
@@ -33,22 +33,16 @@ export default function Intro() {
             <p className={styles.textBlockText}>{text}</p>
           </div>
           <div className={styles.buttonsBlock}>
-            <Button
-              about={buttonScheduleText}
-              className={styles.buttonConsultation}
-              role="button"
-              {...buttonSchedule}
-            >
+            <ScrollIdLink about={buttonScheduleText} {...buttonSchedule} variant={'buttonPrimary'}>
               {buttonScheduleText}
-            </Button>
-            <Button
+            </ScrollIdLink>
+            <ScrollIdLink
               about={buttonServicesText}
-              className={styles.buttonServices}
-              role="button"
+              variant={'buttonSecondary'}
               {...buttonServices}
             >
               {buttonServicesText}
-            </Button>
+            </ScrollIdLink>
           </div>
         </div>
         <div className={styles.imageWrapper}>

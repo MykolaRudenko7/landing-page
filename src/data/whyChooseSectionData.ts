@@ -2,12 +2,8 @@ import { ScrollSectionId } from 'types/types'
 
 export const whyChooseSectionData = {
   buttonSrc: {
-    duration: 750,
-    offset: -60,
     role: 'button',
-    smooth: true,
-    tabIndex: 0,
-    to: ScrollSectionId.Contact,
+    id: ScrollSectionId.Contact,
   },
   cards: [
     {
