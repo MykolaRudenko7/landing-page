@@ -10,9 +10,9 @@ import { useTranslations } from 'next-intl'
 import { navbarData } from 'data/navbarLinksData'
 import ThemeChanger from 'components/ThemeCharger'
 import ScrollIdLink from 'shared/ScrollIdLink'
+import { LinkItem } from 'shared/Link'
 import { LanguagesUrlEndpoints, ThemeNames } from 'types/types'
 import styles from 'components/Navbar/Navbar.module.scss'
-import { LinkItem } from 'shared/Link'
 
 function Navbar() {
   const { theme } = useTheme()

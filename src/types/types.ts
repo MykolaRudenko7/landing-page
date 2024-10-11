@@ -63,6 +63,7 @@ export interface LinkDefaultProps {
   children: React.ReactNode
   className?: string
   target?: string
+  scroll?: boolean
 }
 
 export interface LinkAllProps extends LinkDefaultProps, VariantProps<typeof linkItemVariants> {}

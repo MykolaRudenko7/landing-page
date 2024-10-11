@@ -29,7 +29,7 @@ export default function WhyChooseSection() {
             </div>
             <h4 className={styles.mainCardTitle}>{title}</h4>
             <p className={styles.mainCardText}>{text}</p>
-            <ScrollIdLink about={buttonText} {...buttonSrc} variant={'buttonPrimary'}>
+            <ScrollIdLink about={buttonText} {...buttonSrc} variant={'buttonPrimary'} hide>
               {buttonText}
             </ScrollIdLink>
           </div>
