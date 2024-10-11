@@ -11,6 +11,7 @@ export function LinkItem({
   variant = 'default',
   active,
   role,
+  scroll,
 }: LinkAllProps) {
   return (
     <Link
@@ -18,6 +19,7 @@ export function LinkItem({
       className={linkItemVariants({ variant, active })}
       href={href}
       role={role}
+      scroll={scroll}
       tabIndex={tabIndex}
       target={target}
     >
